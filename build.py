@@ -18,7 +18,7 @@ for level in pack['levels']+pack.get('workshop',[]):
         assert all(f in flags for f in item.get('requires',[])+item.get('requiresOff',[])+item.get('latchWhen',[])), 'Unknown mechanism dependency'
     for item in level['plates']:
         assert all(f in flags for f in item.get('latchWhen',[])), 'Unknown latch dependency'
-for token,file in [('STYLE','style.css'),('LEVELS','levels.js'),('EXPEDITION','expedition.js'),('WILDLIFE','wildlife.js'),('ENGINE','engine.js'),('ART','art.js'),('MUSIC','music.js'),('APP','app.js')]:
+for token,file in [('STYLE','style.css'),('LEVELS','levels.js'),('EXPEDITION','expedition.js'),('WILDLIFE','wildlife.js'),('ENGINE','engine.js'),('ART','art.js'),('MUSIC','music.js'),('JOYPAD','joypad.js'),('APP','app.js')]:
     code=(src/file).read_text()
     if token=='LEVELS':code=code.replace('/*__CAMPAIGN__*/null',json.dumps(pack,ensure_ascii=False).replace('</','<\\/'))
     page=page.replace('/*__'+token+'__*/',code)

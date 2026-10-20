@@ -42,3 +42,41 @@ body.portrait-blocked{overflow:hidden}body.portrait-blocked #game,body.portrait-
 /* Compact but separate object action, including landscape touch controls. */
 .control.cargo{background:#d7e4df;min-width:58px;width:58px}.quest-link{display:inline-block}.quest-banner{flex-wrap:wrap}
 @media(max-height:520px) and (orientation:landscape){.control.cargo{min-width:48px;width:48px}.hero-card{min-width:0}.hero-select{gap:3px}.game-bottom{gap:5px}}
+
+/* Handheld layout: the thumbs stay beside the viewport, never over the puzzle. */
+.gb-only{display:none}
+body.gameboy #game{display:grid;grid-template-columns:142px minmax(0,1fr) 152px;grid-template-rows:44px minmax(0,1fr) 54px;background:#e8e8d9}
+body.gameboy #game[hidden]{display:none}
+body.gameboy .game-top{grid-column:1/-1;grid-row:1;height:44px;padding:4px 12px;border-bottom:1px solid #c4cdba}
+body.gameboy #scene{grid-column:2;grid-row:2;display:flex;align-items:center;justify-content:center;border:5px solid #718474;border-radius:12px;box-shadow:inset 0 2px 5px #244a4033;min-width:0}
+body.gameboy .game-bottom,body.gameboy .keybar{display:none}
+body.gameboy .gb-pad-zone{display:flex;grid-column:1;grid-row:2;flex-direction:column;align-items:center;justify-content:center;gap:12px}
+.gb-pad-zone>small{font-size:8px;font-weight:800;letter-spacing:.7px;color:#607362}
+.gb-pad{position:relative;width:126px;height:126px;touch-action:none;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;filter:drop-shadow(0 4px 0 #1d3430)}
+.gb-direction,.gb-center{position:absolute;width:42px;height:42px;background:#355248;color:#b9c7ac;border:0;display:grid;place-items:center;font-size:18px;padding:0;box-shadow:inset 0 2px 0 #5b7567}
+.gb-up{left:42px;top:0;border-radius:7px 7px 0 0}.gb-down{left:42px;top:84px;border-radius:0 0 7px 7px}.gb-left{left:0;top:42px;border-radius:7px 0 0 7px}.gb-right{left:84px;top:42px;border-radius:0 7px 7px 0}.gb-center{left:42px;top:42px;box-shadow:none;color:#243f37;font-size:25px;pointer-events:none}
+.gb-direction.held{background:#a9bd90;color:#213e34;box-shadow:inset 0 3px 4px #294d4b55;transform:none}
+.gb-direction:active{transform:none}.gb-direction:hover{filter:none!important}
+body.gameboy .gb-buttons{display:flex;grid-column:3;grid-row:2;gap:12px;align-items:center;justify-content:center;padding:12px 6px}
+.gb-buttons>div{display:flex;flex-direction:column;align-items:center;gap:9px;min-width:58px}.gb-button-a{transform:translateY(-23px)}.gb-button-b{transform:translateY(23px)}
+.gb-round{width:58px;height:58px;border-radius:50%;background:#ad5364;color:#fff2d7;border:2px solid #844051;box-shadow:0 5px 0 #713849,inset 0 3px 0 #d3848d;font-size:25px;font-weight:900;touch-action:none}
+.gb-round.held{transform:translateY(3px);box-shadow:0 2px 0 #713849,inset 0 2px 5px #713849;background:#c36a79}.gb-round:disabled{opacity:.4}.gb-buttons small{font-size:9px;font-weight:800;color:#465e51;text-align:center}
+body.gameboy .gb-system{display:flex;grid-column:1/-1;grid-row:3;align-items:center;justify-content:center;gap:25px}
+.gb-system-button{background:none;border:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;font-size:8px;letter-spacing:1.2px;font-weight:800;width:72px;height:48px;padding:0}
+.gb-system-button>span{display:block;width:40px;height:12px;border-radius:9px;background:#6c7c70;box-shadow:0 3px 0 #4d6054;transform:rotate(-12deg)}
+.gb-current{display:grid;grid-template-columns:1fr;min-width:115px;text-align:center;gap:2px}.gb-current strong{font-size:11px}.gb-current small{font-size:8px;color:#718175}#gbHeroDots{font-size:10px;letter-spacing:5px;color:#9c5260}
+body.gameboy #objective{top:5px;font-size:8px;padding:4px 8px;max-width:95%}body.gameboy #speech{top:37px;font-size:10px;padding:7px 10px}body.gameboy #saveIndicator{font-size:7px;bottom:5px;left:7px}
+body.gameboy .level-heading strong{font-size:12px}body.gameboy .level-heading span{font-size:7px}body.gameboy .game-top .icon{width:31px;height:31px;font-size:16px}body.gameboy #starCount{font-size:18px}
+@media(max-width:740px){body.gameboy #game{grid-template-columns:126px minmax(0,1fr) 132px;grid-template-rows:40px minmax(0,1fr) 48px}.gb-pad{width:114px;height:114px}.gb-direction,.gb-center{width:38px;height:38px}.gb-up{left:38px}.gb-down{left:38px;top:76px}.gb-left{top:38px}.gb-right{left:76px;top:38px}.gb-center{left:38px;top:38px}.gb-round{width:52px;height:52px}.gb-buttons>div{min-width:52px}body.gameboy .gb-buttons{gap:8px}body.gameboy .game-top{height:40px}body.gameboy #journalBtn,body.gameboy #fullscreenBtn{display:none}}
+
+body.gameboy #zoomBtn{font-size:11px;font-weight:900;min-width:38px;width:38px}#zoomBtn[hidden]{display:none}
+body.gameboy #objective{font-size:11px;padding:5px 9px;line-height:1.25;max-width:94%}
+body.gameboy #speech{top:48px;font-size:12px;line-height:1.3}
+body.gameboy #saveIndicator{display:none}body.gameboy #arrival{font-size:12px}
+body.gameboy .gb-pad-zone>small{font-size:10px}.gb-buttons small{font-size:11px}
+body.gameboy .gb-current strong{font-size:13px}body.gameboy .gb-current small{font-size:10px}
+body.gameboy .game-top{min-height:0}body.gameboy #journalBtn{display:none}
+
+body.gameboy .gb-system-button{font-size:10px}body.gameboy .gb-current{gap:1px}
+
+body.gameboy #objective{display:none}body.gameboy #speech{top:auto;bottom:8px;max-width:95%;background:#fff9e9f5}body.gameboy #overviewBtn{font-size:10px;font-weight:900}

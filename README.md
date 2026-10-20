@@ -2,7 +2,9 @@
 
 Jeu de plateforme et d’énigmes en solo, en français, jouable hors ligne. Trois crocodiles complémentaires, 100 étapes, dix chapitres et 300 étoiles facultatives.
 
-**Version 1.0.0 — campagne de 100 niveaux : objets transportables, mécanismes réversibles, cartes à plusieurs étages et coopération.**
+**Version 1.1.0 — commandes iPhone façon Game Boy et caméra rapprochée.**
+
+Sur écran tactile : croix directionnelle glissante (appui court, maintien, diagonales), **haut** pour sauter ou grimper, **bas** pour descendre ; **A** pour la capacité du croco, **B** pour les objets, **SELECT** pour le croco suivant et **START** pour la pause. Les deux pouces peuvent agir simultanément. La caméra mobile utilise un zoom de 1,9× par défaut, réglable à 1,6× ou 2,4× avec le bouton de zoom ; le Plan conserve une vue complète. Les étiquettes mobiles sont agrandies et placées au-dessus des personnages. Dans l’ancienne aventure, B reste un raccourci de saut.
 
 [Jouer en mode libre](https://crocrocros.vercel.app/?essai=libre) · [Ancienne aventure de 37 niveaux](https://crocrocros.vercel.app/?campagne=classique)
 

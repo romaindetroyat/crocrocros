@@ -2,9 +2,9 @@
 
 Jeu de plateforme et d’énigmes en solo, en français, jouable hors ligne. Trois crocodiles complémentaires, 100 étapes, dix chapitres et 300 étoiles facultatives.
 
-**Version 1.1.2 — écran de jeu pleine largeur, commandes Game Boy en dessous et caméra rapprochée.**
+**Version 1.1.3 — écran de jeu pleine largeur, commandes Game Boy en dessous et caméra rapprochée.**
 
-Sur écran tactile : croix directionnelle glissante (appui court, maintien, diagonales), **haut** pour sauter ou grimper, **bas** pour descendre ; **A** pour la capacité du croco, **B** pour les objets, **les trois portraits** pour sélectionner directement un croco et **START** pour la pause. Les deux pouces peuvent agir simultanément. La caméra mobile utilise un zoom de 1,9× par défaut, réglable à 1,6× ou 2,4× avec le bouton de zoom ; le Plan conserve une vue complète. Les étiquettes mobiles sont agrandies et placées au-dessus des personnages. Dans l’ancienne aventure, B reste un raccourci de saut.
+Sur écran tactile : croix directionnelle glissante (appui court, maintien, diagonales), **haut** pour sauter ou grimper, **bas** pour descendre ; **A** pour la capacité du croco, **B** pour les objets, **les trois portraits** pour sélectionner directement un croco et **START** pour la pause. Les deux pouces peuvent agir simultanément. La caméra mobile utilise un zoom de 1,9× par défaut, réglable avec **− / +**, de 2,4× jusqu’au **niveau entier (« Tout »)**. Touchez la valeur du zoom pour revenir immédiatement à 1,9× ; le Plan conserve une vue complète. Les étiquettes mobiles sont agrandies et placées au-dessus des personnages. Dans l’ancienne aventure, B reste un raccourci de saut.
 
 [Jouer en mode libre](https://crocrocros.vercel.app/?essai=libre) · [Ancienne aventure de 37 niveaux](https://crocrocros.vercel.app/?campagne=classique)
 

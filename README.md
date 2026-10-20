@@ -2,7 +2,7 @@
 
 Jeu de plateforme et d’énigmes en solo, en français, jouable hors ligne. Trois crocodiles complémentaires, 37 étapes, six chapitres et 111 étoiles facultatives.
 
-**Version 0.8.2 — départs dégagés et leviers toujours lisibles.**
+**Version 0.8.3 — accès libre aux cinq dernières énigmes pour tester la difficulté.**
 
 ![Les personnages dessinés par le moteur du jeu](docs/personnages-v07.png)
 
@@ -19,6 +19,10 @@ python3 -m http.server 8080 --directory dist --bind 127.0.0.1
 ```
 
 Ouvrir `http://localhost:8080`. L’installation PWA nécessite HTTPS ou localhost et un premier chargement complet. Aucun serveur de jeu, compte ni connexion n’est requis ensuite. La configuration Vercel est prête : importer ce dépôt, conserver sa racine et déployer. `vercel.json` sert directement le dossier `dist/` déjà construit, sans dépendance à installer. Le lien avec GitHub permettra de déployer les prochains commits de `main`. Le projet Vercel `crocrocros` est relié au dépôt GitHub ; le déploiement de production a été vérifié le 20 octobre 2026.
+
+## Tester les cinq dernières énigmes
+
+[Ouvrir les essais des niveaux 33 à 37](https://crocrocros.vercel.app/?essai=finales), ou utiliser « Tester les 5 dernières énigmes » à l’accueil. Les cinq niveaux sont accessibles dans l’ordre de votre choix. L’essai en cours et les résultats sont enregistrés dans un emplacement local distinct : la progression de l’aventure reste intacte. « Revenir à mon aventure » retrouve la partie habituelle. Changer d’énigme remplace uniquement l’essai en cours, après confirmation si nécessaire.
 
 ## Commandes
 

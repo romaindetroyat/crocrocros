@@ -1,6 +1,6 @@
 # Les Cro Cro Cros — La bannière du retour
 
-Version 0.8.2 · 20 octobre 2026
+Version 0.8.3 · 20 octobre 2026
 
 Jeu de plateforme et de réflexion en solo, en français. Trois crocodiles complémentaires, 37 étapes, six chapitres, 111 étoiles facultatives. Aucun compte, publicité, achat ou serveur de jeu. Tout le contenu est inclus et fonctionne hors ligne.
 
@@ -17,6 +17,14 @@ python3 -m http.server 8080 --directory dist --bind 127.0.0.1
 ```
 
 Ouvrir ensuite http://localhost:8080. Sur un hébergement HTTPS, attendre « PRÊT HORS LIGNE », puis utiliser l’installation proposée par le navigateur. Après le premier chargement, le jeu n’a pas besoin de connexion.
+
+## Essais libres des cinq dernières énigmes (0.8.3)
+
+Accès direct : https://crocrocros.vercel.app/?essai=finales
+
+Le menu propose les niveaux 33 à 37, sans condition de déblocage. Les règles, les décors et les indices sont identiques à ceux de la campagne. L’essai en cours se sauvegarde et reprend après fermeture. Les résultats et la tentative sont stockés séparément de votre aventure : aucun niveau ni étoile de la campagne n’est ajouté ou effacé par un essai. Le bouton « Revenir à mon aventure » retrouve votre progression habituelle.
+
+Les tests automatisés couvrent l’accès aux cinq niveaux, leur résolution, la reprise, le changement d’énigme et la préservation de la sauvegarde de campagne. La difficulté ressentie reste à évaluer en jouant.
 
 ## Commandes
 

@@ -13,7 +13,7 @@ function harness(store=new Map(),device={}){
  }
  for(const m of fs.readFileSync(path.join(src,'index.html'),'utf8').matchAll(/<(\w+)[^>]*\bid="([^"]+)"[^>]*>/g))els.set(m[2],new El(m[2],m[1]));
  const body=new El('body');body.appendChild=()=>{};
- const context={CROCO_DATA:D,CrocoArt:Art,CrocoEngine:class extends Engine{constructor(...a){super(...a);engine=this;}},document:{getElementById:id=>els.get(id)||null,body,documentElement:new El('html'),hidden:false,createElement:tag=>tag==='audio'&&device.createAudio?device.createAudio():new El('',tag),querySelectorAll:()=>[...els.values()].filter(e=>e.classes.has('held')),addEventListener:(n,f)=>docEvents[n]=f},localStorage:{getItem:k=>store.get(k)||null,setItem:(k,v)=>store.set(k,v)},navigator:device.navigator||{},innerWidth:device.viewport?.width||1100,innerHeight:device.viewport?.height||800,visualViewport:device.viewport,AudioContext:device.AudioContext,CrocoMusic:device.CrocoMusic,location:{protocol:'file:'},performance:{now:()=>now},devicePixelRatio:1,requestAnimationFrame:fn=>raf=fn,setTimeout:(fn,ms)=>{timeouts.push({fn,at:now+ms});return timeouts.length;},clearTimeout:()=>{},console,Blob,URL,addEventListener:(n,f)=>events[n]=f};context.window=context;
+ const context={CROCO_DATA:D,CrocoArt:Art,CrocoEngine:class extends Engine{constructor(...a){super(...a);engine=this;}},document:{getElementById:id=>els.get(id)||null,body,documentElement:new El('html'),hidden:false,createElement:tag=>tag==='audio'&&device.createAudio?device.createAudio():new El('',tag),querySelectorAll:()=>[...els.values()].filter(e=>e.classes.has('held')),addEventListener:(n,f)=>docEvents[n]=f},localStorage:{getItem:k=>store.get(k)||null,setItem:(k,v)=>store.set(k,v)},navigator:device.navigator||{},innerWidth:device.viewport?.width||1100,innerHeight:device.viewport?.height||800,visualViewport:device.viewport,AudioContext:device.AudioContext,CrocoMusic:device.CrocoMusic,location:{protocol:'file:',href:'https://crocrocros.vercel.app/'+(device.search||''),search:device.search||''},performance:{now:()=>now},devicePixelRatio:1,requestAnimationFrame:fn=>raf=fn,setTimeout:(fn,ms)=>{timeouts.push({fn,at:now+ms});return timeouts.length;},clearTimeout:()=>{},console,Blob,URL,URLSearchParams,addEventListener:(n,f)=>events[n]=f};context.window=context;
  vm.createContext(context);vm.runInContext(fs.readFileSync(path.join(src,'app.js'),'utf8'),context);
  function frames(n){for(let i=0;i<n;i++){now+=1000/60;const cb=raf;cb?.(now);for(const t of timeouts)if(!t.done&&now>=t.at){t.done=true;t.fn();}}}
  return {els,store,frames,events,docEvents,context,get engine(){return engine;},key:(k,type='keydown')=>events[type]?.({key:k,preventDefault(){},repeat:false})};
@@ -79,3 +79,23 @@ console.log('PASS portrait gate, rotation pause/resume and held-input release, v
 let mediaCalls=0;const media={paused:true,setAttribute(){},play(){mediaCalls++;this.paused=false;return Promise.resolve();},pause(){this.paused=true;}};
 const legacyPhone=harness(new Map(),{viewport:{width:844,height:390,addEventListener(){}},navigator:{maxTouchPoints:5,userAgent:'iPhone'},AudioContext:PhoneAudio,CrocoMusic:SilentScore,createAudio:()=>media});legacyPhone.els.get('continueBtn').click();assert.equal(mediaCalls,1);assert.ok(media.src.startsWith('data:audio/wav;base64,'),'legacyPhone media is embedded for offline use');assert.equal(media.loop,true);assert.equal(media.paused,true,'opening intro stops legacyPhone channel');
 Promise.resolve().then(()=>Promise.resolve()).then(()=>{legacyPhone.els.get('begin').click();assert.equal(media.paused,false);legacyPhone.els.get('soundBtn').click();assert.equal(media.paused,true,'mute stops legacyPhone channel');console.log('PASS embedded legacyPhone iOS media fallback and stop/resume lifecycle (mock media).');}).catch(e=>{console.error(e);process.exitCode=1;});
+
+// Final-five playtesting has its own durable slot; the campaign is never overwritten.
+const campaignKey='crocrocros.progress.v1',trialKey='crocrocros.trials.finales.v1';
+const campaignBytes=h.store.get(campaignKey),trialStore=new Map([[campaignKey,campaignBytes]]);
+let trial=harness(trialStore,{search:'?essai=finales'});
+assert.ok(trial.els.get('modal').open);assert.ok(trial.els.get('modalBody').innerHTML.includes('ÉNIGMES 33 À 37'));
+for(let i=32;i<37;i++){assert.ok(trial.els.get('level-'+i));assert.equal(trial.els.get('level-'+i).disabled,false);}
+assert.equal(trial.els.get('level-31'),undefined);
+trial.els.get('level-34').click();trial.els.get('begin').click();trial.key('ArrowRight');trial.frames(20);trial.key('ArrowRight','keyup');trial.els.get('pauseBtn').click();
+const trialPosition=trial.engine.p[0].x;assert.ok(trialStore.has(trialKey));assert.equal(trialStore.get(campaignKey),campaignBytes);
+trial=harness(trialStore,{search:'?essai=finales'});trial.els.get('continueBtn').click();assert.equal(trial.engine.L.id,D.levels[34].id);assert.equal(trial.engine.p[0].x,trialPosition);
+trial.els.get('pauseBtn').click();trial.els.get('pauseMap').click();trial.els.get('level-36').click();assert.ok(trial.els.get('leaveYes'));trial.els.get('leaveYes').click();assert.equal(trial.engine.L.id,D.levels[36].id);trial.els.get('backMap').click();trial.els.get('trialAdventure').click();assert.equal(trial.context.location.href,'https://crocrocros.vercel.app/');assert.equal(trialStore.get(campaignKey),campaignBytes);
+for(let i=32;i<37;i++){
+ const store=new Map([[campaignKey,campaignBytes]]),t=harness(store,{search:'?essai=finales'});t.els.get('level-'+i).click();t.els.get('begin').click();
+ for(const c of require('./solutions.json')[i].commands){if(c.select!==undefined)t.engine.select(c.select);else for(let j=0;j<c.n;j++)t.engine.step(1/60,c.input);}
+ assert.ok(t.engine.won,'trial '+(i+1));assert.equal(JSON.parse(store.get(trialKey)).completed[D.levels[i].id].stars,3);assert.equal(store.get(campaignKey),campaignBytes);
+ if(i===32){t.frames(105);t.els.get('next').click();assert.equal(t.engine.L.id,D.levels[33].id);assert.equal(store.get(campaignKey),campaignBytes);}
+}
+const adventure=harness(trialStore);adventure.els.get('continueBtn').click();assert.equal(adventure.engine.L.id,JSON.parse(campaignBytes).current.levelId);adventure.els.get('pauseBtn').click();adventure.els.get('pauseHome').click();adventure.els.get('trialLink').click();assert.equal(adventure.context.location.href,'https://crocrocros.vercel.app/?essai=finales');
+console.log('PASS final-five direct access, independent autosave/reload, level switching, all five victories, next level, and intact campaign on return.');

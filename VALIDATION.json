@@ -1,5 +1,5 @@
 {
-  "version": "0.8.2",
+  "version": "0.8.3",
   "date": "2026-10-20",
   "authored_levels": 37,
   "reusable_passage_families": 13,
@@ -55,7 +55,9 @@
     "full_sprite_start_visibility": "passed (37 levels)",
     "starting_support_no_damage_or_plate_activation": "passed (120 idle frames per level)",
     "translated_v081_save_resume_to_victory": "passed (20 real mid-puzzle saves, all stars, no rebounds)",
-    "foreground_lever_readability": "passed (Canvas visual inspection)"
+    "foreground_lever_readability": "passed (Canvas visual inspection)",
+    "final_five_trials_access_and_completion": "passed (five normal-control victories, minimal DOM)",
+    "trial_save_isolation_reload_and_return": "passed (campaign bytes unchanged)"
   },
   "not_verified": [
     "Real browser layout and interaction",
@@ -64,7 +66,7 @@
     "Musical quality audition on a physical device",
     "Physical iPhone / Safari: landscape layout, silent-switch audio and legacy fallback"
   ],
-  "standalone_sha256": "0894986dd265937a362e45ef7474b4dcbaeceb21c39082e76f3f104d5f6046eb",
+  "standalone_sha256": "9344de2802084ef144774e433115b8bcb367abdf9f98872107ff925200db6903",
   "handcrafted_opening_levels": 12,
   "remaining_v03_levels": 25,
   "difficulty_human_validated": false,
@@ -94,9 +96,9 @@
     "project_id": "prj_e9EVoySujjxJXVBBOfltR3r7mvcu",
     "team_id": "team_87fsqXXj6HjjMn2vPzSZyIrL",
     "url": "https://crocrocros.vercel.app/",
-    "deployment_id": "dpl_J2vNeQd3nR5Rnu1PbpytKdaujUwe",
+    "deployment_id": "dpl_H6ySVWWXu2f8sfCKypQfhZtdiGtu",
     "deployment": "READY production",
-    "verified_source_commit": "517d2974983db4b3309cb26276fef82ef4ce2387",
+    "verified_source_commit": "c7a0bfef5d4fbe081763385a677ea7dcd1752ab5",
     "anonymous_http_checks": {
       "/": 200,
       "/sw.js": 200,
@@ -105,7 +107,7 @@
       "/icon-512.png": 200
     },
     "all_five_assets_match_local_bytes": true,
-    "verification_version": "0.8.1"
+    "verification_version": "0.8.2"
   },
   "clear_starting_areas": 37,
   "corrected_starting_areas": 20

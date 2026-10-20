@@ -97,3 +97,14 @@ body.gameboy .gb-button-a{transform:translateY(-12px)}body.gameboy .gb-button-b{
 body.gameboy .gb-system{grid-column:2;grid-row:3;gap:16px;min-width:0}
 body.gameboy .gb-current{min-width:100px}
 @media(max-width:740px){body.gameboy #game{grid-template-columns:128px minmax(0,1fr) 148px}body.gameboy .gb-system{gap:8px}body.gameboy .gb-system-button{width:60px}body.gameboy .gb-buttons{gap:10px}}
+
+/* Direct character selection, without reducing the full-width playfield. */
+body.gameboy .gb-system{gap:12px;padding:0 4px}
+.gb-heroes{display:flex;gap:8px;min-width:0;flex:1;max-width:280px}
+.gb-hero{position:relative;display:flex;flex:1;min-width:0;height:88px;flex-direction:column;align-items:center;justify-content:center;gap:3px;padding:3px 2px;border:2px solid #b7c5ab;border-radius:12px;background:#f4f1df;box-shadow:0 3px 0 #bbc5ac}
+.gb-hero canvas{width:58px;height:58px;pointer-events:none}
+.gb-hero strong{font-size:11px;white-space:nowrap;pointer-events:none}
+.gb-hero.active{border-color:#244a40;background:#ffe5a0;box-shadow:0 3px 0 #244a40}
+.gb-hero.active:after{content:'✓';position:absolute;top:3px;right:4px;width:17px;height:17px;border-radius:50%;background:#244a40;color:#fff9de;font-size:12px;font-weight:900;text-align:center}
+body.gameboy .gb-system-button{flex-shrink:0;width:60px}
+@media(max-width:740px){body.gameboy .gb-system{gap:8px}.gb-heroes{gap:6px}.gb-hero strong{font-size:10px}body.gameboy .gb-system-button{width:48px}}

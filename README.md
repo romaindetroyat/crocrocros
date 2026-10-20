@@ -1,8 +1,17 @@
 # Les Cro Cro Cros
 
-Jeu de plateforme et d’énigmes en solo, en français, jouable hors ligne. Trois crocodiles complémentaires, 37 étapes, six chapitres et 111 étoiles facultatives.
+Jeu de plateforme et d’énigmes en solo, en français, jouable hors ligne. Trois crocodiles complémentaires, 100 étapes, dix chapitres et 300 étoiles facultatives.
 
-**Version 0.9.0 — atelier de refonte : trois niveaux étalons, monde vertical et animaux qui actionnent les mécanismes.**
+**Version 1.0.0 — campagne de 100 niveaux : objets transportables, mécanismes réversibles, cartes à plusieurs étages et coopération.**
+
+[Jouer en mode libre](https://crocrocros.vercel.app/?essai=libre) · [Ancienne aventure de 37 niveaux](https://crocrocros.vercel.app/?campagne=classique)
+
+La campagne normale déverrouille les niveaux dans l’ordre ; le mode libre ouvre les 100 cartes avec une sauvegarde distincte. Les anciennes sauvegardes restent attachées à l’ancienne aventure. **F** (ou le bouton main) prend, pose, transmet ou installe un objet et manœuvre les commandes ; **Espace** conserve la capacité du personnage. **M** ouvre le plan et les conditions des passages.
+
+Validation : 100 parcours enregistrés avec les commandes du moteur, 300 étoiles obtenues, aucun retour après collision ; 2 187 états de sauvegarde validés et restaurés. Ce contrôle prouve une solution accessible par carte, pas l’équilibrage pour tous les joueurs ni l’absence de tout détour possible. Voir [le bilan de version](design/LIVRAISON_100_NIVEAUX.md).
+
+Reproduire : `node content/campaign100.cjs`, `node tests/campaign100.test.cjs`, `node tests/campaign100-state.test.cjs`, `node tests/campaign100-app.test.cjs`, `python3 build.py`, `node tests/package.test.cjs`. Les tests de rendu/app demandent `@napi-rs/canvas` ; le jeu livré n’a pas de dépendance.
+
 
 ![Les personnages dessinés par le moteur du jeu](docs/personnages-v07.png)
 
@@ -22,7 +31,7 @@ Ouvrir `http://localhost:8080`. L’installation PWA nécessite HTTPS ou localho
 
 ## Atelier de refonte
 
-**[Tester les trois nouveaux niveaux](https://crocrocros.vercel.app/?essai=refonte)** : Le départ par les toits (prise en main), Le moulin enrhumé (coopération) et Le fort des trois relais (épreuve avancée). Le bouton est aussi présent à l’accueil.
+**[Tester les trois nouveaux niveaux](https://crocrocros.vercel.app/?essai=refonte)** : Le départ par les toits (prise en main), Le moulin enrhumé (coopération) et Le fort des trois relais (épreuve avancée). Archive de l’atelier 0.9.0, distincte de la nouvelle campagne.
 
 Ces niveaux sont le premier jalon de la refonte des 37 énigmes, pas une campagne déjà reconstruite. Ils introduisent des mondes de 1 000 à 2 200 unités de hauteur, une caméra sur deux axes, des récepteurs de noix de coco et un chariot déplacé par le souffle d’un hippopotame. Le fort demande des déplacements entre postes éloignés, deux reconfigurations du contrepoids et le retour de toute l’équipe.
 

@@ -1,0 +1,602 @@
+[
+  {
+    "levelId": "voyage-001",
+    "seconds": 10,
+    "stars": 3,
+    "rooms": 2
+  },
+  {
+    "levelId": "voyage-002",
+    "seconds": 9,
+    "stars": 3,
+    "rooms": 2
+  },
+  {
+    "levelId": "voyage-003",
+    "seconds": 11,
+    "stars": 3,
+    "rooms": 2
+  },
+  {
+    "levelId": "voyage-004",
+    "seconds": 13,
+    "stars": 3,
+    "rooms": 2
+  },
+  {
+    "levelId": "voyage-005",
+    "seconds": 11,
+    "stars": 3,
+    "rooms": 2
+  },
+  {
+    "levelId": "voyage-006",
+    "seconds": 11,
+    "stars": 3,
+    "rooms": 2
+  },
+  {
+    "levelId": "voyage-007",
+    "seconds": 26,
+    "stars": 3,
+    "rooms": 4
+  },
+  {
+    "levelId": "voyage-008",
+    "seconds": 12,
+    "stars": 3,
+    "rooms": 2
+  },
+  {
+    "levelId": "voyage-009",
+    "seconds": 17,
+    "stars": 3,
+    "rooms": 4
+  },
+  {
+    "levelId": "voyage-010",
+    "seconds": 30,
+    "stars": 3,
+    "rooms": 4
+  },
+  {
+    "levelId": "voyage-011",
+    "seconds": 13,
+    "stars": 3,
+    "rooms": 2
+  },
+  {
+    "levelId": "voyage-012",
+    "seconds": 21,
+    "stars": 3,
+    "rooms": 4
+  },
+  {
+    "levelId": "voyage-013",
+    "seconds": 26,
+    "stars": 3,
+    "rooms": 4
+  },
+  {
+    "levelId": "voyage-014",
+    "seconds": 21,
+    "stars": 3,
+    "rooms": 4
+  },
+  {
+    "levelId": "voyage-015",
+    "seconds": 36,
+    "stars": 3,
+    "rooms": 6
+  },
+  {
+    "levelId": "voyage-016",
+    "seconds": 34,
+    "stars": 3,
+    "rooms": 4
+  },
+  {
+    "levelId": "voyage-017",
+    "seconds": 26,
+    "stars": 3,
+    "rooms": 4
+  },
+  {
+    "levelId": "voyage-018",
+    "seconds": 37,
+    "stars": 3,
+    "rooms": 6
+  },
+  {
+    "levelId": "voyage-019",
+    "seconds": 23,
+    "stars": 3,
+    "rooms": 6
+  },
+  {
+    "levelId": "voyage-020",
+    "seconds": 38,
+    "stars": 3,
+    "rooms": 6
+  },
+  {
+    "levelId": "voyage-021",
+    "seconds": 24,
+    "stars": 3,
+    "rooms": 4
+  },
+  {
+    "levelId": "voyage-022",
+    "seconds": 30,
+    "stars": 3,
+    "rooms": 6
+  },
+  {
+    "levelId": "voyage-023",
+    "seconds": 29,
+    "stars": 3,
+    "rooms": 6
+  },
+  {
+    "levelId": "voyage-024",
+    "seconds": 43,
+    "stars": 3,
+    "rooms": 9
+  },
+  {
+    "levelId": "voyage-025",
+    "seconds": 34,
+    "stars": 3,
+    "rooms": 6
+  },
+  {
+    "levelId": "voyage-026",
+    "seconds": 46,
+    "stars": 3,
+    "rooms": 6
+  },
+  {
+    "levelId": "voyage-027",
+    "seconds": 34,
+    "stars": 3,
+    "rooms": 6
+  },
+  {
+    "levelId": "voyage-028",
+    "seconds": 36,
+    "stars": 3,
+    "rooms": 6
+  },
+  {
+    "levelId": "voyage-029",
+    "seconds": 40,
+    "stars": 3,
+    "rooms": 9
+  },
+  {
+    "levelId": "voyage-030",
+    "seconds": 58,
+    "stars": 3,
+    "rooms": 9
+  },
+  {
+    "levelId": "voyage-031",
+    "seconds": 21,
+    "stars": 3,
+    "rooms": 4
+  },
+  {
+    "levelId": "voyage-032",
+    "seconds": 32,
+    "stars": 3,
+    "rooms": 6
+  },
+  {
+    "levelId": "voyage-033",
+    "seconds": 23,
+    "stars": 3,
+    "rooms": 6
+  },
+  {
+    "levelId": "voyage-034",
+    "seconds": 47,
+    "stars": 3,
+    "rooms": 9
+  },
+  {
+    "levelId": "voyage-035",
+    "seconds": 31,
+    "stars": 3,
+    "rooms": 6
+  },
+  {
+    "levelId": "voyage-036",
+    "seconds": 17,
+    "stars": 3,
+    "rooms": 3
+  },
+  {
+    "levelId": "voyage-037",
+    "seconds": 28,
+    "stars": 3,
+    "rooms": 6
+  },
+  {
+    "levelId": "voyage-038",
+    "seconds": 38,
+    "stars": 3,
+    "rooms": 6
+  },
+  {
+    "levelId": "voyage-039",
+    "seconds": 29,
+    "stars": 3,
+    "rooms": 6
+  },
+  {
+    "levelId": "voyage-040",
+    "seconds": 50,
+    "stars": 3,
+    "rooms": 9
+  },
+  {
+    "levelId": "voyage-041",
+    "seconds": 55,
+    "stars": 3,
+    "rooms": 9
+  },
+  {
+    "levelId": "voyage-042",
+    "seconds": 45,
+    "stars": 3,
+    "rooms": 9
+  },
+  {
+    "levelId": "voyage-043",
+    "seconds": 30,
+    "stars": 3,
+    "rooms": 6
+  },
+  {
+    "levelId": "voyage-044",
+    "seconds": 33,
+    "stars": 3,
+    "rooms": 6
+  },
+  {
+    "levelId": "voyage-045",
+    "seconds": 48,
+    "stars": 3,
+    "rooms": 8
+  },
+  {
+    "levelId": "voyage-046",
+    "seconds": 28,
+    "stars": 3,
+    "rooms": 6
+  },
+  {
+    "levelId": "voyage-047",
+    "seconds": 57,
+    "stars": 3,
+    "rooms": 9
+  },
+  {
+    "levelId": "voyage-048",
+    "seconds": 71,
+    "stars": 3,
+    "rooms": 9
+  },
+  {
+    "levelId": "voyage-049",
+    "seconds": 45,
+    "stars": 3,
+    "rooms": 9
+  },
+  {
+    "levelId": "voyage-050",
+    "seconds": 84,
+    "stars": 3,
+    "rooms": 12
+  },
+  {
+    "levelId": "voyage-051",
+    "seconds": 34,
+    "stars": 3,
+    "rooms": 6
+  },
+  {
+    "levelId": "voyage-052",
+    "seconds": 51,
+    "stars": 3,
+    "rooms": 9
+  },
+  {
+    "levelId": "voyage-053",
+    "seconds": 34,
+    "stars": 3,
+    "rooms": 6
+  },
+  {
+    "levelId": "voyage-054",
+    "seconds": 24,
+    "stars": 3,
+    "rooms": 4
+  },
+  {
+    "levelId": "voyage-055",
+    "seconds": 52,
+    "stars": 3,
+    "rooms": 9
+  },
+  {
+    "levelId": "voyage-056",
+    "seconds": 47,
+    "stars": 3,
+    "rooms": 9
+  },
+  {
+    "levelId": "voyage-057",
+    "seconds": 36,
+    "stars": 3,
+    "rooms": 9
+  },
+  {
+    "levelId": "voyage-058",
+    "seconds": 47,
+    "stars": 3,
+    "rooms": 9
+  },
+  {
+    "levelId": "voyage-059",
+    "seconds": 58,
+    "stars": 3,
+    "rooms": 12
+  },
+  {
+    "levelId": "voyage-060",
+    "seconds": 76,
+    "stars": 3,
+    "rooms": 12
+  },
+  {
+    "levelId": "voyage-061",
+    "seconds": 34,
+    "stars": 3,
+    "rooms": 6
+  },
+  {
+    "levelId": "voyage-062",
+    "seconds": 48,
+    "stars": 3,
+    "rooms": 9
+  },
+  {
+    "levelId": "voyage-063",
+    "seconds": 45,
+    "stars": 3,
+    "rooms": 9
+  },
+  {
+    "levelId": "voyage-064",
+    "seconds": 23,
+    "stars": 3,
+    "rooms": 6
+  },
+  {
+    "levelId": "voyage-065",
+    "seconds": 57,
+    "stars": 3,
+    "rooms": 9
+  },
+  {
+    "levelId": "voyage-066",
+    "seconds": 46,
+    "stars": 3,
+    "rooms": 9
+  },
+  {
+    "levelId": "voyage-067",
+    "seconds": 50,
+    "stars": 3,
+    "rooms": 9
+  },
+  {
+    "levelId": "voyage-068",
+    "seconds": 67,
+    "stars": 3,
+    "rooms": 12
+  },
+  {
+    "levelId": "voyage-069",
+    "seconds": 66,
+    "stars": 3,
+    "rooms": 10
+  },
+  {
+    "levelId": "voyage-070",
+    "seconds": 86,
+    "stars": 3,
+    "rooms": 12
+  },
+  {
+    "levelId": "voyage-071",
+    "seconds": 13,
+    "stars": 3,
+    "rooms": 2
+  },
+  {
+    "levelId": "voyage-072",
+    "seconds": 42,
+    "stars": 3,
+    "rooms": 9
+  },
+  {
+    "levelId": "voyage-073",
+    "seconds": 45,
+    "stars": 3,
+    "rooms": 9
+  },
+  {
+    "levelId": "voyage-074",
+    "seconds": 21,
+    "stars": 3,
+    "rooms": 4
+  },
+  {
+    "levelId": "voyage-075",
+    "seconds": 46,
+    "stars": 3,
+    "rooms": 9
+  },
+  {
+    "levelId": "voyage-076",
+    "seconds": 39,
+    "stars": 3,
+    "rooms": 9
+  },
+  {
+    "levelId": "voyage-077",
+    "seconds": 55,
+    "stars": 3,
+    "rooms": 9
+  },
+  {
+    "levelId": "voyage-078",
+    "seconds": 51,
+    "stars": 3,
+    "rooms": 12
+  },
+  {
+    "levelId": "voyage-079",
+    "seconds": 36,
+    "stars": 3,
+    "rooms": 9
+  },
+  {
+    "levelId": "voyage-080",
+    "seconds": 74,
+    "stars": 3,
+    "rooms": 12
+  },
+  {
+    "levelId": "voyage-081",
+    "seconds": 34,
+    "stars": 3,
+    "rooms": 9
+  },
+  {
+    "levelId": "voyage-082",
+    "seconds": 64,
+    "stars": 3,
+    "rooms": 12
+  },
+  {
+    "levelId": "voyage-083",
+    "seconds": 71,
+    "stars": 3,
+    "rooms": 12
+  },
+  {
+    "levelId": "voyage-084",
+    "seconds": 37,
+    "stars": 3,
+    "rooms": 6
+  },
+  {
+    "levelId": "voyage-085",
+    "seconds": 46,
+    "stars": 3,
+    "rooms": 12
+  },
+  {
+    "levelId": "voyage-086",
+    "seconds": 67,
+    "stars": 3,
+    "rooms": 12
+  },
+  {
+    "levelId": "voyage-087",
+    "seconds": 59,
+    "stars": 3,
+    "rooms": 12
+  },
+  {
+    "levelId": "voyage-088",
+    "seconds": 44,
+    "stars": 3,
+    "rooms": 12
+  },
+  {
+    "levelId": "voyage-089",
+    "seconds": 86,
+    "stars": 3,
+    "rooms": 12
+  },
+  {
+    "levelId": "voyage-090",
+    "seconds": 109,
+    "stars": 3,
+    "rooms": 16
+  },
+  {
+    "levelId": "voyage-091",
+    "seconds": 67,
+    "stars": 3,
+    "rooms": 12
+  },
+  {
+    "levelId": "voyage-092",
+    "seconds": 68,
+    "stars": 3,
+    "rooms": 12
+  },
+  {
+    "levelId": "voyage-093",
+    "seconds": 64,
+    "stars": 3,
+    "rooms": 12
+  },
+  {
+    "levelId": "voyage-094",
+    "seconds": 36,
+    "stars": 3,
+    "rooms": 6
+  },
+  {
+    "levelId": "voyage-095",
+    "seconds": 100,
+    "stars": 3,
+    "rooms": 16
+  },
+  {
+    "levelId": "voyage-096",
+    "seconds": 85,
+    "stars": 3,
+    "rooms": 12
+  },
+  {
+    "levelId": "voyage-097",
+    "seconds": 71,
+    "stars": 3,
+    "rooms": 16
+  },
+  {
+    "levelId": "voyage-098",
+    "seconds": 118,
+    "stars": 3,
+    "rooms": 16
+  },
+  {
+    "levelId": "voyage-099",
+    "seconds": 69,
+    "stars": 3,
+    "rooms": 16
+  },
+  {
+    "levelId": "voyage-100",
+    "seconds": 142,
+    "stars": 3,
+    "rooms": 16
+  }
+]

@@ -17,7 +17,7 @@ const Wildlife={
  },
  tick(E,dt){
   const p=E.p[E.active];
-  for(const e of E.enemies){e.anim+=dt;if(e.calmWhen?.every(id=>E.flag(id))){e.asleep=true;E.flags[e.id]=true;e.y=e.homeY-(e.hover||0);}if(e.asleep)continue;e.stun=Math.max(0,e.stun-dt);e.timer-=dt;
+  for(const e of E.enemies){e.anim+=dt;if(e.calmWhen?.every(id=>E.flag(id))){e.asleep=true;E.flags[e.id]=true;e.y=e.homeY-(e.hover||0);}if(e.asleep)continue;e.distracted=false;if(e.lureItem&&E.expedition){const toy=E.expedition.items.find(i=>i.id===e.lureItem&&Math.abs(i.y-e.homeY)<120&&i.x>=e.minX-150&&i.x<=e.maxX+150);if(toy){e.distracted=true;e.dir=Math.sign(toy.x-e.x)||e.dir;e.x=clamp(e.x+Math.sign(toy.x-e.x)*Math.min(Math.max(0,Math.abs(toy.x-e.x)-(toy.holder>=0?90:0)),e.speed*1.6*dt),e.minX,e.maxX);e.y=e.homeY;e.phase='recover';e.timer=1;e.stun=0;continue;}}e.stun=Math.max(0,e.stun-dt);e.timer-=dt;
    const canSee=Math.abs(p.y-e.homeY)<65&&Math.abs(p.x-e.x)<(e.kind==='vulture'?260:240)&&!E.solids().some(s=>!s.shield&&!s.oneway&&s.h>50&&s.x>Math.min(e.x,p.x)+30&&s.x<Math.max(e.x,p.x)-30&&s.y<e.homeY&&s.y+s.h>e.homeY-30);
    if(e.stun){e.phase='recover';e.timer=Math.max(e.timer,.65);e.y=e.homeY-(e.hover||0);continue;}
    if(e.phase==='patrol'){

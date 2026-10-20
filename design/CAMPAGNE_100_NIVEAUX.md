@@ -1,6 +1,6 @@
 # Les Cro Cro Cros — conception d’une campagne de 100 niveaux
 
-Date : 20 octobre 2026. Statut : **recherche et propositions de conception ; aucun des 100 niveaux ci-dessous n’est déclaré implémenté ou validé comme jouable**.
+Date : 20 octobre 2026. Statut : **dossier de conception initial. Une campagne jouable de 100 cartes portant ces noms est désormais implémentée en version 1.0.0 ; les détails ci-dessous restent des intentions, certaines adaptées au moteur. Voir LIVRAISON_100_NIVEAUX.md pour le périmètre réel et les validations.**
 
 Ce document étend l’objectif de campagne de 37 à 100 niveaux. Il remplace la cible quantitative et la progression envisagées dans REFONTE_CAMPAGNE.md, qui reste l’historique du diagnostic et de l’atelier 0.9.0. Le retour utilisateur sur cet atelier est désormais connu : encore trop simple et sommaire. Sa réalisation technique ne constitue donc pas un étalon de qualité validé.
 
@@ -416,3 +416,4 @@ Les décors ont trois couches séparées : fond animé ; éléments jouables net
 6. Intégrer la campagne de 100 niveaux avec migration documentée de la progression. Les identifiants des anciennes et nouvelles cartes doivent rester distincts ; ne pas convertir une ancienne victoire en validation d’une nouvelle énigme non jouée.
 
 **Livrable de ce travail : un catalogue de 100 intentions, une progression, un socle de règles et cinq fiches avancées. Ce document ne constitue ni 100 niveaux jouables, ni une validation de difficulté, ni un déploiement du jeu.**
+

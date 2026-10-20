@@ -38,3 +38,7 @@ body.portrait-blocked{overflow:hidden}body.portrait-blocked #game,body.portrait-
  .game-top #starCount{font-size:14px;margin-right:1px}.game-tools{gap:1px}.level-heading span{display:none}.level-heading strong{max-width:100px}
  .hero-select{gap:3px}.hero-card canvas{width:38px;height:42px}.hero-card{max-width:65px}.game-bottom{gap:5px;padding-left:6px;padding-right:6px}.movement,.abilities{gap:4px}.control{width:48px;min-width:48px}.action{width:68px;min-width:68px}.action.small{width:56px;min-width:56px}.abilities.climbing .action{width:65px;min-width:65px}.abilities.climbing .action.small{width:48px;min-width:48px}
 }
+
+/* Compact but separate object action, including landscape touch controls. */
+.control.cargo{background:#d7e4df;min-width:58px;width:58px}.quest-link{display:inline-block}.quest-banner{flex-wrap:wrap}
+@media(max-height:520px) and (orientation:landscape){.control.cargo{min-width:48px;width:48px}.hero-card{min-width:0}.hero-select{gap:3px}.game-bottom{gap:5px}}

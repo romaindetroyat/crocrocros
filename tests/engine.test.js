@@ -1,11 +1,11 @@
 'use strict';
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
 const {levels}=require('../src/levels.js'),Engine=require('../src/engine.js'),recipes=require('./recipes.json');
-let E,commands=[],context='';
+let E,commands=[],context='',routeOffset=0;
 function tick(n,input={}){const last=commands.at(-1);if(last?.input&&JSON.stringify(last.input)===JSON.stringify(input))last.n+=n;else commands.push({n,input});for(let j=0;j<n;j++)E.step(1/60,input);}
 function select(i){E.select(i);commands.push({select:i});tick(2);}
-function walk(x,max=500){let n=0;while(!E.won&&Math.abs(E.p[E.active].x-x)>4&&n++<max)tick(1,{right:x>E.p[E.active].x,left:x<E.p[E.active].x});assert.ok(n<max,`${context}: walk blocked hero ${E.active}, desired ${x}, actual ${E.p[E.active].x}, y ${E.p[E.active].y}`);tick(3);}
-function jumpTo(x){tick(1,{jump:true});let n=0;while(n++<160){const p=E.p[E.active],dx=x-p.x;tick(1,{right:dx>3,left:dx< -3});if(E.p[E.active].ground&&n>8)break;}assert.ok(n<160,`${context}: jump never landed`);}
+function walk(x,max=500){x+=routeOffset;let n=0;while(!E.won&&Math.abs(E.p[E.active].x-x)>4&&n++<max)tick(1,{right:x>E.p[E.active].x,left:x<E.p[E.active].x});assert.ok(n<max,`${context}: walk blocked hero ${E.active}, desired ${x}, actual ${E.p[E.active].x}, y ${E.p[E.active].y}`);tick(3);}
+function jumpTo(x){x+=routeOffset;tick(1,{jump:true});let n=0;while(n++<160){const p=E.p[E.active],dx=x-p.x;tick(1,{right:dx>3,left:dx< -3});if(E.p[E.active].ground&&n>8)break;}assert.ok(n<160,`${context}: jump never landed`);}
 function action(){tick(1,{action:true});tick(26);}
 function roofAt(x){select(1);walk(x);if(!E.p[1].roof)action();}
 function climb(shieldX,platformX){select(0);walk(shieldX-55);jumpTo(shieldX);assert.ok(Math.abs(E.p[0].y-433)<2,`${context}: shield ${E.p[0].y}`);jumpTo(platformX);assert.ok(Math.abs(E.p[0].y-340)<2,`${context}: platform ${E.p[0].y}`);}
@@ -48,7 +48,7 @@ function solve(step,m){const {type,offset:o,width:w}=step,p=`m${m}-`;context=`${
 const routes=[],report=[];
 for(let index=0;index<levels.length;index++){
  E=new Engine(levels[index]);commands=[];tick(30);
- if(recipes[index].custom){context=E.L.name;require('./opening-solutions.cjs')(recipes[index].custom,{E,tick,select,walk,jumpTo,action,roofAt,climb,shootFrom,waitUntil,assert});}else recipes[index].steps.forEach(solve);
+ if(recipes[index].custom){context=E.L.name;routeOffset=E.L.startOffset||0;require('./opening-solutions.cjs')(recipes[index].custom,{E,tick,select,walk,jumpTo,action,roofAt,climb,shootFrom,waitUntil,assert});routeOffset=0;}else recipes[index].steps.forEach(solve);
  if(E.zebra&&!E.zebra.caught){const z=E.zebra;select(z.mode==='snack'?2:0);walk((z.minX+z.maxX)/2);
   if(z.mode==='snack'){let tries=0;while(!z.ready&&tries++<5){tick(1,{right:z.x>E.p[2].x,left:z.x<E.p[2].x});action();tick(25);}assert.ok(z.ready,`${context}: feed zebra`);}
   else waitUntil(()=>z.ready,'zebra offers star',600);

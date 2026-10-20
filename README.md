@@ -2,7 +2,7 @@
 
 Jeu de plateforme et d’énigmes en solo, en français, jouable hors ligne. Trois crocodiles complémentaires, 37 étapes, six chapitres et 111 étoiles facultatives.
 
-**Version 0.8.1 — affichage paysage responsive et audio multimédia sur iPhone.**
+**Version 0.8.2 — départs dégagés et leviers toujours lisibles.**
 
 ![Les personnages dessinés par le moteur du jeu](docs/personnages-v07.png)
 
@@ -27,7 +27,11 @@ Ouvrir `http://localhost:8080`. L’installation PWA nécessite HTTPS ou localho
 - **Espace** : capacité, interaction ou étoile offerte par un zèbre.
 - **R** : rembobiner ; **M** : vue d’ensemble ; **Échap** : pause.
 
-Commandes tactiles disponibles. Sur téléphone et tablette, le jeu se met en attente en portrait et reprend en paysage. Les proportions sont préservées au redimensionnement, y compris lorsque les barres de Safari changent de taille. Sur iOS 17 et ultérieur, la session audio `playback` utilise le volume multimédia, indépendamment du commutateur de sonnerie. Un média silencieux embarqué sert de compatibilité pour les anciens iOS. Un premier appui reste nécessaire. La version 0.8.1 conserve aussi la tentative en cours. Progression locale, export/import dans les réglages. La mise à jour 0.8 conserve les niveaux terminés et leurs étoiles ; la tentative en cours repart au début de son niveau pour charger les nouveaux placements. Pour passer du fichier local au site Vercel, exporter puis importer la progression dans les réglages.
+Commandes tactiles disponibles. Sur téléphone et tablette, le jeu se met en attente en portrait et reprend en paysage. Les proportions sont préservées au redimensionnement, y compris lorsque les barres de Safari changent de taille. Sur iOS 17 et ultérieur, la session audio `playback` utilise le volume multimédia, indépendamment du commutateur de sonnerie. Un média silencieux embarqué sert de compatibilité pour les anciens iOS. Un premier appui reste nécessaire. Les versions 0.8.1 et 0.8.2 conservent aussi la tentative en cours. Progression locale, export/import dans les réglages. La mise à jour 0.8 conserve les niveaux terminés et leurs étoiles ; la tentative en cours repart au début de son niveau pour charger les nouveaux placements. Pour passer du fichier local au site Vercel, exporter puis importer la progression dans les réglages.
+
+## Des départs lisibles
+
+Les 37 niveaux ont été vérifiés avec les dimensions complètes des personnages. Les 20 départs qui masquaient un mécanisme disposent désormais d’une courte zone libre, sans activation involontaire des dalles. Pendant le jeu, un levier recouvert par un croco s’affiche au premier plan avec son état au-dessus du personnage. Les sauvegardes 0.8/0.8.1 sont repositionnées sans perdre les actions déjà accomplies.
 
 ## Les zèbres
 
@@ -45,6 +49,7 @@ Cinq rencontres facultatives aux niveaux 4, 12, 19, 27 et 35, loin des sorties. 
 node content/author-campaign.cjs
 python3 build.py
 node tests/engine.test.js
+node tests/start-visibility.test.cjs
 node tests/exit.test.cjs
 node tests/blocks.test.cjs
 node tests/wildlife.test.cjs

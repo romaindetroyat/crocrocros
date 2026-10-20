@@ -7,6 +7,18 @@ function rect(g,x,y,w,h,r,fill,stroke=null,lw=3){path(g,c=>c.roundRect(x,y,w,h,r
 function line(g,x,y,x2,y2,c,lw=3){path(g,p=>{p.moveTo(x,y);p.lineTo(x2,y2);},null,c,lw);}
 function star(g,x,y,r,color){path(g,c=>{for(let i=0;i<10;i++){const a=i*Math.PI/5-Math.PI/2,rr=i%2?r*.45:r;c.lineTo(x+Math.cos(a)*rr,y+Math.sin(a)*rr);}c.closePath();},color,'#b18037',2);}
 function text(g,t,x,y,size=14,color=C.ink,align='center'){g.font=`800 ${size}px "Trebuchet MS", sans-serif`;g.textAlign=align;g.fillStyle=color;g.fillText(t,x,y);}
+function switchOccluders(E,sw){return E.p.filter(p=>Math.abs(p.x-sw.x)<95&&p.y>sw.y-80&&p.y-p.h<sw.y+6);}
+function drawSwitch(g,E,sw,front=false){
+ const on=E.flag(sw.id),near=switchOccluders(E,sw);
+ if(front)rect(g,sw.x-29,sw.y-59,58,61,12,'#fff0bfdd',C.ink,1);
+ rect(g,sw.x-23,sw.y-16,46,16,5,'#697c68',C.ink,2);line(g,sw.x,sw.y-17,sw.x+(on?17:-17),sw.y-49,'#445b50',7);ellipse(g,sw.x+(on?17:-17),sw.y-49,8,8,on?'#b6d57b':'#ed9b57',C.ink,2);
+ if(!front&&near.length)return;
+ const label=sw.toggle?sw.label+(on?' ●':' ○'):on?'✓':sw.label;
+ const y=front?Math.min(sw.y-112,...near.map(p=>p.y-p.h-28)):sw.y-68;
+ if(front){g.font='800 12px "Trebuchet MS", sans-serif';const w=Math.max(50,g.measureText(label).width+20);rect(g,sw.x-w/2,y-17,w,24,7,'#fff3cf',C.ink,1.5);line(g,sw.x,y+8,sw.x,sw.y-61,'#f6d78b',2);}
+ text(g,label,sw.x,y,12);
+}
+
 // Restrained light/shadow and a few large details remain legible at game scale.
 function tint(hex,mix){const n=parseInt(hex.slice(1),16),to=mix>0?255:0,a=Math.abs(mix);return '#'+[n>>16,(n>>8)&255,n&255].map(v=>Math.round(v+(to-v)*a).toString(16).padStart(2,'0')).join('');}
 function volume(g,y1,y2,base){const v=g.createLinearGradient(-18,y1,25,y2);v.addColorStop(0,tint(base,.22));v.addColorStop(.42,base);v.addColorStop(1,tint(base,-.19));return v;}
@@ -275,7 +287,7 @@ function render(g,W,H,E,camera,time=0){
  for(const b of L.bridges){if(E.open(b)){rect(g,b.x,b.y,b.w,b.h,4,'#c29a5f',C.ink,3);for(let x=b.x+14;x<b.x+b.w;x+=24)line(g,x,b.y,x,b.y+b.h,'#896d47',2);line(g,b.x,550,b.x+b.w,550,'#5e7753',3);}else{for(let x=b.x+10;x<b.x+b.w;x+=40)line(g,x,b.y+8,x+20,b.y+8,'#f7e4a960',3);text(g,b.id.endsWith('bridgeA')?'A seul':b.id.endsWith('bridgeB')?'B seul':'PONT REPLIÉ',b.x+b.w/2,b.y+64,12,'#e8edc9');}}
  for(const pad of L.pads){for(let j=0;j<6;j++)ellipse(g,pad.x+Math.cos(j)*14,pad.y-6+Math.sin(j)*4,8,4,'#f3d684');ellipse(g,pad.x,pad.y-6,7,4,'#b98242');}
  for(const sign of L.signs){line(g,sign.x,sign.y-3,sign.x,sign.y-70,'#81684c',6);rect(g,sign.x-63,sign.y-82,126,28,5,'#edcf8b',C.ink,2);text(g,sign.text,sign.x,sign.y-63,10);}
- for(const sw of L.switches){rect(g,sw.x-23,sw.y-16,46,16,5,'#697c68',C.ink,2);line(g,sw.x,sw.y-17,sw.x+(E.flags[sw.id]?17:-17),sw.y-49,'#445b50',7);ellipse(g,sw.x+(E.flags[sw.id]?17:-17),sw.y-49,8,8,E.flags[sw.id]?'#b6d57b':'#ed9b57',C.ink,2);text(g,sw.toggle?sw.label+(E.flag(sw.id)?' ●':' ○'):E.flags[sw.id]?'✓':sw.label,sw.x,sw.y-68,12);}
+ for(const sw of L.switches)drawSwitch(g,E,sw);
  for(const pl of L.plates){rect(g,pl.x,pl.y-8,pl.w,8,3,E.flag(pl.id)?'#d8dc8a':'#dfa954',C.ink,2);for(let j=0;j<3;j++)line(g,pl.x+15+j*22,pl.y-4,pl.x+19+j*22,pl.y-4,'#fff0bf',2);if(pl.label)text(g,pl.label,pl.x+pl.w/2,pl.y+24,10,'#fff0bd');}
  for(const gate of L.gates){const open=E.open(gate);if(gate.elephant){if(!open){line(g,gate.x,gate.y+gate.h,gate.x+gate.w,gate.y+gate.h,"#d5a765",4);text(g,"TROMPE BAISSÉE",gate.x+gate.w/2,gate.y-14,10);}continue;}line(g,gate.x-5,gate.y-15,gate.x-5,gate.y+gate.h,'#5b7460',10);line(g,gate.x+gate.w+5,gate.y-15,gate.x+gate.w+5,gate.y+gate.h,'#5b7460',10);rect(g,gate.x-14,gate.y-20,gate.w+28,22,4,'#d1aa67',C.ink,2);if(!open){rect(g,gate.x,gate.y,gate.w,gate.h,3,'#d4a15f',C.ink,2);for(let yy=gate.y+15;yy<gate.y+gate.h;yy+=26)line(g,gate.x+3,yy,gate.x+gate.w-3,yy+8,'#f0ce83',4);text(g,'×',gate.x+gate.w/2,gate.y+gate.h/2,22,C.ink);}else text(g,'✓',gate.x+gate.w/2,gate.y-28,22,'#335949');if(!open)(gate.requires||[]).forEach((id,i)=>{const k=(L.keys||[]).find(k=>k.id===id);ellipse(g,gate.x+gate.w/2,gate.y+35+i*28,8,8,E.flag(id)?'#a5c576':k?['#d7815b','#e9bd58','#6bacc8'][k.hero]:'#728e89',C.ink,2);});}
  for(const c of L.crates)if(!E.broken[c.id]){for(let y=c.y;y<c.y+c.h;y+=c.h/2){rect(g,c.x,y,c.w,c.h/2-2,4,'#be8954',C.ink,3);line(g,c.x+7,y+7,c.x+c.w-7,y+c.h/2-9,'#e8b976',6);line(g,c.x+c.w-7,y+7,c.x+7,y+c.h/2-9,'#8a603e',2);}}
@@ -291,6 +303,8 @@ function render(g,W,H,E,camera,time=0){
  if(E.zebra)zebra(g,E.zebra,time);pranks(g,E,time);
  // Draw active hero last for readability when heroes overlap.
  [0,1,2].filter(i=>i!==E.active).concat(E.active).forEach(i=>{g.save();if(E.p[i].invul>0)g.globalAlpha=.65; if(E.won)g.translate(0,-Math.abs(Math.sin((time-(E.celebrationAt||0)/1000)*8+i*.8))*12);croc(g,E.won?{...E.p[i],x:ex.x+5+i*70,face:1,joy:true}:E.p[i],i,time,i===E.active);g.restore();});
+ // Critical controls stay legible even when a hero walks across them.
+ for(const sw of L.switches)if(switchOccluders(E,sw).length)drawSwitch(g,E,sw,true);
  if(E.won){const t=time-(E.celebrationAt||0)/1000;for(let j=0;j<45;j++){const age=(t+j*.047)%2.2,x=ex.x+ex.w/2+Math.sin(j*2.4)*age*120,y=ex.y-100-age*170+age*age*92;g.save();g.translate(x,y);g.rotate(j+t*2);rect(g,-3,-3,6,10,1,['#f1c864','#cd8062','#91c6ad'][j%3]);g.restore();}const bannerX=Math.max(camera+150,Math.min(camera+W-150,ex.x+ex.w/2));rect(g,bannerX-145,ex.y-252,290,44,18,'#244a40e8');text(g,'BRAVO L’ÉQUIPE !',bannerX,ex.y-223,22,'#fff0bf');}
  for(const e of E.effects){g.globalAlpha=Math.max(0,e.life/.7);ellipse(g,e.x,e.y,4,4,e.c);}g.globalAlpha=1;
  g.restore();foreground(g,W,H,camera,L.scenery,time);

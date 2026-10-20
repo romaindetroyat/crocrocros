@@ -1,5 +1,5 @@
 {
-  "version": "0.8.1",
+  "version": "0.8.2",
   "date": "2026-10-20",
   "authored_levels": 37,
   "reusable_passage_families": 13,
@@ -51,7 +51,11 @@
     "zebra_placement_away_from_exit": "passed",
     "mobile_rotation_pause_inputs_and_viewport": "passed (minimal DOM)",
     "ios_playback_category_and_interruption": "passed (mock AudioContext)",
-    "legacy_ios_embedded_media_lifecycle": "passed (mock HTMLAudioElement)"
+    "legacy_ios_embedded_media_lifecycle": "passed (mock HTMLAudioElement)",
+    "full_sprite_start_visibility": "passed (37 levels)",
+    "starting_support_no_damage_or_plate_activation": "passed (120 idle frames per level)",
+    "translated_v081_save_resume_to_victory": "passed (20 real mid-puzzle saves, all stars, no rebounds)",
+    "foreground_lever_readability": "passed (Canvas visual inspection)"
   },
   "not_verified": [
     "Real browser layout and interaction",
@@ -60,7 +64,7 @@
     "Musical quality audition on a physical device",
     "Physical iPhone / Safari: landscape layout, silent-switch audio and legacy fallback"
   ],
-  "standalone_sha256": "920167176198e9199d4af656548624ba466b863a288c2626d6c9600f002f0a82",
+  "standalone_sha256": "0894986dd265937a362e45ef7474b4dcbaeceb21c39082e76f3f104d5f6046eb",
   "handcrafted_opening_levels": 12,
   "remaining_v03_levels": 25,
   "difficulty_human_validated": false,
@@ -90,9 +94,9 @@
     "project_id": "prj_e9EVoySujjxJXVBBOfltR3r7mvcu",
     "team_id": "team_87fsqXXj6HjjMn2vPzSZyIrL",
     "url": "https://crocrocros.vercel.app/",
-    "deployment_id": "dpl_4VCvMuyyySrJarbZ8RFjz3gjLzXW",
+    "deployment_id": "dpl_J2vNeQd3nR5Rnu1PbpytKdaujUwe",
     "deployment": "READY production",
-    "verified_source_commit": "7ce727fcb8080ae8cae535040fcf2a793b36e486",
+    "verified_source_commit": "517d2974983db4b3309cb26276fef82ef4ce2387",
     "anonymous_http_checks": {
       "/": 200,
       "/sw.js": 200,
@@ -101,6 +105,8 @@
       "/icon-512.png": 200
     },
     "all_five_assets_match_local_bytes": true,
-    "verification_version": "0.8.0"
-  }
+    "verification_version": "0.8.1"
+  },
+  "clear_starting_areas": 37,
+  "corrected_starting_areas": 20
 }

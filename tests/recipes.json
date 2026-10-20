@@ -67,12 +67,12 @@
     "steps": [
       {
         "type": "lift",
-        "offset": 0,
+        "offset": 160,
         "width": 720
       },
       {
         "type": "combination",
-        "offset": 720,
+        "offset": 880,
         "width": 720
       }
     ]
@@ -97,17 +97,17 @@
     "steps": [
       {
         "type": "portal",
-        "offset": 0,
+        "offset": 160,
         "width": 720
       },
       {
         "type": "ladder",
-        "offset": 720,
+        "offset": 880,
         "width": 720
       },
       {
         "type": "cover",
-        "offset": 1440,
+        "offset": 1600,
         "width": 720
       }
     ]
@@ -152,12 +152,12 @@
     "steps": [
       {
         "type": "lift",
-        "offset": 0,
+        "offset": 160,
         "width": 720
       },
       {
         "type": "spring",
-        "offset": 720,
+        "offset": 880,
         "width": 720
       }
     ]
@@ -187,17 +187,17 @@
     "steps": [
       {
         "type": "portal",
-        "offset": 0,
+        "offset": 160,
         "width": 720
       },
       {
         "type": "lift",
-        "offset": 720,
+        "offset": 880,
         "width": 720
       },
       {
         "type": "reverse",
-        "offset": 1440,
+        "offset": 1600,
         "width": 720
       }
     ]
@@ -242,12 +242,12 @@
     "steps": [
       {
         "type": "lift",
-        "offset": 0,
+        "offset": 160,
         "width": 720
       },
       {
         "type": "bridge",
-        "offset": 720,
+        "offset": 880,
         "width": 900
       }
     ]
@@ -307,12 +307,12 @@
     "steps": [
       {
         "type": "bridge",
-        "offset": 0,
+        "offset": 160,
         "width": 900
       },
       {
         "type": "combination",
-        "offset": 900,
+        "offset": 1060,
         "width": 720
       }
     ]
@@ -342,17 +342,17 @@
     "steps": [
       {
         "type": "portal",
-        "offset": 0,
+        "offset": 160,
         "width": 720
       },
       {
         "type": "combination",
-        "offset": 720,
+        "offset": 880,
         "width": 720
       },
       {
         "type": "reverse",
-        "offset": 1440,
+        "offset": 1600,
         "width": 720
       }
     ]
@@ -382,17 +382,17 @@
     "steps": [
       {
         "type": "lift",
-        "offset": 0,
+        "offset": 160,
         "width": 720
       },
       {
         "type": "portal",
-        "offset": 720,
+        "offset": 880,
         "width": 720
       },
       {
         "type": "bridge",
-        "offset": 1440,
+        "offset": 1600,
         "width": 900
       }
     ]
@@ -417,17 +417,17 @@
     "steps": [
       {
         "type": "portal",
-        "offset": 0,
+        "offset": 160,
         "width": 720
       },
       {
         "type": "reverse",
-        "offset": 720,
+        "offset": 880,
         "width": 720
       },
       {
         "type": "relay",
-        "offset": 1440,
+        "offset": 1600,
         "width": 780
       }
     ]
@@ -437,17 +437,17 @@
     "steps": [
       {
         "type": "combination",
-        "offset": 0,
+        "offset": 160,
         "width": 720
       },
       {
         "type": "portal",
-        "offset": 720,
+        "offset": 880,
         "width": 720
       },
       {
         "type": "bridge",
-        "offset": 1440,
+        "offset": 1600,
         "width": 900
       }
     ]
@@ -477,17 +477,17 @@
     "steps": [
       {
         "type": "bridge",
-        "offset": 0,
+        "offset": 160,
         "width": 900
       },
       {
         "type": "relay",
-        "offset": 900,
+        "offset": 1060,
         "width": 780
       },
       {
         "type": "armour",
-        "offset": 1680,
+        "offset": 1840,
         "width": 720
       }
     ]

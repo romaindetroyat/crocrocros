@@ -1,0 +1,224 @@
+[
+  {
+    "level": 1,
+    "id": "marais-01",
+    "clear": true,
+    "entranceAdded": 0
+  },
+  {
+    "level": 2,
+    "id": "marais-02",
+    "clear": true,
+    "entranceAdded": 160
+  },
+  {
+    "level": 3,
+    "id": "marais-03",
+    "clear": true,
+    "entranceAdded": 160
+  },
+  {
+    "level": 4,
+    "id": "expedition-04",
+    "clear": true,
+    "entranceAdded": 160
+  },
+  {
+    "level": 5,
+    "id": "expedition-05",
+    "clear": true,
+    "entranceAdded": 160
+  },
+  {
+    "level": 6,
+    "id": "expedition-06",
+    "clear": true,
+    "entranceAdded": 0
+  },
+  {
+    "level": 7,
+    "id": "expedition-07",
+    "clear": true,
+    "entranceAdded": 160
+  },
+  {
+    "level": 8,
+    "id": "expedition-08",
+    "clear": true,
+    "entranceAdded": 160
+  },
+  {
+    "level": 9,
+    "id": "expedition-09",
+    "clear": true,
+    "entranceAdded": 160
+  },
+  {
+    "level": 10,
+    "id": "expedition-10",
+    "clear": true,
+    "entranceAdded": 0
+  },
+  {
+    "level": 11,
+    "id": "expedition-11",
+    "clear": true,
+    "entranceAdded": 160
+  },
+  {
+    "level": 12,
+    "id": "expedition-12",
+    "clear": true,
+    "entranceAdded": 160
+  },
+  {
+    "level": 13,
+    "id": "expedition-13",
+    "clear": true,
+    "entranceAdded": 0
+  },
+  {
+    "level": 14,
+    "id": "expedition-14",
+    "clear": true,
+    "entranceAdded": 160
+  },
+  {
+    "level": 15,
+    "id": "expedition-15",
+    "clear": true,
+    "entranceAdded": 0
+  },
+  {
+    "level": 16,
+    "id": "expedition-16",
+    "clear": true,
+    "entranceAdded": 160
+  },
+  {
+    "level": 17,
+    "id": "expedition-17",
+    "clear": true,
+    "entranceAdded": 0
+  },
+  {
+    "level": 18,
+    "id": "expedition-18",
+    "clear": true,
+    "entranceAdded": 0
+  },
+  {
+    "level": 19,
+    "id": "expedition-19",
+    "clear": true,
+    "entranceAdded": 160
+  },
+  {
+    "level": 20,
+    "id": "expedition-20",
+    "clear": true,
+    "entranceAdded": 0
+  },
+  {
+    "level": 21,
+    "id": "expedition-21",
+    "clear": true,
+    "entranceAdded": 160
+  },
+  {
+    "level": 22,
+    "id": "expedition-22",
+    "clear": true,
+    "entranceAdded": 0
+  },
+  {
+    "level": 23,
+    "id": "expedition-23",
+    "clear": true,
+    "entranceAdded": 0
+  },
+  {
+    "level": 24,
+    "id": "expedition-24",
+    "clear": true,
+    "entranceAdded": 160
+  },
+  {
+    "level": 25,
+    "id": "expedition-25",
+    "clear": true,
+    "entranceAdded": 0
+  },
+  {
+    "level": 26,
+    "id": "expedition-26",
+    "clear": true,
+    "entranceAdded": 0
+  },
+  {
+    "level": 27,
+    "id": "expedition-27",
+    "clear": true,
+    "entranceAdded": 0
+  },
+  {
+    "level": 28,
+    "id": "expedition-28",
+    "clear": true,
+    "entranceAdded": 160
+  },
+  {
+    "level": 29,
+    "id": "expedition-29",
+    "clear": true,
+    "entranceAdded": 0
+  },
+  {
+    "level": 30,
+    "id": "expedition-30",
+    "clear": true,
+    "entranceAdded": 160
+  },
+  {
+    "level": 31,
+    "id": "expedition-31",
+    "clear": true,
+    "entranceAdded": 0
+  },
+  {
+    "level": 32,
+    "id": "expedition-32",
+    "clear": true,
+    "entranceAdded": 160
+  },
+  {
+    "level": 33,
+    "id": "expedition-33",
+    "clear": true,
+    "entranceAdded": 0
+  },
+  {
+    "level": 34,
+    "id": "expedition-34",
+    "clear": true,
+    "entranceAdded": 160
+  },
+  {
+    "level": 35,
+    "id": "expedition-35",
+    "clear": true,
+    "entranceAdded": 160
+  },
+  {
+    "level": 36,
+    "id": "expedition-36",
+    "clear": true,
+    "entranceAdded": 0
+  },
+  {
+    "level": 37,
+    "id": "expedition-37",
+    "clear": true,
+    "entranceAdded": 160
+  }
+]

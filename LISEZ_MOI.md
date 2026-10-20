@@ -1,6 +1,6 @@
 # Les Cro Cro Cros — La bannière du retour
 
-Version 0.8.1 · 20 octobre 2026
+Version 0.8.2 · 20 octobre 2026
 
 Jeu de plateforme et de réflexion en solo, en français. Trois crocodiles complémentaires, 37 étapes, six chapitres, 111 étoiles facultatives. Aucun compte, publicité, achat ou serveur de jeu. Tout le contenu est inclus et fonctionne hors ligne.
 
@@ -38,6 +38,12 @@ Les boutons tactiles permettent de marcher et agir simultanément. Un portrait s
 - **Croqueboum** tire des boulettes pour actionner les cibles ou envoyer les gêneurs faire une sieste.
 - Espace prend l’étoile d’un zèbre prêt à l’offrir à proximité ; sinon, il privilégie un levier ou une arche avant la capacité du personnage.
 - Les trois doivent rejoindre l’arrivée. Une sortie avec un sceau manquant demande d’abord de résoudre son mécanisme.
+
+## Correctif 0.8.2 : mécanismes visibles au départ
+
+Les 37 positions de départ ont été contrôlées en tenant compte des queues, museaux et boucliers. Une courte zone de départ libre a été ajoutée aux 20 niveaux concernés pour dégager leviers, dalles et échelles. Les énigmes conservent leur disposition relative. Les leviers passent également au premier plan lorsqu’un croco les recouvre, avec une étiquette d’état au-dessus de lui.
+
+La mise à jour depuis 0.8 ou 0.8.1 déplace les positions enregistrées avec les mécanismes : personnages, animaux et contrepoids suivent le même décalage. Les leviers actionnés, étoiles, temps écoulé et niveaux terminés sont conservés. Vérifications automatisées : 37 départs sans obstruction, 37 solutions avec trois étoiles et aucun rebond, et reprise de 20 sauvegardes réelles à mi-parcours jusqu’à la victoire.
 
 ## Correctif 0.8.1 : iPhone en paysage et son multimédia
 

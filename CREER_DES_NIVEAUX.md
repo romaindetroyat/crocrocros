@@ -97,3 +97,10 @@ Le texte `victory` résume la coopération accomplie. Il ne doit pas donner la s
 `exit.requires` permet une sortie initialement scellée. `scenery` choisit parmi harbour/canopy/falls/mill/ruins/moon/savannah/fair/fort. `zebra` associe une position au sol à l’identifiant d’une étoile facultative. `questReward` indique le morceau de bannière donné à la réussite ; les étapes de récompense sont définies dans quest.milestones.
 
 Les états ennemis et l’accroche aux échelles sont sauvegardés. Toute modification de géométrie ou d’ennemis d’une carte doit augmenter sa révision pour préserver les anciennes victoires tout en réinitialisant la tentative devenue incompatible.
+
+
+## Lisibilité des départs (0.8.2)
+
+La silhouette dessinée dépasse largement le corps utilisé pour les collisions : réserver environ 65 unités de chaque côté et 110 au-dessus des pieds. Le générateur `content/clear-starts.cjs` détecte les leviers, dalles, échelles, arches, cibles et clés masqués ; il ajoute si nécessaire une zone de départ de 160 unités en translatant ensemble tous les éléments de l’énigme. Le test `tests/start-visibility.test.cjs` vérifie les 37 départs et leur stabilité sans commande.
+
+Pour les cartes livrées en révision 7, la révision 8 et `startOffset` permettent une migration par translation des sauvegardes. Ne réutiliser cette migration que pour une translation pure ; une refonte de géométrie exige une nouvelle révision et une stratégie de sauvegarde adaptée.

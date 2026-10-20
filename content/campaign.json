@@ -1,5 +1,5 @@
 {
-  "version": 8,
+  "version": 9,
   "quest": {
     "title": "La bannière du retour",
     "intro": "Un grand barrissement a dispersé le régiment et déchiré sa bannière. Retrouvez ses six morceaux, traversez le pays des éléphants et ramenez tout le monde au marais.",
@@ -208,7 +208,7 @@
     },
     {
       "id": "marais-02",
-      "revision": 7,
+      "revision": 8,
       "chapter": "Le port des étourdis",
       "name": "Le poste de guet",
       "subtitle": "Personne ne reste derrière",
@@ -235,19 +235,19 @@
         {
           "x": 0,
           "y": 520,
-          "w": 1270,
+          "w": 1430,
           "h": 160,
           "oneway": false
         },
         {
-          "x": 195,
+          "x": 355,
           "y": 320,
           "w": 300,
           "h": 18,
           "oneway": true
         },
         {
-          "x": 680,
+          "x": 840,
           "y": 320,
           "w": 225,
           "h": 18,
@@ -257,7 +257,7 @@
       "bridges": [],
       "gates": [
         {
-          "x": 1005,
+          "x": 1165,
           "y": 230,
           "w": 28,
           "h": 290,
@@ -270,7 +270,7 @@
       "targets": [
         {
           "id": "signal",
-          "x": 875,
+          "x": 1035,
           "y": 282,
           "label": "DEUX SIGNAUX",
           "requires": [
@@ -282,7 +282,7 @@
       "plates": [
         {
           "id": "lookout",
-          "x": 405,
+          "x": 565,
           "y": 320,
           "w": 75,
           "hero": 0,
@@ -293,7 +293,7 @@
         },
         {
           "id": "guard",
-          "x": 780,
+          "x": 940,
           "y": 520,
           "w": 80,
           "hero": 1,
@@ -309,7 +309,7 @@
       "lifts": [
         {
           "id": "lift",
-          "x": 550,
+          "x": 710,
           "y": 520,
           "w": 130,
           "h": 16,
@@ -325,7 +325,7 @@
       ],
       "ladders": [
         {
-          "x": 230,
+          "x": 390,
           "y": 320,
           "h": 200
         }
@@ -336,23 +336,23 @@
       "stars": [
         {
           "id": "star-1",
-          "x": 445,
+          "x": 605,
           "y": 275
         },
         {
           "id": "star-2",
-          "x": 755,
+          "x": 915,
           "y": 270
         },
         {
           "id": "star-3",
-          "x": 1150,
+          "x": 1310,
           "y": 410
         }
       ],
       "signs": [
         {
-          "x": 315,
+          "x": 475,
           "y": 520,
           "text": "↑ / ↓ GRIMPER"
         }
@@ -363,14 +363,14 @@
         "Installez Croqueboum sur le monte-charge avant que Croquinet ne tienne la dalle rouge en hauteur.",
         "Croquefort tient la dalle jaune au sol. Croquinet reste sur la rouge. Depuis la terrasse de droite, Croqueboum peut alors activer la cible."
       ],
-      "width": 1270,
+      "width": 1430,
       "exit": {
-        "x": 1055,
+        "x": 1215,
         "y": 520,
         "w": 180
       },
       "checkpoint": {
-        "x": 110,
+        "x": 270,
         "y": 520
       },
       "handcrafted": true,
@@ -381,7 +381,7 @@
       "questStage": 0,
       "elephants": [
         {
-          "x": 980,
+          "x": 1140,
           "y": 520,
           "radius": 310,
           "requires": [
@@ -389,11 +389,12 @@
           ],
           "label": "LES GRANDES OREILLES"
         }
-      ]
+      ],
+      "startOffset": 160
     },
     {
       "id": "marais-03",
-      "revision": 7,
+      "revision": 8,
       "chapter": "Le port des étourdis",
       "name": "Les deux rives",
       "subtitle": "Personne ne reste derrière",
@@ -420,19 +421,19 @@
         {
           "x": 0,
           "y": 520,
-          "w": 410,
+          "w": 570,
           "h": 160,
           "oneway": false
         },
         {
-          "x": 620,
+          "x": 780,
           "y": 520,
           "w": 840,
           "h": 160,
           "oneway": false
         },
         {
-          "x": 700,
+          "x": 860,
           "y": 280,
           "w": 290,
           "h": 18,
@@ -442,7 +443,7 @@
       "bridges": [
         {
           "id": "river",
-          "x": 410,
+          "x": 570,
           "y": 520,
           "w": 210,
           "h": 18,
@@ -453,7 +454,7 @@
       ],
       "gates": [
         {
-          "x": 1200,
+          "x": 1360,
           "y": 230,
           "w": 28,
           "h": 290,
@@ -465,7 +466,7 @@
       "switches": [
         {
           "id": "crossing",
-          "x": 845,
+          "x": 1005,
           "y": 520,
           "label": "PASSERELLE"
         }
@@ -473,13 +474,13 @@
       "targets": [
         {
           "id": "power",
-          "x": 360,
+          "x": 520,
           "y": 482,
           "label": "ARCHE"
         },
         {
           "id": "finish",
-          "x": 1140,
+          "x": 1300,
           "y": 482,
           "label": "SORTIE",
           "requires": [
@@ -492,7 +493,7 @@
       "crates": [
         {
           "id": "crate",
-          "x": 995,
+          "x": 1155,
           "y": 440,
           "w": 55,
           "h": 80
@@ -502,7 +503,7 @@
       "keys": [
         {
           "id": "gold",
-          "x": 900,
+          "x": 1060,
           "y": 247,
           "hero": 1
         }
@@ -513,9 +514,9 @@
       "portals": [
         {
           "id": "outbound",
-          "x": 270,
+          "x": 430,
           "y": 520,
-          "toX": 740,
+          "toX": 900,
           "toY": 280,
           "requires": [
             "power"
@@ -523,9 +524,9 @@
         },
         {
           "id": "return",
-          "x": 660,
+          "x": 820,
           "y": 520,
-          "toX": 270,
+          "toX": 430,
           "toY": 520
         }
       ],
@@ -533,17 +534,17 @@
       "stars": [
         {
           "id": "star-1",
-          "x": 850,
+          "x": 1010,
           "y": 240
         },
         {
           "id": "star-2",
-          "x": 520,
+          "x": 680,
           "y": 410
         },
         {
           "id": "star-3",
-          "x": 1350,
+          "x": 1510,
           "y": 410
         }
       ],
@@ -554,14 +555,14 @@
         "Croquefort traverse, ramasse la clé et descend de la terrasse vers le levier au sol.",
         "Le levier déploie la passerelle. Croquinet traverse et charge la caisse ; Croqueboum peut alors activer la cible finale. L’arche au sol à droite permet de revenir si vous avez oublié la clé."
       ],
-      "width": 1460,
+      "width": 1620,
       "exit": {
-        "x": 1245,
+        "x": 1405,
         "y": 520,
         "w": 180
       },
       "checkpoint": {
-        "x": 110,
+        "x": 270,
         "y": 520
       },
       "handcrafted": true,
@@ -572,21 +573,22 @@
         {
           "id": "riverCrab",
           "kind": "hippo",
-          "x": 920,
+          "x": 1080,
           "y": 520,
-          "minX": 880,
-          "maxX": 950,
+          "minX": 1040,
+          "maxX": 1110,
           "speed": 65,
           "dir": -1
         }
       ],
       "scenery": "falls",
       "questStage": 0,
+      "startOffset": 160,
       "questReward": 0
     },
     {
       "id": "expedition-04",
-      "revision": 7,
+      "revision": 8,
       "chapter": "Le port des étourdis",
       "name": "Qui tient la porte ?",
       "subtitle": "Personne ne reste derrière",
@@ -613,12 +615,12 @@
         {
           "x": 0,
           "y": 520,
-          "w": 1250,
+          "w": 1410,
           "h": 160,
           "oneway": false
         },
         {
-          "x": 220,
+          "x": 380,
           "y": 320,
           "w": 420,
           "h": 18,
@@ -628,7 +630,7 @@
       "bridges": [],
       "gates": [
         {
-          "x": 680,
+          "x": 840,
           "y": 230,
           "w": 28,
           "h": 290,
@@ -637,7 +639,7 @@
           ]
         },
         {
-          "x": 1010,
+          "x": 1170,
           "y": 230,
           "w": 28,
           "h": 290,
@@ -650,7 +652,7 @@
       "targets": [
         {
           "id": "finish",
-          "x": 955,
+          "x": 1115,
           "y": 482,
           "label": "SORTIE",
           "requires": [
@@ -661,7 +663,7 @@
       "plates": [
         {
           "id": "weightPlate",
-          "x": 500,
+          "x": 660,
           "y": 320,
           "w": 80,
           "hero": 1,
@@ -672,7 +674,7 @@
       "crates": [
         {
           "id": "crate",
-          "x": 800,
+          "x": 960,
           "y": 440,
           "w": 55,
           "h": 80
@@ -683,7 +685,7 @@
       "lifts": [],
       "ladders": [
         {
-          "x": 260,
+          "x": 420,
           "y": 320,
           "h": 200
         }
@@ -694,23 +696,23 @@
       "stars": [
         {
           "id": "star-1",
-          "x": 300,
+          "x": 460,
           "y": 280
         },
         {
           "id": "star-2",
-          "x": 600,
+          "x": 760,
           "y": 280
         },
         {
           "id": "star-3",
-          "x": 1130,
+          "x": 1290,
           "y": 410
         }
       ],
       "signs": [
         {
-          "x": 350,
+          "x": 510,
           "y": 195,
           "text": "POUSSER →"
         }
@@ -722,44 +724,45 @@
         "Grimpez avec Croquefort et poussez le contrepoids vers la droite, jusqu’à la dalle. Revenez vers l’échelle pour redescendre. Croquinet casse ensuite la caisse et Croqueboum active la dernière cible.",
         "Ce zèbre est curieux : restez immobile près de lui, laissez-le approcher, puis Espace pour son étoile."
       ],
-      "width": 1250,
+      "width": 1410,
       "exit": {
-        "x": 1035,
+        "x": 1195,
         "y": 520,
         "w": 180
       },
       "checkpoint": {
-        "x": 110,
+        "x": 270,
         "y": 520
       },
       "handcrafted": true,
       "blocks": [
         {
           "id": "weight",
-          "x": 350,
+          "x": 510,
           "y": 264,
           "w": 56,
           "h": 56,
-          "minX": 350,
-          "maxX": 510
+          "minX": 510,
+          "maxX": 670
         }
       ],
       "victory": "Vous avez remplacé un gardien par un contrepoids : la porte reste ouverte pour toute l’équipe.",
       "difficulty": "Déduction",
       "scenery": "mill",
       "zebra": {
-        "x": 450,
-        "minX": 320,
-        "maxX": 560,
+        "x": 610,
+        "minX": 480,
+        "maxX": 720,
         "mode": "curious",
         "y": 520,
         "starId": "star-3"
       },
-      "questStage": 1
+      "questStage": 1,
+      "startOffset": 160
     },
     {
       "id": "expedition-05",
-      "revision": 7,
+      "revision": 8,
       "chapter": "Les marais à ressorts",
       "name": "L’îlot des décisions",
       "subtitle": "Personne ne reste derrière",
@@ -786,19 +789,19 @@
         {
           "x": 0,
           "y": 520,
-          "w": 330,
+          "w": 490,
           "h": 160,
           "oneway": false
         },
         {
-          "x": 500,
+          "x": 660,
           "y": 520,
           "w": 140,
           "h": 160,
           "oneway": false
         },
         {
-          "x": 810,
+          "x": 970,
           "y": 520,
           "w": 470,
           "h": 160,
@@ -808,7 +811,7 @@
       "bridges": [
         {
           "id": "first",
-          "x": 330,
+          "x": 490,
           "y": 520,
           "w": 170,
           "h": 18,
@@ -824,7 +827,7 @@
         },
         {
           "id": "second",
-          "x": 640,
+          "x": 800,
           "y": 520,
           "w": 170,
           "h": 18,
@@ -841,7 +844,7 @@
       ],
       "gates": [
         {
-          "x": 1040,
+          "x": 1200,
           "y": 230,
           "w": 28,
           "h": 290,
@@ -853,14 +856,14 @@
       "switches": [
         {
           "id": "A",
-          "x": 150,
+          "x": 310,
           "y": 520,
           "label": "A ↔",
           "toggle": true
         },
         {
           "id": "B",
-          "x": 570,
+          "x": 730,
           "y": 520,
           "label": "B ↔",
           "toggle": true
@@ -869,7 +872,7 @@
       "targets": [
         {
           "id": "finish",
-          "x": 980,
+          "x": 1140,
           "y": 482,
           "label": "VERROU",
           "requires": [
@@ -880,7 +883,7 @@
       "plates": [
         {
           "id": "guard",
-          "x": 840,
+          "x": 1000,
           "y": 520,
           "w": 80,
           "hero": 1,
@@ -901,28 +904,28 @@
       "stars": [
         {
           "id": "star-1",
-          "x": 570,
+          "x": 730,
           "y": 410
         },
         {
           "id": "star-2",
-          "x": 880,
+          "x": 1040,
           "y": 410
         },
         {
           "id": "star-3",
-          "x": 1160,
+          "x": 1320,
           "y": 410
         }
       ],
       "signs": [
         {
-          "x": 425,
+          "x": 585,
           "y": 365,
           "text": "A SEUL"
         },
         {
-          "x": 725,
+          "x": 885,
           "y": 365,
           "text": "B SEUL"
         }
@@ -934,14 +937,14 @@
         "Désactivez A avec Croquinet. Croquefort traverse la seconde travée et tient la dalle ; Croqueboum tire sur la cible. Le verrou maintient les deux ponts ouverts : Croquinet peut rejoindre les autres.",
         "Le vautour monte avec sa noix de coco avant de la lâcher. Le bouclier levé protège les têtes ; profitez de son repos pour tirer."
       ],
-      "width": 1280,
+      "width": 1440,
       "exit": {
-        "x": 1065,
+        "x": 1225,
         "y": 520,
         "w": 180
       },
       "checkpoint": {
-        "x": 110,
+        "x": 270,
         "y": 520
       },
       "handcrafted": true,
@@ -952,10 +955,10 @@
         {
           "id": "islandPrankster",
           "kind": "vulture",
-          "x": 610,
+          "x": 770,
           "y": 520,
-          "minX": 525,
-          "maxX": 635,
+          "minX": 685,
+          "maxX": 795,
           "speed": 72,
           "dir": -1
         }
@@ -964,7 +967,7 @@
       "questStage": 1,
       "elephants": [
         {
-          "x": 1015,
+          "x": 1175,
           "y": 520,
           "radius": 300,
           "requires": [
@@ -972,7 +975,8 @@
           ],
           "label": "NE PAS RÉVEILLER"
         }
-      ]
+      ],
+      "startOffset": 160
     },
     {
       "id": "expedition-06",
@@ -1209,7 +1213,7 @@
     },
     {
       "id": "expedition-07",
-      "revision": 7,
+      "revision": 8,
       "chapter": "Les marais à ressorts",
       "name": "Chut… de grandes oreilles",
       "subtitle": "Personne ne reste derrière",
@@ -1236,12 +1240,12 @@
         {
           "x": 0,
           "y": 520,
-          "w": 1420,
+          "w": 1580,
           "h": 160,
           "oneway": false
         },
         {
-          "x": 195,
+          "x": 355,
           "y": 320,
           "w": 365,
           "h": 18,
@@ -1251,7 +1255,7 @@
       "bridges": [],
       "gates": [
         {
-          "x": 775,
+          "x": 935,
           "y": 385,
           "w": 35,
           "h": 135,
@@ -1264,7 +1268,7 @@
           "elephant": true
         },
         {
-          "x": 1170,
+          "x": 1330,
           "y": 230,
           "w": 28,
           "h": 290,
@@ -1277,7 +1281,7 @@
       "targets": [
         {
           "id": "bell",
-          "x": 1000,
+          "x": 1160,
           "y": 482,
           "label": "CLOCHE · TIR ←",
           "hitDirection": -1,
@@ -1290,7 +1294,7 @@
       "plates": [
         {
           "id": "lookout",
-          "x": 395,
+          "x": 555,
           "y": 320,
           "w": 75,
           "hero": 0,
@@ -1301,7 +1305,7 @@
         },
         {
           "id": "shelter",
-          "x": 700,
+          "x": 860,
           "y": 520,
           "w": 75,
           "hero": 1,
@@ -1318,7 +1322,7 @@
       "lifts": [],
       "ladders": [
         {
-          "x": 230,
+          "x": 390,
           "y": 320,
           "h": 200
         }
@@ -1329,17 +1333,17 @@
       "stars": [
         {
           "id": "star-1",
-          "x": 430,
+          "x": 590,
           "y": 280
         },
         {
           "id": "star-2",
-          "x": 1090,
+          "x": 1250,
           "y": 410
         },
         {
           "id": "star-3",
-          "x": 1320,
+          "x": 1480,
           "y": 410
         }
       ],
@@ -1350,21 +1354,21 @@
         "Croquinet tient la dalle rouge en haut. Croquefort, sur la dalle jaune, lève son bouclier pour soutenir la trompe.",
         "Faites passer Croqueboum sous la trompe, puis à droite de la cloche. Il tire vers la gauche pendant que les deux autres tiennent leurs postes. La cloche libère tout le monde."
       ],
-      "width": 1420,
+      "width": 1580,
       "exit": {
-        "x": 1205,
+        "x": 1365,
         "y": 520,
         "w": 180
       },
       "checkpoint": {
-        "x": 110,
+        "x": 270,
         "y": 520
       },
       "handcrafted": true,
       "blocks": [],
       "elephants": [
         {
-          "x": 655,
+          "x": 815,
           "y": 520,
           "radius": 360,
           "requires": [
@@ -1379,11 +1383,12 @@
       "difficulty": "Sang-froid",
       "victory": "Vous avez soutenu la trompe, contourné la cloche, puis libéré les deux gardiens. Le géant vous salue !",
       "scenery": "savannah",
-      "questStage": 2
+      "questStage": 2,
+      "startOffset": 160
     },
     {
       "id": "expedition-08",
-      "revision": 7,
+      "revision": 8,
       "chapter": "Les marais à ressorts",
       "name": "L’ascenseur à trompe",
       "subtitle": "Personne ne reste derrière",
@@ -1410,12 +1415,12 @@
         {
           "x": 0,
           "y": 520,
-          "w": 1280,
+          "w": 1440,
           "h": 160,
           "oneway": false
         },
         {
-          "x": 650,
+          "x": 810,
           "y": 290,
           "w": 350,
           "h": 18,
@@ -1425,7 +1430,7 @@
       "bridges": [],
       "gates": [
         {
-          "x": 1030,
+          "x": 1190,
           "y": 230,
           "w": 28,
           "h": 290,
@@ -1437,7 +1442,7 @@
       "switches": [
         {
           "id": "call",
-          "x": 240,
+          "x": 400,
           "y": 520,
           "label": "TROMPE ↔",
           "toggle": true
@@ -1446,7 +1451,7 @@
       "targets": [
         {
           "id": "finish",
-          "x": 970,
+          "x": 1130,
           "y": 252,
           "label": "CALME + CLÉ",
           "requires": [
@@ -1461,7 +1466,7 @@
       "plates": [
         {
           "id": "scout",
-          "x": 335,
+          "x": 495,
           "y": 520,
           "w": 70,
           "hero": 0,
@@ -1476,7 +1481,7 @@
       "keys": [
         {
           "id": "gold",
-          "x": 810,
+          "x": 970,
           "y": 257,
           "hero": 1
         }
@@ -1484,7 +1489,7 @@
       "lifts": [
         {
           "id": "trunk",
-          "x": 500,
+          "x": 660,
           "y": 520,
           "w": 130,
           "h": 16,
@@ -1503,17 +1508,17 @@
       "stars": [
         {
           "id": "star-1",
-          "x": 810,
+          "x": 970,
           "y": 250
         },
         {
           "id": "star-2",
-          "x": 920,
+          "x": 1080,
           "y": 250
         },
         {
           "id": "star-3",
-          "x": 1160,
+          "x": 1320,
           "y": 410
         }
       ],
@@ -1524,21 +1529,21 @@
         "Croquinet commande le levier. Faites monter Croquefort chercher la clé, redescendez la trompe, puis faites monter Croqueboum.",
         "Les deux passagers quittent le plateau vers la corniche de droite. Croquinet éteint ensuite le levier et tient la dalle rouge. Croqueboum tire : clé partagée, dalle occupée et cloche silencieuse sont nécessaires."
       ],
-      "width": 1280,
+      "width": 1440,
       "exit": {
-        "x": 1065,
+        "x": 1225,
         "y": 520,
         "w": 180
       },
       "checkpoint": {
-        "x": 110,
+        "x": 270,
         "y": 520
       },
       "handcrafted": true,
       "blocks": [],
       "elephants": [
         {
-          "x": 410,
+          "x": 570,
           "y": 520,
           "radius": 260,
           "lift": "trunk",
@@ -1551,11 +1556,12 @@
       "difficulty": "Organisation",
       "victory": "Deux passagers, deux voyages et un dernier instant de silence : l’éléphant vous a fait confiance.",
       "scenery": "canopy",
-      "questStage": 2
+      "questStage": 2,
+      "startOffset": 160
     },
     {
       "id": "expedition-09",
-      "revision": 7,
+      "revision": 8,
       "chapter": "Les marais à ressorts",
       "name": "Le détour du retour",
       "subtitle": "Personne ne reste derrière",
@@ -1582,19 +1588,19 @@
         {
           "x": 0,
           "y": 520,
-          "w": 1210,
+          "w": 1370,
           "h": 160,
           "oneway": false
         },
         {
           "x": 0,
           "y": 320,
-          "w": 325,
+          "w": 485,
           "h": 18,
           "oneway": true
         },
         {
-          "x": 780,
+          "x": 940,
           "y": 340,
           "w": 350,
           "h": 18,
@@ -1607,7 +1613,7 @@
       "targets": [
         {
           "id": "home",
-          "x": 230,
+          "x": 390,
           "y": 282,
           "label": "RETOUR · TIR ←",
           "hitDirection": -1,
@@ -1620,7 +1626,7 @@
       "plates": [
         {
           "id": "guard",
-          "x": 970,
+          "x": 1130,
           "y": 520,
           "w": 85,
           "hero": 1,
@@ -1635,7 +1641,7 @@
       "keys": [
         {
           "id": "red",
-          "x": 1020,
+          "x": 1180,
           "y": 307,
           "hero": 0
         }
@@ -1643,7 +1649,7 @@
       "lifts": [],
       "ladders": [
         {
-          "x": 160,
+          "x": 320,
           "y": 320,
           "h": 200
         }
@@ -1652,9 +1658,9 @@
       "portals": [
         {
           "id": "shortcut",
-          "x": 1050,
+          "x": 1210,
           "y": 520,
-          "toX": 190,
+          "toX": 350,
           "toY": 320,
           "requires": [
             "home"
@@ -1665,24 +1671,24 @@
       "stars": [
         {
           "id": "star-1",
-          "x": 1020,
+          "x": 1180,
           "y": 300
         },
         {
           "id": "star-2",
-          "x": 900,
+          "x": 1060,
           "y": 410
         },
         {
           "id": "star-3",
-          "x": 270,
+          "x": 430,
           "y": 280
         }
       ],
       "signs": [],
       "pads": [
         {
-          "x": 740,
+          "x": 900,
           "y": 520
         }
       ],
@@ -1691,9 +1697,9 @@
         "Croquefort aide Croquinet à grimper sur la corniche de droite grâce au bouclier levé près des fleurs. Croquinet prend le sceau. Croquefort tient ensuite la dalle jaune au sol.",
         "Croqueboum monte à l’échelle de gauche et tire vers la gauche sur la cible, depuis son côté droit. Le signal ouvre la sortie et le raccourci au pied de la corniche droite. Les deux éclaireurs peuvent l’emprunter pour rentrer."
       ],
-      "width": 1210,
+      "width": 1370,
       "exit": {
-        "x": 65,
+        "x": 225,
         "y": 320,
         "w": 195,
         "requires": [
@@ -1701,14 +1707,14 @@
         ]
       },
       "checkpoint": {
-        "x": 110,
+        "x": 270,
         "y": 520
       },
       "handcrafted": true,
       "blocks": [],
       "elephants": [
         {
-          "x": 710,
+          "x": 870,
           "y": 520,
           "radius": 290,
           "requires": [
@@ -1720,7 +1726,8 @@
       "difficulty": "Prévoir le retour",
       "victory": "La solution allait dans les deux sens. Même les éclaireurs sont rentrés sans refaire tout le chemin.",
       "scenery": "moon",
-      "questStage": 2
+      "questStage": 2,
+      "startOffset": 160
     },
     {
       "id": "expedition-10",
@@ -1940,7 +1947,7 @@
     },
     {
       "id": "expedition-11",
-      "revision": 7,
+      "revision": 8,
       "chapter": "Les marais à ressorts",
       "name": "Le grand saut de Croquefort",
       "subtitle": "Personne ne reste derrière",
@@ -1967,12 +1974,12 @@
         {
           "x": 0,
           "y": 520,
-          "w": 340,
+          "w": 500,
           "h": 160,
           "oneway": false
         },
         {
-          "x": 800,
+          "x": 960,
           "y": 520,
           "w": 635,
           "h": 160,
@@ -1981,7 +1988,7 @@
         {
           "x": 0,
           "y": 210,
-          "w": 340,
+          "w": 500,
           "h": 18,
           "oneway": true
         }
@@ -1989,7 +1996,7 @@
       "bridges": [
         {
           "id": "river",
-          "x": 340,
+          "x": 500,
           "y": 520,
           "w": 460,
           "h": 18,
@@ -2000,7 +2007,7 @@
       ],
       "gates": [
         {
-          "x": 1190,
+          "x": 1350,
           "y": 230,
           "w": 28,
           "h": 290,
@@ -2012,7 +2019,7 @@
       "switches": [
         {
           "id": "bridge",
-          "x": 950,
+          "x": 1110,
           "y": 520,
           "label": "SAUVETAGE"
         }
@@ -2020,7 +2027,7 @@
       "targets": [
         {
           "id": "finish",
-          "x": 1150,
+          "x": 1310,
           "y": 482,
           "label": "SORTIE",
           "requires": [
@@ -2033,7 +2040,7 @@
       "crates": [
         {
           "id": "crate",
-          "x": 1040,
+          "x": 1200,
           "y": 440,
           "w": 55,
           "h": 80
@@ -2043,7 +2050,7 @@
       "keys": [
         {
           "id": "gold",
-          "x": 870,
+          "x": 1030,
           "y": 487,
           "hero": 1
         }
@@ -2051,7 +2058,7 @@
       "lifts": [],
       "ladders": [
         {
-          "x": 150,
+          "x": 310,
           "y": 210,
           "h": 310
         }
@@ -2062,28 +2069,28 @@
       "stars": [
         {
           "id": "star-1",
-          "x": 650,
+          "x": 810,
           "y": 290
         },
         {
           "id": "star-2",
-          "x": 950,
+          "x": 1110,
           "y": 410
         },
         {
           "id": "star-3",
-          "x": 1335,
+          "x": 1495,
           "y": 410
         }
       ],
       "signs": [
         {
-          "x": 265,
+          "x": 425,
           "y": 210,
           "text": "X · BOUCLIER ↑"
         },
         {
-          "x": 860,
+          "x": 1020,
           "y": 385,
           "text": "LE PONT EST ICI"
         }
@@ -2094,14 +2101,14 @@
         "Gardez le bouclier levé et maintenez → pour traverser le vide. ↑ ne fait pas sauter Croquefort : il doit partir du bord.",
         "Sur l’autre rive, Croquefort récupère la clé jaune et actionne le levier. Le pont permet aux deux autres de traverser. Croquinet casse la caisse, Croqueboum active la cible."
       ],
-      "width": 1435,
+      "width": 1595,
       "exit": {
-        "x": 1220,
+        "x": 1380,
         "y": 520,
         "w": 180
       },
       "checkpoint": {
-        "x": 110,
+        "x": 270,
         "y": 520
       },
       "handcrafted": true,
@@ -2110,11 +2117,12 @@
       "difficulty": "Maîtrise aérienne",
       "victory": "Un long vol, un pont de secours, puis deux équipiers sauvés. Ce bouclier mérite une médaille.",
       "scenery": "falls",
-      "questStage": 2
+      "questStage": 2,
+      "startOffset": 160
     },
     {
       "id": "expedition-12",
-      "revision": 7,
+      "revision": 8,
       "chapter": "Les marais à ressorts",
       "name": "La ronde des gros dodos",
       "subtitle": "Personne ne reste derrière",
@@ -2141,12 +2149,12 @@
         {
           "x": 0,
           "y": 520,
-          "w": 1220,
+          "w": 1380,
           "h": 160,
           "oneway": false
         },
         {
-          "x": 195,
+          "x": 355,
           "y": 320,
           "w": 405,
           "h": 18,
@@ -2156,7 +2164,7 @@
       "bridges": [],
       "gates": [
         {
-          "x": 870,
+          "x": 1030,
           "y": 230,
           "w": 28,
           "h": 290,
@@ -2175,7 +2183,7 @@
       "keys": [
         {
           "id": "red",
-          "x": 500,
+          "x": 660,
           "y": 287,
           "hero": 0
         }
@@ -2183,7 +2191,7 @@
       "lifts": [],
       "ladders": [
         {
-          "x": 230,
+          "x": 390,
           "y": 320,
           "h": 200
         }
@@ -2194,17 +2202,17 @@
       "stars": [
         {
           "id": "star-1",
-          "x": 500,
+          "x": 660,
           "y": 280
         },
         {
           "id": "star-2",
-          "x": 750,
+          "x": 910,
           "y": 410
         },
         {
           "id": "star-3",
-          "x": 1100,
+          "x": 1260,
           "y": 410
         }
       ],
@@ -2216,14 +2224,14 @@
         "Montez sur la corniche avec le protecteur et le tireur. Assommez le lionceau, puis récupérez le sceau avec Croquinet. Redescendez par l’échelle pour approcher l’hippopotame en formation. Les deux animaux endormis et le sceau ouvrent la porte.",
         "Ce zèbre est gourmand : offrez-lui une boulette avec Croqueboum, puis approchez et Espace pendant son goûter."
       ],
-      "width": 1220,
+      "width": 1380,
       "exit": {
-        "x": 1005,
+        "x": 1165,
         "y": 520,
         "w": 180
       },
       "checkpoint": {
-        "x": 110,
+        "x": 270,
         "y": 520
       },
       "handcrafted": true,
@@ -2233,20 +2241,20 @@
         {
           "id": "upperCrab",
           "kind": "lion",
-          "x": 510,
+          "x": 670,
           "y": 320,
-          "minX": 430,
-          "maxX": 555,
+          "minX": 590,
+          "maxX": 715,
           "speed": 76,
           "dir": -1
         },
         {
           "id": "lowerCrab",
           "kind": "hippo",
-          "x": 740,
+          "x": 900,
           "y": 520,
-          "minX": 650,
-          "maxX": 790,
+          "minX": 810,
+          "maxX": 950,
           "speed": 95,
           "dir": -1
         }
@@ -2255,14 +2263,15 @@
       "victory": "Deux gros dodos, trois museaux intacts. Le bouclier a protégé le tireur, et le tireur a ouvert la route.",
       "scenery": "savannah",
       "zebra": {
-        "x": 400,
-        "minX": 310,
-        "maxX": 490,
+        "x": 560,
+        "minX": 470,
+        "maxX": 650,
         "mode": "snack",
         "y": 520,
         "starId": "star-3"
       },
       "questStage": 2,
+      "startOffset": 160,
       "questReward": 2
     },
     {
@@ -2483,7 +2492,7 @@
     },
     {
       "id": "expedition-14",
-      "revision": 7,
+      "revision": 8,
       "chapter": "Les ruines du museau",
       "name": "Le concierge du pharaon",
       "subtitle": "Personne ne reste derrière",
@@ -2510,24 +2519,24 @@
         {
           "x": 0,
           "y": 520,
-          "w": 720,
+          "w": 880,
           "h": 160
         },
         {
-          "x": 380,
+          "x": 540,
           "y": 300,
           "w": 155,
           "h": 18,
           "oneway": true
         },
         {
-          "x": 720,
+          "x": 880,
           "y": 520,
           "w": 720,
           "h": 160
         },
         {
-          "x": 1440,
+          "x": 1600,
           "y": 520,
           "w": 240,
           "h": 160
@@ -2536,7 +2545,7 @@
       "bridges": [],
       "gates": [
         {
-          "x": 610,
+          "x": 770,
           "y": 250,
           "w": 28,
           "h": 270,
@@ -2545,7 +2554,7 @@
           ]
         },
         {
-          "x": 1330,
+          "x": 1490,
           "y": 250,
           "w": 28,
           "h": 270,
@@ -2557,21 +2566,21 @@
       "switches": [
         {
           "id": "m1-A",
-          "x": 860,
+          "x": 1020,
           "y": 520,
           "label": "A ↔",
           "toggle": true
         },
         {
           "id": "m1-B",
-          "x": 970,
+          "x": 1130,
           "y": 520,
           "label": "B ↔",
           "toggle": true
         },
         {
           "id": "m1-C",
-          "x": 1080,
+          "x": 1240,
           "y": 520,
           "label": "C ↔",
           "toggle": true
@@ -2580,7 +2589,7 @@
       "targets": [
         {
           "id": "m1-shot",
-          "x": 1240,
+          "x": 1400,
           "y": 482,
           "label": "TIR",
           "requires": [
@@ -2595,7 +2604,7 @@
       "plates": [
         {
           "id": "m0-low",
-          "x": 195,
+          "x": 355,
           "y": 520,
           "w": 50,
           "hero": 1,
@@ -2610,7 +2619,7 @@
       "keys": [
         {
           "id": "m0-key",
-          "x": 455,
+          "x": 615,
           "y": 267,
           "hero": 2
         }
@@ -2618,7 +2627,7 @@
       "lifts": [
         {
           "id": "m0-lift",
-          "x": 260,
+          "x": 420,
           "y": 520,
           "w": 120,
           "h": 16,
@@ -2636,23 +2645,23 @@
       "stars": [
         {
           "id": "star-1",
-          "x": 500,
+          "x": 660,
           "y": 255
         },
         {
           "id": "star-2",
-          "x": 1190,
+          "x": 1350,
           "y": 380
         },
         {
           "id": "star-3",
-          "x": 1380,
+          "x": 1540,
           "y": 410
         }
       ],
       "signs": [
         {
-          "x": 1200,
+          "x": 1360,
           "y": 365,
           "text": "A + C · PAS B"
         }
@@ -2666,19 +2675,20 @@
         "Passage 2 · Les panneaux indiquent A + C. Le voyant barré doit rester éteint.",
         "Passage 2 · Activez A et C, laissez B éteint, puis tirez sur la cible. Si B est allumé, Espace le désactive."
       ],
-      "width": 1680,
+      "width": 1840,
       "exit": {
-        "x": 1475,
+        "x": 1635,
         "y": 520,
         "w": 170
       },
       "checkpoint": {
-        "x": 780,
+        "x": 940,
         "y": 520
       },
       "enemies": [],
       "scenery": "moon",
-      "questStage": 3
+      "questStage": 3,
+      "startOffset": 160
     },
     {
       "id": "expedition-15",
@@ -2869,7 +2879,7 @@
     },
     {
       "id": "expedition-16",
-      "revision": 7,
+      "revision": 8,
       "chapter": "Les ruines du museau",
       "name": "Le trousseau partagé",
       "subtitle": "Personne ne reste derrière",
@@ -2896,37 +2906,37 @@
         {
           "x": 0,
           "y": 520,
-          "w": 720,
+          "w": 880,
           "h": 160
         },
         {
-          "x": 300,
+          "x": 460,
           "y": 280,
           "w": 240,
           "h": 18,
           "oneway": true
         },
         {
-          "x": 720,
+          "x": 880,
           "y": 520,
           "w": 720,
           "h": 160
         },
         {
-          "x": 1050,
+          "x": 1210,
           "y": 300,
           "w": 215,
           "h": 18,
           "oneway": true
         },
         {
-          "x": 1440,
+          "x": 1600,
           "y": 520,
           "w": 720,
           "h": 160
         },
         {
-          "x": 2160,
+          "x": 2320,
           "y": 520,
           "w": 240,
           "h": 160
@@ -2935,7 +2945,7 @@
       "bridges": [],
       "gates": [
         {
-          "x": 610,
+          "x": 770,
           "y": 250,
           "w": 28,
           "h": 270,
@@ -2944,7 +2954,7 @@
           ]
         },
         {
-          "x": 1330,
+          "x": 1490,
           "y": 250,
           "w": 28,
           "h": 270,
@@ -2953,7 +2963,7 @@
           ]
         },
         {
-          "x": 2050,
+          "x": 2210,
           "y": 250,
           "w": 28,
           "h": 270,
@@ -2966,14 +2976,14 @@
       "targets": [
         {
           "id": "m0-shot",
-          "x": 360,
+          "x": 520,
           "y": 482,
           "label": "TIR",
           "requires": []
         },
         {
           "id": "m1-shot",
-          "x": 1225,
+          "x": 1385,
           "y": 262,
           "label": "TIR",
           "requires": [
@@ -2982,7 +2992,7 @@
         },
         {
           "id": "m2-shot",
-          "x": 1950,
+          "x": 2110,
           "y": 482,
           "label": "TIR",
           "requires": [
@@ -2993,7 +3003,7 @@
       "plates": [
         {
           "id": "m2-low",
-          "x": 1795,
+          "x": 1955,
           "y": 520,
           "w": 80,
           "hero": 1,
@@ -3007,24 +3017,24 @@
       "turrets": [
         {
           "id": "m2-flower",
-          "x": 1965,
+          "x": 2125,
           "y": 480,
           "dir": -1,
           "off": "m2-shot",
           "period": 1.8,
-          "awakeX": 1740
+          "awakeX": 1900
         }
       ],
       "keys": [
         {
           "id": "m0-key",
-          "x": 440,
+          "x": 600,
           "y": 247,
           "hero": 1
         },
         {
           "id": "m1-key",
-          "x": 1130,
+          "x": 1290,
           "y": 267,
           "hero": 2
         }
@@ -3032,7 +3042,7 @@
       "lifts": [],
       "ladders": [
         {
-          "x": 1070,
+          "x": 1230,
           "y": 300,
           "h": 220
         }
@@ -3041,9 +3051,9 @@
       "portals": [
         {
           "id": "m0-in",
-          "x": 230,
+          "x": 390,
           "y": 520,
-          "toX": 345,
+          "toX": 505,
           "toY": 280,
           "requires": [
             "m0-shot"
@@ -3051,9 +3061,9 @@
         },
         {
           "id": "m0-out",
-          "x": 505,
+          "x": 665,
           "y": 280,
-          "toX": 480,
+          "toX": 640,
           "toY": 520
         }
       ],
@@ -3061,23 +3071,23 @@
       "stars": [
         {
           "id": "star-1",
-          "x": 400,
+          "x": 560,
           "y": 235
         },
         {
           "id": "star-2",
-          "x": 1200,
+          "x": 1360,
           "y": 225
         },
         {
           "id": "star-3",
-          "x": 1835,
+          "x": 1995,
           "y": 400
         }
       ],
       "signs": [
         {
-          "x": 935,
+          "x": 1095,
           "y": 520,
           "text": "↑ / ↓ GRIMPER"
         }
@@ -3095,40 +3105,41 @@
         "Passage 3 · Croquefort tient la dalle face à la fleur. Croqueboum tire depuis son abri. La cible verrouille le passage en position ouverte.",
         "Le vautour monte avec sa noix de coco avant de la lâcher. Le bouclier levé protège les têtes ; profitez de son repos pour tirer."
       ],
-      "width": 2400,
+      "width": 2560,
       "exit": {
-        "x": 2195,
+        "x": 2355,
         "y": 520,
         "w": 170
       },
       "checkpoint": {
-        "x": 780,
+        "x": 940,
         "y": 520
       },
       "enemies": [
         {
           "id": "m2-flower-crab",
           "kind": "lion",
-          "x": 1925,
+          "x": 2085,
           "y": 520,
-          "minX": 1880,
-          "maxX": 1945,
+          "minX": 2040,
+          "maxX": 2105,
           "speed": 85,
           "dir": -1
         },
         {
           "id": "m1-patrol",
           "kind": "vulture",
-          "x": 1225,
+          "x": 1385,
           "y": 300,
-          "minX": 1190,
-          "maxX": 1235,
+          "minX": 1350,
+          "maxX": 1395,
           "speed": 80,
           "dir": -1
         }
       ],
       "scenery": "ruins",
-      "questStage": 3
+      "questStage": 3,
+      "startOffset": 160
     },
     {
       "id": "expedition-17",
@@ -3552,7 +3563,7 @@
     },
     {
       "id": "expedition-19",
-      "revision": 7,
+      "revision": 8,
       "chapter": "La fabrique des bêtises",
       "name": "Monte-charge, descends-croco",
       "subtitle": "Personne ne reste derrière",
@@ -3579,31 +3590,31 @@
         {
           "x": 0,
           "y": 520,
-          "w": 720,
+          "w": 880,
           "h": 160
         },
         {
-          "x": 380,
+          "x": 540,
           "y": 300,
           "w": 155,
           "h": 18,
           "oneway": true
         },
         {
-          "x": 720,
+          "x": 880,
           "y": 520,
           "w": 720,
           "h": 160
         },
         {
-          "x": 1050,
+          "x": 1210,
           "y": 300,
           "w": 215,
           "h": 18,
           "oneway": true
         },
         {
-          "x": 1440,
+          "x": 1600,
           "y": 520,
           "w": 240,
           "h": 160
@@ -3612,7 +3623,7 @@
       "bridges": [],
       "gates": [
         {
-          "x": 610,
+          "x": 770,
           "y": 250,
           "w": 28,
           "h": 270,
@@ -3621,7 +3632,7 @@
           ]
         },
         {
-          "x": 1330,
+          "x": 1490,
           "y": 250,
           "w": 28,
           "h": 270,
@@ -3634,7 +3645,7 @@
       "targets": [
         {
           "id": "m1-shot",
-          "x": 1225,
+          "x": 1385,
           "y": 262,
           "label": "TIR",
           "requires": [
@@ -3645,7 +3656,7 @@
       "plates": [
         {
           "id": "m0-low",
-          "x": 195,
+          "x": 355,
           "y": 520,
           "w": 50,
           "hero": 1,
@@ -3660,13 +3671,13 @@
       "keys": [
         {
           "id": "m0-key",
-          "x": 455,
+          "x": 615,
           "y": 267,
           "hero": 2
         },
         {
           "id": "m1-key",
-          "x": 1130,
+          "x": 1290,
           "y": 267,
           "hero": 2
         }
@@ -3674,7 +3685,7 @@
       "lifts": [
         {
           "id": "m0-lift",
-          "x": 260,
+          "x": 420,
           "y": 520,
           "w": 120,
           "h": 16,
@@ -3688,7 +3699,7 @@
       "ladders": [],
       "springs": [
         {
-          "x": 965,
+          "x": 1125,
           "y": 520,
           "w": 65
         }
@@ -3698,23 +3709,23 @@
       "stars": [
         {
           "id": "star-1",
-          "x": 500,
+          "x": 660,
           "y": 255
         },
         {
           "id": "star-2",
-          "x": 1200,
+          "x": 1360,
           "y": 225
         },
         {
           "id": "star-3",
-          "x": 1380,
+          "x": 1540,
           "y": 410
         }
       ],
       "signs": [
         {
-          "x": 885,
+          "x": 1045,
           "y": 520,
           "text": "REBOND →"
         }
@@ -3730,38 +3741,39 @@
         "Ce zèbre fait des pauses : observez son trot, approchez pendant qu’il broute, puis Espace pour son étoile.",
         "Le vautour monte avec sa noix de coco avant de la lâcher. Le bouclier levé protège les têtes ; profitez de son repos pour tirer."
       ],
-      "width": 1680,
+      "width": 1840,
       "exit": {
-        "x": 1475,
+        "x": 1635,
         "y": 520,
         "w": 170
       },
       "checkpoint": {
-        "x": 780,
+        "x": 940,
         "y": 520
       },
       "enemies": [
         {
           "id": "m1-patrol",
           "kind": "vulture",
-          "x": 1225,
+          "x": 1385,
           "y": 300,
-          "minX": 1190,
-          "maxX": 1235,
+          "minX": 1350,
+          "maxX": 1395,
           "speed": 83,
           "dir": -1
         }
       ],
       "scenery": "harbour",
       "zebra": {
-        "x": 820,
-        "minX": 730,
-        "maxX": 920,
+        "x": 980,
+        "minX": 890,
+        "maxX": 1080,
         "mode": "pause",
         "y": 520,
         "starId": "star-3"
       },
-      "questStage": 3
+      "questStage": 3,
+      "startOffset": 160
     },
     {
       "id": "expedition-20",
@@ -4038,7 +4050,7 @@
     },
     {
       "id": "expedition-21",
-      "revision": 7,
+      "revision": 8,
       "chapter": "La fabrique des bêtises",
       "name": "Le grand rendez-vous",
       "subtitle": "Personne ne reste derrière",
@@ -4065,37 +4077,37 @@
         {
           "x": 0,
           "y": 520,
-          "w": 720,
+          "w": 880,
           "h": 160
         },
         {
-          "x": 300,
+          "x": 460,
           "y": 280,
           "w": 240,
           "h": 18,
           "oneway": true
         },
         {
-          "x": 720,
+          "x": 880,
           "y": 520,
           "w": 720,
           "h": 160
         },
         {
-          "x": 1100,
+          "x": 1260,
           "y": 300,
           "w": 155,
           "h": 18,
           "oneway": true
         },
         {
-          "x": 1440,
+          "x": 1600,
           "y": 520,
           "w": 720,
           "h": 160
         },
         {
-          "x": 2160,
+          "x": 2320,
           "y": 520,
           "w": 240,
           "h": 160
@@ -4104,7 +4116,7 @@
       "bridges": [],
       "gates": [
         {
-          "x": 610,
+          "x": 770,
           "y": 250,
           "w": 28,
           "h": 270,
@@ -4113,7 +4125,7 @@
           ]
         },
         {
-          "x": 1330,
+          "x": 1490,
           "y": 250,
           "w": 28,
           "h": 270,
@@ -4122,7 +4134,7 @@
           ]
         },
         {
-          "x": 2050,
+          "x": 2210,
           "y": 250,
           "w": 28,
           "h": 270,
@@ -4136,14 +4148,14 @@
       "targets": [
         {
           "id": "m0-shot",
-          "x": 360,
+          "x": 520,
           "y": 482,
           "label": "TIR",
           "requires": []
         },
         {
           "id": "m2-shot",
-          "x": 1900,
+          "x": 2060,
           "y": 482,
           "label": "TIR",
           "requires": [],
@@ -4153,7 +4165,7 @@
       "plates": [
         {
           "id": "m1-low",
-          "x": 915,
+          "x": 1075,
           "y": 520,
           "w": 50,
           "hero": 1,
@@ -4166,7 +4178,7 @@
       "crates": [
         {
           "id": "m2-crate",
-          "x": 1720,
+          "x": 1880,
           "y": 440,
           "w": 50,
           "h": 80
@@ -4176,13 +4188,13 @@
       "keys": [
         {
           "id": "m0-key",
-          "x": 440,
+          "x": 600,
           "y": 247,
           "hero": 1
         },
         {
           "id": "m1-key",
-          "x": 1175,
+          "x": 1335,
           "y": 267,
           "hero": 2
         }
@@ -4190,7 +4202,7 @@
       "lifts": [
         {
           "id": "m1-lift",
-          "x": 980,
+          "x": 1140,
           "y": 520,
           "w": 120,
           "h": 16,
@@ -4206,9 +4218,9 @@
       "portals": [
         {
           "id": "m0-in",
-          "x": 230,
+          "x": 390,
           "y": 520,
-          "toX": 345,
+          "toX": 505,
           "toY": 280,
           "requires": [
             "m0-shot"
@@ -4216,9 +4228,9 @@
         },
         {
           "id": "m0-out",
-          "x": 505,
+          "x": 665,
           "y": 280,
-          "toX": 480,
+          "toX": 640,
           "toY": 520
         }
       ],
@@ -4226,17 +4238,17 @@
       "stars": [
         {
           "id": "star-1",
-          "x": 400,
+          "x": 560,
           "y": 235
         },
         {
           "id": "star-2",
-          "x": 1220,
+          "x": 1380,
           "y": 255
         },
         {
           "id": "star-3",
-          "x": 1830,
+          "x": 1990,
           "y": 380
         }
       ],
@@ -4253,19 +4265,20 @@
         "Passage 3 · Croquinet doit d’abord démolir la caisse. La petite flèche indique le sens du tir.",
         "Passage 3 · Passez Croqueboum à droite de la cible. Faites un pas à gauche, puis Espace."
       ],
-      "width": 2400,
+      "width": 2560,
       "exit": {
-        "x": 2195,
+        "x": 2355,
         "y": 520,
         "w": 170
       },
       "checkpoint": {
-        "x": 780,
+        "x": 940,
         "y": 520
       },
       "enemies": [],
       "scenery": "falls",
-      "questStage": 4
+      "questStage": 4,
+      "startOffset": 160
     },
     {
       "id": "expedition-22",
@@ -4779,7 +4792,7 @@
     },
     {
       "id": "expedition-24",
-      "revision": 7,
+      "revision": 8,
       "chapter": "La fabrique des bêtises",
       "name": "Chauffeur, si tu nous entends",
       "subtitle": "Personne ne reste derrière",
@@ -4806,36 +4819,36 @@
         {
           "x": 0,
           "y": 520,
-          "w": 720,
+          "w": 880,
           "h": 160
         },
         {
-          "x": 380,
+          "x": 540,
           "y": 300,
           "w": 155,
           "h": 18,
           "oneway": true
         },
         {
-          "x": 720,
+          "x": 880,
           "y": 520,
           "w": 300,
           "h": 160
         },
         {
-          "x": 1170,
+          "x": 1330,
           "y": 520,
           "w": 100,
           "h": 160
         },
         {
-          "x": 1420,
+          "x": 1580,
           "y": 520,
           "w": 200,
           "h": 160
         },
         {
-          "x": 1620,
+          "x": 1780,
           "y": 520,
           "w": 240,
           "h": 160
@@ -4844,7 +4857,7 @@
       "bridges": [
         {
           "id": "m1-bridgeA",
-          "x": 1020,
+          "x": 1180,
           "y": 520,
           "w": 150,
           "h": 18,
@@ -4860,7 +4873,7 @@
         },
         {
           "id": "m1-bridgeB",
-          "x": 1270,
+          "x": 1430,
           "y": 520,
           "w": 150,
           "h": 18,
@@ -4877,7 +4890,7 @@
       ],
       "gates": [
         {
-          "x": 610,
+          "x": 770,
           "y": 250,
           "w": 28,
           "h": 270,
@@ -4886,7 +4899,7 @@
           ]
         },
         {
-          "x": 1545,
+          "x": 1705,
           "y": 250,
           "w": 28,
           "h": 270,
@@ -4898,14 +4911,14 @@
       "switches": [
         {
           "id": "m1-A",
-          "x": 850,
+          "x": 1010,
           "y": 520,
           "label": "A ↔",
           "toggle": true
         },
         {
           "id": "m1-B",
-          "x": 955,
+          "x": 1115,
           "y": 520,
           "label": "B ↔",
           "toggle": true
@@ -4914,7 +4927,7 @@
       "targets": [
         {
           "id": "m1-shot",
-          "x": 1495,
+          "x": 1655,
           "y": 482,
           "label": "TIR",
           "requires": [
@@ -4925,7 +4938,7 @@
       "plates": [
         {
           "id": "m0-low",
-          "x": 195,
+          "x": 355,
           "y": 520,
           "w": 50,
           "hero": 1,
@@ -4936,7 +4949,7 @@
         },
         {
           "id": "m1-low",
-          "x": 1430,
+          "x": 1590,
           "y": 520,
           "w": 70,
           "hero": 1,
@@ -4951,7 +4964,7 @@
       "keys": [
         {
           "id": "m0-key",
-          "x": 455,
+          "x": 615,
           "y": 267,
           "hero": 2
         }
@@ -4959,7 +4972,7 @@
       "lifts": [
         {
           "id": "m0-lift",
-          "x": 260,
+          "x": 420,
           "y": 520,
           "w": 120,
           "h": 16,
@@ -4977,23 +4990,23 @@
       "stars": [
         {
           "id": "star-1",
-          "x": 500,
+          "x": 660,
           "y": 255
         },
         {
           "id": "star-2",
-          "x": 1220,
+          "x": 1380,
           "y": 420
         },
         {
           "id": "star-3",
-          "x": 1560,
+          "x": 1720,
           "y": 410
         }
       ],
       "signs": [
         {
-          "x": 1220,
+          "x": 1380,
           "y": 520,
           "text": "ÎLOT REFUGE"
         }
@@ -5007,19 +5020,20 @@
         "Passage 2 · Croquinet commande les deux leviers. A seul ouvre la première travée, B seul ouvre la seconde. L’îlot central est sûr.",
         "Passage 2 · A actif : faites traverser les deux autres jusqu’à l’îlot. Désactivez A et activez B. Croquefort traverse vers la dalle jaune ; Croqueboum tire sur la cible depuis l’îlot. Les deux ponts restent ouverts : ramenez Croquinet."
       ],
-      "width": 1860,
+      "width": 2020,
       "exit": {
-        "x": 1655,
+        "x": 1815,
         "y": 520,
         "w": 170
       },
       "checkpoint": {
-        "x": 780,
+        "x": 940,
         "y": 520
       },
       "enemies": [],
       "scenery": "mill",
-      "questStage": 4
+      "questStage": 4,
+      "startOffset": 160
     },
     {
       "id": "expedition-25",
@@ -5721,7 +5735,7 @@
     },
     {
       "id": "expedition-28",
-      "revision": 7,
+      "revision": 8,
       "chapter": "La foire aux détours",
       "name": "A, puis B, puis tout le monde",
       "subtitle": "Personne ne reste derrière",
@@ -5748,29 +5762,29 @@
         {
           "x": 0,
           "y": 520,
-          "w": 300,
+          "w": 460,
           "h": 160
         },
         {
-          "x": 450,
+          "x": 610,
           "y": 520,
           "w": 100,
           "h": 160
         },
         {
-          "x": 700,
+          "x": 860,
           "y": 520,
           "w": 200,
           "h": 160
         },
         {
-          "x": 900,
+          "x": 1060,
           "y": 520,
           "w": 720,
           "h": 160
         },
         {
-          "x": 1620,
+          "x": 1780,
           "y": 520,
           "w": 240,
           "h": 160
@@ -5779,7 +5793,7 @@
       "bridges": [
         {
           "id": "m0-bridgeA",
-          "x": 300,
+          "x": 460,
           "y": 520,
           "w": 150,
           "h": 18,
@@ -5795,7 +5809,7 @@
         },
         {
           "id": "m0-bridgeB",
-          "x": 550,
+          "x": 710,
           "y": 520,
           "w": 150,
           "h": 18,
@@ -5812,7 +5826,7 @@
       ],
       "gates": [
         {
-          "x": 825,
+          "x": 985,
           "y": 250,
           "w": 28,
           "h": 270,
@@ -5821,7 +5835,7 @@
           ]
         },
         {
-          "x": 1510,
+          "x": 1670,
           "y": 250,
           "w": 28,
           "h": 270,
@@ -5833,35 +5847,35 @@
       "switches": [
         {
           "id": "m0-A",
-          "x": 130,
+          "x": 290,
           "y": 520,
           "label": "A ↔",
           "toggle": true
         },
         {
           "id": "m0-B",
-          "x": 235,
+          "x": 395,
           "y": 520,
           "label": "B ↔",
           "toggle": true
         },
         {
           "id": "m1-A",
-          "x": 1040,
+          "x": 1200,
           "y": 520,
           "label": "A ↔",
           "toggle": true
         },
         {
           "id": "m1-B",
-          "x": 1150,
+          "x": 1310,
           "y": 520,
           "label": "B ↔",
           "toggle": true
         },
         {
           "id": "m1-C",
-          "x": 1260,
+          "x": 1420,
           "y": 520,
           "label": "C ↔",
           "toggle": true
@@ -5870,7 +5884,7 @@
       "targets": [
         {
           "id": "m0-shot",
-          "x": 775,
+          "x": 935,
           "y": 482,
           "label": "TIR",
           "requires": [
@@ -5879,7 +5893,7 @@
         },
         {
           "id": "m1-shot",
-          "x": 1420,
+          "x": 1580,
           "y": 482,
           "label": "TIR",
           "requires": [
@@ -5894,7 +5908,7 @@
       "plates": [
         {
           "id": "m0-low",
-          "x": 710,
+          "x": 870,
           "y": 520,
           "w": 70,
           "hero": 1,
@@ -5915,28 +5929,28 @@
       "stars": [
         {
           "id": "star-1",
-          "x": 500,
+          "x": 660,
           "y": 420
         },
         {
           "id": "star-2",
-          "x": 1370,
+          "x": 1530,
           "y": 380
         },
         {
           "id": "star-3",
-          "x": 1560,
+          "x": 1720,
           "y": 410
         }
       ],
       "signs": [
         {
-          "x": 500,
+          "x": 660,
           "y": 520,
           "text": "ÎLOT REFUGE"
         },
         {
-          "x": 1380,
+          "x": 1540,
           "y": 365,
           "text": "A + C · PAS B"
         }
@@ -5950,19 +5964,20 @@
         "Passage 2 · Les panneaux indiquent A + C. Le voyant barré doit rester éteint.",
         "Passage 2 · Activez A et C, laissez B éteint, puis tirez sur la cible. Si B est allumé, Espace le désactive."
       ],
-      "width": 1860,
+      "width": 2020,
       "exit": {
-        "x": 1655,
+        "x": 1815,
         "y": 520,
         "w": 170
       },
       "checkpoint": {
-        "x": 960,
+        "x": 1120,
         "y": 520
       },
       "enemies": [],
       "scenery": "fair",
       "questStage": 4,
+      "startOffset": 160,
       "questReward": 4
     },
     {
@@ -6212,7 +6227,7 @@
     },
     {
       "id": "expedition-30",
-      "revision": 7,
+      "revision": 8,
       "chapter": "La foire aux détours",
       "name": "La clé du marchand de clés",
       "subtitle": "Personne ne reste derrière",
@@ -6239,30 +6254,30 @@
         {
           "x": 0,
           "y": 520,
-          "w": 720,
+          "w": 880,
           "h": 160
         },
         {
-          "x": 300,
+          "x": 460,
           "y": 280,
           "w": 240,
           "h": 18,
           "oneway": true
         },
         {
-          "x": 720,
+          "x": 880,
           "y": 520,
           "w": 720,
           "h": 160
         },
         {
-          "x": 1440,
+          "x": 1600,
           "y": 520,
           "w": 720,
           "h": 160
         },
         {
-          "x": 2160,
+          "x": 2320,
           "y": 520,
           "w": 240,
           "h": 160
@@ -6271,7 +6286,7 @@
       "bridges": [],
       "gates": [
         {
-          "x": 610,
+          "x": 770,
           "y": 250,
           "w": 28,
           "h": 270,
@@ -6280,7 +6295,7 @@
           ]
         },
         {
-          "x": 1330,
+          "x": 1490,
           "y": 250,
           "w": 28,
           "h": 270,
@@ -6289,7 +6304,7 @@
           ]
         },
         {
-          "x": 2050,
+          "x": 2210,
           "y": 250,
           "w": 28,
           "h": 270,
@@ -6302,21 +6317,21 @@
       "switches": [
         {
           "id": "m1-A",
-          "x": 860,
+          "x": 1020,
           "y": 520,
           "label": "A ↔",
           "toggle": true
         },
         {
           "id": "m1-B",
-          "x": 970,
+          "x": 1130,
           "y": 520,
           "label": "B ↔",
           "toggle": true
         },
         {
           "id": "m1-C",
-          "x": 1080,
+          "x": 1240,
           "y": 520,
           "label": "C ↔",
           "toggle": true
@@ -6325,14 +6340,14 @@
       "targets": [
         {
           "id": "m0-shot",
-          "x": 360,
+          "x": 520,
           "y": 482,
           "label": "TIR",
           "requires": []
         },
         {
           "id": "m1-shot",
-          "x": 1240,
+          "x": 1400,
           "y": 482,
           "label": "TIR",
           "requires": [
@@ -6345,7 +6360,7 @@
         },
         {
           "id": "m2-shot",
-          "x": 1900,
+          "x": 2060,
           "y": 482,
           "label": "TIR",
           "requires": [],
@@ -6356,7 +6371,7 @@
       "crates": [
         {
           "id": "m2-crate",
-          "x": 1720,
+          "x": 1880,
           "y": 440,
           "w": 50,
           "h": 80
@@ -6366,7 +6381,7 @@
       "keys": [
         {
           "id": "m0-key",
-          "x": 440,
+          "x": 600,
           "y": 247,
           "hero": 1
         }
@@ -6377,9 +6392,9 @@
       "portals": [
         {
           "id": "m0-in",
-          "x": 230,
+          "x": 390,
           "y": 520,
-          "toX": 345,
+          "toX": 505,
           "toY": 280,
           "requires": [
             "m0-shot"
@@ -6387,9 +6402,9 @@
         },
         {
           "id": "m0-out",
-          "x": 505,
+          "x": 665,
           "y": 280,
-          "toX": 480,
+          "toX": 640,
           "toY": 520
         }
       ],
@@ -6397,23 +6412,23 @@
       "stars": [
         {
           "id": "star-1",
-          "x": 400,
+          "x": 560,
           "y": 235
         },
         {
           "id": "star-2",
-          "x": 1190,
+          "x": 1350,
           "y": 380
         },
         {
           "id": "star-3",
-          "x": 1830,
+          "x": 1990,
           "y": 380
         }
       ],
       "signs": [
         {
-          "x": 1200,
+          "x": 1360,
           "y": 365,
           "text": "A + C · PAS B"
         }
@@ -6430,19 +6445,20 @@
         "Passage 3 · Croquinet doit d’abord démolir la caisse. La petite flèche indique le sens du tir.",
         "Passage 3 · Passez Croqueboum à droite de la cible. Faites un pas à gauche, puis Espace."
       ],
-      "width": 2400,
+      "width": 2560,
       "exit": {
-        "x": 2195,
+        "x": 2355,
         "y": 520,
         "w": 170
       },
       "checkpoint": {
-        "x": 780,
+        "x": 940,
         "y": 520
       },
       "enemies": [],
       "scenery": "fair",
-      "questStage": 5
+      "questStage": 5,
+      "startOffset": 160
     },
     {
       "id": "expedition-31",
@@ -6669,7 +6685,7 @@
     },
     {
       "id": "expedition-32",
-      "revision": 7,
+      "revision": 8,
       "chapter": "La foire aux détours",
       "name": "Le tourniquet des museaux",
       "subtitle": "Personne ne reste derrière",
@@ -6696,49 +6712,49 @@
         {
           "x": 0,
           "y": 520,
-          "w": 720,
+          "w": 880,
           "h": 160
         },
         {
-          "x": 380,
+          "x": 540,
           "y": 300,
           "w": 155,
           "h": 18,
           "oneway": true
         },
         {
-          "x": 720,
+          "x": 880,
           "y": 520,
           "w": 720,
           "h": 160
         },
         {
-          "x": 1020,
+          "x": 1180,
           "y": 280,
           "w": 240,
           "h": 18,
           "oneway": true
         },
         {
-          "x": 1440,
+          "x": 1600,
           "y": 520,
           "w": 300,
           "h": 160
         },
         {
-          "x": 1890,
+          "x": 2050,
           "y": 520,
           "w": 100,
           "h": 160
         },
         {
-          "x": 2140,
+          "x": 2300,
           "y": 520,
           "w": 200,
           "h": 160
         },
         {
-          "x": 2340,
+          "x": 2500,
           "y": 520,
           "w": 240,
           "h": 160
@@ -6747,7 +6763,7 @@
       "bridges": [
         {
           "id": "m2-bridgeA",
-          "x": 1740,
+          "x": 1900,
           "y": 520,
           "w": 150,
           "h": 18,
@@ -6763,7 +6779,7 @@
         },
         {
           "id": "m2-bridgeB",
-          "x": 1990,
+          "x": 2150,
           "y": 520,
           "w": 150,
           "h": 18,
@@ -6780,7 +6796,7 @@
       ],
       "gates": [
         {
-          "x": 610,
+          "x": 770,
           "y": 250,
           "w": 28,
           "h": 270,
@@ -6789,7 +6805,7 @@
           ]
         },
         {
-          "x": 1330,
+          "x": 1490,
           "y": 250,
           "w": 28,
           "h": 270,
@@ -6798,7 +6814,7 @@
           ]
         },
         {
-          "x": 2265,
+          "x": 2425,
           "y": 250,
           "w": 28,
           "h": 270,
@@ -6810,14 +6826,14 @@
       "switches": [
         {
           "id": "m2-A",
-          "x": 1570,
+          "x": 1730,
           "y": 520,
           "label": "A ↔",
           "toggle": true
         },
         {
           "id": "m2-B",
-          "x": 1675,
+          "x": 1835,
           "y": 520,
           "label": "B ↔",
           "toggle": true
@@ -6826,14 +6842,14 @@
       "targets": [
         {
           "id": "m1-shot",
-          "x": 1080,
+          "x": 1240,
           "y": 482,
           "label": "TIR",
           "requires": []
         },
         {
           "id": "m2-shot",
-          "x": 2215,
+          "x": 2375,
           "y": 482,
           "label": "TIR",
           "requires": [
@@ -6844,7 +6860,7 @@
       "plates": [
         {
           "id": "m0-low",
-          "x": 195,
+          "x": 355,
           "y": 520,
           "w": 50,
           "hero": 1,
@@ -6855,7 +6871,7 @@
         },
         {
           "id": "m2-low",
-          "x": 2150,
+          "x": 2310,
           "y": 520,
           "w": 70,
           "hero": 1,
@@ -6870,13 +6886,13 @@
       "keys": [
         {
           "id": "m0-key",
-          "x": 455,
+          "x": 615,
           "y": 267,
           "hero": 2
         },
         {
           "id": "m1-key",
-          "x": 1160,
+          "x": 1320,
           "y": 247,
           "hero": 1
         }
@@ -6884,7 +6900,7 @@
       "lifts": [
         {
           "id": "m0-lift",
-          "x": 260,
+          "x": 420,
           "y": 520,
           "w": 120,
           "h": 16,
@@ -6900,9 +6916,9 @@
       "portals": [
         {
           "id": "m1-in",
-          "x": 950,
+          "x": 1110,
           "y": 520,
-          "toX": 1065,
+          "toX": 1225,
           "toY": 280,
           "requires": [
             "m1-shot"
@@ -6910,9 +6926,9 @@
         },
         {
           "id": "m1-out",
-          "x": 1225,
+          "x": 1385,
           "y": 280,
-          "toX": 1200,
+          "toX": 1360,
           "toY": 520
         }
       ],
@@ -6920,23 +6936,23 @@
       "stars": [
         {
           "id": "star-1",
-          "x": 500,
+          "x": 660,
           "y": 255
         },
         {
           "id": "star-2",
-          "x": 1120,
+          "x": 1280,
           "y": 235
         },
         {
           "id": "star-3",
-          "x": 1940,
+          "x": 2100,
           "y": 420
         }
       ],
       "signs": [
         {
-          "x": 1940,
+          "x": 2100,
           "y": 520,
           "text": "ÎLOT REFUGE"
         }
@@ -6953,19 +6969,20 @@
         "Passage 3 · Croquinet commande les deux leviers. A seul ouvre la première travée, B seul ouvre la seconde. L’îlot central est sûr.",
         "Passage 3 · A actif : faites traverser les deux autres jusqu’à l’îlot. Désactivez A et activez B. Croquefort traverse vers la dalle jaune ; Croqueboum tire sur la cible depuis l’îlot. Les deux ponts restent ouverts : ramenez Croquinet."
       ],
-      "width": 2580,
+      "width": 2740,
       "exit": {
-        "x": 2375,
+        "x": 2535,
         "y": 520,
         "w": 170
       },
       "checkpoint": {
-        "x": 780,
+        "x": 940,
         "y": 520
       },
       "enemies": [],
       "scenery": "fair",
-      "questStage": 5
+      "questStage": 5,
+      "startOffset": 160
     },
     {
       "id": "expedition-33",
@@ -7181,7 +7198,7 @@
     },
     {
       "id": "expedition-34",
-      "revision": 7,
+      "revision": 8,
       "chapter": "Le fort du général",
       "name": "Personne au même endroit",
       "subtitle": "Personne ne reste derrière",
@@ -7208,37 +7225,37 @@
         {
           "x": 0,
           "y": 520,
-          "w": 720,
+          "w": 880,
           "h": 160
         },
         {
-          "x": 300,
+          "x": 460,
           "y": 280,
           "w": 240,
           "h": 18,
           "oneway": true
         },
         {
-          "x": 720,
+          "x": 880,
           "y": 520,
           "w": 720,
           "h": 160
         },
         {
-          "x": 1440,
+          "x": 1600,
           "y": 520,
           "w": 780,
           "h": 160
         },
         {
-          "x": 1715,
+          "x": 1875,
           "y": 340,
           "w": 225,
           "h": 18,
           "oneway": true
         },
         {
-          "x": 2220,
+          "x": 2380,
           "y": 520,
           "w": 240,
           "h": 160
@@ -7247,7 +7264,7 @@
       "bridges": [],
       "gates": [
         {
-          "x": 610,
+          "x": 770,
           "y": 250,
           "w": 28,
           "h": 270,
@@ -7256,7 +7273,7 @@
           ]
         },
         {
-          "x": 1330,
+          "x": 1490,
           "y": 250,
           "w": 28,
           "h": 270,
@@ -7266,7 +7283,7 @@
           ]
         },
         {
-          "x": 2100,
+          "x": 2260,
           "y": 250,
           "w": 28,
           "h": 270,
@@ -7279,14 +7296,14 @@
       "targets": [
         {
           "id": "m0-shot",
-          "x": 360,
+          "x": 520,
           "y": 482,
           "label": "TIR",
           "requires": []
         },
         {
           "id": "m1-shot",
-          "x": 1180,
+          "x": 1340,
           "y": 482,
           "label": "TIR",
           "requires": [],
@@ -7294,7 +7311,7 @@
         },
         {
           "id": "m2-shot",
-          "x": 1990,
+          "x": 2150,
           "y": 482,
           "label": "TIR",
           "requires": [
@@ -7306,7 +7323,7 @@
       "plates": [
         {
           "id": "m2-high",
-          "x": 1835,
+          "x": 1995,
           "y": 340,
           "w": 70,
           "hero": 0,
@@ -7317,7 +7334,7 @@
         },
         {
           "id": "m2-low",
-          "x": 1840,
+          "x": 2000,
           "y": 520,
           "w": 80,
           "hero": 1,
@@ -7330,7 +7347,7 @@
       "crates": [
         {
           "id": "m1-crate",
-          "x": 1000,
+          "x": 1160,
           "y": 440,
           "w": 50,
           "h": 80
@@ -7340,7 +7357,7 @@
       "keys": [
         {
           "id": "m0-key",
-          "x": 440,
+          "x": 600,
           "y": 247,
           "hero": 1
         }
@@ -7351,9 +7368,9 @@
       "portals": [
         {
           "id": "m0-in",
-          "x": 230,
+          "x": 390,
           "y": 520,
-          "toX": 345,
+          "toX": 505,
           "toY": 280,
           "requires": [
             "m0-shot"
@@ -7361,9 +7378,9 @@
         },
         {
           "id": "m0-out",
-          "x": 505,
+          "x": 665,
           "y": 280,
-          "toX": 480,
+          "toX": 640,
           "toY": 520
         }
       ],
@@ -7371,30 +7388,30 @@
       "stars": [
         {
           "id": "star-1",
-          "x": 400,
+          "x": 560,
           "y": 235
         },
         {
           "id": "star-2",
-          "x": 1110,
+          "x": 1270,
           "y": 380
         },
         {
           "id": "star-3",
-          "x": 1870,
+          "x": 2030,
           "y": 300
         }
       ],
       "signs": [
         {
-          "x": 1650,
+          "x": 1810,
           "y": 520,
           "text": "BOUCLIER ↑"
         }
       ],
       "pads": [
         {
-          "x": 1675,
+          "x": 1835,
           "y": 520
         }
       ],
@@ -7409,23 +7426,24 @@
         "Passage 3 · Le bouclier levé aide Croquinet à gagner la dalle rouge en hauteur. Ensuite Croquefort descend tenir la dalle jaune.",
         "Passage 3 · Laissez Croquinet sur sa dalle et Croquefort sur la sienne. Croqueboum tire depuis la gauche. La cible libère les deux équipiers."
       ],
-      "width": 2460,
+      "width": 2620,
       "exit": {
-        "x": 2255,
+        "x": 2415,
         "y": 520,
         "w": 170
       },
       "checkpoint": {
-        "x": 780,
+        "x": 940,
         "y": 520
       },
       "enemies": [],
       "scenery": "fort",
-      "questStage": 5
+      "questStage": 5,
+      "startOffset": 160
     },
     {
       "id": "expedition-35",
-      "revision": 7,
+      "revision": 8,
       "chapter": "Le fort du général",
       "name": "Mais on est déjà passés ici !",
       "subtitle": "Personne ne reste derrière",
@@ -7452,42 +7470,42 @@
         {
           "x": 0,
           "y": 520,
-          "w": 720,
+          "w": 880,
           "h": 160
         },
         {
-          "x": 720,
+          "x": 880,
           "y": 520,
           "w": 720,
           "h": 160
         },
         {
-          "x": 1020,
+          "x": 1180,
           "y": 280,
           "w": 240,
           "h": 18,
           "oneway": true
         },
         {
-          "x": 1440,
+          "x": 1600,
           "y": 520,
           "w": 300,
           "h": 160
         },
         {
-          "x": 1890,
+          "x": 2050,
           "y": 520,
           "w": 100,
           "h": 160
         },
         {
-          "x": 2140,
+          "x": 2300,
           "y": 520,
           "w": 200,
           "h": 160
         },
         {
-          "x": 2340,
+          "x": 2500,
           "y": 520,
           "w": 240,
           "h": 160
@@ -7496,7 +7514,7 @@
       "bridges": [
         {
           "id": "m2-bridgeA",
-          "x": 1740,
+          "x": 1900,
           "y": 520,
           "w": 150,
           "h": 18,
@@ -7512,7 +7530,7 @@
         },
         {
           "id": "m2-bridgeB",
-          "x": 1990,
+          "x": 2150,
           "y": 520,
           "w": 150,
           "h": 18,
@@ -7529,7 +7547,7 @@
       ],
       "gates": [
         {
-          "x": 610,
+          "x": 770,
           "y": 250,
           "w": 28,
           "h": 270,
@@ -7538,7 +7556,7 @@
           ]
         },
         {
-          "x": 1330,
+          "x": 1490,
           "y": 250,
           "w": 28,
           "h": 270,
@@ -7547,7 +7565,7 @@
           ]
         },
         {
-          "x": 2265,
+          "x": 2425,
           "y": 250,
           "w": 28,
           "h": 270,
@@ -7559,35 +7577,35 @@
       "switches": [
         {
           "id": "m0-A",
-          "x": 140,
+          "x": 300,
           "y": 520,
           "label": "A ↔",
           "toggle": true
         },
         {
           "id": "m0-B",
-          "x": 250,
+          "x": 410,
           "y": 520,
           "label": "B ↔",
           "toggle": true
         },
         {
           "id": "m0-C",
-          "x": 360,
+          "x": 520,
           "y": 520,
           "label": "C ↔",
           "toggle": true
         },
         {
           "id": "m2-A",
-          "x": 1570,
+          "x": 1730,
           "y": 520,
           "label": "A ↔",
           "toggle": true
         },
         {
           "id": "m2-B",
-          "x": 1675,
+          "x": 1835,
           "y": 520,
           "label": "B ↔",
           "toggle": true
@@ -7596,7 +7614,7 @@
       "targets": [
         {
           "id": "m0-shot",
-          "x": 520,
+          "x": 680,
           "y": 482,
           "label": "TIR",
           "requires": [
@@ -7609,14 +7627,14 @@
         },
         {
           "id": "m1-shot",
-          "x": 1080,
+          "x": 1240,
           "y": 482,
           "label": "TIR",
           "requires": []
         },
         {
           "id": "m2-shot",
-          "x": 2215,
+          "x": 2375,
           "y": 482,
           "label": "TIR",
           "requires": [
@@ -7627,7 +7645,7 @@
       "plates": [
         {
           "id": "m2-low",
-          "x": 2150,
+          "x": 2310,
           "y": 520,
           "w": 70,
           "hero": 1,
@@ -7642,7 +7660,7 @@
       "keys": [
         {
           "id": "m1-key",
-          "x": 1160,
+          "x": 1320,
           "y": 247,
           "hero": 1
         }
@@ -7653,9 +7671,9 @@
       "portals": [
         {
           "id": "m1-in",
-          "x": 950,
+          "x": 1110,
           "y": 520,
-          "toX": 1065,
+          "toX": 1225,
           "toY": 280,
           "requires": [
             "m1-shot"
@@ -7663,9 +7681,9 @@
         },
         {
           "id": "m1-out",
-          "x": 1225,
+          "x": 1385,
           "y": 280,
-          "toX": 1200,
+          "toX": 1360,
           "toY": 520
         }
       ],
@@ -7673,28 +7691,28 @@
       "stars": [
         {
           "id": "star-1",
-          "x": 470,
+          "x": 630,
           "y": 380
         },
         {
           "id": "star-2",
-          "x": 1120,
+          "x": 1280,
           "y": 235
         },
         {
           "id": "star-3",
-          "x": 1940,
+          "x": 2100,
           "y": 420
         }
       ],
       "signs": [
         {
-          "x": 480,
+          "x": 640,
           "y": 365,
           "text": "A + C · PAS B"
         },
         {
-          "x": 1940,
+          "x": 2100,
           "y": 520,
           "text": "ÎLOT REFUGE"
         }
@@ -7712,27 +7730,28 @@
         "Passage 3 · A actif : faites traverser les deux autres jusqu’à l’îlot. Désactivez A et activez B. Croquefort traverse vers la dalle jaune ; Croqueboum tire sur la cible depuis l’îlot. Les deux ponts restent ouverts : ramenez Croquinet.",
         "Ce zèbre est curieux : restez immobile près de lui, laissez-le approcher, puis Espace pour son étoile."
       ],
-      "width": 2580,
+      "width": 2740,
       "exit": {
-        "x": 2375,
+        "x": 2535,
         "y": 520,
         "w": 170
       },
       "checkpoint": {
-        "x": 780,
+        "x": 940,
         "y": 520
       },
       "enemies": [],
       "scenery": "falls",
       "zebra": {
-        "x": 820,
-        "minX": 730,
-        "maxX": 880,
+        "x": 980,
+        "minX": 890,
+        "maxX": 1040,
         "mode": "curious",
         "y": 520,
         "starId": "star-3"
       },
-      "questStage": 5
+      "questStage": 5,
+      "startOffset": 160
     },
     {
       "id": "expedition-36",
@@ -8010,7 +8029,7 @@
     },
     {
       "id": "expedition-37",
-      "revision": 7,
+      "revision": 8,
       "chapter": "Le fort du général",
       "name": "Le coffre du général Crognon",
       "subtitle": "Personne ne reste derrière",
@@ -8037,42 +8056,42 @@
         {
           "x": 0,
           "y": 520,
-          "w": 300,
+          "w": 460,
           "h": 160
         },
         {
-          "x": 450,
+          "x": 610,
           "y": 520,
           "w": 100,
           "h": 160
         },
         {
-          "x": 700,
+          "x": 860,
           "y": 520,
           "w": 200,
           "h": 160
         },
         {
-          "x": 900,
+          "x": 1060,
           "y": 520,
           "w": 780,
           "h": 160
         },
         {
-          "x": 1175,
+          "x": 1335,
           "y": 340,
           "w": 225,
           "h": 18,
           "oneway": true
         },
         {
-          "x": 1680,
+          "x": 1840,
           "y": 520,
           "w": 720,
           "h": 160
         },
         {
-          "x": 2400,
+          "x": 2560,
           "y": 520,
           "w": 240,
           "h": 160
@@ -8081,7 +8100,7 @@
       "bridges": [
         {
           "id": "m0-bridgeA",
-          "x": 300,
+          "x": 460,
           "y": 520,
           "w": 150,
           "h": 18,
@@ -8097,7 +8116,7 @@
         },
         {
           "id": "m0-bridgeB",
-          "x": 550,
+          "x": 710,
           "y": 520,
           "w": 150,
           "h": 18,
@@ -8114,7 +8133,7 @@
       ],
       "gates": [
         {
-          "x": 825,
+          "x": 985,
           "y": 250,
           "w": 28,
           "h": 270,
@@ -8123,7 +8142,7 @@
           ]
         },
         {
-          "x": 1560,
+          "x": 1720,
           "y": 250,
           "w": 28,
           "h": 270,
@@ -8132,7 +8151,7 @@
           ]
         },
         {
-          "x": 2290,
+          "x": 2450,
           "y": 250,
           "w": 28,
           "h": 270,
@@ -8144,14 +8163,14 @@
       "switches": [
         {
           "id": "m0-A",
-          "x": 130,
+          "x": 290,
           "y": 520,
           "label": "A ↔",
           "toggle": true
         },
         {
           "id": "m0-B",
-          "x": 235,
+          "x": 395,
           "y": 520,
           "label": "B ↔",
           "toggle": true
@@ -8160,7 +8179,7 @@
       "targets": [
         {
           "id": "m0-shot",
-          "x": 775,
+          "x": 935,
           "y": 482,
           "label": "TIR",
           "requires": [
@@ -8169,7 +8188,7 @@
         },
         {
           "id": "m1-shot",
-          "x": 1450,
+          "x": 1610,
           "y": 482,
           "label": "TIR",
           "requires": [
@@ -8179,7 +8198,7 @@
         },
         {
           "id": "m2-shot",
-          "x": 2190,
+          "x": 2350,
           "y": 482,
           "label": "TIR",
           "requires": [
@@ -8190,7 +8209,7 @@
       "plates": [
         {
           "id": "m0-low",
-          "x": 710,
+          "x": 870,
           "y": 520,
           "w": 70,
           "hero": 1,
@@ -8201,7 +8220,7 @@
         },
         {
           "id": "m1-high",
-          "x": 1295,
+          "x": 1455,
           "y": 340,
           "w": 70,
           "hero": 0,
@@ -8212,7 +8231,7 @@
         },
         {
           "id": "m1-low",
-          "x": 1300,
+          "x": 1460,
           "y": 520,
           "w": 80,
           "hero": 1,
@@ -8223,7 +8242,7 @@
         },
         {
           "id": "m2-low",
-          "x": 2035,
+          "x": 2195,
           "y": 520,
           "w": 80,
           "hero": 1,
@@ -8236,7 +8255,7 @@
       "crates": [
         {
           "id": "m2-crate",
-          "x": 2235,
+          "x": 2395,
           "y": 440,
           "w": 50,
           "h": 80,
@@ -8255,35 +8274,35 @@
       "stars": [
         {
           "id": "star-1",
-          "x": 500,
+          "x": 660,
           "y": 420
         },
         {
           "id": "star-2",
-          "x": 1330,
+          "x": 1490,
           "y": 300
         },
         {
           "id": "star-3",
-          "x": 2075,
+          "x": 2235,
           "y": 400
         }
       ],
       "signs": [
         {
-          "x": 500,
+          "x": 660,
           "y": 520,
           "text": "ÎLOT REFUGE"
         },
         {
-          "x": 1110,
+          "x": 1270,
           "y": 520,
           "text": "BOUCLIER ↑"
         }
       ],
       "pads": [
         {
-          "x": 1135,
+          "x": 1295,
           "y": 520
         }
       ],
@@ -8298,30 +8317,31 @@
         "Passage 3 · Croquefort alimente la cible depuis la dalle. Croqueboum retire le blindage en tirant.",
         "Passage 3 · Quand la cible est verte, Croquinet peut charger le coffre. Tant qu’il est gris, même sa meilleure grimace n’y fera rien."
       ],
-      "width": 2640,
+      "width": 2800,
       "exit": {
-        "x": 2435,
+        "x": 2595,
         "y": 520,
         "w": 170
       },
       "checkpoint": {
-        "x": 960,
+        "x": 1120,
         "y": 520
       },
       "enemies": [
         {
           "id": "m2-patrol",
           "kind": "lion",
-          "x": 2240,
+          "x": 2400,
           "y": 520,
-          "minX": 2230,
-          "maxX": 2260,
+          "minX": 2390,
+          "maxX": 2420,
           "speed": 101,
           "dir": -1
         }
       ],
       "scenery": "savannah",
       "questStage": 5,
+      "startOffset": 160,
       "questReward": 5
     }
   ]

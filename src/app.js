@@ -7,7 +7,10 @@ const input={left:false,right:false,up:false,down:false,jump:false,action:false}
 function validSave(d){if(!d||d.format!=='crocrocros-save'||d.version!==1||typeof d.completed!=='object'||!d.completed||Array.isArray(d.completed))return false;
  if(!Object.entries(d.completed).every(([id,v])=>D.levels.some(l=>l.id===id)&&v&&Number.isInteger(v.stars)&&v.stars>=0&&v.stars<=3&&Number.isFinite(v.time)&&v.time>=0))return false;
  if(d.current){const L=D.levels.find(l=>l.id===d.current.levelId);if(!L||!CrocoEngine.valid(d.current,L))return false;}return true;}
-function migrateSave(raw){if(!raw||raw.format!=='crocrocros-save'||raw.version!==1)return raw;const next=CLONE(raw);if(next.current){const L=D.levels.find(l=>l.id===next.current.levelId);if(L&&(next.current.layoutRevision||1)!==(L.revision||1)){next.current=new CrocoEngine(L).snapshot();next.revisionNotice=true;}}return next;}
+function migrateSave(raw){if(!raw||raw.format!=='crocrocros-save'||raw.version!==1)return raw;const next=CLONE(raw);if(next.current){const L=D.levels.find(l=>l.id===next.current.levelId);if(L&&(next.current.layoutRevision||1)!==(L.revision||1)){
+ if(next.current.layoutRevision===7&&L.revision===8&&L.startOffset){const shift=L.startOffset;const move=o=>{if(!o||typeof o!=='object')return;for(const [k,v]of Object.entries(o)){if(['x','minX','maxX','aim','watchX'].includes(k)&&typeof v==='number')o[k]+=shift;else if(typeof v==='object')move(v);}};move(next.current);for(const k of Object.keys(next.current.blocks||{}))next.current.blocks[k]+=shift;next.current.layoutRevision=8;}
+ else{next.current=new CrocoEngine(L).snapshot();next.revisionNotice=true;}
+ }}return next;}
 try{const old=localStorage.getItem(KEY);if(old){const raw=migrateSave(JSON.parse(old));if(validSave(raw))data={...blank(),...raw};}}catch(e){storageOK=false;}
 function persist(capture=true){if(capture&&E&&!E.won)data.current=E.snapshot();try{localStorage.setItem(KEY,JSON.stringify(data));storageOK=true;$('saveIndicator').textContent='✓ Progression enregistrée sur cet appareil';}catch(e){storageOK=false;$('saveIndicator').textContent='Sauvegarde indisponible : exportez votre progression';}refreshHome();}
 function toast(t){$('toast').textContent=t;$('toast').classList.add('show');clearTimeout(toastTimer);toastTimer=setTimeout(()=>$('toast').classList.remove('show'),4000);}
@@ -111,5 +114,5 @@ refreshHome();resizeCover();requestAnimationFrame(frame);
 if(!storageOK)setTimeout(()=>toast('Sauvegarde locale indisponible. Exportez votre progression depuis les réglages.'),1500);
 if('serviceWorker' in navigator && location.protocol!=='file:' && !window.CROCO_SINGLE_FILE){navigator.serviceWorker.register('./sw.js').then(()=>navigator.serviceWorker.ready).then(()=>{$('offlineStatus').textContent='✓ PRÊT HORS LIGNE';}).catch(()=>{$('offlineStatus').textContent='SOLO · INSTALLATION HORS LIGNE INDISPONIBLE';});}
 // Read-only metadata for diagnostics; the live game remains private to this closure.
-window.CROCO_VERSION='0.8.1';
+window.CROCO_VERSION='0.8.2';
 })();

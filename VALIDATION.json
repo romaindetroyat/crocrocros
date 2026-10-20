@@ -84,6 +84,6 @@
   "vercel": {
     "configuration": "vercel.json",
     "output": "dist",
-    "deployment": "pending account connection"
+    "deployment": "blocked: Vercel 403 creating project in romain-detroyat-s-projects"
   }
 }

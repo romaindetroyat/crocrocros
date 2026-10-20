@@ -1,5 +1,5 @@
 {
-  "version": 9,
+  "version": 10,
   "quest": {
     "title": "La bannière du retour",
     "intro": "Un grand barrissement a dispersé le régiment et déchiré sa bannière. Retrouvez ses six morceaux, traversez le pays des éléphants et ramenez tout le monde au marais.",
@@ -8343,6 +8343,1071 @@
       "questStage": 5,
       "startOffset": 160,
       "questReward": 5
+    }
+  ],
+  "workshop": [
+    {
+      "id": "atelier-depart",
+      "name": "Le départ par les toits",
+      "width": 1650,
+      "height": 1000,
+      "scenery": "canopy",
+      "theme": "forest",
+      "revision": 1,
+      "handcrafted": true,
+      "chapter": "Atelier de refonte",
+      "difficulty": "PRISE EN MAIN",
+      "briefing": "Le régiment s’est trompé de porte : la sortie est tout en haut. Apprenez à faire travailler les trois crocos ensemble, puis gagnez les toits.",
+      "intro": "« La sortie est en haut ? » — « On avait demandé une vue sur le marais. »",
+      "hints": [
+        "Chaque portrait rappelle la capacité de son croco. Les fleurs indiquent une place utile pour le bouclier.",
+        "Croquefort lève son bouclier près des fleurs. Croquinet saute dessus, puis sur la corniche pour prendre son sceau.",
+        "Croquinet peut ensuite charger la caisse. Croqueboum tire sur le lionceau depuis une distance sûre, puis sur la cible. L’échelle apparaît : les trois crocos peuvent monter aux toits."
+      ],
+      "victory": "Un marchepied, une charge, quelques petits pois… et trois crocos sur le toit !",
+      "spawns": [
+        {
+          "x": 70,
+          "y": 900
+        },
+        {
+          "x": 140,
+          "y": 900
+        },
+        {
+          "x": 210,
+          "y": 900
+        }
+      ],
+      "checkpoint": {
+        "x": 110,
+        "y": 900
+      },
+      "exit": {
+        "x": 1450,
+        "y": 320,
+        "w": 150,
+        "requires": [
+          "ladder"
+        ]
+      },
+      "zones": [
+        {
+          "x": 0,
+          "y": 470,
+          "w": 1100,
+          "h": 500,
+          "label": "AU PIED DU GRAND ARBRE"
+        },
+        {
+          "x": 1250,
+          "y": 80,
+          "w": 400,
+          "h": 850,
+          "label": "LE POSTE DES TOITS"
+        }
+      ],
+      "goals": [
+        {
+          "id": "red",
+          "text": "Récupérer le sceau rouge"
+        },
+        {
+          "id": "crate",
+          "text": "Ouvrir la caisse renforcée"
+        },
+        {
+          "id": "cub",
+          "text": "Faire faire la sieste au lionceau"
+        },
+        {
+          "id": "ladder",
+          "text": "Déployer l’échelle des toits"
+        }
+      ],
+      "platforms": [
+        {
+          "x": 0,
+          "y": 900,
+          "w": 1650,
+          "h": 150,
+          "oneway": false
+        },
+        {
+          "x": 310,
+          "y": 700,
+          "w": 360,
+          "h": 24,
+          "oneway": true
+        },
+        {
+          "x": 1270,
+          "y": 320,
+          "w": 380,
+          "h": 24,
+          "oneway": true
+        }
+      ],
+      "bridges": [],
+      "gates": [],
+      "switches": [],
+      "targets": [
+        {
+          "id": "ladder",
+          "x": 1200,
+          "y": 862,
+          "label": "VERS LES TOITS",
+          "requires": [
+            "red",
+            "crate",
+            "cub"
+          ]
+        }
+      ],
+      "plates": [],
+      "crates": [
+        {
+          "id": "crate",
+          "x": 800,
+          "y": 820,
+          "w": 55,
+          "h": 80,
+          "requires": [
+            "red"
+          ]
+        }
+      ],
+      "turrets": [],
+      "keys": [
+        {
+          "id": "red",
+          "x": 510,
+          "y": 667,
+          "hero": 0
+        }
+      ],
+      "lifts": [],
+      "ladders": [
+        {
+          "x": 1370,
+          "y": 320,
+          "h": 580,
+          "requires": [
+            "ladder"
+          ]
+        }
+      ],
+      "springs": [],
+      "portals": [],
+      "conveyors": [],
+      "stars": [
+        {
+          "id": "star-0",
+          "x": 550,
+          "y": 655
+        },
+        {
+          "id": "star-1",
+          "x": 730,
+          "y": 790
+        },
+        {
+          "id": "star-2",
+          "x": 1530,
+          "y": 280
+        }
+      ],
+      "signs": [
+        {
+          "x": 350,
+          "y": 900,
+          "text": "X : BOUCLIER ↑"
+        },
+        {
+          "x": 620,
+          "y": 700,
+          "text": "W : LE SCEAU"
+        },
+        {
+          "x": 920,
+          "y": 760,
+          "text": "C : PETITS POIS"
+        }
+      ],
+      "pads": [
+        {
+          "x": 270,
+          "y": 900
+        }
+      ],
+      "blocks": [],
+      "elephants": [],
+      "enemies": [
+        {
+          "id": "cub",
+          "kind": "lion",
+          "x": 1020,
+          "y": 900,
+          "minX": 990,
+          "maxX": 1110,
+          "speed": 55,
+          "dir": -1
+        }
+      ],
+      "reactors": []
+    },
+    {
+      "id": "atelier-moulin",
+      "name": "Le moulin enrhumé",
+      "width": 1780,
+      "height": 1500,
+      "scenery": "mill",
+      "theme": "factory",
+      "revision": 1,
+      "handcrafted": true,
+      "chapter": "Atelier de refonte",
+      "difficulty": "COOPÉRATION",
+      "briefing": "Un hippopotame enrhumé et un vautour farceur ont arrêté le moulin. Leurs bêtises peuvent aussi le remettre en marche. Explorez les trois étages et préparez la traversée du dernier croco.",
+      "intro": "« À tes souhaits ! » — « Attends… refais ça. »",
+      "hints": [
+        "Le chariot porte une spirale, pas le X de Croquefort : il réagit au souffle. L’hippopotame éternue vers le croco qu’il regarde.",
+        "Croquinet peut passer au-dessus du chariot par la petite échelle et attirer le souffle vers la droite. Écartez-le du rail avant que le chariot avance.",
+        "Sur la galerie du vautour, placez un croco sur le collecteur. Le vautour vise sa position avant de lâcher la noix : déplacez-vous pendant la descente. L’échelle des combles et l’ascenseur sont alors alimentés.",
+        "Croquinet récupère le sceau rouge. Croquefort tient la dalle du haut avec son bouclier levé, ce qui déploie la grande passerelle. Croqueboum traverse et tire. Le pont reste ouvert et le dernier croco peut rejoindre la sortie."
+      ],
+      "victory": "Un éternuement a poussé le chariot, une noix a relancé le moulin, et le bouclier a permis le passage de tous.",
+      "spawns": [
+        {
+          "x": 70,
+          "y": 1400
+        },
+        {
+          "x": 140,
+          "y": 1400
+        },
+        {
+          "x": 210,
+          "y": 1400
+        }
+      ],
+      "checkpoint": {
+        "x": 110,
+        "y": 1400
+      },
+      "exit": {
+        "x": 1580,
+        "y": 420,
+        "w": 150,
+        "requires": [
+          "finish"
+        ]
+      },
+      "zones": [
+        {
+          "x": 0,
+          "y": 1070,
+          "w": 750,
+          "h": 420,
+          "label": "LA SOUFFLERIE"
+        },
+        {
+          "x": 1050,
+          "y": 670,
+          "w": 730,
+          "h": 730,
+          "label": "LA COLLECTE DES NOIX"
+        },
+        {
+          "x": 0,
+          "y": 140,
+          "w": 600,
+          "h": 800,
+          "label": "LES COMBLES"
+        },
+        {
+          "x": 1200,
+          "y": 80,
+          "w": 580,
+          "h": 700,
+          "label": "LE GRAND MÉCANISME"
+        }
+      ],
+      "goals": [
+        {
+          "id": "wind",
+          "text": "Faire avancer le chariot à vent"
+        },
+        {
+          "id": "rain",
+          "text": "Alimenter le collecteur de noix"
+        },
+        {
+          "id": "red",
+          "text": "Récupérer le sceau des combles"
+        },
+        {
+          "id": "finish",
+          "text": "Remettre le moulin en marche"
+        }
+      ],
+      "platforms": [
+        {
+          "x": 0,
+          "y": 1400,
+          "w": 700,
+          "h": 150,
+          "oneway": false
+        },
+        {
+          "x": 1000,
+          "y": 1400,
+          "w": 780,
+          "h": 150,
+          "oneway": false
+        },
+        {
+          "x": 450,
+          "y": 1220,
+          "w": 290,
+          "h": 24,
+          "oneway": true
+        },
+        {
+          "x": 0,
+          "y": 950,
+          "w": 340,
+          "h": 24,
+          "oneway": true
+        },
+        {
+          "x": 460,
+          "y": 950,
+          "w": 1320,
+          "h": 24,
+          "oneway": true
+        },
+        {
+          "x": 0,
+          "y": 420,
+          "w": 600,
+          "h": 24,
+          "oneway": true
+        },
+        {
+          "x": 1200,
+          "y": 420,
+          "w": 580,
+          "h": 24,
+          "oneway": true
+        }
+      ],
+      "bridges": [
+        {
+          "id": "river",
+          "x": 700,
+          "y": 1400,
+          "w": 300,
+          "h": 18,
+          "requires": [
+            "wind"
+          ]
+        },
+        {
+          "id": "sky",
+          "x": 600,
+          "y": 420,
+          "w": 600,
+          "h": 18,
+          "requires": [
+            "roof",
+            "red"
+          ],
+          "latchWhen": [
+            "finish"
+          ]
+        }
+      ],
+      "gates": [],
+      "switches": [
+        {
+          "id": "call",
+          "x": 390,
+          "y": 1400,
+          "label": "ASCENSEUR ↔",
+          "toggle": true
+        },
+        {
+          "id": "call",
+          "x": 390,
+          "y": 950,
+          "label": "ASCENSEUR ↔",
+          "toggle": true
+        }
+      ],
+      "targets": [
+        {
+          "id": "finish",
+          "x": 1510,
+          "y": 382,
+          "label": "LE MOULIN REPART",
+          "rule": "VENT + NOIX + SCEAU + TOIT",
+          "requires": [
+            "wind",
+            "rain",
+            "red",
+            "roof"
+          ]
+        }
+      ],
+      "plates": [
+        {
+          "id": "wind",
+          "x": 650,
+          "y": 1400,
+          "w": 64,
+          "label": "CHARIOT À VENT",
+          "acceptBlock": true,
+          "blockOnly": true
+        },
+        {
+          "id": "roof",
+          "x": 300,
+          "y": 420,
+          "w": 75,
+          "hero": 1,
+          "roof": true,
+          "label": "X · BOUCLIER ↑"
+        }
+      ],
+      "crates": [],
+      "turrets": [],
+      "keys": [
+        {
+          "id": "red",
+          "x": 515,
+          "y": 387,
+          "hero": 0
+        }
+      ],
+      "lifts": [
+        {
+          "id": "lift",
+          "x": 340,
+          "y": 1400,
+          "w": 120,
+          "h": 16,
+          "toY": 950,
+          "speed": 160,
+          "requires": [
+            "call",
+            "rain"
+          ]
+        }
+      ],
+      "ladders": [
+        {
+          "x": 490,
+          "y": 1220,
+          "h": 180
+        },
+        {
+          "x": 1080,
+          "y": 950,
+          "h": 450
+        },
+        {
+          "x": 240,
+          "y": 420,
+          "h": 530,
+          "requires": [
+            "rain"
+          ]
+        }
+      ],
+      "springs": [],
+      "portals": [],
+      "conveyors": [],
+      "stars": [
+        {
+          "id": "star-0",
+          "x": 640,
+          "y": 1180
+        },
+        {
+          "id": "star-1",
+          "x": 515,
+          "y": 380
+        },
+        {
+          "id": "star-2",
+          "x": 1640,
+          "y": 380
+        }
+      ],
+      "signs": [
+        {
+          "x": 580,
+          "y": 1170,
+          "text": "LE VENT POUSSE ≈"
+        },
+        {
+          "x": 1460,
+          "y": 950,
+          "text": "OBSERVER… ESQUIVER"
+        },
+        {
+          "x": 870,
+          "y": 250,
+          "text": "LE TOIT TIENT LE PONT"
+        }
+      ],
+      "pads": [],
+      "blocks": [
+        {
+          "id": "windCart",
+          "x": 560,
+          "y": 1344,
+          "w": 56,
+          "h": 56,
+          "minX": 560,
+          "maxX": 650,
+          "windOnly": true
+        }
+      ],
+      "elephants": [],
+      "enemies": [
+        {
+          "id": "hippo",
+          "kind": "hippo",
+          "essential": true,
+          "calmWhen": [
+            "wind"
+          ],
+          "x": 425,
+          "y": 1400,
+          "minX": 415,
+          "maxX": 435,
+          "speed": 12,
+          "dir": 1
+        },
+        {
+          "id": "bird",
+          "kind": "vulture",
+          "essential": true,
+          "hover": 95,
+          "calmWhen": [
+            "rain"
+          ],
+          "x": 1300,
+          "y": 950,
+          "minX": 1240,
+          "maxX": 1360,
+          "speed": 32,
+          "dir": -1
+        }
+      ],
+      "reactors": [
+        {
+          "id": "rain",
+          "kind": "coconut",
+          "x": 1260,
+          "y": 950,
+          "w": 90,
+          "h": 20,
+          "label": "UNE NOIX ICI"
+        }
+      ]
+    },
+    {
+      "id": "atelier-fort",
+      "name": "Le fort des trois relais",
+      "width": 2400,
+      "height": 2200,
+      "scenery": "fort",
+      "theme": "fort",
+      "revision": 1,
+      "handcrafted": true,
+      "chapter": "Atelier de refonte",
+      "difficulty": "ÉPREUVE AVANCÉE",
+      "briefing": "La sortie se trouve derrière vous. Il faut explorer le fort, récupérer trois sceaux et préparer plusieurs relèves. Le contrepoids commande soit l’expédition du bas, soit le retour par les toits. Prévoyez où chacun attendra quand les passerelles changeront.",
+      "intro": "« Si on ouvre le pont du haut, celui du bas se ferme. » — « Donc on réfléchit avant. »",
+      "hints": [
+        "Prenez le plan avec M. A commande l’expédition du bas ; B commande le pont des toits, avec le poste X. Le rappel final demande à nouveau A. Le tireur devra donc débarquer avant la dernière commutation.",
+        "Croqueboum embarque sur le monte-charge AVANT que Croquinet tienne W POSTE I. Sur la galerie, le tireur prend son sceau et attire une noix sur le collecteur. Il active le premier relais pendant que W reste occupé.",
+        "Croquefort va chercher le sceau jaune dans la cour, puis revient au contrepoids. Croquinet rejoint le tireur par l’échelle centrale : tous deux gagnent le belvédère. Croquinet prend le rouge et tient W LE RAPPEL.",
+        "Croquefort pousse le bloc sur B puis tient X POSTE II. Le tireur peut traverser le pont des toits vers la tour de gauche. Une fois débarqué, Croquefort remet le bloc sur A, puis revient au poste X.",
+        "Croqueboum tire vers la gauche sur le rappel, avec les trois sceaux et les deux postes occupés. Les arches des deux tours ramènent les éclaireurs à l’entrée ; Croquefort redescend son échelle. Personne ne reste derrière."
+      ],
+      "victory": "Vous avez anticipé les débarquements, changé l’alimentation deux fois et libéré jusqu’au dernier opérateur. Tout le régiment est rentré !",
+      "spawns": [
+        {
+          "x": 70,
+          "y": 2100
+        },
+        {
+          "x": 140,
+          "y": 2100
+        },
+        {
+          "x": 210,
+          "y": 2100
+        }
+      ],
+      "checkpoint": {
+        "x": 110,
+        "y": 2100
+      },
+      "exit": {
+        "x": 65,
+        "y": 2100,
+        "w": 190,
+        "requires": [
+          "finish"
+        ],
+        "direction": "left"
+      },
+      "zones": [
+        {
+          "x": 0,
+          "y": 1510,
+          "w": 700,
+          "h": 640,
+          "label": "LE POSTE DE COMMANDE"
+        },
+        {
+          "x": 1030,
+          "y": 1240,
+          "w": 420,
+          "h": 850,
+          "label": "LE RELAIS DU VAUTOUR"
+        },
+        {
+          "x": 1820,
+          "y": 1150,
+          "w": 580,
+          "h": 950,
+          "label": "LA COUR DU GARDIEN"
+        },
+        {
+          "x": 1820,
+          "y": 580,
+          "w": 580,
+          "h": 850,
+          "label": "LE BELVÉDÈRE"
+        },
+        {
+          "x": 0,
+          "y": 560,
+          "w": 620,
+          "h": 850,
+          "label": "LA TOUR DU RAPPEL"
+        }
+      ],
+      "goals": [
+        {
+          "id": "blue",
+          "text": "Atteindre le relais bleu"
+        },
+        {
+          "id": "relay",
+          "text": "Ouvrir l’expédition vers la cour"
+        },
+        {
+          "id": "gold",
+          "text": "Rapporter le sceau jaune"
+        },
+        {
+          "id": "red",
+          "text": "Atteindre le belvédère rouge"
+        },
+        {
+          "id": "finish",
+          "text": "Organiser le rappel du régiment"
+        }
+      ],
+      "platforms": [
+        {
+          "x": 0,
+          "y": 2100,
+          "w": 700,
+          "h": 150,
+          "oneway": false
+        },
+        {
+          "x": 1050,
+          "y": 2100,
+          "w": 400,
+          "h": 150,
+          "oneway": false
+        },
+        {
+          "x": 1820,
+          "y": 2100,
+          "w": 580,
+          "h": 150,
+          "oneway": false
+        },
+        {
+          "x": 0,
+          "y": 1800,
+          "w": 650,
+          "h": 24,
+          "oneway": true
+        },
+        {
+          "x": 1050,
+          "y": 1580,
+          "w": 400,
+          "h": 24,
+          "oneway": true
+        },
+        {
+          "x": 1820,
+          "y": 1580,
+          "w": 580,
+          "h": 24,
+          "oneway": true
+        },
+        {
+          "x": 0,
+          "y": 900,
+          "w": 620,
+          "h": 24,
+          "oneway": true
+        },
+        {
+          "x": 1820,
+          "y": 900,
+          "w": 580,
+          "h": 24,
+          "oneway": true
+        },
+        {
+          "x": 350,
+          "y": 1980,
+          "w": 330,
+          "h": 24,
+          "oneway": true
+        }
+      ],
+      "bridges": [
+        {
+          "id": "first",
+          "x": 700,
+          "y": 2100,
+          "w": 350,
+          "h": 18,
+          "requires": [
+            "a"
+          ],
+          "latchWhen": [
+            "finish"
+          ]
+        },
+        {
+          "id": "second",
+          "x": 1450,
+          "y": 2100,
+          "w": 370,
+          "h": 18,
+          "requires": [
+            "relay"
+          ]
+        },
+        {
+          "id": "gallery",
+          "x": 1450,
+          "y": 1580,
+          "w": 370,
+          "h": 18,
+          "requires": [
+            "relay",
+            "gold"
+          ]
+        },
+        {
+          "id": "sky",
+          "x": 620,
+          "y": 900,
+          "w": 1200,
+          "h": 18,
+          "requires": [
+            "b",
+            "guard"
+          ],
+          "latchWhen": [
+            "finish"
+          ]
+        }
+      ],
+      "gates": [],
+      "switches": [],
+      "targets": [
+        {
+          "id": "relay",
+          "x": 1400,
+          "y": 1542,
+          "label": "PREMIER RELAIS",
+          "rule": "A + W POSTE I + BLEU + NOIX",
+          "requires": [
+            "a",
+            "lookout",
+            "blue",
+            "rain"
+          ]
+        },
+        {
+          "id": "finish",
+          "x": 280,
+          "y": 862,
+          "label": "LE GRAND RAPPEL",
+          "rule": "TROIS SCEAUX + A + W + X",
+          "hitDirection": -1,
+          "requires": [
+            "blue",
+            "gold",
+            "red",
+            "a",
+            "guard",
+            "scoutFar",
+            "relay"
+          ]
+        }
+      ],
+      "plates": [
+        {
+          "id": "a",
+          "x": 430,
+          "y": 2100,
+          "w": 64,
+          "blockOnly": true,
+          "acceptBlock": true,
+          "label": "BLOC A · EXPÉDITION"
+        },
+        {
+          "id": "b",
+          "x": 580,
+          "y": 2100,
+          "w": 64,
+          "blockOnly": true,
+          "acceptBlock": true,
+          "label": "BLOC B · LES TOITS"
+        },
+        {
+          "id": "lookout",
+          "x": 500,
+          "y": 1800,
+          "w": 70,
+          "hero": 0,
+          "label": "W · POSTE I"
+        },
+        {
+          "id": "guard",
+          "x": 400,
+          "y": 1800,
+          "w": 70,
+          "hero": 1,
+          "label": "X · POSTE II"
+        },
+        {
+          "id": "scoutFar",
+          "x": 2240,
+          "y": 900,
+          "w": 75,
+          "hero": 0,
+          "label": "W · LE RAPPEL"
+        }
+      ],
+      "crates": [],
+      "turrets": [],
+      "keys": [
+        {
+          "id": "blue",
+          "x": 1190,
+          "y": 1547,
+          "hero": 2
+        },
+        {
+          "id": "gold",
+          "x": 2200,
+          "y": 2067,
+          "hero": 1
+        },
+        {
+          "id": "red",
+          "x": 2300,
+          "y": 867,
+          "hero": 0
+        }
+      ],
+      "lifts": [
+        {
+          "id": "lift",
+          "x": 920,
+          "y": 2100,
+          "w": 130,
+          "h": 18,
+          "toY": 1580,
+          "speed": 160,
+          "requires": [
+            "a",
+            "lookout"
+          ]
+        }
+      ],
+      "ladders": [
+        {
+          "x": 300,
+          "y": 1800,
+          "h": 300
+        },
+        {
+          "x": 370,
+          "y": 1980,
+          "h": 120
+        },
+        {
+          "x": 660,
+          "y": 1980,
+          "h": 120
+        },
+        {
+          "x": 1110,
+          "y": 1580,
+          "h": 520,
+          "requires": [
+            "relay"
+          ]
+        },
+        {
+          "x": 2200,
+          "y": 900,
+          "h": 680,
+          "requires": [
+            "rain",
+            "gold"
+          ]
+        }
+      ],
+      "springs": [],
+      "portals": [
+        {
+          "id": "leftHome",
+          "x": 490,
+          "y": 900,
+          "toX": 150,
+          "toY": 2100,
+          "requires": [
+            "finish"
+          ]
+        },
+        {
+          "id": "rightHome",
+          "x": 2090,
+          "y": 900,
+          "toX": 150,
+          "toY": 2100,
+          "requires": [
+            "finish"
+          ]
+        }
+      ],
+      "conveyors": [],
+      "stars": [
+        {
+          "id": "star-0",
+          "x": 1190,
+          "y": 1540
+        },
+        {
+          "id": "star-1",
+          "x": 2300,
+          "y": 860
+        },
+        {
+          "id": "star-2",
+          "x": 390,
+          "y": 860
+        }
+      ],
+      "signs": [
+        {
+          "x": 550,
+          "y": 1950,
+          "text": "A OU B · UN SEUL BLOC"
+        },
+        {
+          "x": 1410,
+          "y": 1900,
+          "text": "LA GALERIE EST EN HAUT"
+        },
+        {
+          "x": 1950,
+          "y": 1400,
+          "text": "LES TROIS SCEAUX"
+        },
+        {
+          "x": 1130,
+          "y": 720,
+          "text": "B + X : RETOUR PAR LES TOITS"
+        },
+        {
+          "x": 430,
+          "y": 730,
+          "text": "LE TIR VIENT DE LA DROITE"
+        }
+      ],
+      "pads": [],
+      "blocks": [
+        {
+          "id": "weight",
+          "x": 430,
+          "y": 2044,
+          "w": 56,
+          "h": 56,
+          "minX": 430,
+          "maxX": 580
+        }
+      ],
+      "elephants": [],
+      "enemies": [
+        {
+          "id": "bird",
+          "kind": "vulture",
+          "essential": true,
+          "hover": 95,
+          "calmWhen": [
+            "rain"
+          ],
+          "x": 1300,
+          "y": 1580,
+          "minX": 1250,
+          "maxX": 1350,
+          "speed": 28,
+          "dir": -1
+        },
+        {
+          "id": "hippo",
+          "kind": "hippo",
+          "x": 2070,
+          "y": 2100,
+          "minX": 2000,
+          "maxX": 2250,
+          "speed": 65,
+          "dir": -1
+        }
+      ],
+      "reactors": [
+        {
+          "id": "rain",
+          "kind": "coconut",
+          "x": 1260,
+          "y": 1580,
+          "w": 90,
+          "h": 20,
+          "label": "UNE NOIX ICI"
+        }
+      ]
     }
   ]
 }

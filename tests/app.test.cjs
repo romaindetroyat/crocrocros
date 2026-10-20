@@ -97,5 +97,16 @@ for(let i=32;i<37;i++){
  assert.ok(t.engine.won,'trial '+(i+1));assert.equal(JSON.parse(store.get(trialKey)).completed[D.levels[i].id].stars,3);assert.equal(store.get(campaignKey),campaignBytes);
  if(i===32){t.frames(105);t.els.get('next').click();assert.equal(t.engine.L.id,D.levels[33].id);assert.equal(store.get(campaignKey),campaignBytes);}
 }
-const adventure=harness(trialStore);adventure.els.get('continueBtn').click();assert.equal(adventure.engine.L.id,JSON.parse(campaignBytes).current.levelId);adventure.els.get('pauseBtn').click();adventure.els.get('pauseHome').click();adventure.els.get('trialLink').click();assert.equal(adventure.context.location.href,'https://crocrocros.vercel.app/?essai=finales');
+const adventure=harness(trialStore);adventure.els.get('continueBtn').click();assert.equal(adventure.engine.L.id,JSON.parse(campaignBytes).current.levelId);adventure.els.get('pauseBtn').click();adventure.els.get('pauseHome').click();adventure.els.get('trialLink').click();assert.equal(adventure.context.location.href,'https://crocrocros.vercel.app/?essai=refonte');
 console.log('PASS final-five direct access, independent autosave/reload, level switching, all five victories, next level, and intact campaign on return.');
+
+// New workshop campaigns use a third save namespace and the full vertical map.
+for(const [i,route] of require('./workshop-solutions.json').entries()){
+ const store=new Map([[campaignKey,campaignBytes],[trialKey,trialStore.get(trialKey)]]),previousTrial=store.get(trialKey),w=harness(store,{search:'?essai=refonte'});
+ assert.ok(w.els.get('modalBody').innerHTML.includes('3 NIVEAUX ÉTALONS'));assert.equal(w.els.get('level-3'),undefined);w.els.get('level-'+i).click();w.els.get('begin').click();assert.equal(w.engine.L.id,route.levelId);
+ w.els.get('overviewBtn').click();assert.equal(w.els.get('overviewCanvas').height,Math.ceil(w.engine.L.height*1200/w.engine.L.width));w.els.get('planBack').click();
+ for(const c of route.commands){if(c.select!==undefined)w.engine.select(c.select);else for(let j=0;j<c.n;j++)w.engine.step(1/60,c.input);}
+ assert.ok(w.engine.won);assert.equal(JSON.parse(store.get('crocrocros.workshop.v1')).completed[route.levelId].stars,3);assert.equal(store.get(campaignKey),campaignBytes);assert.equal(store.get(trialKey),previousTrial);if(i===0){w.frames(105);w.els.get('gradeEasy').click();assert.equal(JSON.parse(store.get('crocrocros.workshop.v1')).feedback[route.levelId].grade,'trop simple');assert.equal(store.get(campaignKey),campaignBytes);}
+}
+const ws=new Map([[campaignKey,campaignBytes]]);let w=harness(ws,{search:'?essai=refonte'});w.els.get('level-2').click();w.els.get('begin').click();w.key('ArrowRight');w.frames(12);w.key('ArrowRight','keyup');w.els.get('pauseBtn').click();const wp=w.engine.p[0].x;w=harness(ws,{search:'?essai=refonte'});w.els.get('continueBtn').click();assert.equal(w.engine.p[0].x,wp);assert.equal(w.engine.p[0].y,2100);assert.equal(ws.get(campaignKey),campaignBytes);
+console.log('PASS three workshop UI victories, full-height overview, independent save and reload, campaign and final-five saves untouched.');

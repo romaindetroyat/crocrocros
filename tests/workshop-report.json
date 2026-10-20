@@ -1,0 +1,23 @@
+[
+  {
+    "id": "atelier-depart",
+    "seconds": 28,
+    "stars": 3,
+    "rebounds": 0,
+    "height": 1000
+  },
+  {
+    "id": "atelier-moulin",
+    "seconds": 53,
+    "stars": 3,
+    "rebounds": 0,
+    "height": 1500
+  },
+  {
+    "id": "atelier-fort",
+    "seconds": 75,
+    "stars": 3,
+    "rebounds": 0,
+    "height": 2200
+  }
+]

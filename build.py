@@ -7,14 +7,14 @@ src=ROOT/'src'; dist=ROOT/'dist';dist.mkdir(exist_ok=True)
 page=(src/'index.html').read_text()
 pack=json.loads((ROOT/'content/campaign.json').read_text())
 ids=set()
-for level in pack['levels']:
+for level in pack['levels']+pack.get('workshop',[]):
     assert level['id'] not in ids, 'Duplicate level ID'
     ids.add(level['id'])
     assert len(level['spawns'])==3 and len(level['stars'])==3
     for key in ['platforms','bridges','gates','switches','targets','plates','crates','turrets','hints','pads','signs']:
         assert isinstance(level[key],list), f'Missing list {key}'
-    flags={x['id'] for key in ['switches','targets','plates','keys','crates','enemies'] for x in level.get(key,[])}
-    for item in level['bridges']+level['gates']+level['targets']+level.get('lifts',[])+level.get('portals',[])+level['crates']+[level['exit']]+level.get('elephants',[]):
+    flags={x['id'] for key in ['switches','targets','plates','keys','crates','enemies','reactors'] for x in level.get(key,[])}
+    for item in level.get('ladders',[])+level.get('reactors',[])+level['switches']+level['bridges']+level['gates']+level['targets']+level.get('lifts',[])+level.get('portals',[])+level['crates']+[level['exit']]+level.get('elephants',[]):
         assert all(f in flags for f in item.get('requires',[])+item.get('requiresOff',[])+item.get('latchWhen',[])), 'Unknown mechanism dependency'
     for item in level['plates']:
         assert all(f in flags for f in item.get('latchWhen',[])), 'Unknown latch dependency'

@@ -1,6 +1,6 @@
 # Les Cro Cro Cros — La bannière du retour
 
-Version 0.8.3 · 20 octobre 2026
+Version 0.9.0 · 20 octobre 2026
 
 Jeu de plateforme et de réflexion en solo, en français. Trois crocodiles complémentaires, 37 étapes, six chapitres, 111 étoiles facultatives. Aucun compte, publicité, achat ou serveur de jeu. Tout le contenu est inclus et fonctionne hors ligne.
 
@@ -17,6 +17,18 @@ python3 -m http.server 8080 --directory dist --bind 127.0.0.1
 ```
 
 Ouvrir ensuite http://localhost:8080. Sur un hébergement HTTPS, attendre « PRÊT HORS LIGNE », puis utiliser l’installation proposée par le navigateur. Après le premier chargement, le jeu n’a pas besoin de connexion.
+
+## Atelier de refonte (0.9.0)
+
+https://crocrocros.vercel.app/?essai=refonte
+
+Trois nouveaux niveaux indépendants sont jouables : **Le départ par les toits**, **Le moulin enrhumé**, **Le fort des trois relais**. Ils représentent trois étapes de difficulté à tester avant la reconstruction des 37 énigmes. Les 37 cartes de l’aventure actuelle restent disponibles ; elles ne sont pas encore remplacées.
+
+Le monde est désormais suivi horizontalement et verticalement. M ouvre le plan complet et les objectifs. Les autres crocos restent repérables par des indicateurs de bord, y compris au-dessus ou en dessous. Les échelles conditionnelles apparaissent atténuées tant que leur alimentation manque.
+
+Le chariot portant une spirale réagit au souffle de l’hippopotame. Une boulette ne remplace pas une noix de coco sur les collecteurs. Les animaux nécessaires à une énigme reprennent leurs esprits après un tir et se calment quand leur mécanisme est résolu.
+
+La sauvegarde de l’atelier est distincte de l’aventure et des essais des cinq dernières étapes. Après la victoire, un avis facultatif et un export du bilan permettent d’évaluer la difficulté. Rien n’est envoyé sur le réseau. La difficulté et le plaisir restent à valider par de vraies parties.
 
 ## Essais libres des cinq dernières énigmes (0.8.3)
 

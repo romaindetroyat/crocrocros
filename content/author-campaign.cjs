@@ -123,7 +123,7 @@ require('./clear-starts.cjs')(levels,routes);
 old.heroes.forEach((h,i)=>{h.speed=[380,290,325][i];h.skin=['#85b94b','#b49b4c','#4bafaa'][i];h.color=['#e16b4b','#dfb44e','#4d9cc4'][i];});
 const quest={title:'La bannière du retour',intro:'Un grand barrissement a dispersé le régiment et déchiré sa bannière. Retrouvez ses six morceaux, traversez le pays des éléphants et ramenez tout le monde au marais.',milestones:[2,5,11,19,27,36],pieces:['Le museau','Les roseaux','La lune','La rivière','Le soleil','Les trois étoiles']};
 quest.milestones.forEach((n,i)=>levels[n].questReward=i);
-fs.writeFileSync(path.join(__dirname,'campaign.json'),JSON.stringify({version:9,quest,heroes:old.heroes,levels},null,2));
+fs.writeFileSync(path.join(__dirname,'campaign.json'),JSON.stringify({version:10,quest,heroes:old.heroes,levels,workshop:require('./workshop.cjs')()},null,2));
 fs.writeFileSync(path.join(__dirname,'../tests/recipes.json'),JSON.stringify(routes,null,2));
 const doc=['# Les Cro Cro Cros — carnet d’adaptation v0.5','',
 '37 parcours compacts originaux, organisés suivant les 37 étapes de référence. Les correspondances ci-dessous sont une trame de travail : les cartes, distances, objets et séquences ne reproduisent pas exactement les niveaux de The Lost Vikings. Les systèmes de combat, de bombes et de magnétisme sont simplifiés en mécanismes de coopération.','',

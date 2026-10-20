@@ -1,6 +1,6 @@
 # Les Cro Cro Cros — refonte de toute la campagne
 
-Statut : document de conception, 20 octobre 2026. Les propositions ci-dessous ne sont pas encore des fonctionnalités livrées. La version publiée reste la 0.8.3. La refonte concerne les 37 niveaux, y compris les premiers.
+Statut au 20 octobre 2026 : premier jalon technique et trois niveaux étalons livrés dans l’atelier 0.9.0 (`?essai=refonte`). La reconstruction des 37 cartes décrite ci-dessous reste à réaliser après évaluation de ces étalons. La refonte concerne toute la campagne, y compris les premiers niveaux.
 
 ## Diagnostic vérifié sur la version publiée
 
@@ -102,3 +102,13 @@ Un test automatique qui gagne n’est pas une validation d’amusement. Le retou
 ## Besoins côté utilisateur
 
 Les contraintes, références, personnages et objectifs fournis suffisent pour commencer. Aucun outil, abonnement, compte ou ressource graphique supplémentaire n’est requis pour cette refonte de conception. Les retours de parties constituent l’apport le plus utile : moment de déclic, temps passé à chercher, énigme trop évidente, répétition, difficulté de commande et moment amusant. Un enregistrement facultatif de quelques minutes aide à observer les hésitations sans demander au joueur de concevoir lui-même les niveaux.
+
+
+## Premier jalon 0.9.0 réalisé
+
+- Niveaux étalons : Le départ par les toits (hauteur 1 000), Le moulin enrhumé (1 500), Le fort des trois relais (2 200).
+- Caméra verticale, plan complet, indicateurs des héros sur les deux axes et objectifs visibles.
+- Récepteurs de noix et chariot à vent ; animaux indispensables temporairement étourdis plutôt que supprimés.
+- Sauvegarde séparée et avis de difficulté exportable localement.
+- Trois solutions par les commandes normales, avec trois étoiles et aucun rebond, reprises de sauvegardes et régressions de l’ancienne campagne vérifiées.
+- Les parcours scriptés connaissent la solution et durent environ 28, 53 et 75 secondes : ces durées ne prédisent pas le temps de découverte. Validation humaine de l’amusement et de la difficulté encore attendue.

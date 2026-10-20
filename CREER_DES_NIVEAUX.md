@@ -104,3 +104,14 @@ Les états ennemis et l’accroche aux échelles sont sauvegardés. Toute modifi
 La silhouette dessinée dépasse largement le corps utilisé pour les collisions : réserver environ 65 unités de chaque côté et 110 au-dessus des pieds. Le générateur `content/clear-starts.cjs` détecte les leviers, dalles, échelles, arches, cibles et clés masqués ; il ajoute si nécessaire une zone de départ de 160 unités en translatant ensemble tous les éléments de l’énigme. Le test `tests/start-visibility.test.cjs` vérifie les 37 départs et leur stabilité sans commande.
 
 Pour les cartes livrées en révision 7, la révision 8 et `startOffset` permettent une migration par translation des sauvegardes. Ne réutiliser cette migration que pour une translation pure ; une refonte de géométrie exige une nouvelle révision et une stratégie de sauvegarde adaptée.
+
+
+## Atelier vertical 0.9.0
+
+`content/workshop.cjs` définit trois cartes indépendantes. Le générateur les place dans `campaign.workshop`, sélectionné par `?essai=refonte`, avec une clé de sauvegarde distincte. `height` est la hauteur du monde, les coordonnées y restent absolues. Caméra, plan, chutes et validation des sauvegardes utilisent cette hauteur.
+
+Les `ladders` peuvent avoir des conditions `requires`. Une dalle `blockOnly:true, acceptBlock:true` exige un contrepoids. Un bloc `windOnly:true` reçoit le souffle d’un hippopotame ; il ne se pousse pas à la main. Les `reactors` `{id,kind,x,y,w,h,label}` acceptent le type de projectile animal indiqué (`coconut`, `gust` ou `wave`) et deviennent un signal permanent. Leurs identifiants entrent dans les dépendances et sauvegardes.
+
+Un ennemi `essential:true` est étourdi temporairement par les attaques. `calmWhen` liste les signaux qui le calment définitivement après sa contribution ; `hover` fixe la hauteur de vol d’un vautour au-dessus de son étage de référence. `zones` dessine des repères d’architecture et `goals` expose des objectifs sans donner la séquence.
+
+`tests/workshop.test.cjs` fournit des solutions par commandes normales. `tests/workshop-mechanics.test.cjs` vérifie les interactions, sauvegardes et monte-charges. `tests/workshop-render.cjs` reconstruit six scènes réellement jouées pour inspection.

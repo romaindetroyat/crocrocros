@@ -2,7 +2,7 @@
 
 Jeu de plateforme et d’énigmes en solo, en français, jouable hors ligne. Trois crocodiles complémentaires, 37 étapes, six chapitres et 111 étoiles facultatives.
 
-**Version 0.8.3 — accès libre aux cinq dernières énigmes pour tester la difficulté.**
+**Version 0.9.0 — atelier de refonte : trois niveaux étalons, monde vertical et animaux qui actionnent les mécanismes.**
 
 ![Les personnages dessinés par le moteur du jeu](docs/personnages-v07.png)
 
@@ -19,6 +19,14 @@ python3 -m http.server 8080 --directory dist --bind 127.0.0.1
 ```
 
 Ouvrir `http://localhost:8080`. L’installation PWA nécessite HTTPS ou localhost et un premier chargement complet. Aucun serveur de jeu, compte ni connexion n’est requis ensuite. La configuration Vercel est prête : importer ce dépôt, conserver sa racine et déployer. `vercel.json` sert directement le dossier `dist/` déjà construit, sans dépendance à installer. Le lien avec GitHub permettra de déployer les prochains commits de `main`. Le projet Vercel `crocrocros` est relié au dépôt GitHub ; le déploiement de production a été vérifié le 20 octobre 2026.
+
+## Atelier de refonte
+
+**[Tester les trois nouveaux niveaux](https://crocrocros.vercel.app/?essai=refonte)** : Le départ par les toits (prise en main), Le moulin enrhumé (coopération) et Le fort des trois relais (épreuve avancée). Le bouton est aussi présent à l’accueil.
+
+Ces niveaux sont le premier jalon de la refonte des 37 énigmes, pas une campagne déjà reconstruite. Ils introduisent des mondes de 1 000 à 2 200 unités de hauteur, une caméra sur deux axes, des récepteurs de noix de coco et un chariot déplacé par le souffle d’un hippopotame. Le fort demande des déplacements entre postes éloignés, deux reconfigurations du contrepoids et le retour de toute l’équipe.
+
+L’atelier possède une sauvegarde indépendante de l’aventure et des anciens essais. Un avis facultatif de difficulté et l’export du bilan sont proposés à la réussite ; les données restent sur l’appareil. Les tests garantissent des parcours possibles et des reprises compatibles, pas une difficulté humaine déjà validée.
 
 ## Tester les cinq dernières énigmes
 
@@ -53,6 +61,8 @@ Cinq rencontres facultatives aux niveaux 4, 12, 19, 27 et 35, loin des sorties. 
 node content/author-campaign.cjs
 python3 build.py
 node tests/engine.test.js
+node tests/workshop.test.cjs
+node tests/workshop-mechanics.test.cjs
 node tests/start-visibility.test.cjs
 node tests/exit.test.cjs
 node tests/blocks.test.cjs

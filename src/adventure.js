@@ -1,0 +1,47 @@
+(function(root){
+'use strict';
+const clone=x=>JSON.parse(JSON.stringify(x)),clamp=(v,a,b)=>Math.max(a,Math.min(b,v));
+const A={
+ init(E){if(!E.L.adventure)return;E.traces=[];E.adventure={riding:[false,false,false],movers:Object.fromEntries((E.L.movers||[]).map(m=>[m.id,{x:m.x,y:m.y,v:0}])),checkpoint:null,timers:{},seen:{}};},
+ solids(E){return E.adventure?(E.L.movers||[]).map(m=>({...m,...E.adventure.movers[m.id],oneway:true,mover:m.id})):[];},
+ footprint(E,i){const p=E.p[i];if(i!==1||!E.adventure)return {w:p.w,h:p.h};const riders=E.p.filter((_,j)=>E.adventure.riding[j]);return {w:Math.max(p.w,...riders.map(r=>46+r.w)),h:Math.max(p.h,...riders.map(r=>87+r.h))};},
+ near(E){if(!E.adventure)return null;const p=E.p[E.active],sh=E.p[1];if(E.adventure.riding[E.active])return {kind:'leave',label:'Descendre'};
+  if(E.active===1&&sh.roof&&E.p.some((o,i)=>i!==1&&!E.adventure.riding[i]&&Math.abs(o.x-p.x)<105&&Math.abs(o.y-p.y)<105))return {kind:'crew',label:'Embarquer'};
+  const sw=E.L.switches.find(s=>Math.abs(s.x-p.x)<58&&Math.abs(s.y-p.y)<40);if(sw)return {kind:'switch',object:sw,label:sw.verb||'Actionner'};
+  const m=(E.L.mirrors||[]).find(m=>m.rotatable&&Math.abs(m.x-p.x)<60&&Math.abs(m.y-(p.y-38))<52);if(m)return {kind:'mirror',object:m,label:'Orienter'};
+  const portal=(E.L.portals||[]).find(s=>Math.abs(s.x-p.x)<42&&Math.abs(s.y-p.y)<35&&E.open(s));if(portal)return {kind:'portal',object:portal,label:'Passer'};
+  if(E.active!==1&&sh.roof&&Math.abs(p.x-sh.x)<92&&Math.abs(p.y-sh.y)<105)return {kind:'board',label:'Monter'};
+  if(E.active===1&&sh.roof&&E.p.some((o,i)=>i!==1&&!E.adventure.riding[i]&&Math.abs(o.x-p.x)<105&&Math.abs(o.y-p.y)<105))return {kind:'crew',label:'Embarquer'};
+  const deck=(E.L.movers||[]).find(m=>{const q=E.adventure.movers[m.id];return m.control&&Math.abs(p.y-q.y)<12&&p.x>q.x&&p.x<q.x+m.w;});if(deck){const sw=E.L.switches.find(s=>s.id===deck.control);return {kind:'switch',object:sw,label:E.flag(sw.id)?'Rappeler':'Départ'};}
+  return null;
+ },
+ mount(E,i){const sh=E.p[1],p=E.p[i],x=sh.x+(i===0?-23:23),y=sh.y-87,box={x:x-p.w/2,y:y-p.h,w:p.w,h:p.h};if(E.solids(i).some(s=>!s.oneway&&!s.shield&&box.x<s.x+s.w&&box.x+box.w>s.x&&box.y<s.y+s.h&&box.y+box.h>s.y))return false;E.adventure.riding[i]=true;p.x=x;p.y=y;p.vx=p.vy=0;p.onLadder=false;p.ground=true;E.burst(x,y-20,p.color,7);return true;},
+ interact(E){const n=this.near(E);if(!n)return;const p=E.p[E.active];
+  if(n.kind==='leave'){let x=null;for(const dir of [p.face,-p.face]){const xx=E.p[1].x+dir*(60+p.w/2),left=Math.min(p.x,xx)-p.w/2,right=Math.max(p.x,xx)+p.w/2;if(xx>p.w/2&&xx<E.L.width-p.w/2&&!E.solids(E.active).some(s=>!s.oneway&&left<s.x+s.w&&right>s.x&&p.y>s.y&&p.y-p.h<s.y+s.h)){x=xx;break;}}if(x===null){E.event('notice','Il faut un peu de place pour descendre.');return;}E.adventure.riding[E.active]=false;p.x=x;p.ground=false;p.vy=-70;E.event('notice','À toi de jouer !');}
+  if(n.kind==='board'){if(this.mount(E,E.active))E.event('notice','À bord ! Sélectionnez Croquefort pour voyager.');else E.event('notice','Le plafond est trop bas pour embarquer ici.');}
+  if(n.kind==='crew'){let count=0;for(let i=0;i<3;i++)if(i!==1&&!E.adventure.riding[i]&&Math.abs(E.p[i].x-p.x)<105&&Math.abs(E.p[i].y-p.y)<105)count+=Number(this.mount(E,i));E.event('notice',count?'Tout le monde s’accroche !':'Le plafond est trop bas pour embarquer ici.');}
+  if(n.kind==='switch'){const s=n.object;if(!E.open(s)){E.event('notice',s.locked||'Ce poste attend un équipier.');return;}E.flags[s.id]=s.duration?true:s.toggle?!E.flags[s.id]:true;if(s.duration)E.adventure.timers[s.id]=s.duration;E.event('lever',s.id);E.burst(s.x,s.y-40,'#f9d97b',15);}
+  if(n.kind==='mirror'){E.flags[n.object.id]=!E.flags[n.object.id];E.event('mirror');E.burst(n.object.x,n.object.y,'#b0e7e1',9);}
+  if(n.kind==='portal'){p.x=n.object.toX;p.y=n.object.toY;p.vy=0;p.onLadder=false;E.event('portal');}
+ },
+ before(E,dt,input){if(!E.adventure)return;const a=E.adventure;for(const id of Object.keys(a.timers)){const def=E.L.switches.find(s=>s.id===id&&s.duration);if(def?.latchWhen?.some(f=>E.flag(f))){delete a.timers[id];continue;}a.timers[id]=Math.max(0,a.timers[id]-dt);if(a.timers[id]===0){E.flags[id]=false;delete a.timers[id];E.event('notice','Le mécanisme revient au départ. La manette permet de réessayer.');}}
+  if(a.riding[E.active]&&(input.jump||input.down)){a.riding[E.active]=false;E.p[E.active].vy=input.jump&&E.active===0?-640:0;E.p[E.active].ground=false;}
+  for(const m of E.L.movers||[]){const s=a.movers[m.id],ox=s.x,oy=s.y,active=E.open(m),tx=active?m.toX:m.x,ty=active?m.toY:m.y,dist=Math.hypot(tx-s.x,ty-s.y);if(dist>.01){const step=Math.min(dist,(m.speed||100)*dt);s.x+=(tx-s.x)/dist*step;s.y+=(ty-s.y)/dist*step;}
+   let dx=s.x-ox,dy=s.y-oy;const sizes=E.p.map((_,i)=>this.footprint(E,i)),solid=E.solids(-1).filter(t=>!t.oneway&&!t.mover&&!t.shield);if(E.p.some((p,i)=>!a.riding[i]&&Math.abs(p.y-oy)<2&&p.x+p.w/2>ox&&p.x-p.w/2<ox+m.w&&solid.some(t=>p.x+dx+sizes[i].w/2>t.x&&p.x+dx-sizes[i].w/2<t.x+t.w&&p.y+dy>t.y&&p.y+dy-sizes[i].h<t.y+t.h))){s.x=ox;s.y=oy;dx=dy=0;}for(let i=0;i<3;i++){const p=E.p[i];if(!a.riding[i]&&Math.abs(p.y-oy)<2&&p.vy>=0&&p.x+p.w/2>ox&&p.x-p.w/2<ox+m.w){p.x+=dx;p.y+=dy;p.vy=0;p.ground=true;}}
+  }
+ },
+ wind(E,p,dt){if(!E.adventure||p!==E.p[1]||!p.roof)return;for(const w of E.L.winds||[])if(E.open(w)&&p.x>w.x&&p.x<w.x+w.w&&p.y>w.y&&p.y<=w.y+w.h+2){p.vy=Math.max(-(w.speed||155),p.vy-(w.force||2200)*dt);p.x+=(w.drift||0)*dt;}},
+ after(E){if(!E.adventure)return;const a=E.adventure,sh=E.p[1];E.traces=(E.traces||[]).filter(t=>(t.life-=1/60)>0);for(let i=0;i<3;i++)if(a.riding[i]){if(!sh.roof){a.riding[i]=false;E.p[i].ground=false;continue;}const p=E.p[i];p.x=sh.x+(i===0?-23:23);p.y=sh.y-87;p.vx=sh.vx;p.vy=0;p.ground=true;p.onLadder=false;}
+  for(const [i,b] of (E.L.beats||[]).entries())if(!a.seen[i]&&Math.hypot(E.p[E.active].x-b.x,E.p[E.active].y-b.y)<b.r){a.seen[i]=true;if(i>0)E.event('notice',b.text);}
+  for(const m of E.L.milestones||[])if(!E.flags[m.id]&&E.open(m)&&E.p.every((p,i)=>p.x>=m.x-30&&Math.abs(p.y+(a.riding[i]?87:0)-m.y)<120)){E.flags[m.id]=true;E.event('stage',m.id);}
+  const cp=(E.L.rallies||[]).find(c=>E.p.every(p=>Math.abs(p.x-c.x)<c.w/2&&Math.abs(p.y-c.y)<115));if(cp&&a.checkpoint!==cp.id){a.checkpoint=cp.id;E.event('rally');E.burst(cp.x,cp.y-80,'#f9d576',20);}
+ },
+ recall(E){if(!E.adventure||E.won)return false;const elapsed=E.elapsed,stars=clone(E.collected),rebounds=E.rebounds+1;if(!E.adventure.checkpoint){E.reset();E.collected=stars;}else{const c=E.L.rallies.find(c=>c.id===E.adventure.checkpoint);E.adventure.riding=[false,false,false];E.p.forEach((p,i)=>Object.assign(p,{x:c.x+(i-1)*55,y:c.y,vx:0,vy:0,roof:false,onLadder:false,ground:true,cool:0,charge:0,invul:2}));E.shots=[];}E.elapsed=elapsed;E.rebounds=rebounds;E.history=[];return true;},
+ hit(E,i){if(!E.adventure)return;E.adventure.riding[i]=false;if(i===1)E.adventure.riding=[false,false,false];},
+ home(E,i){if(!E.adventure?.checkpoint)return null;const c=E.L.rallies.find(c=>c.id===E.adventure.checkpoint);return c?{x:c.x+(i-1)*55,y:c.y}:null;},
+ segment(x1,y1,x2,y2,x,y,r){const dx=x2-x1,dy=y2-y1,t=clamp(((x-x1)*dx+(y-y1)*dy)/(dx*dx+dy*dy||1),0,1);return Math.hypot(x1+t*dx-x,y1+t*dy-y)<r;},
+ reflect(E,b,ox,oy){if(!E.adventure||b.kind!=='pea')return false;for(const p of E.L.portals||[]){if(!p.shots||b.through===p.id||!E.open(p)||!this.segment(ox,oy,b.x,b.y,p.x,p.y-38,23))continue;b.x=p.toX+(p.dir||1)*35;b.y=p.toY-38;b.vx=(p.dir||1)*620;b.vy=0;b.through=p.id;b.life=2;E.burst(p.x,p.y-38,'#a5dbdb',12);E.burst(b.x,b.y,'#a5dbdb',12);E.event('portal');return true;}for(const m of E.L.mirrors||[]){if(b.lastMirror===m.id||!E.open(m)||!this.segment(ox,oy,b.x,b.y,m.x,m.y,20))continue;const slash=(m.slash!==false)!==!!E.flags[m.id],vx=b.vx,vy=b.vy||0;b.vx=slash?-vy:vy;b.vy=slash?-vx:vx;b.x=m.x+Math.sign(b.vx)*23;b.y=m.y+Math.sign(b.vy)*23;b.lastMirror=m.id;b.life=Math.max(b.life,2);b.bounces=(b.bounces||0)+1;if(b.bounces>8)b.life=0;E.burst(m.x,m.y,'#b9f5df',6);E.event('ricochet');return true;}return false;},
+ valid(s,L){if(!L.adventure)return !s;if(!s||!Array.isArray(s.riding)||s.riding.length!==3||s.riding[1]!==false||!s.riding.every(v=>typeof v==='boolean')||!s.movers||!s.timers||!s.seen||Object.entries(s.timers).some(([id,v])=>{const t=L.switches.find(t=>t.id===id&&t.duration);return !t||!Number.isFinite(v)||v<0||v>t.duration;})||Object.entries(s.seen).some(([id,v])=>typeof v!=='boolean'||!(L.beats||[]).some((b,i)=>String(i)===id)))return false;if(s.checkpoint!==null&&!(L.rallies||[]).some(c=>c.id===s.checkpoint))return false;const ms=L.movers||[];return Object.keys(s.movers).length===ms.length&&ms.every(m=>{const p=s.movers[m.id];return p&&Number.isFinite(p.x)&&Number.isFinite(p.y)&&p.x>=Math.min(m.x,m.toX)-.1&&p.x<=Math.max(m.x,m.toX)+.1&&p.y>=Math.min(m.y,m.toY)-.1&&p.y<=Math.max(m.y,m.toY)+.1;});},
+ snapshot(E){return E.adventure?clone(E.adventure):undefined;},restore(E,s){if(E.L.adventure)E.adventure=clone(s);}
+};root.CrocoAdventure=A;if(typeof module!=='undefined')module.exports=A;
+})(typeof globalThis!=='undefined'?globalThis:this);

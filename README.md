@@ -1,93 +1,76 @@
-# Les Cro Cro Cros
+# Les Cro Cro Cros — La folle traversée
 
-Jeu de plateforme et d’énigmes en solo, en français, jouable hors ligne. Trois crocodiles complémentaires, 100 étapes, dix chapitres et 300 étoiles facultatives.
+Jeu de plateforme et d’énigmes en solo, en français. **Version 2.0.0 : nouvelle coopération physique et campagne de 100 parcours.**
 
-**Version 1.2.0 — 66 niveaux remaniés pour varier les énigmes et les parcours.**
+[Jouer](https://crocrocros.vercel.app/) · [Explorer les 100 niveaux librement](https://crocrocros.vercel.app/?essai=libre) · [Retrouver la campagne 1.2 et sa progression](https://crocrocros.vercel.app/?campagne=archive) · [Aventure classique de 37 niveaux](https://crocrocros.vercel.app/?campagne=classique)
 
-46 nouvelles énigmes (circuits, partitions, postes simultanés, balances et aiguillages), 20 parcours de plateforme réintégrés, 34 expéditions conservées. Les niveaux avec objets à transporter passent de 84 à 35. [Détail de la refonte](design/VARIETE_1_2.md).
+Le bouclier devient un moyen de transport : les deux équipiers peuvent embarquer, voyager sur une nacelle, planer, prendre un courant d’air et descendre à destination. Les tirs rebondissent sur des réflecteurs orientables et traversent certains portails. Les nacelles transportent réellement les personnages ; casser un support transforme le trajet d’une passerelle.
 
-Sur écran tactile : croix directionnelle glissante (appui court, maintien, diagonales), **haut** pour sauter ou grimper, **bas** pour descendre ; **A** pour la capacité du croco, **B** pour les objets, **les trois portraits** pour sélectionner directement un croco et **START** pour la pause. Les deux pouces peuvent agir simultanément. La caméra mobile utilise un zoom de 1,9× par défaut, réglable avec **− / +**, de 2,4× jusqu’au **niveau entier (« Tout »)**. Touchez la valeur du zoom pour revenir immédiatement à 1,9× ; le Plan conserve une vue complète. Les étiquettes mobiles sont agrandies et placées au-dessus des personnages. Dans les parcours sans objets et l’ancienne aventure, B est un raccourci de saut.
+La campagne emploie 16 situations fondatrices : bac, cheminée à ricochets, vol en équipe, pont descendant, relève d’un opérateur, contrepoids, aiguillage de tirs, ascenseurs opposés, tremplin, postes simultanés, chaîne de réflecteurs, portes complémentaires, sauvetage de deux balcons, souffleries alternées, course au frein et portail pour projectiles. Le catalogue compose **24 parcours concentrés, 65 traversées en deux passages et 11 traversées en trois passages**. Les situations reviennent et se combinent ; ce ne sont pas 100 règles indépendantes. Les grands parcours atteignent 5 580 unités de largeur et 1 780 de hauteur.
 
-[Jouer en mode libre](https://crocrocros.vercel.app/?essai=libre) · [Ancienne aventure de 37 niveaux](https://crocrocros.vercel.app/?campagne=classique)
-
-La campagne normale déverrouille les niveaux dans l’ordre ; le mode libre ouvre les 100 cartes avec une sauvegarde distincte. Les anciennes sauvegardes restent attachées à l’ancienne aventure. **F** (ou le bouton main) prend, pose, transmet ou installe un objet et manœuvre les commandes ; **Espace** conserve la capacité du personnage. **M** ouvre le plan et les conditions des passages.
-
-Validation : 100 parcours enregistrés avec les commandes du moteur, 300 étoiles obtenues, aucun retour après collision ; 1 873 états de sauvegarde validés et restaurés. Ce contrôle prouve une solution accessible par carte, pas l’équilibrage pour tous les joueurs ni l’absence de tout détour possible. Voir [le bilan de version](design/VARIETE_1_2.md).
-
-Reproduire : `node content/campaign100.cjs`, `node tests/campaign100.test.cjs`, `node tests/campaign100-state.test.cjs`, `node tests/campaign100-app.test.cjs`, `node tests/variety.test.cjs`, `python3 build.py`, `node tests/package.test.cjs`. Les tests de rendu/app demandent `@napi-rs/canvas` ; le jeu livré n’a pas de dépendance.
-
-
-![Les personnages dessinés par le moteur du jeu](docs/personnages-v07.png)
-
-## Jouer
-
-**[Jouer en ligne — crocrocros.vercel.app](https://crocrocros.vercel.app/)**
-
-Télécharger [Les_Cro_Cro_Cros.html](Les_Cro_Cro_Cros.html) puis l’ouvrir dans un navigateur sur ordinateur. Le fichier est autonome ; le bouton « Raw / Download raw file » de GitHub permet de récupérer son contenu.
-
-Pour la PWA, servir le dossier `dist/` sur HTTPS ou localement :
-
-```sh
-python3 -m http.server 8080 --directory dist --bind 127.0.0.1
-```
-
-Ouvrir `http://localhost:8080`. L’installation PWA nécessite HTTPS ou localhost et un premier chargement complet. Aucun serveur de jeu, compte ni connexion n’est requis ensuite. La configuration Vercel est prête : importer ce dépôt, conserver sa racine et déployer. `vercel.json` sert directement le dossier `dist/` déjà construit, sans dépendance à installer. Le lien avec GitHub permettra de déployer les prochains commits de `main`. Le projet Vercel `crocrocros` est relié au dépôt GitHub ; le déploiement de production a été vérifié le 20 octobre 2026.
-
-## Atelier de refonte
-
-**[Tester les trois nouveaux niveaux](https://crocrocros.vercel.app/?essai=refonte)** : Le départ par les toits (prise en main), Le moulin enrhumé (coopération) et Le fort des trois relais (épreuve avancée). Archive de l’atelier 0.9.0, distincte de la nouvelle campagne.
-
-Ces niveaux sont le premier jalon de la refonte des 37 énigmes, pas une campagne déjà reconstruite. Ils introduisent des mondes de 1 000 à 2 200 unités de hauteur, une caméra sur deux axes, des récepteurs de noix de coco et un chariot déplacé par le souffle d’un hippopotame. Le fort demande des déplacements entre postes éloignés, deux reconfigurations du contrepoids et le retour de toute l’équipe.
-
-L’atelier possède une sauvegarde indépendante de l’aventure et des anciens essais. Un avis facultatif de difficulté et l’export du bilan sont proposés à la réussite ; les données restent sur l’appareil. Les tests garantissent des parcours possibles et des reprises compatibles, pas une difficulté humaine déjà validée.
-
-## Tester les cinq dernières énigmes
-
-[Ouvrir les essais des niveaux 33 à 37](https://crocrocros.vercel.app/?essai=finales), ou utiliser « Tester les 5 dernières énigmes » à l’accueil. Les cinq niveaux sont accessibles dans l’ordre de votre choix. L’essai en cours et les résultats sont enregistrés dans un emplacement local distinct : la progression de l’aventure reste intacte. « Revenir à mon aventure » retrouve la partie habituelle. Changer d’énigme remplace uniquement l’essai en cours, après confirmation si nécessaire.
+Les passages d’un niveau sont reliés physiquement. Aucun repositionnement automatique ne remplace les déplacements : les solutions enregistrées utilisent les mêmes commandes que le joueur. Le dernier opérateur doit rejoindre la sortie. Des points de ralliement, le rembobinage, le plan et des indices progressifs permettent de reprendre après une erreur.
 
 ## Commandes
 
-- **W / X / C** : sélectionner Croquinet / Croquefort / Croqueboum.
-- **← / →** : marcher ; **↑** : sauter avec Croquinet ou monter à l’échelle ; **↓** : descendre.
-- **Espace** : capacité, interaction ou étoile offerte par un zèbre.
-- **R** : rembobiner ; **M** : vue d’ensemble ; **Échap** : pause.
+| Action | Clavier | iPhone / tactile |
+| --- | --- | --- |
+| Marcher | ← / → | Croix : appui court, maintien ou glissement |
+| Sauter avec Croquinet, monter à l’échelle | ↑ | Haut de la croix |
+| Descendre à l’échelle | ↓ | Bas de la croix |
+| Charge / bouclier / tir | Espace | A |
+| Embarquer, descendre, manœuvrer | F | B, dont le libellé suit le contexte |
+| Changer de personnage | W / X / C | Trois portraits |
+| Pause | Échap | START |
+| Revenir jusqu’à huit secondes en arrière | R | ↶ |
+| Vue complète, en pause | M | Plan |
 
-Commandes tactiles disponibles. Sur téléphone et tablette, le jeu se met en attente en portrait et reprend en paysage. Les proportions sont préservées au redimensionnement, y compris lorsque les barres de Safari changent de taille. Sur iOS 17 et ultérieur, la session audio `playback` utilise le volume multimédia, indépendamment du commutateur de sonnerie. Un média silencieux embarqué sert de compatibilité pour les anciens iOS. Un premier appui reste nécessaire. Les versions 0.8.1 et 0.8.2 conservent aussi la tentative en cours. Progression locale, export/import dans les réglages. La mise à jour 0.8 conserve les niveaux terminés et leurs étoiles ; la tentative en cours repart au début de son niveau pour charger les nouveaux placements. Pour passer du fichier local au site Vercel, exporter puis importer la progression dans les réglages.
+Pour voyager ensemble : sélectionner Croquefort, lever le bouclier avec A, rapprocher les deux autres puis B. Sélectionner un passager et B pour débarquer. Le bouclier frontal protège ; le bouclier levé permet de transporter et de planer.
 
-## Des départs lisibles
+Sur iPhone : paysage, scène sur toute la largeur, commandes en dessous. Le zoom va de 2,4× à « Tout » ; toucher sa valeur restaure 1,9×. Les portraits indiquent les passagers à bord. Les pointillés du Plan relient les commandes aux passages qu’elles actionnent.
 
-Les 37 niveaux ont été vérifiés avec les dimensions complètes des personnages. Les 20 départs qui masquaient un mécanisme disposent désormais d’une courte zone libre, sans activation involontaire des dalles. Pendant le jeu, un levier recouvert par un croco s’affiche au premier plan avec son état au-dessus du personnage. Les sauvegardes 0.8/0.8.1 sont repositionnées sans perdre les actions déjà accomplies.
+## Progression et installation
 
-## Les zèbres
+La nouvelle campagne possède une sauvegarde distincte. La progression 1.2 reste consultable par le lien d’archive, et la campagne classique conserve aussi sa sauvegarde. Le mode libre ouvre les 100 cartes dans un emplacement séparé. Les préférences de son et de zoom de la campagne 1.2 sont reprises au premier lancement de la nouvelle aventure.
 
-Cinq rencontres facultatives aux niveaux 4, 12, 19, 27 et 35, loin des sorties. Le curieux s’approche quand vous restez immobile, le gourmand s’arrête pour une boulette de Croqueboum, le flâneur alterne trot et pauses. Espace prend l’étoile quand il est prêt. Les autres niveaux retrouvent leurs étoiles fixes.
+La partie se sauvegarde automatiquement sur le navigateur. Export et import sont disponibles dans les réglages. Pour importer une sauvegarde d’une ancienne campagne, ouvrir d’abord cette campagne. Effacer les données du navigateur efface les sauvegardes locales.
 
-## Sources et reconstruction
+Le fichier [Les_Cro_Cro_Cros.html](Les_Cro_Cro_Cros.html) fonctionne directement sur ordinateur, sans connexion. Pour l’installation PWA : ouvrir le site HTTPS, puis Safari → Partager → Sur l’écran d’accueil sur iPhone. Attendre « Prêt hors ligne » avant de couper la connexion. Après une mise à jour, recharger la page pour charger le nouveau jeu.
 
-- `src/` : moteur, bestiaire, dessin Canvas, musique et interface.
-- `content/` : définition et génération des 37 niveaux.
-- `dist/` : PWA compilée, manifeste, service worker et icônes.
-- `tests/` : solutions par les commandes normales, sauvegardes, interactions et simulations d’API.
-- `docs/` : planche de personnages produite par le moteur.
+Le jeu livré n’a ni dépendance à installer, ni compte, publicité, achat ou serveur de jeu.
+
+## Validation de la version 2.0
+
+- 100 parcours terminés avec les commandes du moteur ; 300 étoiles obtenues ; aucun retour après choc ou chute dans ces parcours.
+- 2 198 interruptions par sauvegarde/reprise intégrées aux replays, dont 974 avec passagers, 744 après déplacement de nacelles et 51 avec projectiles en vol.
+- Vérification des collisions du groupe transporté, du débarquement, des orientations des réflecteurs, des portails, des chronos et des retours au ralliement.
+- Interface réelle Chromium à 667 × 375, 844 × 390 et 932 × 430 : scène pleine largeur, contrôles dessous, sélection directe, zoom complet et persistance.
+- Rendu détaillé et complet des 100 cartes dans Chromium ; 13 scènes en cours de partie vérifiées avec leur Plan.
+- Replays et sauvegardes de la campagne 1.2 toujours valides : 100 victoires, 300 étoiles, 1 873 états.
+
+Ces contrôles établissent la possibilité des parcours et les comportements testés. Ils ne constituent pas une étude du plaisir de jeu, une recherche de toutes les solutions possibles, ni une validation de Safari sur iPhone physique. Détails et catalogue : [REFONTE_2_0.md](design/REFONTE_2_0.md).
+
+## Reconstruire et vérifier
+
+Node.js et Python 3 suffisent pour la compilation et les tests du moteur. Les tests d’interface utilisent `@napi-rs/canvas`, ceux de navigateur Playwright avec Chromium. Aucun de ces outils n’est requis pour jouer.
 
 ```sh
-node content/author-campaign.cjs
+node content/adventure-campaign.cjs
+node tests/adventure.test.cjs
+node tests/adventure-state.test.cjs
+node tests/adventure-mechanics.test.cjs
+node tests/adventure-app.test.cjs
+node tests/joypad.test.cjs
+node tests/campaign100-state.test.cjs
+node tests/campaign100-app.test.cjs
+node tests/variety.test.cjs
 python3 build.py
-node tests/engine.test.js
-node tests/workshop.test.cjs
-node tests/workshop-mechanics.test.cjs
-node tests/start-visibility.test.cjs
-node tests/exit.test.cjs
-node tests/blocks.test.cjs
-node tests/wildlife.test.cjs
-node tests/pranks.test.cjs
-node tests/zebra.test.cjs
-node tests/music.test.cjs
 node tests/package.test.cjs
+node tests/mobile-layout.test.cjs
+node tests/adventure-browser.test.cjs
 ```
 
-Avant chaque commit qui modifie le jeu, reconstruire `dist/` et le HTML autonome avec les commandes ci-dessus : Vercel publie ces fichiers compilés.
+`content/adventure-campaign.cjs` contient les scènes, les variantes, le catalogue explicite des combinaisons et leurs plans de solution. `src/adventure.js` gère les nouvelles interactions ; `src/engine.js` reste la simulation commune aux campagnes. Les scripts historiques `content/campaign100.cjs` et `content/author-campaign.cjs` servent à reconstruire leurs anciennes éditions : ne pas les lancer pour compiler la version 2.0.
 
-Les tests d’interface et les rendus demandent `@napi-rs/canvas` dans l’environnement Node, sans dépendance pour jouer. L’aperçu vidéo facultatif demande aussi FFmpeg. Lire [LISEZ_MOI.md](LISEZ_MOI.md) pour les instructions complètes et les limites de validation ; [VALIDATION.json](VALIDATION.json) consigne les vérifications de cette version. L’installation sur appareil, le rendu CSS en navigateur réel et la difficulté ressentie nécessitent encore une validation humaine.
+Vercel sert le dossier `dist/` déjà compilé. Tout changement de jeu doit donc être suivi de `python3 build.py` et de la publication des fichiers compilés avec les sources.
 
-Les illustrations sont originales et produites par le code Canvas. L’adaptation musicale de la comptine traditionnelle est documentée dans [MUSIQUE.md](MUSIQUE.md). Les références de conception des énigmes figurent dans [CARNET_ADAPTATION.md](CARNET_ADAPTATION.md).
+Les personnages et décors sont dessinés en Canvas. L’arrangement instrumental de la comptine traditionnelle est documenté dans [MUSIQUE.md](MUSIQUE.md).

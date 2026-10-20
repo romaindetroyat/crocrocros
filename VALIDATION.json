@@ -1,132 +1,67 @@
 {
-  "version": "0.9.0",
+  "version": "2.0.0",
   "date": "2026-10-20",
-  "authored_levels": 37,
-  "reusable_passage_families": 13,
-  "chapters": 6,
-  "all_stars_reachable": 111,
-  "future_level_count_tested": 200,
+  "campaign": {
+    "levels": 100,
+    "families": 16,
+    "single_passage": 24,
+    "two_passages": 65,
+    "three_passages": 11,
+    "max_width": 5580,
+    "max_height": 1780
+  },
   "solution_checks": {
-    "levels_won": 37,
-    "all_heroes_at_exit": true,
-    "all_three_stars": true,
-    "total_rebounds": 0,
-    "controls_only": true
+    "levels": 100,
+    "stars": 300,
+    "rebounds": 0,
+    "resumePoints": 2198,
+    "resumesWithProjectiles": 51,
+    "resumesWithPassengers": 974,
+    "resumesAfterPlatformMovement": 744
   },
-  "tests": {
-    "moving_lift_save_restore": "passed",
-    "engine_solutions": "passed",
-    "app_logic_minimal_dom": "passed",
-    "independent_touch_pointers": "passed",
-    "save_reload_resume": "passed",
-    "package_and_offline_mock_cache": "passed",
-    "artwork_inspection": "passed",
-    "keyboard_mapping": "passed",
-    "legacy_save_migration": "passed",
-    "conditional_and_reversible_bridges": "passed",
-    "music_32_bars_mock_audio": "passed",
-    "rail_counterweights": "passed",
-    "counterweight_save_and_rewind": "passed",
-    "map_overview_and_pause": "passed",
-    "victory_commit_and_celebration": "passed",
-    "sixth_level_power_routing": "passed",
-    "wildlife_facing_and_sleep": "passed",
-    "wildlife_save_validation": "passed",
-    "mandatory_glide": "passed",
-    "elephant_cooperation": "passed",
-    "ladder_grip_and_save": "passed",
-    "touch_ladder_descent": "passed",
-    "quest_legacy_progress": "passed",
-    "sealed_return_exit": "passed",
-    "elephant_windup_damage_jump_directional_block": "passed",
-    "hippo_shove_and_shield": "passed",
-    "lion_pounce_and_midflight_save": "passed",
-    "coconut_gravity_damage_roof_dodge": "passed",
-    "wildlife_malformed_save_rejection": "passed",
-    "zebra_capture_reload": "passed",
-    "nine_biomes_visual_inspection": "passed",
-    "character_sheet_and_animated_poses": "passed",
-    "exit_overshoot_right_left_save_and_conditions": "passed",
-    "zebra_three_behaviors_and_persistence": "passed",
-    "zebra_placement_away_from_exit": "passed",
-    "mobile_rotation_pause_inputs_and_viewport": "passed (minimal DOM)",
-    "ios_playback_category_and_interruption": "passed (mock AudioContext)",
-    "legacy_ios_embedded_media_lifecycle": "passed (mock HTMLAudioElement)",
-    "full_sprite_start_visibility": "passed (37 levels)",
-    "starting_support_no_damage_or_plate_activation": "passed (120 idle frames per level)",
-    "translated_v081_save_resume_to_victory": "passed (20 real mid-puzzle saves, all stars, no rebounds)",
-    "foreground_lever_readability": "passed (Canvas visual inspection)",
-    "final_five_trials_access_and_completion": "passed (five normal-control victories, minimal DOM)",
-    "trial_save_isolation_reload_and_return": "passed (campaign bytes unchanged)",
-    "workshop_normal_input_solutions": "passed (3 victories, 9 stars, no rebounds)",
-    "workshop_save_isolation_and_ui": "passed (minimal DOM)",
-    "workshop_full_height_overview": "passed (minimal DOM)",
-    "workshop_animal_receivers_and_wind_cart": "passed",
-    "workshop_reload_routes": "passed at stable checkpoints",
-    "descending_lift_waiting_passenger": "passed",
-    "workshop_artwork": "six real route scenes inspected"
+  "archive_1_2": {
+    "levels_won": 100,
+    "stars": 300,
+    "valid_restored_snapshots": 1873
   },
-  "not_verified": [
-    "Real browser layout and interaction",
-    "Real PWA installation on a device",
-    "Human difficulty, variety and enjoyment assessment",
-    "Musical quality audition on a physical device",
-    "Physical iPhone / Safari: landscape layout, silent-switch audio and legacy fallback"
-  ],
-  "standalone_sha256": "57d7d4061aaa3bfade7e6ca9f8e51debd8b0fb4b01abcfc392faf869dd4b68b7",
-  "handcrafted_opening_levels": 12,
-  "remaining_v03_levels": 25,
-  "difficulty_human_validated": false,
-  "scenery_variants": 9,
-  "quest_fragments": 6,
-  "video_references_analyzed": 4,
-  "levels_with_mobile_animals": 19,
-  "mobile_animals": 26,
-  "zebra_challenges": 5,
-  "wildlife_behavior_types": [
-    "zebra_curious",
-    "zebra_snack",
-    "zebra_pause",
-    "elephant_stomp",
-    "hippo_sneeze",
-    "lion_pounce",
-    "vulture_coconut"
-  ],
-  "visual_identity": {
-    "scout": "spring green / red scarf",
-    "protector": "golden olive / helmet and riveted shield",
-    "shooter": "turquoise / goggles and seed bag"
-  },
-  "vercel": {
-    "configuration": "vercel.json",
-    "output": "dist",
-    "project_id": "prj_e9EVoySujjxJXVBBOfltR3r7mvcu",
-    "team_id": "team_87fsqXXj6HjjMn2vPzSZyIrL",
-    "url": "https://crocrocros.vercel.app/",
-    "deployment_id": "dpl_5QDVqz6EZEtX4noqECyet7ram9Pr",
-    "deployment": "READY production",
-    "verified_source_commit": "9e20ba93a34fb2b9286cddf0e38d04e12cade2e3",
-    "anonymous_http_checks": {
-      "/": 200,
-      "/sw.js": 200,
-      "/manifest.webmanifest": 200,
-      "/icon-192.png": 200,
-      "/icon-512.png": 200
-    },
-    "all_five_assets_match_local_bytes": true,
-    "verification_version": "0.8.3"
-  },
-  "clear_starting_areas": 37,
-  "corrected_starting_areas": 20,
-  "workshop": {
-    "authored_levels": 3,
-    "world_heights": [
-      1000,
-      1500,
-      2200
+  "browser_checks": {
+    "engine": "Chromium",
+    "mobile_viewports": [
+      "667x375",
+      "844x390",
+      "932x430"
     ],
-    "solutions": "tests/workshop-report.json",
-    "human_difficulty_validated": false,
-    "campaign_rebuilt": false
-  }
+    "full_and_detail_renders": 200,
+    "restored_scene_levels": [
+      1,
+      3,
+      4,
+      6,
+      8,
+      11,
+      15,
+      16,
+      25,
+      51,
+      70,
+      90,
+      100
+    ]
+  },
+  "mechanics": [
+    "safe_boarding_disembarkation",
+    "carried_team_collision",
+    "mobile_platforms",
+    "mirror_rotation",
+    "projectile_portals",
+    "timer_reset_and_latch",
+    "rally_recall",
+    "save_resume_in_flight"
+  ],
+  "limits": [
+    "No human 100-level playtest",
+    "No physical iPhone or Safari validation",
+    "No guarantee of exhaustive alternate-route or softlock coverage",
+    "Fun is not established by automated replays"
+  ]
 }

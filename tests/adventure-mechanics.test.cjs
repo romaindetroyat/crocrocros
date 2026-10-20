@@ -1,0 +1,10 @@
+'use strict';
+const assert=require('node:assert/strict'),Engine=require('../src/engine'),A=require('../src/adventure'),D=require('../content/campaign.json');
+const clone=x=>JSON.parse(JSON.stringify(x));
+const L=clone(D.levels[0]);L.platforms=[{x:0,y:820,w:L.width,h:30,oneway:true}];L.movers=[];L.gates=[{x:900,y:600,w:30,h:220,requires:['pont']}];L.switches=[];L.rallies=[];L.targets=[];L.exit.requires=['pont'];
+const E=new Engine(L);E.p[1].x=650;E.p[1].roof=true;A.mount(E,0);A.mount(E,2);E.select(1);for(let i=0;i<120;i++)E.step(1/60,{right:true});assert(E.p.every(p=>p.x+p.w/2<=900.01),'whole carried team respects a closed gate');E.select(2);E.p[2].face=1;A.interact(E);assert(E.p[2].x+E.p[2].w/2<900,'disembark cannot teleport through gate');assert(!E.adventure.riding[2]);
+const B=new Engine(L);B.p[1].x=880;B.p[1].roof=true;assert(!A.mount(B,2),'boarding requires room above shield');
+const P=new Engine(D.levels[0]);P.p[1].roof=true;P.p.forEach((p,i)=>{p.x=520+(i-1)*25;p.y=820;});P.select(1);assert.equal(A.near(P).kind,'crew','boarding takes priority over onboard departure');A.interact(P);assert.deepEqual(P.adventure.riding,[true,false,true]);assert.equal(A.near(P).kind,'switch','departure is available once crew is aboard');A.interact(P);assert(P.flag('depart'));P.step(1/60);assert(P.adventure.movers.ferry.x>430);
+const M=new Engine(D.levels[1]);const mirror=M.L.mirrors[0],shot={kind:'pea',x:mirror.x,y:mirror.y,vx:620,vy:0,life:1};A.reflect(M,shot,mirror.x-15,mirror.y);assert(shot.vy>0,'backslash redirects downward');M.flags[mirror.id]=true;const up={kind:'pea',x:mirror.x,y:mirror.y,vx:620,vy:0,life:1};A.reflect(M,up,mirror.x-15,mirror.y);assert(up.vy<0,'rotated mirror redirects upward');
+const portal=new Engine(D.levels[15]);portal.flags.power=true;const gate=portal.L.portals[0],pea={kind:'pea',x:gate.x,y:gate.y-38,vx:620,life:1};A.reflect(portal,pea,gate.x-15,gate.y-38);assert.equal(pea.through,gate.id);assert.equal(pea.y,gate.toY-38);assert(pea.x>gate.toX);
+console.log('PASS carried-team collisions, safe boarding/disembarkation, context priority, reversible reflections and projectile portals.');

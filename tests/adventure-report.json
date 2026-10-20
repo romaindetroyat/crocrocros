@@ -1,0 +1,502 @@
+[
+  {
+    "levelId": "escapade-001",
+    "seconds": 13,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-002",
+    "seconds": 16,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-003",
+    "seconds": 16,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-004",
+    "seconds": 23,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-005",
+    "seconds": 21,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-006",
+    "seconds": 16,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-007",
+    "seconds": 17,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-008",
+    "seconds": 15,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-009",
+    "seconds": 12,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-010",
+    "seconds": 15,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-011",
+    "seconds": 20,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-012",
+    "seconds": 18,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-013",
+    "seconds": 17,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-014",
+    "seconds": 17,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-015",
+    "seconds": 14,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-016",
+    "seconds": 11,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-017",
+    "seconds": 22,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-018",
+    "seconds": 22,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-019",
+    "seconds": 26,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-020",
+    "seconds": 25,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-021",
+    "seconds": 21,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-022",
+    "seconds": 26,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-023",
+    "seconds": 13,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-024",
+    "seconds": 27,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-025",
+    "seconds": 33,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-026",
+    "seconds": 39,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-027",
+    "seconds": 33,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-028",
+    "seconds": 37,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-029",
+    "seconds": 38,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-030",
+    "seconds": 30,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-031",
+    "seconds": 38,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-032",
+    "seconds": 34,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-033",
+    "seconds": 33,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-034",
+    "seconds": 29,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-035",
+    "seconds": 37,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-036",
+    "seconds": 41,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-037",
+    "seconds": 39,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-038",
+    "seconds": 37,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-039",
+    "seconds": 36,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-040",
+    "seconds": 30,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-041",
+    "seconds": 30,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-042",
+    "seconds": 35,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-043",
+    "seconds": 40,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-044",
+    "seconds": 41,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-045",
+    "seconds": 32,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-046",
+    "seconds": 34,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-047",
+    "seconds": 33,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-048",
+    "seconds": 37,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-049",
+    "seconds": 37,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-050",
+    "seconds": 34,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-051",
+    "seconds": 36,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-052",
+    "seconds": 35,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-053",
+    "seconds": 38,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-054",
+    "seconds": 33,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-055",
+    "seconds": 40,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-056",
+    "seconds": 36,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-057",
+    "seconds": 38,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-058",
+    "seconds": 38,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-059",
+    "seconds": 37,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-060",
+    "seconds": 40,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-061",
+    "seconds": 29,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-062",
+    "seconds": 36,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-063",
+    "seconds": 38,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-064",
+    "seconds": 35,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-065",
+    "seconds": 39,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-066",
+    "seconds": 34,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-067",
+    "seconds": 35,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-068",
+    "seconds": 39,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-069",
+    "seconds": 39,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-070",
+    "seconds": 37,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-071",
+    "seconds": 33,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-072",
+    "seconds": 34,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-073",
+    "seconds": 42,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-074",
+    "seconds": 36,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-075",
+    "seconds": 31,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-076",
+    "seconds": 35,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-077",
+    "seconds": 41,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-078",
+    "seconds": 38,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-079",
+    "seconds": 35,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-080",
+    "seconds": 37,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-081",
+    "seconds": 43,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-082",
+    "seconds": 28,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-083",
+    "seconds": 37,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-084",
+    "seconds": 39,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-085",
+    "seconds": 37,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-086",
+    "seconds": 36,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-087",
+    "seconds": 40,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-088",
+    "seconds": 39,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-089",
+    "seconds": 41,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-090",
+    "seconds": 56,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-091",
+    "seconds": 63,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-092",
+    "seconds": 51,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-093",
+    "seconds": 52,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-094",
+    "seconds": 58,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-095",
+    "seconds": 49,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-096",
+    "seconds": 58,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-097",
+    "seconds": 58,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-098",
+    "seconds": 57,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-099",
+    "seconds": 50,
+    "stars": 3
+  },
+  {
+    "levelId": "escapade-100",
+    "seconds": 62,
+    "stars": 3
+  }
+]

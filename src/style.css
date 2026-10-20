@@ -110,3 +110,5 @@ body.gameboy .gb-system-button{flex-shrink:0;width:60px}
 @media(max-width:740px){body.gameboy .gb-system{gap:8px}.gb-heroes{gap:6px}.gb-hero strong{font-size:10px}body.gameboy .gb-system-button{width:48px}}
 
 .zoom-controls{display:flex;align-items:center;gap:3px}.zoom-controls[hidden]{display:none}body.gameboy .zoom-controls .icon{width:34px;min-width:34px;height:34px}body.gameboy .zoom-controls #zoomBtn{width:40px;font-size:11px}body.gameboy .level-heading{min-width:0}body.gameboy .level-heading strong{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}body.gameboy .game-tools{flex-shrink:0}
+
+.gb-hero.onboard::before{content:'À BORD';position:absolute;left:4px;top:5px;border-radius:4px;background:#315e50;color:#fff5cb;padding:2px 3px;font-size:8px;font-weight:900;letter-spacing:.2px;pointer-events:none}

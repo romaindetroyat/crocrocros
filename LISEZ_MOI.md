@@ -1,6 +1,6 @@
 # Les Cro Cro Cros — La bannière du retour
 
-Version 0.8.0 · 20 octobre 2026
+Version 0.8.1 · 20 octobre 2026
 
 Jeu de plateforme et de réflexion en solo, en français. Trois crocodiles complémentaires, 37 étapes, six chapitres, 111 étoiles facultatives. Aucun compte, publicité, achat ou serveur de jeu. Tout le contenu est inclus et fonctionne hors ligne.
 
@@ -38,6 +38,16 @@ Les boutons tactiles permettent de marcher et agir simultanément. Un portrait s
 - **Croqueboum** tire des boulettes pour actionner les cibles ou envoyer les gêneurs faire une sieste.
 - Espace prend l’étoile d’un zèbre prêt à l’offrir à proximité ; sinon, il privilégie un levier ou une arche avant la capacité du personnage.
 - Les trois doivent rejoindre l’arrivée. Une sortie avec un sceau manquant demande d’abord de résoudre son mécanisme.
+
+## Correctif 0.8.1 : iPhone en paysage et son multimédia
+
+- Sur téléphone/tablette tactile, le mode portrait masque le jeu et ses dialogues, arrête la simulation et affiche une invitation à tourner l’appareil. Le retour en paysage préserve le menu ou la partie en cours ; les boutons maintenus sont relâchés.
+- Cadre responsive mesuré sur la scène et le viewport visible de Safari. Redimensionnement après rotation et changement des barres du navigateur ; échelle uniforme, aucune déformation des personnages. Les commandes et les marges d’encoche sont adaptées au paysage.
+- Manifeste PWA en paysage et demande de verrouillage quand le navigateur la supporte. Sur iPhone, l’écran d’attente prend le relais si le verrouillage logiciel est indisponible.
+- AudioSession `playback` avant la création/reprise de Web Audio sur iOS compatible ; activation par un appui, reprise de l’état `interrupted`, suspension à la pause ou en arrière-plan. Compatibilité avec les anciens iOS via une courte boucle PCM silencieuse intégrée, arrêtée à la pause ou à la coupure du son. Aucun fichier audio distant.
+- Le mode silencieux de la sonnerie est distinct du volume multimédia : ce dernier doit rester audible. Le bouton Son du jeu reste prioritaire.
+
+Référence technique WebKit : https://bugs.webkit.org/show_bug.cgi?id=237322 (configuration `playback` et solution de compatibilité). Les tests de rotation, de reprise et de session audio sont automatisés avec un DOM/audio simulé. L’audition avec le commutateur silencieux sur un iPhone physique reste à confirmer ; aucune validation matérielle n’est revendiquée.
 
 ## Nouveautés 0.8 : des rencontres en chemin
 

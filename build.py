@@ -23,7 +23,7 @@ for token,file in [('STYLE','style.css'),('LEVELS','levels.js'),('WILDLIFE','wil
     if token=='LEVELS':code=code.replace('/*__CAMPAIGN__*/null',json.dumps(pack,ensure_ascii=False).replace('</','<\\/'))
     page=page.replace('/*__'+token+'__*/',code)
 (dist/'index.html').write_text(page)
-manifest={'id':'./','name':'Les Cro Cro Cros','short_name':'Cro Cro Cros','description':'Trois crocodiles, des énigmes et beaucoup de mauvaise foi.','lang':'fr','start_url':'./','scope':'./','display':'standalone','background_color':'#f7f3e6','theme_color':'#244a40','icons':[{'src':f'icon-{s}.png','sizes':f'{s}x{s}','type':'image/png','purpose':'any maskable'} for s in [192,512]]}
+manifest={'id':'./','name':'Les Cro Cro Cros','short_name':'Cro Cro Cros','description':'Trois crocodiles, des énigmes et beaucoup de mauvaise foi.','lang':'fr','start_url':'./','scope':'./','display':'standalone','orientation':'landscape','background_color':'#f7f3e6','theme_color':'#244a40','icons':[{'src':f'icon-{s}.png','sizes':f'{s}x{s}','type':'image/png','purpose':'any maskable'} for s in [192,512]]}
 (dist/'manifest.webmanifest').write_text(json.dumps(manifest,ensure_ascii=False,indent=2))
 version=hashlib.sha256(page.encode()).hexdigest()[:12]
 sw="""'use strict';

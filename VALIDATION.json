@@ -1,5 +1,5 @@
 {
-  "version": "0.8.0",
+  "version": "0.8.1",
   "date": "2026-10-20",
   "authored_levels": 37,
   "reusable_passage_families": 13,
@@ -48,16 +48,19 @@
     "character_sheet_and_animated_poses": "passed",
     "exit_overshoot_right_left_save_and_conditions": "passed",
     "zebra_three_behaviors_and_persistence": "passed",
-    "zebra_placement_away_from_exit": "passed"
+    "zebra_placement_away_from_exit": "passed",
+    "mobile_rotation_pause_inputs_and_viewport": "passed (minimal DOM)",
+    "ios_playback_category_and_interruption": "passed (mock AudioContext)",
+    "legacy_ios_embedded_media_lifecycle": "passed (mock HTMLAudioElement)"
   },
   "not_verified": [
     "Real browser layout and interaction",
-    "Physical iPhone / Safari",
     "Real PWA installation on a device",
     "Human difficulty, variety and enjoyment assessment",
-    "Musical quality audition on a physical device"
+    "Musical quality audition on a physical device",
+    "Physical iPhone / Safari: landscape layout, silent-switch audio and legacy fallback"
   ],
-  "standalone_sha256": "431cd9798164800b7e5080a5d43eb59881241062f85f2312d8a6ce06f4fe72b8",
+  "standalone_sha256": "920167176198e9199d4af656548624ba466b863a288c2626d6c9600f002f0a82",
   "handcrafted_opening_levels": 12,
   "remaining_v03_levels": 25,
   "difficulty_human_validated": false,
@@ -97,6 +100,7 @@
       "/icon-192.png": 200,
       "/icon-512.png": 200
     },
-    "all_five_assets_match_local_bytes": true
+    "all_five_assets_match_local_bytes": true,
+    "verification_version": "0.8.0"
   }
 }

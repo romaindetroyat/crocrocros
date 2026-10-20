@@ -1,5 +1,5 @@
 {
-  "version": "0.7.0",
+  "version": "0.7.1",
   "date": "2026-10-20",
   "authored_levels": 37,
   "reusable_passage_families": 13,
@@ -46,7 +46,8 @@
     "wildlife_malformed_save_rejection": "passed",
     "zebra_capture_reload": "passed",
     "nine_biomes_visual_inspection": "passed",
-    "character_sheet_and_animated_poses": "passed"
+    "character_sheet_and_animated_poses": "passed",
+    "exit_overshoot_right_left_save_and_conditions": "passed"
   },
   "not_verified": [
     "Real browser layout and interaction",
@@ -55,7 +56,7 @@
     "Human difficulty, variety and enjoyment assessment",
     "Musical quality audition on a physical device"
   ],
-  "standalone_sha256": "c927ae1e21751ecf80e24b13002777cda9fea70cee69a4decea605b7c44c4d6b",
+  "standalone_sha256": "eef2ebb9d157bb2eded53444b7e0b9bd3c7d5843d9c17017068ef125f9bbe09a",
   "handcrafted_opening_levels": 12,
   "remaining_v03_levels": 25,
   "difficulty_human_validated": false,

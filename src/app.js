@@ -83,5 +83,5 @@ refreshHome();resizeCover();requestAnimationFrame(frame);
 if(!storageOK)setTimeout(()=>toast('Sauvegarde locale indisponible. Exportez votre progression depuis les réglages.'),1500);
 if('serviceWorker' in navigator && location.protocol!=='file:' && !window.CROCO_SINGLE_FILE){navigator.serviceWorker.register('./sw.js').then(()=>navigator.serviceWorker.ready).then(()=>{$('offlineStatus').textContent='✓ PRÊT HORS LIGNE';}).catch(()=>{$('offlineStatus').textContent='SOLO · INSTALLATION HORS LIGNE INDISPONIBLE';});}
 // Read-only metadata for diagnostics; the live game remains private to this closure.
-window.CROCO_VERSION='0.7.0';
+window.CROCO_VERSION='0.7.1';
 })();

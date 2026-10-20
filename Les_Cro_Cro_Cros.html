@@ -29,7 +29,7 @@
    <div class="hero-art"><canvas id="cover" aria-label="Les trois crocodiles en expédition dans les marais"></canvas><div class="postcard"><span>EXPÉDITION N° 01</span><strong>La bannière du retour</strong><small>Grandes oreilles & petits courages</small></div></div>
   </section>
   <section class="cast-strip" aria-label="Vos trois aventuriers"><article><i class="dot red"></i><div><strong>Croquinet</strong><span>Saute. Fonce. Réfléchit après.</span></div><kbd>W</kbd></article><article><i class="dot yellow"></i><div><strong>Croquefort</strong><span>Un grand cœur. Un grand bouclier.</span></div><kbd>X</kbd></article><article><i class="dot blue"></i><div><strong>Croqueboum</strong><span>La diplomatie, à coups de boulettes.</span></div><kbd>C</kbd></article></section>
-  <footer class="home-footer"><span>Un jeu de réflexion à trois… qui se joue tout seul.</span><span>SIX CHAPITRES · v0.7</span></footer>
+  <footer class="home-footer"><span>Un jeu de réflexion à trois… qui se joue tout seul.</span><span>SIX CHAPITRES · v0.7.1</span></footer>
  </main>
  <main id="game" hidden>
   <header class="game-top"><button id="pauseBtn" class="icon" aria-label="Pause et menu">Ⅱ</button><div class="level-heading"><span id="levelChapter"></span><strong id="levelName"></strong></div><div class="game-tools"><span id="starCount" aria-label="Étoiles ramassées">☆ ☆ ☆</span><button id="rewindBtn" class="icon" aria-label="Revenir jusqu’à huit secondes en arrière">↶</button><button id="overviewBtn" class="icon" aria-label="Vue d’ensemble du niveau, touche M">⌖</button><button id="journalBtn" class="icon" aria-label="La quête et le bestiaire">⚑</button><button id="hintBtn" class="icon" aria-label="Obtenir un indice">?</button><button id="soundBtn" class="icon" aria-label="Activer ou couper le son">♫</button><button id="fullscreenBtn" class="icon desktop" aria-label="Plein écran">⛶</button></div></header>
@@ -201,7 +201,10 @@ class Engine {
   this.shots=this.shots.filter(b=>b.life>0);
   Wildlife.impacts(this,dt);
   this.effects=this.effects.filter(e=>{e.x+=e.vx*dt;e.y+=e.vy*dt;e.vy+=180*dt;e.life-=dt;return e.life>0;});
-  if(this.open(this.L.exit)&&this.p.every(p=>p.x>this.L.exit.x&&p.x<this.L.exit.x+this.L.exit.w&&Math.abs(p.y-this.L.exit.y)<15)){this.won=true;this.event('win');}
+  // The finish extends from the arch towards the nearest world edge, including overshoot.
+  // Keep its elevation and mechanism conditions: a different floor is not an arrival.
+  const exit=this.L.exit,exitLeft=exit.x+exit.w/2<this.L.width/2;
+  if(this.open(exit)&&this.p.every(p=>(exitLeft?p.x<=exit.x+exit.w:p.x>=exit.x)&&Math.abs(p.y-exit.y)<15)){this.won=true;this.event('win');}
   this.histClock+=dt;if(this.histClock>=.5){this.histClock=0;this.history.push(this.snapshot());if(this.history.length>16)this.history.shift();}
  }
  snapshot(){return {version:1,layoutRevision:this.L.revision||1,levelId:this.L.id,p:this.p.map(p=>({x:p.x,y:p.y,vy:p.vy,face:p.face,roof:p.roof,onLadder:!!p.onLadder})),active:this.active,flags:clone(this.flags),broken:clone(this.broken),collected:clone(this.collected),elapsed:this.elapsed,wildlife:Wildlife.snapshot(this),lifts:clone(this.lifts),blocks:clone(this.blocks),enemies:this.enemies.map(e=>({id:e.id,x:e.x,dir:e.dir,asleep:e.asleep,stun:e.stun})),checkpoint:this.checkpoint,rebounds:this.rebounds};}
@@ -635,7 +638,7 @@ refreshHome();resizeCover();requestAnimationFrame(frame);
 if(!storageOK)setTimeout(()=>toast('Sauvegarde locale indisponible. Exportez votre progression depuis les réglages.'),1500);
 if('serviceWorker' in navigator && location.protocol!=='file:' && !window.CROCO_SINGLE_FILE){navigator.serviceWorker.register('./sw.js').then(()=>navigator.serviceWorker.ready).then(()=>{$('offlineStatus').textContent='✓ PRÊT HORS LIGNE';}).catch(()=>{$('offlineStatus').textContent='SOLO · INSTALLATION HORS LIGNE INDISPONIBLE';});}
 // Read-only metadata for diagnostics; the live game remains private to this closure.
-window.CROCO_VERSION='0.7.0';
+window.CROCO_VERSION='0.7.1';
 })();
 </script>
 </body>

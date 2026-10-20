@@ -1,6 +1,6 @@
 # Les Cro Cro Cros — La bannière du retour
 
-Version 0.7.0 · 20 octobre 2026
+Version 0.7.1 · 20 octobre 2026
 
 Jeu de plateforme et de réflexion en solo, en français. Trois crocodiles complémentaires, 37 étapes, six chapitres, 111 étoiles facultatives. Aucun compte, publicité, achat ou serveur de jeu. Tout le contenu est inclus et fonctionne hors ligne.
 
@@ -36,6 +36,10 @@ Les boutons tactiles permettent de marcher et agir simultanément. Un portrait s
 - **Croqueboum** tire des boulettes pour actionner les cibles ou envoyer les gêneurs faire une sieste.
 - Espace attrape un zèbre coincé à proximité ; sinon, il privilégie un levier ou une arche avant la capacité du personnage.
 - Les trois doivent rejoindre l’arrivée. Une sortie avec un sceau manquant demande d’abord de résoudre son mécanisme.
+
+## Correctif 0.7.1 : dépassement de l’arrivée
+
+Un croco placé après l’arche, du côté de la sortie, compte désormais pour terminer le niveau. Cette règle fonctionne vers la droite et pour la sortie de retour à gauche de l’étape 9. Les trois crocos doivent toujours être arrivés au bon étage et les conditions de sortie doivent être remplies. Les sauvegardes existantes sont compatibles, y compris si un croco avait déjà dépassé l’arche.
 
 ## Nouveautés 0.7 : identité visuelle et dessin
 
@@ -82,6 +86,7 @@ Reconstruction :
 node content/author-campaign.cjs
 python3 build.py
 node tests/engine.test.js
+node tests/exit.test.cjs
 node tests/blocks.test.cjs
 node tests/wildlife.test.cjs
 node tests/pranks.test.cjs

@@ -2,7 +2,7 @@
 
 Jeu de plateforme et d’énigmes en solo, en français, jouable hors ligne. Trois crocodiles complémentaires, 37 étapes, six chapitres et 111 étoiles facultatives.
 
-**Version 0.7.0 — personnages plus détaillés et mieux différenciés.**
+**Version 0.7.1 — arrivée validée même si un croco dépasse l’arche.**
 
 ![Les personnages dessinés par le moteur du jeu](docs/personnages-v07.png)
 
@@ -39,6 +39,7 @@ Commandes tactiles disponibles. Progression locale, export/import dans les régl
 node content/author-campaign.cjs
 python3 build.py
 node tests/engine.test.js
+node tests/exit.test.cjs
 node tests/blocks.test.cjs
 node tests/wildlife.test.cjs
 node tests/pranks.test.cjs

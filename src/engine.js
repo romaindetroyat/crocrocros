@@ -68,7 +68,10 @@ class Engine {
   this.shots=this.shots.filter(b=>b.life>0);
   Wildlife.impacts(this,dt);
   this.effects=this.effects.filter(e=>{e.x+=e.vx*dt;e.y+=e.vy*dt;e.vy+=180*dt;e.life-=dt;return e.life>0;});
-  if(this.open(this.L.exit)&&this.p.every(p=>p.x>this.L.exit.x&&p.x<this.L.exit.x+this.L.exit.w&&Math.abs(p.y-this.L.exit.y)<15)){this.won=true;this.event('win');}
+  // The finish extends from the arch towards the nearest world edge, including overshoot.
+  // Keep its elevation and mechanism conditions: a different floor is not an arrival.
+  const exit=this.L.exit,exitLeft=exit.x+exit.w/2<this.L.width/2;
+  if(this.open(exit)&&this.p.every(p=>(exitLeft?p.x<=exit.x+exit.w:p.x>=exit.x)&&Math.abs(p.y-exit.y)<15)){this.won=true;this.event('win');}
   this.histClock+=dt;if(this.histClock>=.5){this.histClock=0;this.history.push(this.snapshot());if(this.history.length>16)this.history.shift();}
  }
  snapshot(){return {version:1,layoutRevision:this.L.revision||1,levelId:this.L.id,p:this.p.map(p=>({x:p.x,y:p.y,vy:p.vy,face:p.face,roof:p.roof,onLadder:!!p.onLadder})),active:this.active,flags:clone(this.flags),broken:clone(this.broken),collected:clone(this.collected),elapsed:this.elapsed,wildlife:Wildlife.snapshot(this),lifts:clone(this.lifts),blocks:clone(this.blocks),enemies:this.enemies.map(e=>({id:e.id,x:e.x,dir:e.dir,asleep:e.asleep,stun:e.stun})),checkpoint:this.checkpoint,rebounds:this.rebounds};}

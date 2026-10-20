@@ -1,0 +1,261 @@
+[
+  {
+    "level": 1,
+    "id": "marais-01",
+    "reference": "STRT",
+    "seconds": 17,
+    "rebounds": 0
+  },
+  {
+    "level": 2,
+    "id": "marais-02",
+    "reference": "GR8T",
+    "seconds": 17,
+    "rebounds": 0
+  },
+  {
+    "level": 3,
+    "id": "marais-03",
+    "reference": "TLPT",
+    "seconds": 25,
+    "rebounds": 0
+  },
+  {
+    "level": 4,
+    "id": "expedition-04",
+    "reference": "GRND",
+    "seconds": 18,
+    "rebounds": 0
+  },
+  {
+    "level": 5,
+    "id": "expedition-05",
+    "reference": "LLM0",
+    "seconds": 21,
+    "rebounds": 0
+  },
+  {
+    "level": 6,
+    "id": "expedition-06",
+    "reference": "FL0T",
+    "seconds": 20,
+    "rebounds": 0
+  },
+  {
+    "level": 7,
+    "id": "expedition-07",
+    "reference": "TRSS",
+    "seconds": 18,
+    "rebounds": 0
+  },
+  {
+    "level": 8,
+    "id": "expedition-08",
+    "reference": "PRHS",
+    "seconds": 24,
+    "rebounds": 0
+  },
+  {
+    "level": 9,
+    "id": "expedition-09",
+    "reference": "CVRN",
+    "seconds": 16,
+    "rebounds": 0
+  },
+  {
+    "level": 10,
+    "id": "expedition-10",
+    "reference": "BBLS",
+    "seconds": 22,
+    "rebounds": 0
+  },
+  {
+    "level": 11,
+    "id": "expedition-11",
+    "reference": "VLCN",
+    "seconds": 19,
+    "rebounds": 0
+  },
+  {
+    "level": 12,
+    "id": "expedition-12",
+    "reference": "QCKS",
+    "seconds": 26,
+    "rebounds": 0
+  },
+  {
+    "level": 13,
+    "id": "expedition-13",
+    "reference": "PHR0",
+    "seconds": 27,
+    "rebounds": 0
+  },
+  {
+    "level": 14,
+    "id": "expedition-14",
+    "reference": "C1R0",
+    "seconds": 24,
+    "rebounds": 0
+  },
+  {
+    "level": 15,
+    "id": "expedition-15",
+    "reference": "SPKS",
+    "seconds": 29,
+    "rebounds": 0
+  },
+  {
+    "level": 16,
+    "id": "expedition-16",
+    "reference": "JMNN",
+    "seconds": 35,
+    "rebounds": 0
+  },
+  {
+    "level": 17,
+    "id": "expedition-17",
+    "reference": "TTRS",
+    "seconds": 35,
+    "rebounds": 0
+  },
+  {
+    "level": 18,
+    "id": "expedition-18",
+    "reference": "JLLY",
+    "seconds": 32,
+    "rebounds": 0
+  },
+  {
+    "level": 19,
+    "id": "expedition-19",
+    "reference": "PLNG",
+    "seconds": 23,
+    "rebounds": 0
+  },
+  {
+    "level": 20,
+    "id": "expedition-20",
+    "reference": "BTRY",
+    "seconds": 34,
+    "rebounds": 0
+  },
+  {
+    "level": 21,
+    "id": "expedition-21",
+    "reference": "JNKR",
+    "seconds": 31,
+    "rebounds": 0
+  },
+  {
+    "level": 22,
+    "id": "expedition-22",
+    "reference": "CBLT",
+    "seconds": 44,
+    "rebounds": 0
+  },
+  {
+    "level": 23,
+    "id": "expedition-23",
+    "reference": "H0PP",
+    "seconds": 27,
+    "rebounds": 0
+  },
+  {
+    "level": 24,
+    "id": "expedition-24",
+    "reference": "SMRT",
+    "seconds": 26,
+    "rebounds": 0
+  },
+  {
+    "level": 25,
+    "id": "expedition-25",
+    "reference": "V8TR",
+    "seconds": 45,
+    "rebounds": 0
+  },
+  {
+    "level": 26,
+    "id": "expedition-26",
+    "reference": "NFL8",
+    "seconds": 25,
+    "rebounds": 0
+  },
+  {
+    "level": 27,
+    "id": "expedition-27",
+    "reference": "WKYY",
+    "seconds": 26,
+    "rebounds": 0
+  },
+  {
+    "level": 28,
+    "id": "expedition-28",
+    "reference": "CMB0",
+    "seconds": 31,
+    "rebounds": 0
+  },
+  {
+    "level": 29,
+    "id": "expedition-29",
+    "reference": "8BLL",
+    "seconds": 33,
+    "rebounds": 0
+  },
+  {
+    "level": 30,
+    "id": "expedition-30",
+    "reference": "TRDR",
+    "seconds": 34,
+    "rebounds": 0
+  },
+  {
+    "level": 31,
+    "id": "expedition-31",
+    "reference": "FNTM",
+    "seconds": 32,
+    "rebounds": 0
+  },
+  {
+    "level": 32,
+    "id": "expedition-32",
+    "reference": "WRLR",
+    "seconds": 35,
+    "rebounds": 0
+  },
+  {
+    "level": 33,
+    "id": "expedition-33",
+    "reference": "TRPD",
+    "seconds": 28,
+    "rebounds": 0
+  },
+  {
+    "level": 34,
+    "id": "expedition-34",
+    "reference": "TFFF",
+    "seconds": 37,
+    "rebounds": 0
+  },
+  {
+    "level": 35,
+    "id": "expedition-35",
+    "reference": "FRGT",
+    "seconds": 43,
+    "rebounds": 0
+  },
+  {
+    "level": 36,
+    "id": "expedition-36",
+    "reference": "4RN4",
+    "seconds": 46,
+    "rebounds": 0
+  },
+  {
+    "level": 37,
+    "id": "expedition-37",
+    "reference": "MSTR",
+    "seconds": 49,
+    "rebounds": 0
+  }
+]

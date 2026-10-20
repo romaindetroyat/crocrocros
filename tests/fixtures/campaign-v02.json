@@ -1,0 +1,541 @@
+{
+  "levels": [
+    {
+      "id": "marais-01",
+      "chapter": "Le grand départ",
+      "name": "Trois museaux, un cerveau",
+      "subtitle": "Enfin… à peu près.",
+      "theme": "morning",
+      "width": 1440,
+      "par": 240,
+      "intro": "Le régiment est parti à gauche. Nos héros ont pris à droite. Ça commence bien.",
+      "briefing": "Un bouton trop haut, un pont replié et une porte têtue. Faites passer les trois crocos !",
+      "spawns": [
+        {
+          "x": 130,
+          "y": 520
+        },
+        {
+          "x": 225,
+          "y": 520
+        },
+        {
+          "x": 320,
+          "y": 520
+        }
+      ],
+      "platforms": [
+        {
+          "x": 0,
+          "y": 520,
+          "w": 720,
+          "h": 200
+        },
+        {
+          "x": 890,
+          "y": 520,
+          "w": 550,
+          "h": 200
+        },
+        {
+          "x": 400,
+          "y": 340,
+          "w": 160,
+          "h": 26
+        }
+      ],
+      "bridges": [
+        {
+          "id": "pont",
+          "x": 720,
+          "y": 520,
+          "w": 170,
+          "h": 24,
+          "requires": [
+            "haut"
+          ]
+        }
+      ],
+      "gates": [
+        {
+          "id": "porte",
+          "x": 1190,
+          "y": 380,
+          "w": 30,
+          "h": 140,
+          "requires": [
+            "cible"
+          ]
+        }
+      ],
+      "switches": [
+        {
+          "id": "haut",
+          "x": 500,
+          "y": 340,
+          "label": "PONT"
+        }
+      ],
+      "targets": [
+        {
+          "id": "cible",
+          "x": 1090,
+          "y": 482,
+          "label": "PORTE"
+        }
+      ],
+      "plates": [],
+      "crates": [],
+      "turrets": [],
+      "exit": {
+        "x": 1270,
+        "y": 520,
+        "w": 140
+      },
+      "checkpoint": {
+        "x": 975,
+        "y": 520
+      },
+      "stars": [
+        {
+          "id": "a",
+          "x": 260,
+          "y": 478
+        },
+        {
+          "id": "b",
+          "x": 535,
+          "y": 304
+        },
+        {
+          "id": "c",
+          "x": 1010,
+          "y": 478
+        }
+      ],
+      "signs": [
+        {
+          "x": 310,
+          "y": 520,
+          "text": "MARCHEPIED ↑"
+        },
+        {
+          "x": 680,
+          "y": 520,
+          "text": "PONT →"
+        }
+      ],
+      "hints": [
+        "Placez Croquefort sur la fleur, sous le bord gauche de la plateforme. Action met son bouclier au-dessus de sa tête.",
+        "Avec Croquinet, sautez sur le bouclier, puis sur la plateforme. Action près du levier déplie le pont.",
+        "De l’autre côté du pont, Croqueboum tire vers la cible rouge. Amenez ensuite les trois crocos sous l’arche."
+      ],
+      "pads": [
+        {
+          "x": 350,
+          "y": 520
+        }
+      ],
+      "revision": 2
+    },
+    {
+      "id": "marais-02",
+      "chapter": "Les roseaux farceurs",
+      "name": "Le coup à l’envers",
+      "subtitle": "Pour avancer, il faut parfois regarder derrière.",
+      "theme": "sunset",
+      "width": 1700,
+      "par": 300,
+      "intro": "« C’est une fleur. » — Croquinet, trois secondes avant de recevoir une boulette.",
+      "briefing": "Une dalle lourde, une fleur enrhumée et une cible blindée. Le bon tireur choisit aussi le bon côté.",
+      "spawns": [
+        {
+          "x": 100,
+          "y": 520
+        },
+        {
+          "x": 190,
+          "y": 520
+        },
+        {
+          "x": 280,
+          "y": 520
+        }
+      ],
+      "platforms": [
+        {
+          "x": 0,
+          "y": 520,
+          "w": 780,
+          "h": 200
+        },
+        {
+          "x": 980,
+          "y": 520,
+          "w": 720,
+          "h": 200
+        }
+      ],
+      "bridges": [
+        {
+          "id": "pont",
+          "x": 780,
+          "y": 520,
+          "w": 200,
+          "h": 24,
+          "requires": [
+            "fleur"
+          ]
+        }
+      ],
+      "gates": [
+        {
+          "id": "volet",
+          "x": 590,
+          "y": 380,
+          "w": 28,
+          "h": 140,
+          "requires": [
+            "dalle"
+          ]
+        },
+        {
+          "id": "finale",
+          "x": 1470,
+          "y": 370,
+          "w": 28,
+          "h": 150,
+          "requires": [
+            "fin"
+          ]
+        }
+      ],
+      "switches": [],
+      "targets": [
+        {
+          "id": "fleur",
+          "x": 720,
+          "y": 482,
+          "label": "PONT"
+        },
+        {
+          "id": "fin",
+          "x": 1360,
+          "y": 482,
+          "label": "← À REVERS",
+          "hitDirection": -1
+        }
+      ],
+      "plates": [
+        {
+          "id": "dalle",
+          "x": 420,
+          "y": 520,
+          "w": 80,
+          "hero": 1,
+          "label": "LOURDE",
+          "latchWhen": [
+            "fleur"
+          ]
+        }
+      ],
+      "crates": [
+        {
+          "id": "caisses",
+          "x": 1090,
+          "y": 425,
+          "w": 50,
+          "h": 95
+        }
+      ],
+      "turrets": [
+        {
+          "id": "plante",
+          "x": 740,
+          "y": 482,
+          "dir": -1,
+          "off": "fleur",
+          "period": 1.6
+        }
+      ],
+      "exit": {
+        "x": 1530,
+        "y": 520,
+        "w": 140
+      },
+      "checkpoint": {
+        "x": 1205,
+        "y": 520
+      },
+      "stars": [
+        {
+          "id": "a",
+          "x": 350,
+          "y": 478
+        },
+        {
+          "id": "b",
+          "x": 1170,
+          "y": 478
+        },
+        {
+          "id": "c",
+          "x": 1420,
+          "y": 478
+        }
+      ],
+      "signs": [
+        {
+          "x": 380,
+          "y": 520,
+          "text": "LE PLUS COSTAUD"
+        },
+        {
+          "x": 1230,
+          "y": 520,
+          "text": "L’AUTRE CÔTÉ ←"
+        }
+      ],
+      "pads": [],
+      "hints": [
+        "Seul Croquefort est assez lourd pour cette dalle. Placez-le dessus, bouclier devant lui et regard vers la droite.",
+        "Croqueboum tire depuis derrière Croquefort. La première cible déplie le pont. Croquinet charge ensuite les caisses.",
+        "La seconde cible est blindée à gauche. Passez à sa droite avec Croqueboum, tournez-vous vers la gauche et tirez dans son dos."
+      ],
+      "revision": 2
+    },
+    {
+      "id": "marais-03",
+      "chapter": "Le temple des chaussettes",
+      "name": "Trois places, un seul tir",
+      "subtitle": "Personne ne peut tout faire tout seul.",
+      "theme": "temple",
+      "width": 2000,
+      "par": 420,
+      "intro": "Le temple abrite un trésor inestimable : des chaussettes sèches. Sans pieds, ça reste discutable.",
+      "briefing": "Une dalle en hauteur, une dalle lourde au sol et une cible verrouillée. Il faudra placer les trois crocos avant de tirer.",
+      "spawns": [
+        {
+          "x": 110,
+          "y": 520
+        },
+        {
+          "x": 205,
+          "y": 520
+        },
+        {
+          "x": 300,
+          "y": 520
+        }
+      ],
+      "platforms": [
+        {
+          "x": 0,
+          "y": 520,
+          "w": 680,
+          "h": 200
+        },
+        {
+          "x": 860,
+          "y": 520,
+          "w": 1140,
+          "h": 200
+        },
+        {
+          "x": 375,
+          "y": 340,
+          "w": 210,
+          "h": 28
+        },
+        {
+          "x": 1130,
+          "y": 340,
+          "w": 280,
+          "h": 28
+        }
+      ],
+      "bridges": [
+        {
+          "id": "pont1",
+          "x": 680,
+          "y": 520,
+          "w": 180,
+          "h": 24,
+          "requires": [
+            "haut1"
+          ]
+        }
+      ],
+      "gates": [
+        {
+          "id": "volet",
+          "x": 1450,
+          "y": 360,
+          "w": 28,
+          "h": 160,
+          "requires": [
+            "haut",
+            "bas"
+          ]
+        },
+        {
+          "id": "porte",
+          "x": 1800,
+          "y": 370,
+          "w": 28,
+          "h": 150,
+          "requires": [
+            "final"
+          ]
+        }
+      ],
+      "switches": [
+        {
+          "id": "haut1",
+          "x": 510,
+          "y": 340,
+          "label": "PONT"
+        }
+      ],
+      "targets": [
+        {
+          "id": "final",
+          "x": 1660,
+          "y": 482,
+          "label": "DEUX DALLES",
+          "requires": [
+            "haut",
+            "bas"
+          ]
+        }
+      ],
+      "plates": [
+        {
+          "id": "haut",
+          "x": 1300,
+          "y": 340,
+          "w": 80,
+          "label": "HAUT",
+          "latchWhen": [
+            "final"
+          ]
+        },
+        {
+          "id": "bas",
+          "x": 1260,
+          "y": 520,
+          "w": 100,
+          "hero": 1,
+          "label": "BAS · LOURDE",
+          "latchWhen": [
+            "final"
+          ]
+        }
+      ],
+      "crates": [
+        {
+          "id": "mur",
+          "x": 930,
+          "y": 425,
+          "w": 45,
+          "h": 95
+        }
+      ],
+      "turrets": [
+        {
+          "id": "plante",
+          "x": 1680,
+          "y": 482,
+          "dir": -1,
+          "off": "final",
+          "period": 1.35
+        }
+      ],
+      "exit": {
+        "x": 1845,
+        "y": 520,
+        "w": 130
+      },
+      "checkpoint": {
+        "x": 1045,
+        "y": 520
+      },
+      "stars": [
+        {
+          "id": "a",
+          "x": 555,
+          "y": 303
+        },
+        {
+          "id": "b",
+          "x": 1235,
+          "y": 303
+        },
+        {
+          "id": "c",
+          "x": 1730,
+          "y": 478
+        }
+      ],
+      "signs": [
+        {
+          "x": 280,
+          "y": 520,
+          "text": "ENSEMBLE ↑"
+        },
+        {
+          "x": 1545,
+          "y": 520,
+          "text": "HAUT + BAS = TIR"
+        }
+      ],
+      "pads": [
+        {
+          "x": 325,
+          "y": 520
+        },
+        {
+          "x": 1080,
+          "y": 520
+        }
+      ],
+      "hints": [
+        "Utilisez le bouclier sous la première plateforme pour que Croquinet ouvre le pont. Il casse ensuite les caisses.",
+        "Sous la deuxième plateforme, Croquefort fait de nouveau le marchepied. Croquinet doit rester sur la dalle HAUT.",
+        "Déplacez ensuite Croquefort sur la dalle BAS, bouclier devant lui, face à droite. Les deux dalles doivent rester occupées ensemble.",
+        "Enfin, Croqueboum tire depuis derrière Croquefort. Une fois la cible touchée, les passages restent ouverts : les trois peuvent sortir."
+      ],
+      "revision": 2
+    }
+  ],
+  "heroes": [
+    {
+      "name": "Croquinet",
+      "role": "Éclaireur",
+      "color": "#e8774e",
+      "skin": "#7aa849",
+      "speed": 335,
+      "w": 37,
+      "h": 66
+    },
+    {
+      "name": "Croquefort",
+      "role": "Protecteur",
+      "color": "#e5b849",
+      "skin": "#598d5c",
+      "speed": 250,
+      "w": 50,
+      "h": 75
+    },
+    {
+      "name": "Croqueboum",
+      "role": "Artilleur",
+      "color": "#6a9eb4",
+      "skin": "#669d7a",
+      "speed": 285,
+      "w": 40,
+      "h": 68
+    }
+  ],
+  "version": 1
+}

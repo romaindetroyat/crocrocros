@@ -1,0 +1,495 @@
+[
+  {
+    "levelId": "marais-01",
+    "custom": 1
+  },
+  {
+    "levelId": "marais-02",
+    "custom": 2
+  },
+  {
+    "levelId": "marais-03",
+    "custom": 3
+  },
+  {
+    "levelId": "expedition-04",
+    "custom": 4
+  },
+  {
+    "levelId": "expedition-05",
+    "custom": 5
+  },
+  {
+    "levelId": "expedition-06",
+    "custom": 6
+  },
+  {
+    "levelId": "expedition-07",
+    "custom": 7
+  },
+  {
+    "levelId": "expedition-08",
+    "custom": 8
+  },
+  {
+    "levelId": "expedition-09",
+    "custom": 9
+  },
+  {
+    "levelId": "expedition-10",
+    "custom": 10
+  },
+  {
+    "levelId": "expedition-11",
+    "custom": 11
+  },
+  {
+    "levelId": "expedition-12",
+    "custom": 12
+  },
+  {
+    "levelId": "expedition-13",
+    "steps": [
+      {
+        "type": "relay",
+        "offset": 0,
+        "width": 780
+      },
+      {
+        "type": "ladder",
+        "offset": 780,
+        "width": 720
+      }
+    ]
+  },
+  {
+    "levelId": "expedition-14",
+    "steps": [
+      {
+        "type": "lift",
+        "offset": 0,
+        "width": 720
+      },
+      {
+        "type": "combination",
+        "offset": 720,
+        "width": 720
+      }
+    ]
+  },
+  {
+    "levelId": "expedition-15",
+    "steps": [
+      {
+        "type": "reverse",
+        "offset": 0,
+        "width": 720
+      },
+      {
+        "type": "relay",
+        "offset": 720,
+        "width": 780
+      }
+    ]
+  },
+  {
+    "levelId": "expedition-16",
+    "steps": [
+      {
+        "type": "portal",
+        "offset": 0,
+        "width": 720
+      },
+      {
+        "type": "ladder",
+        "offset": 720,
+        "width": 720
+      },
+      {
+        "type": "cover",
+        "offset": 1440,
+        "width": 720
+      }
+    ]
+  },
+  {
+    "levelId": "expedition-17",
+    "steps": [
+      {
+        "type": "boost",
+        "offset": 0,
+        "width": 720
+      },
+      {
+        "type": "charge",
+        "offset": 720,
+        "width": 720
+      },
+      {
+        "type": "combination",
+        "offset": 1440,
+        "width": 720
+      }
+    ]
+  },
+  {
+    "levelId": "expedition-18",
+    "steps": [
+      {
+        "type": "belt",
+        "offset": 0,
+        "width": 720
+      },
+      {
+        "type": "cover",
+        "offset": 720,
+        "width": 720
+      }
+    ]
+  },
+  {
+    "levelId": "expedition-19",
+    "steps": [
+      {
+        "type": "lift",
+        "offset": 0,
+        "width": 720
+      },
+      {
+        "type": "spring",
+        "offset": 720,
+        "width": 720
+      }
+    ]
+  },
+  {
+    "levelId": "expedition-20",
+    "steps": [
+      {
+        "type": "ladder",
+        "offset": 0,
+        "width": 720
+      },
+      {
+        "type": "portal",
+        "offset": 720,
+        "width": 720
+      },
+      {
+        "type": "relay",
+        "offset": 1440,
+        "width": 780
+      }
+    ]
+  },
+  {
+    "levelId": "expedition-21",
+    "steps": [
+      {
+        "type": "portal",
+        "offset": 0,
+        "width": 720
+      },
+      {
+        "type": "lift",
+        "offset": 720,
+        "width": 720
+      },
+      {
+        "type": "reverse",
+        "offset": 1440,
+        "width": 720
+      }
+    ]
+  },
+  {
+    "levelId": "expedition-22",
+    "steps": [
+      {
+        "type": "belt",
+        "offset": 0,
+        "width": 720
+      },
+      {
+        "type": "lift",
+        "offset": 720,
+        "width": 720
+      },
+      {
+        "type": "cover",
+        "offset": 1440,
+        "width": 720
+      }
+    ]
+  },
+  {
+    "levelId": "expedition-23",
+    "steps": [
+      {
+        "type": "spring",
+        "offset": 0,
+        "width": 720
+      },
+      {
+        "type": "bridge",
+        "offset": 720,
+        "width": 900
+      }
+    ]
+  },
+  {
+    "levelId": "expedition-24",
+    "steps": [
+      {
+        "type": "lift",
+        "offset": 0,
+        "width": 720
+      },
+      {
+        "type": "bridge",
+        "offset": 720,
+        "width": 900
+      }
+    ]
+  },
+  {
+    "levelId": "expedition-25",
+    "steps": [
+      {
+        "type": "belt",
+        "offset": 0,
+        "width": 720
+      },
+      {
+        "type": "ladder",
+        "offset": 720,
+        "width": 720
+      },
+      {
+        "type": "combination",
+        "offset": 1440,
+        "width": 720
+      }
+    ]
+  },
+  {
+    "levelId": "expedition-26",
+    "steps": [
+      {
+        "type": "spring",
+        "offset": 0,
+        "width": 720
+      },
+      {
+        "type": "ladder",
+        "offset": 720,
+        "width": 720
+      }
+    ]
+  },
+  {
+    "levelId": "expedition-27",
+    "steps": [
+      {
+        "type": "relay",
+        "offset": 0,
+        "width": 780
+      },
+      {
+        "type": "spring",
+        "offset": 780,
+        "width": 720
+      }
+    ]
+  },
+  {
+    "levelId": "expedition-28",
+    "steps": [
+      {
+        "type": "bridge",
+        "offset": 0,
+        "width": 900
+      },
+      {
+        "type": "combination",
+        "offset": 900,
+        "width": 720
+      }
+    ]
+  },
+  {
+    "levelId": "expedition-29",
+    "steps": [
+      {
+        "type": "boost",
+        "offset": 0,
+        "width": 720
+      },
+      {
+        "type": "portal",
+        "offset": 720,
+        "width": 720
+      },
+      {
+        "type": "ladder",
+        "offset": 1440,
+        "width": 720
+      }
+    ]
+  },
+  {
+    "levelId": "expedition-30",
+    "steps": [
+      {
+        "type": "portal",
+        "offset": 0,
+        "width": 720
+      },
+      {
+        "type": "combination",
+        "offset": 720,
+        "width": 720
+      },
+      {
+        "type": "reverse",
+        "offset": 1440,
+        "width": 720
+      }
+    ]
+  },
+  {
+    "levelId": "expedition-31",
+    "steps": [
+      {
+        "type": "spring",
+        "offset": 0,
+        "width": 720
+      },
+      {
+        "type": "boost",
+        "offset": 720,
+        "width": 720
+      },
+      {
+        "type": "charge",
+        "offset": 1440,
+        "width": 720
+      }
+    ]
+  },
+  {
+    "levelId": "expedition-32",
+    "steps": [
+      {
+        "type": "lift",
+        "offset": 0,
+        "width": 720
+      },
+      {
+        "type": "portal",
+        "offset": 720,
+        "width": 720
+      },
+      {
+        "type": "bridge",
+        "offset": 1440,
+        "width": 900
+      }
+    ]
+  },
+  {
+    "levelId": "expedition-33",
+    "steps": [
+      {
+        "type": "relay",
+        "offset": 0,
+        "width": 780
+      },
+      {
+        "type": "armour",
+        "offset": 780,
+        "width": 720
+      }
+    ]
+  },
+  {
+    "levelId": "expedition-34",
+    "steps": [
+      {
+        "type": "portal",
+        "offset": 0,
+        "width": 720
+      },
+      {
+        "type": "reverse",
+        "offset": 720,
+        "width": 720
+      },
+      {
+        "type": "relay",
+        "offset": 1440,
+        "width": 780
+      }
+    ]
+  },
+  {
+    "levelId": "expedition-35",
+    "steps": [
+      {
+        "type": "combination",
+        "offset": 0,
+        "width": 720
+      },
+      {
+        "type": "portal",
+        "offset": 720,
+        "width": 720
+      },
+      {
+        "type": "bridge",
+        "offset": 1440,
+        "width": 900
+      }
+    ]
+  },
+  {
+    "levelId": "expedition-36",
+    "steps": [
+      {
+        "type": "belt",
+        "offset": 0,
+        "width": 720
+      },
+      {
+        "type": "spring",
+        "offset": 720,
+        "width": 720
+      },
+      {
+        "type": "relay",
+        "offset": 1440,
+        "width": 780
+      }
+    ]
+  },
+  {
+    "levelId": "expedition-37",
+    "steps": [
+      {
+        "type": "bridge",
+        "offset": 0,
+        "width": 900
+      },
+      {
+        "type": "relay",
+        "offset": 900,
+        "width": 780
+      },
+      {
+        "type": "armour",
+        "offset": 1680,
+        "width": 720
+      }
+    ]
+  }
+]

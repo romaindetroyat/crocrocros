@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="fr">
+<head>
+ <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
+ <meta name="theme-color" content="#244a40"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+ <meta name="description" content="Trois crocodiles, un seul cerveau. Une aventure de réflexion et de coopération en solo, à emporter partout.">
+ <title>Les Cro Cro Cros — La bannière du retour</title><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icon-192.png"><link rel="icon" href="icon-192.png">
+ <style>/*__STYLE__*/</style>
+</head>
+<body>
+ <main id="home">
+  <header class="masthead"><span class="wordmark">Les Cro Cro Cros<span class="tiny-star">✦</span></span><div class="header-actions"><span class="status" id="offlineStatus">SOLO · SUR CET APPAREIL</span><button class="icon" id="settingsHome" aria-label="Réglages et sauvegardes">☷</button></div></header>
+  <section class="hero">
+   <div class="hero-copy"><span class="eyebrow">UNE GRANDE AVENTURE À PETITS PAS</span><h1>Trois museaux.<br>Un seul <em>cerveau.</em></h1><p>Un barrissement. Un régiment dispersé.<br>Six morceaux de bannière à rapporter au marais.</p><div class="home-cta"><button class="primary" id="continueBtn">C’est parti ! <span>→</span></button><button class="secondary" id="mapBtn">Les étapes <span>☷</span></button></div><div id="progressNote" class="progress-note">3 crocodiles · 37 énigmes · beaucoup de mauvaise foi</div><button class="quest-link" id="journalHome">⚑ La quête de la bannière</button></div>
+   <div class="hero-art"><canvas id="cover" aria-label="Les trois crocodiles en expédition dans les marais"></canvas><div class="postcard"><span>EXPÉDITION N° 01</span><strong>La bannière du retour</strong><small>Grandes oreilles & petits courages</small></div></div>
+  </section>
+  <section class="cast-strip" aria-label="Vos trois aventuriers"><article><i class="dot red"></i><div><strong>Croquinet</strong><span>Saute. Fonce. Réfléchit après.</span></div><kbd>W</kbd></article><article><i class="dot yellow"></i><div><strong>Croquefort</strong><span>Un grand cœur. Un grand bouclier.</span></div><kbd>X</kbd></article><article><i class="dot blue"></i><div><strong>Croqueboum</strong><span>La diplomatie, à coups de boulettes.</span></div><kbd>C</kbd></article></section>
+  <footer class="home-footer"><span>Un jeu de réflexion à trois… qui se joue tout seul.</span><span>SIX CHAPITRES · v0.7</span></footer>
+ </main>
+ <main id="game" hidden>
+  <header class="game-top"><button id="pauseBtn" class="icon" aria-label="Pause et menu">Ⅱ</button><div class="level-heading"><span id="levelChapter"></span><strong id="levelName"></strong></div><div class="game-tools"><span id="starCount" aria-label="Étoiles ramassées">☆ ☆ ☆</span><button id="rewindBtn" class="icon" aria-label="Revenir jusqu’à huit secondes en arrière">↶</button><button id="overviewBtn" class="icon" aria-label="Vue d’ensemble du niveau, touche M">⌖</button><button id="journalBtn" class="icon" aria-label="La quête et le bestiaire">⚑</button><button id="hintBtn" class="icon" aria-label="Obtenir un indice">?</button><button id="soundBtn" class="icon" aria-label="Activer ou couper le son">♫</button><button id="fullscreenBtn" class="icon desktop" aria-label="Plein écran">⛶</button></div></header>
+  <div id="scene"><canvas id="world" tabindex="0" aria-label="Aire de jeu. Flèches gauche et droite pour marcher, flèche haut pour sauter, espace pour agir, touches W X C pour changer de crocodile."></canvas><div id="objective">Amenez les trois crocodiles à la sortie.</div><div id="speech" role="status"></div><div id="saveIndicator">Sauvegarde automatique</div><div id="arrival"></div></div>
+  <div class="game-bottom"><div class="movement"><button id="left" class="control" aria-label="Marcher à gauche">◀</button><button id="right" class="control" aria-label="Marcher à droite">▶</button></div><div class="hero-select" id="heroSelect"></div><div class="abilities" id="abilities"><button id="jump" class="control action small"><span>↑</span><small>Sauter</small></button><button id="down" class="control descent" aria-label="Descendre l’échelle" hidden><span>↓</span></button><button id="action" class="control action"><span id="actionIcon">✦</span><small id="actionLabel">Charger</small></button></div></div>
+  <div class="keybar"><span>← → : marcher · ↑ : saut · Espace : action · W X C : choisir · M : plan</span><span id="heroRole"></span></div>
+ </main>
+ <dialog id="modal"><div id="modalBody"></div></dialog>
+ <div id="toast" role="status"></div><input type="file" id="importInput" accept="application/json,.json" hidden>
+ <script>/*__LEVELS__*/</script><script>/*__WILDLIFE__*/
+</script><script>
+/*__ENGINE__*/</script><script>/*__ART__*/</script><script>/*__MUSIC__*/</script><script>/*__APP__*/</script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+/* Six fully authored opening maps. Each is a single interdependent puzzle.
+   These are deliberately not concatenations of the reusable campaign passages. */
+module.exports=function(levels,routes){
+ function base(i,name,width){const L={...levels[i],revision:4,name,width,handcrafted:true,spawns:[{x:70,y:520},{x:125,y:520},{x:180,y:520}],checkpoint:{x:110,y:520},exit:{x:width-215,y:520,w:180}};for(const k of ['platforms','bridges','gates','switches','targets','plates','crates','turrets','keys','lifts','ladders','springs','portals','conveyors','stars','signs','pads','blocks'])L[k]=[];levels[i]=L;routes[i]={levelId:L.id,custom:i+1};return L;}
+ const floor=(L,x,w,y=520,h=160)=>L.platforms.push({x,y,w,h,oneway:h<40});
+ const stars=(L,pts)=>L.stars=pts.map(([x,y],i)=>({id:`star-${i+1}`,x,y}));
+ let L=base(0,'La porte du régiment',1210);
+ floor(L,0,700);floor(L,880,330);floor(L,275,285,340,18);
+ L.switches=[{id:'lookout',x:475,y:340,label:'PASSAGE'}];
+ L.gates=[{x:600,y:365,w:28,h:155,requires:['lookout']}];
+ L.targets=[{id:'bridge',x:850,y:482,label:'PONT',requires:['lookout']}];
+ L.bridges=[{id:'river',x:700,y:520,w:180,h:18,requires:['bridge']}];
+ L.pads=[{x:235,y:520}];L.signs=[{x:210,y:520,text:'BOUCLIER ↑'},{x:735,y:360,text:'LA SORTIE →'}];stars(L,[[475,300],[655,410],[1090,410]]);
+ L.briefing='Le régiment a levé le pont. Retrouvez le passage et amenez les trois museaux de l’autre côté.';
+ L.hints=['À quoi peut servir un bouclier qui regarde le ciel ?','Placez Croquefort près des fleurs. Son bouclier levé permet à Croquinet de gagner la terrasse.','Croquinet actionne le levier en haut. Croqueboum peut alors s’approcher du canal et tirer sur la cible de l’autre rive.'];
+ L.victory='Un marchepied, un détour et un tir : chacun a ouvert le chemin du suivant.';
+ L=base(1,'Le poste de guet',1270);
+ floor(L,0,1270);floor(L,195,300,320,18);floor(L,680,225,320,18);
+ L.ladders=[{x:230,y:320,h:200}];
+ L.lifts=[{id:'lift',x:550,y:520,w:130,h:16,toY:320,speed:105,requires:['lookout'],latchWhen:['signal']}];
+ L.plates=[{id:'lookout',x:405,y:320,w:75,hero:0,label:'W',latchWhen:['signal']},{id:'guard',x:780,y:520,w:80,hero:1,label:'X',latchWhen:['signal']}];
+ L.targets=[{id:'signal',x:875,y:282,label:'DEUX SIGNAUX',requires:['lookout','guard']}];L.gates=[{x:1005,y:230,w:28,h:290,requires:['signal']}];
+ L.signs=[{x:315,y:520,text:'↑ / ↓ GRIMPER'}];stars(L,[[445,275],[755,270],[1150,410]]);
+ L.briefing='Le poste de guet attend deux signaux. Regardez les deux étages avant de déplacer toute l’équipe.';
+ L.hints=['La dalle du haut et celle du bas n’ont pas la même couleur.','Installez Croqueboum sur le monte-charge avant que Croquinet ne tienne la dalle rouge en hauteur.','Croquefort tient la dalle jaune au sol. Croquinet reste sur la rouge. Depuis la terrasse de droite, Croqueboum peut alors activer la cible.'];
+ L.victory='Trois postes occupés, un signal commun. Personne n’a quitté sa place trop tôt.';
+ L=base(2,'Les deux rives',1460);
+ floor(L,0,410);floor(L,620,840);floor(L,700,290,280,18);
+ L.targets=[{id:'power',x:360,y:482,label:'ARCHE'},{id:'finish',x:1140,y:482,label:'SORTIE',requires:['gold','crate']}];
+ L.portals=[{id:'outbound',x:270,y:520,toX:740,toY:280,requires:['power']},{id:'return',x:660,y:520,toX:270,toY:520}];
+ L.keys=[{id:'gold',x:900,y:247,hero:1}];L.switches=[{id:'crossing',x:845,y:520,label:'PASSERELLE'}];
+ L.bridges=[{id:'river',x:410,y:520,w:210,h:18,requires:['crossing']}];
+ L.crates=[{id:'crate',x:995,y:440,w:55,h:80}];L.gates=[{x:1200,y:230,w:28,h:290,requires:['finish']}];
+ stars(L,[[850,240],[520,410],[1350,410]]);
+ L.briefing='Une arche mène sur l’autre rive. Celui qui part en éclaireur doit aussi organiser le passage des autres.';
+ L.hints=['La cible de gauche alimente l’arche turquoise. La clé jaune attend Croquefort.','Croquefort traverse, ramasse la clé et descend de la terrasse vers le levier au sol.','Le levier déploie la passerelle. Croquinet traverse et charge la caisse ; Croqueboum peut alors activer la cible finale. L’arche au sol à droite permet de revenir si vous avez oublié la clé.'];
+ L.victory='L’éclaireur a préparé la traversée, puis les deux autres ont terminé le travail.';
+ L=base(3,'Qui tient la porte ?',1250);
+ floor(L,0,1250);floor(L,220,420,320,18);L.ladders=[{x:260,y:320,h:200}];
+ L.blocks=[{id:'weight',x:350,y:264,w:56,h:56,minX:350,maxX:510}];
+ L.plates=[{id:'weightPlate',x:500,y:320,w:80,hero:1,acceptBlock:true,label:'CONTREPOIDS'}];
+ L.gates=[{x:680,y:230,w:28,h:290,requires:['weightPlate']},{x:1010,y:230,w:28,h:290,requires:['finish']}];
+ L.crates=[{id:'crate',x:800,y:440,w:55,h:80}];L.targets=[{id:'finish',x:955,y:482,label:'SORTIE',requires:['crate']}];
+ L.signs=[{x:350,y:195,text:'POUSSER →'}];stars(L,[[300,280],[600,280],[1130,410]]);
+ L.briefing='La porte se referme dès que son gardien s’éloigne. Il va falloir trouver quelqu’un de très patient pour le remplacer.';
+ L.hints=['Le contrepoids peut rester sur la dalle à la place d’un crocodile.','Croquefort est le seul assez fort pour pousser le contrepoids en marchant contre lui. Le rail indique sa course.','Grimpez avec Croquefort et poussez le contrepoids vers la droite, jusqu’à la dalle. Revenez vers l’échelle pour redescendre. Croquinet casse ensuite la caisse et Croqueboum active la dernière cible.'];
+ L.victory='Vous avez remplacé un gardien par un contrepoids : la porte reste ouverte pour toute l’équipe.';
+ L=base(4,'L’îlot des décisions',1280);
+ floor(L,0,330);floor(L,500,140);floor(L,810,470);
+ L.switches=[{id:'A',x:150,y:520,label:'A ↔',toggle:true},{id:'B',x:570,y:520,label:'B ↔',toggle:true}];
+ L.bridges=[{id:'first',x:330,y:520,w:170,h:18,requires:['A'],requiresOff:['B'],latchWhen:['finish']},{id:'second',x:640,y:520,w:170,h:18,requires:['B'],requiresOff:['A'],latchWhen:['finish']}];
+ L.plates=[{id:'guard',x:840,y:520,w:80,hero:1,label:'X',latchWhen:['finish']}];
+ L.targets=[{id:'finish',x:980,y:482,label:'VERROU',requires:['guard']}];L.gates=[{x:1040,y:230,w:28,h:290,requires:['finish']}];
+ L.signs=[{x:425,y:365,text:'A SEUL'},{x:725,y:365,text:'B SEUL'}];stars(L,[[570,410],[880,410],[1160,410]]);
+ L.briefing='Deux leviers éloignés, deux ponts incompatibles. Avant de traverser, décidez qui pourra encore agir derrière vous.';
+ L.hints=['A seul ouvre la première travée ; B seul ouvre la seconde. Les deux allumés ferment les deux ponts.','Laissez Croquinet au levier A. Les deux autres rejoignent l’îlot grâce à A. Croquefort peut alors activer B.','Désactivez A avec Croquinet. Croquefort traverse la seconde travée et tient la dalle ; Croqueboum tire sur la cible. Le verrou maintient les deux ponts ouverts : Croquinet peut rejoindre les autres.'];
+ L.victory='Le dernier crocodile peut enfin traverser. Votre plan avait prévu son retour.';
+ L=base(5,'Le rendez-vous des trois',1310);
+ L.spawns=[{x:80,y:320},{x:80,y:520},{x:765,y:320}];
+ floor(L,0,470);floor(L,650,660);floor(L,0,400,320,18);floor(L,650,660,320,18);floor(L,350,120,420,18);
+ L.switches=[{id:'supply',x:290,y:320,label:'ATELIER ↔',toggle:true}];
+ L.gates=[{x:230,y:360,w:28,h:160,requires:['supply']},{x:1060,y:340,w:28,h:180,requires:['finish']}];
+ L.blocks=[{id:'weight',x:300,y:464,w:56,h:56,minX:300,maxX:400}];
+ L.plates=[{id:'scout',x:280,y:320,w:80,hero:0,label:'W',latchWhen:['finish']},{id:'ballast',x:400,y:520,w:65,hero:1,acceptBlock:true,label:'CONTREPOIDS'}];
+ L.bridges=[{id:'low',x:470,y:520,w:180,h:18,requires:['ballast']},{id:'high',x:400,y:320,w:250,h:18,requires:['finish']}];
+ L.ladders=[{x:370,y:420,h:100},{x:895,y:320,h:200}];
+ L.targets=[{id:'finish',x:980,y:282,label:'RENDEZ-VOUS',requires:['scout','ballast'],requiresOff:['supply']}];
+ stars(L,[[330,280],[430,380],[1135,280]]);
+ L.briefing='Vous commencez séparés. Tout ce qu’il faut est visible, mais chacun dépend des deux autres. À vous de reconstruire l’ordre des opérations.';
+ L.hints=['Regardez ce que chacun peut modifier. La cible attend deux signaux allumés et un voyant éteint : l’atelier détourne son alimentation.','Croquinet ouvre l’atelier et reste sur la dalle rouge. Croquefort peut alors déplacer le contrepoids sur la dalle du bas.','Quand le contrepoids est en place, Croquinet referme l’atelier avec le levier et reste sur sa dalle. Les deux signaux sont actifs et le voyant barré éteint : Croqueboum peut tirer depuis la terrasse de droite. Le pont supérieur libère Croquinet. Croquefort grimpe à la petite échelle pour passer au-dessus du contrepoids. La grande échelle de droite permet aux deux autres de rejoindre la sortie au sol.'];
+ L.victory='Séparés au départ, réunis à l’arrivée. Vous avez coordonné toute la chaîne sans abandonner personne.';
+ // Neutral map annotations never reveal a sequence; only requested hints do.
+ for(let i=0;i<6;i++){levels[i].intro=['« Trois museaux. Ça doit suffire. »','« Attends ! Si tu bouges, ça redescend. »','« Je pars devant. Vous faites quoi, vous ? »','« Pour une fois, il faut réfléchir avant de pousser. »','« Et celui qui reste derrière ? »','« Bon. Chacun voit un bout du problème. »'][i];levels[i].par=0;levels[i].difficulty=['Découverte','Coordination','Initiative','Déduction','Anticipation','Synthèse'][i];}
+};

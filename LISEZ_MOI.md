@@ -6,9 +6,11 @@ Jeu de plateforme et de réflexion en solo, en français. Trois crocodiles compl
 
 ## Jouer
 
+Adresse publique : **https://crocrocros.vercel.app/**
+
 Ouvrir **Les_Cro_Cro_Cros.html** dans un navigateur sur ordinateur. La musique démarre après une première interaction. Pour reprendre la progression d’un ancien fichier HTML dont le nom ou l’emplacement change, exporter la sauvegarde depuis les réglages de l’ancien jeu, puis l’importer dans le nouveau. Selon le navigateur, le stockage local des fichiers dépend de leur chemin.
 
-Le dossier **dist/** contient la PWA installable. Il doit être servi en HTTPS, ou sur localhost pour un essai local. Aucun déploiement public n’a été effectué. L’installation depuis un simple fichier téléchargé n’est pas une installation PWA.
+Le dossier **dist/** contient la PWA installable. Il doit être servi en HTTPS, ou sur localhost pour un essai local. Le site public est déployé sur Vercel. L’installation depuis un simple fichier téléchargé n’est pas une installation PWA.
 
 ```sh
 python3 -m http.server 8080 --directory dist --bind 127.0.0.1
@@ -41,7 +43,7 @@ Les boutons tactiles permettent de marcher et agir simultanément. Un portrait s
 
 Cinq zèbres seulement (niveaux 4, 12, 19, 27 et 35), placés au cours du parcours, loin des arches d’arrivée. Le curieux approche si vous attendez sans bouger ; le gourmand mange pendant quatre secondes après une boulette de Croqueboum ; le flâneur broute trois secondes entre ses trottinements. Approchez et utilisez Espace ou le bouton « Étoile ». Aucun encerclement requis. Les bonus restent facultatifs.
 
-Les étoiles des autres niveaux redeviennent fixes. Les niveaux terminés et leurs étoiles sont conservés à la mise à jour ; seule la tentative en cours redémarre avec la nouvelle disposition. Pour passer du fichier local au futur site Vercel, exporter la progression puis l’importer dans les réglages du site.
+Les étoiles des autres niveaux redeviennent fixes. Les niveaux terminés et leurs étoiles sont conservés à la mise à jour ; seule la tentative en cours redémarre avec la nouvelle disposition. Pour passer du fichier local au site Vercel, exporter la progression puis l’importer dans les réglages du site.
 
 `vercel.json` publie le dossier `dist/` déjà construit depuis la racine du dépôt GitHub. Aucun serveur de jeu n’est ajouté. Le service worker et la page sont revalidés à chaque connexion ; le jeu conserve son fonctionnement hors ligne après le premier chargement complet.
 

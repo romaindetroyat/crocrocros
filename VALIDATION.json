@@ -84,6 +84,19 @@
   "vercel": {
     "configuration": "vercel.json",
     "output": "dist",
-    "deployment": "blocked: Vercel 403 creating project in romain-detroyat-s-projects"
+    "project_id": "prj_e9EVoySujjxJXVBBOfltR3r7mvcu",
+    "team_id": "team_87fsqXXj6HjjMn2vPzSZyIrL",
+    "url": "https://crocrocros.vercel.app/",
+    "deployment_id": "dpl_4VCvMuyyySrJarbZ8RFjz3gjLzXW",
+    "deployment": "READY production",
+    "verified_source_commit": "7ce727fcb8080ae8cae535040fcf2a793b36e486",
+    "anonymous_http_checks": {
+      "/": 200,
+      "/sw.js": 200,
+      "/manifest.webmanifest": 200,
+      "/icon-192.png": 200,
+      "/icon-512.png": 200
+    },
+    "all_five_assets_match_local_bytes": true
   }
 }

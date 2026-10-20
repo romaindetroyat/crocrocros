@@ -8,6 +8,8 @@ Jeu de plateforme et d’énigmes en solo, en français, jouable hors ligne. Tro
 
 ## Jouer
 
+**[Jouer en ligne — crocrocros.vercel.app](https://crocrocros.vercel.app/)**
+
 Télécharger [Les_Cro_Cro_Cros.html](Les_Cro_Cro_Cros.html) puis l’ouvrir dans un navigateur sur ordinateur. Le fichier est autonome ; le bouton « Raw / Download raw file » de GitHub permet de récupérer son contenu.
 
 Pour la PWA, servir le dossier `dist/` sur HTTPS ou localement :
@@ -16,7 +18,7 @@ Pour la PWA, servir le dossier `dist/` sur HTTPS ou localement :
 python3 -m http.server 8080 --directory dist --bind 127.0.0.1
 ```
 
-Ouvrir `http://localhost:8080`. L’installation PWA nécessite HTTPS ou localhost et un premier chargement complet. Aucun serveur de jeu, compte ni connexion n’est requis ensuite. La configuration Vercel est prête : importer ce dépôt, conserver sa racine et déployer. `vercel.json` sert directement le dossier `dist/` déjà construit, sans dépendance à installer. Le lien avec GitHub permettra de déployer les prochains commits de `main`. Aucun déploiement public n’a encore été confirmé.
+Ouvrir `http://localhost:8080`. L’installation PWA nécessite HTTPS ou localhost et un premier chargement complet. Aucun serveur de jeu, compte ni connexion n’est requis ensuite. La configuration Vercel est prête : importer ce dépôt, conserver sa racine et déployer. `vercel.json` sert directement le dossier `dist/` déjà construit, sans dépendance à installer. Le lien avec GitHub permettra de déployer les prochains commits de `main`. Le projet Vercel `crocrocros` est relié au dépôt GitHub ; le déploiement de production a été vérifié le 20 octobre 2026.
 
 ## Commandes
 

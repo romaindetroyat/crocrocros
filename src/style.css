@@ -43,7 +43,7 @@ body.portrait-blocked{overflow:hidden}body.portrait-blocked #game,body.portrait-
 .control.cargo{background:#d7e4df;min-width:58px;width:58px}.quest-link{display:inline-block}.quest-banner{flex-wrap:wrap}
 @media(max-height:520px) and (orientation:landscape){.control.cargo{min-width:48px;width:48px}.hero-card{min-width:0}.hero-select{gap:3px}.game-bottom{gap:5px}}
 
-/* Handheld layout: the thumbs stay beside the viewport, never over the puzzle. */
+/* Handheld controls; the final layout below reserves a full-width viewport. */
 .gb-only{display:none}
 body.gameboy #game{display:grid;grid-template-columns:142px minmax(0,1fr) 152px;grid-template-rows:44px minmax(0,1fr) 54px;background:#e8e8d9}
 body.gameboy #game[hidden]{display:none}
@@ -80,3 +80,20 @@ body.gameboy .game-top{min-height:0}body.gameboy #journalBtn{display:none}
 body.gameboy .gb-system-button{font-size:10px}body.gameboy .gb-current{gap:1px}
 
 body.gameboy #objective{display:none}body.gameboy #speech{top:auto;bottom:8px;max-width:95%;background:#fff9e9f5}body.gameboy #overviewBtn{font-size:10px;font-weight:900}
+
+/* Full-width playfield with every handheld control in the lower band. */
+body.gameboy #game{grid-template-columns:136px minmax(0,1fr) 166px;grid-template-rows:40px minmax(0,1fr) 116px}
+body.gameboy .game-top{height:40px;padding:2px 10px}
+body.gameboy #scene{grid-column:1/-1;grid-row:2;border:0;border-radius:0;box-shadow:none;width:100%}
+body.gameboy .gb-pad-zone{grid-column:1;grid-row:3;gap:0;padding:4px 0}
+body.gameboy .gb-pad-zone>small{display:none}
+body.gameboy .gb-pad{width:108px;height:108px}
+body.gameboy .gb-direction,body.gameboy .gb-center{width:36px;height:36px}
+body.gameboy .gb-up{left:36px;top:0}body.gameboy .gb-down{left:36px;top:72px}
+body.gameboy .gb-left{left:0;top:36px}body.gameboy .gb-right{left:72px;top:36px}
+body.gameboy .gb-center{left:36px;top:36px}
+body.gameboy .gb-buttons{grid-column:3;grid-row:3;padding:6px;gap:14px}
+body.gameboy .gb-button-a{transform:translateY(-12px)}body.gameboy .gb-button-b{transform:translateY(12px)}
+body.gameboy .gb-system{grid-column:2;grid-row:3;gap:16px;min-width:0}
+body.gameboy .gb-current{min-width:100px}
+@media(max-width:740px){body.gameboy #game{grid-template-columns:128px minmax(0,1fr) 148px}body.gameboy .gb-system{gap:8px}body.gameboy .gb-system-button{width:60px}body.gameboy .gb-buttons{gap:10px}}

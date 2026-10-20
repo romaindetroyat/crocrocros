@@ -1,5 +1,7 @@
 # Les Cro Cro Cros — refonte de toute la campagne
 
+> **Mise à jour — objectif 100 niveaux :** voir [CAMPAGNE_100_NIVEAUX.md](CAMPAGNE_100_NIVEAUX.md), qui remplace la cible et la progression à 37 niveaux ci-dessous. Le retour utilisateur sur les trois étalons 0.9.0 est négatif concernant leur profondeur : encore trop simples et sommaires. Leur faisabilité technique est acquise, leur qualité de référence n’est pas validée. Le nouveau dossier contient 100 intentions et cinq fiches développées, pas une campagne déjà reconstruite.
+
 Statut au 20 octobre 2026 : premier jalon technique et trois niveaux étalons livrés dans l’atelier 0.9.0 (`?essai=refonte`). La reconstruction des 37 cartes décrite ci-dessous reste à réaliser après évaluation de ces étalons. La refonte concerne toute la campagne, y compris les premiers niveaux.
 
 ## Diagnostic vérifié sur la version publiée

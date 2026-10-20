@@ -1,5 +1,5 @@
 {
-  "version": "0.7.1",
+  "version": "0.8.0",
   "date": "2026-10-20",
   "authored_levels": 37,
   "reusable_passage_families": 13,
@@ -38,7 +38,6 @@
     "touch_ladder_descent": "passed",
     "quest_legacy_progress": "passed",
     "sealed_return_exit": "passed",
-    "zebra_pursuit_pincer_touch_capture": "passed",
     "elephant_windup_damage_jump_directional_block": "passed",
     "hippo_shove_and_shield": "passed",
     "lion_pounce_and_midflight_save": "passed",
@@ -47,7 +46,9 @@
     "zebra_capture_reload": "passed",
     "nine_biomes_visual_inspection": "passed",
     "character_sheet_and_animated_poses": "passed",
-    "exit_overshoot_right_left_save_and_conditions": "passed"
+    "exit_overshoot_right_left_save_and_conditions": "passed",
+    "zebra_three_behaviors_and_persistence": "passed",
+    "zebra_placement_away_from_exit": "passed"
   },
   "not_verified": [
     "Real browser layout and interaction",
@@ -56,7 +57,7 @@
     "Human difficulty, variety and enjoyment assessment",
     "Musical quality audition on a physical device"
   ],
-  "standalone_sha256": "eef2ebb9d157bb2eded53444b7e0b9bd3c7d5843d9c17017068ef125f9bbe09a",
+  "standalone_sha256": "431cd9798164800b7e5080a5d43eb59881241062f85f2312d8a6ce06f4fe72b8",
   "handcrafted_opening_levels": 12,
   "remaining_v03_levels": 25,
   "difficulty_human_validated": false,
@@ -65,9 +66,11 @@
   "video_references_analyzed": 4,
   "levels_with_mobile_animals": 19,
   "mobile_animals": 26,
-  "zebra_challenges": 21,
+  "zebra_challenges": 5,
   "wildlife_behavior_types": [
-    "zebra_pincer",
+    "zebra_curious",
+    "zebra_snack",
+    "zebra_pause",
     "elephant_stomp",
     "hippo_sneeze",
     "lion_pounce",
@@ -77,5 +80,10 @@
     "scout": "spring green / red scarf",
     "protector": "golden olive / helmet and riveted shield",
     "shooter": "turquoise / goggles and seed bag"
+  },
+  "vercel": {
+    "configuration": "vercel.json",
+    "output": "dist",
+    "deployment": "pending account connection"
   }
 }

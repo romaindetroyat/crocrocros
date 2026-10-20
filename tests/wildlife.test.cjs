@@ -1,6 +1,6 @@
 const assert=require('node:assert/strict'),Engine=require('../src/engine.js'),D=require('../src/levels.js');
 const tick=(E,n,input={})=>{for(let i=0;i<n;i++)E.step(1/60,input);};
-function arena(hero=1){const L=structuredClone(D.levels[11]);Object.assign(L,{width:1300,platforms:[{x:0,y:520,w:1300,h:160}],gates:[],keys:[],stars:[],ladders:[],exit:{x:1100,y:520,w:150},spawns:[{x:80,y:520},{x:300,y:520},{x:160,y:520}],enemies:[{id:'test',kind:'hippo',x:410,y:520,minX:340,maxX:480,speed:80,dir:-1}]});const E=new Engine(L);tick(E,4);E.select(hero);return E;}
+function arena(hero=1){const L=structuredClone(D.levels[11]);Object.assign(L,{width:1300,platforms:[{x:0,y:520,w:1300,h:160}],gates:[],keys:[],stars:[],zebra:null,ladders:[],exit:{x:1100,y:520,w:150},spawns:[{x:80,y:520},{x:300,y:520},{x:160,y:520}],enemies:[{id:'test',kind:'hippo',x:410,y:520,minX:340,maxX:480,speed:80,dir:-1}]});const E=new Engine(L);tick(E,4);E.select(hero);return E;}
 let E=arena();const initial=E.enemies[0].x;tick(E,20);assert.notEqual(E.enemies[0].x,initial,'patrol moves while player is idle');tick(E,120);assert.equal(E.rebounds,0,'front shield protects');assert.ok(E.enemies[0].x>E.p[1].x,'enemy cannot pass through shield');tick(E,120,{right:true});assert.equal(E.rebounds,0,'pushing to rail end cannot turn into a rear hit');assert.ok(E.p[1].x<E.enemies[0].x);
 E=arena();tick(E,1,{left:true});tick(E,180);assert.ok(E.rebounds>0,'exposed back is vulnerable');
 E=arena();tick(E,1,{action:true});tick(E,180);assert.ok(E.rebounds>0,'overhead shield leaves front exposed');

@@ -1,5 +1,5 @@
 {
-  "version": 7,
+  "version": 8,
   "quest": {
     "title": "La bannière du retour",
     "intro": "Un grand barrissement a dispersé le régiment et déchiré sa bannière. Retrouvez ses six morceaux, traversez le pays des éléphants et ramenez tout le monde au marais.",
@@ -52,7 +52,7 @@
   "levels": [
     {
       "id": "marais-01",
-      "revision": 6,
+      "revision": 7,
       "chapter": "Le port des étourdis",
       "name": "La porte du régiment",
       "subtitle": "Personne ne reste derrière",
@@ -187,8 +187,7 @@
       "hints": [
         "À quoi peut servir un bouclier qui regarde le ciel ?",
         "Placez Croquefort près des fleurs. Son bouclier levé permet à Croquinet de gagner la terrasse.",
-        "Croquinet actionne le levier en haut. Croqueboum peut alors s’approcher du canal et tirer sur la cible de l’autre rive.",
-        "Le zèbre saute par-dessus un poursuivant seul. Placez un croco de chaque côté, resserrez la tenaille, puis appuyez sur Espace près de lui."
+        "Croquinet actionne le levier en haut. Croqueboum peut alors s’approcher du canal et tirer sur la cible de l’autre rive."
       ],
       "width": 1210,
       "exit": {
@@ -205,18 +204,11 @@
       "victory": "Un marchepied, un détour et un tir : chacun a ouvert le chemin du suivant.",
       "difficulty": "Découverte",
       "scenery": "harbour",
-      "zebra": {
-        "x": 1090,
-        "y": 520,
-        "starId": "star-3",
-        "minX": 960,
-        "maxX": 1145
-      },
       "questStage": 0
     },
     {
       "id": "marais-02",
-      "revision": 6,
+      "revision": 7,
       "chapter": "Le port des étourdis",
       "name": "Le poste de guet",
       "subtitle": "Personne ne reste derrière",
@@ -369,8 +361,7 @@
       "hints": [
         "La dalle du haut et celle du bas n’ont pas la même couleur.",
         "Installez Croqueboum sur le monte-charge avant que Croquinet ne tienne la dalle rouge en hauteur.",
-        "Croquefort tient la dalle jaune au sol. Croquinet reste sur la rouge. Depuis la terrasse de droite, Croqueboum peut alors activer la cible.",
-        "Le zèbre saute par-dessus un poursuivant seul. Placez un croco de chaque côté, resserrez la tenaille, puis appuyez sur Espace près de lui."
+        "Croquefort tient la dalle jaune au sol. Croquinet reste sur la rouge. Depuis la terrasse de droite, Croqueboum peut alors activer la cible."
       ],
       "width": 1270,
       "exit": {
@@ -387,13 +378,6 @@
       "victory": "Trois postes occupés, un signal commun. Personne n’a quitté sa place trop tôt.",
       "difficulty": "Coordination",
       "scenery": "canopy",
-      "zebra": {
-        "x": 1150,
-        "y": 520,
-        "starId": "star-3",
-        "minX": 1083,
-        "maxX": 1205
-      },
       "questStage": 0,
       "elephants": [
         {
@@ -409,7 +393,7 @@
     },
     {
       "id": "marais-03",
-      "revision": 6,
+      "revision": 7,
       "chapter": "Le port des étourdis",
       "name": "Les deux rives",
       "subtitle": "Personne ne reste derrière",
@@ -568,8 +552,7 @@
       "hints": [
         "La cible de gauche alimente l’arche turquoise. La clé jaune attend Croquefort.",
         "Croquefort traverse, ramasse la clé et descend de la terrasse vers le levier au sol.",
-        "Le levier déploie la passerelle. Croquinet traverse et charge la caisse ; Croqueboum peut alors activer la cible finale. L’arche au sol à droite permet de revenir si vous avez oublié la clé.",
-        "Le zèbre saute par-dessus un poursuivant seul. Placez un croco de chaque côté, resserrez la tenaille, puis appuyez sur Espace près de lui."
+        "Le levier déploie la passerelle. Croquinet traverse et charge la caisse ; Croqueboum peut alors activer la cible finale. L’arche au sol à droite permet de revenir si vous avez oublié la clé."
       ],
       "width": 1460,
       "exit": {
@@ -598,19 +581,12 @@
         }
       ],
       "scenery": "falls",
-      "zebra": {
-        "x": 1350,
-        "y": 520,
-        "starId": "star-3",
-        "minX": 1278,
-        "maxX": 1395
-      },
       "questStage": 0,
       "questReward": 0
     },
     {
       "id": "expedition-04",
-      "revision": 6,
+      "revision": 7,
       "chapter": "Le port des étourdis",
       "name": "Qui tient la porte ?",
       "subtitle": "Personne ne reste derrière",
@@ -744,7 +720,7 @@
         "Le contrepoids peut rester sur la dalle à la place d’un crocodile.",
         "Croquefort est le seul assez fort pour pousser le contrepoids en marchant contre lui. Le rail indique sa course.",
         "Grimpez avec Croquefort et poussez le contrepoids vers la droite, jusqu’à la dalle. Revenez vers l’échelle pour redescendre. Croquinet casse ensuite la caisse et Croqueboum active la dernière cible.",
-        "Le zèbre saute par-dessus un poursuivant seul. Placez un croco de chaque côté, resserrez la tenaille, puis appuyez sur Espace près de lui."
+        "Ce zèbre est curieux : restez immobile près de lui, laissez-le approcher, puis Espace pour son étoile."
       ],
       "width": 1250,
       "exit": {
@@ -772,17 +748,18 @@
       "difficulty": "Déduction",
       "scenery": "mill",
       "zebra": {
-        "x": 1130,
+        "x": 450,
+        "minX": 320,
+        "maxX": 560,
+        "mode": "curious",
         "y": 520,
-        "starId": "star-3",
-        "minX": 1088,
-        "maxX": 1185
+        "starId": "star-3"
       },
       "questStage": 1
     },
     {
       "id": "expedition-05",
-      "revision": 6,
+      "revision": 7,
       "chapter": "Les marais à ressorts",
       "name": "L’îlot des décisions",
       "subtitle": "Personne ne reste derrière",
@@ -955,7 +932,6 @@
         "A seul ouvre la première travée ; B seul ouvre la seconde. Les deux allumés ferment les deux ponts.",
         "Laissez Croquinet au levier A. Les deux autres rejoignent l’îlot grâce à A. Croquefort peut alors activer B.",
         "Désactivez A avec Croquinet. Croquefort traverse la seconde travée et tient la dalle ; Croqueboum tire sur la cible. Le verrou maintient les deux ponts ouverts : Croquinet peut rejoindre les autres.",
-        "Le zèbre saute par-dessus un poursuivant seul. Placez un croco de chaque côté, resserrez la tenaille, puis appuyez sur Espace près de lui.",
         "Le vautour monte avec sa noix de coco avant de la lâcher. Le bouclier levé protège les têtes ; profitez de son repos pour tirer."
       ],
       "width": 1280,
@@ -985,13 +961,6 @@
         }
       ],
       "scenery": "moon",
-      "zebra": {
-        "x": 1160,
-        "y": 520,
-        "starId": "star-3",
-        "minX": 1118,
-        "maxX": 1215
-      },
       "questStage": 1,
       "elephants": [
         {
@@ -1007,7 +976,7 @@
     },
     {
       "id": "expedition-06",
-      "revision": 6,
+      "revision": 7,
       "chapter": "Les marais à ressorts",
       "name": "Le rendez-vous des trois",
       "subtitle": "Personne ne reste derrière",
@@ -1240,7 +1209,7 @@
     },
     {
       "id": "expedition-07",
-      "revision": 6,
+      "revision": 7,
       "chapter": "Les marais à ressorts",
       "name": "Chut… de grandes oreilles",
       "subtitle": "Personne ne reste derrière",
@@ -1379,8 +1348,7 @@
       "hints": [
         "La cloche est blindée à gauche. Et ses deux voyants attendent les bonnes positions.",
         "Croquinet tient la dalle rouge en haut. Croquefort, sur la dalle jaune, lève son bouclier pour soutenir la trompe.",
-        "Faites passer Croqueboum sous la trompe, puis à droite de la cloche. Il tire vers la gauche pendant que les deux autres tiennent leurs postes. La cloche libère tout le monde.",
-        "Le zèbre saute par-dessus un poursuivant seul. Placez un croco de chaque côté, resserrez la tenaille, puis appuyez sur Espace près de lui."
+        "Faites passer Croqueboum sous la trompe, puis à droite de la cloche. Il tire vers la gauche pendant que les deux autres tiennent leurs postes. La cloche libère tout le monde."
       ],
       "width": 1420,
       "exit": {
@@ -1411,18 +1379,11 @@
       "difficulty": "Sang-froid",
       "victory": "Vous avez soutenu la trompe, contourné la cloche, puis libéré les deux gardiens. Le géant vous salue !",
       "scenery": "savannah",
-      "zebra": {
-        "x": 1320,
-        "y": 520,
-        "starId": "star-3",
-        "minX": 1248,
-        "maxX": 1355
-      },
       "questStage": 2
     },
     {
       "id": "expedition-08",
-      "revision": 6,
+      "revision": 7,
       "chapter": "Les marais à ressorts",
       "name": "L’ascenseur à trompe",
       "subtitle": "Personne ne reste derrière",
@@ -1561,8 +1522,7 @@
       "hints": [
         "Celui qui récupère la clé jaune n’est pas celui qui tire. La trompe doit redescendre entre les voyages.",
         "Croquinet commande le levier. Faites monter Croquefort chercher la clé, redescendez la trompe, puis faites monter Croqueboum.",
-        "Les deux passagers quittent le plateau vers la corniche de droite. Croquinet éteint ensuite le levier et tient la dalle rouge. Croqueboum tire : clé partagée, dalle occupée et cloche silencieuse sont nécessaires.",
-        "Le zèbre saute par-dessus un poursuivant seul. Placez un croco de chaque côté, resserrez la tenaille, puis appuyez sur Espace près de lui."
+        "Les deux passagers quittent le plateau vers la corniche de droite. Croquinet éteint ensuite le levier et tient la dalle rouge. Croqueboum tire : clé partagée, dalle occupée et cloche silencieuse sont nécessaires."
       ],
       "width": 1280,
       "exit": {
@@ -1591,18 +1551,11 @@
       "difficulty": "Organisation",
       "victory": "Deux passagers, deux voyages et un dernier instant de silence : l’éléphant vous a fait confiance.",
       "scenery": "canopy",
-      "zebra": {
-        "x": 1160,
-        "y": 520,
-        "starId": "star-3",
-        "minX": 1108,
-        "maxX": 1215
-      },
       "questStage": 2
     },
     {
       "id": "expedition-09",
-      "revision": 6,
+      "revision": 7,
       "chapter": "Les marais à ressorts",
       "name": "Le détour du retour",
       "subtitle": "Personne ne reste derrière",
@@ -1771,7 +1724,7 @@
     },
     {
       "id": "expedition-10",
-      "revision": 6,
+      "revision": 7,
       "chapter": "Les marais à ressorts",
       "name": "Les trois étages du silence",
       "subtitle": "Personne ne reste derrière",
@@ -1955,8 +1908,7 @@
       "hints": [
         "Croqueboum peut descendre du bord de sa terrasse. Il doit atteindre le monte-charge avant le déplacement du contrepoids.",
         "Croquefort pousse le contrepoids vers la dalle au sol. Croquinet tient la dalle rouge du dernier étage : le monte-charge peut monter.",
-        "Croqueboum récupère la clé bleue sur la corniche, puis tire sur la cible. Le pont du haut libère Croquinet. Croquefort utilise la petite échelle pour passer au-dessus du contrepoids ; tout le monde rejoint la sortie au sol par la droite.",
-        "Le zèbre saute par-dessus un poursuivant seul. Placez un croco de chaque côté, resserrez la tenaille, puis appuyez sur Espace près de lui."
+        "Croqueboum récupère la clé bleue sur la corniche, puis tire sur la cible. Le pont du haut libère Croquinet. Croquefort utilise la petite échelle pour passer au-dessus du contrepoids ; tout le monde rejoint la sortie au sol par la droite."
       ],
       "width": 1170,
       "exit": {
@@ -1984,18 +1936,11 @@
       "difficulty": "Synthèse avancée",
       "victory": "Vous avez préparé le passage avant de verrouiller le mécanisme. Le dernier signal a réuni les trois étages.",
       "scenery": "ruins",
-      "zebra": {
-        "x": 1060,
-        "y": 520,
-        "starId": "star-3",
-        "minX": 930,
-        "maxX": 1105
-      },
       "questStage": 2
     },
     {
       "id": "expedition-11",
-      "revision": 6,
+      "revision": 7,
       "chapter": "Les marais à ressorts",
       "name": "Le grand saut de Croquefort",
       "subtitle": "Personne ne reste derrière",
@@ -2147,8 +2092,7 @@
       "hints": [
         "Espace lève le bouclier de Croquefort. Au bord de la falaise, continuez vers la droite : sa chute devient très lente.",
         "Gardez le bouclier levé et maintenez → pour traverser le vide. ↑ ne fait pas sauter Croquefort : il doit partir du bord.",
-        "Sur l’autre rive, Croquefort récupère la clé jaune et actionne le levier. Le pont permet aux deux autres de traverser. Croquinet casse la caisse, Croqueboum active la cible.",
-        "Le zèbre saute par-dessus un poursuivant seul. Placez un croco de chaque côté, resserrez la tenaille, puis appuyez sur Espace près de lui."
+        "Sur l’autre rive, Croquefort récupère la clé jaune et actionne le levier. Le pont permet aux deux autres de traverser. Croquinet casse la caisse, Croqueboum active la cible."
       ],
       "width": 1435,
       "exit": {
@@ -2166,18 +2110,11 @@
       "difficulty": "Maîtrise aérienne",
       "victory": "Un long vol, un pont de secours, puis deux équipiers sauvés. Ce bouclier mérite une médaille.",
       "scenery": "falls",
-      "zebra": {
-        "x": 1335,
-        "y": 520,
-        "starId": "star-3",
-        "minX": 1268,
-        "maxX": 1370
-      },
       "questStage": 2
     },
     {
       "id": "expedition-12",
-      "revision": 6,
+      "revision": 7,
       "chapter": "Les marais à ressorts",
       "name": "La ronde des gros dodos",
       "subtitle": "Personne ne reste derrière",
@@ -2277,7 +2214,7 @@
         "Les animaux reviennent sur leurs pas. Observez leur patrouille depuis une position sûre.",
         "Croquefort bloque un animal seulement s’il lui fait face, bouclier devant lui. Croqueboum peut alors tirer depuis derrière son protecteur.",
         "Montez sur la corniche avec le protecteur et le tireur. Assommez le lionceau, puis récupérez le sceau avec Croquinet. Redescendez par l’échelle pour approcher l’hippopotame en formation. Les deux animaux endormis et le sceau ouvrent la porte.",
-        "Le zèbre saute par-dessus un poursuivant seul. Placez un croco de chaque côté, resserrez la tenaille, puis appuyez sur Espace près de lui."
+        "Ce zèbre est gourmand : offrez-lui une boulette avec Croqueboum, puis approchez et Espace pendant son goûter."
       ],
       "width": 1220,
       "exit": {
@@ -2318,18 +2255,19 @@
       "victory": "Deux gros dodos, trois museaux intacts. Le bouclier a protégé le tireur, et le tireur a ouvert la route.",
       "scenery": "savannah",
       "zebra": {
-        "x": 1100,
+        "x": 400,
+        "minX": 310,
+        "maxX": 490,
+        "mode": "snack",
         "y": 520,
-        "starId": "star-3",
-        "minX": 970,
-        "maxX": 1155
+        "starId": "star-3"
       },
       "questStage": 2,
       "questReward": 2
     },
     {
       "id": "expedition-13",
-      "revision": 6,
+      "revision": 7,
       "chapter": "Les ruines du museau",
       "name": "Le temple des trois poids",
       "subtitle": "Personne ne reste derrière",
@@ -2516,7 +2454,6 @@
         "Passage 2 · Les trois crocos savent grimper aux cordages.",
         "Passage 2 · Maintenez ↑ près de l’échelle ; sur écran tactile, maintenez le bouton de saut.",
         "Passage 2 · Croqueboum grimpe, ramasse la clé bleue puis tire sur la cible à sa hauteur. Descendez ensuite par le bord droit.",
-        "Le zèbre saute par-dessus un poursuivant seul. Placez un croco de chaque côté, resserrez la tenaille, puis appuyez sur Espace près de lui.",
         "Le vautour monte avec sa noix de coco avant de la lâcher. Le bouclier levé protège les têtes ; profitez de son repos pour tirer."
       ],
       "width": 1740,
@@ -2542,18 +2479,11 @@
         }
       ],
       "scenery": "ruins",
-      "zebra": {
-        "x": 1440,
-        "y": 520,
-        "starId": "star-3",
-        "minX": 1468,
-        "maxX": 1540
-      },
       "questStage": 3
     },
     {
       "id": "expedition-14",
-      "revision": 6,
+      "revision": 7,
       "chapter": "Les ruines du museau",
       "name": "Le concierge du pharaon",
       "subtitle": "Personne ne reste derrière",
@@ -2734,8 +2664,7 @@
         "Passage 1 · Croquefort reste sur la dalle pendant que Croqueboum monte chercher la clé bleue. Elle maintient l’ascenseur en haut et ouvre la porte.",
         "Passage 2 · Trois leviers, mais tous ne doivent pas être allumés.",
         "Passage 2 · Les panneaux indiquent A + C. Le voyant barré doit rester éteint.",
-        "Passage 2 · Activez A et C, laissez B éteint, puis tirez sur la cible. Si B est allumé, Espace le désactive.",
-        "Le zèbre saute par-dessus un poursuivant seul. Placez un croco de chaque côté, resserrez la tenaille, puis appuyez sur Espace près de lui."
+        "Passage 2 · Activez A et C, laissez B éteint, puis tirez sur la cible. Si B est allumé, Espace le désactive."
       ],
       "width": 1680,
       "exit": {
@@ -2749,18 +2678,11 @@
       },
       "enemies": [],
       "scenery": "moon",
-      "zebra": {
-        "x": 1380,
-        "y": 520,
-        "starId": "star-3",
-        "minX": 1408,
-        "maxX": 1480
-      },
       "questStage": 3
     },
     {
       "id": "expedition-15",
-      "revision": 6,
+      "revision": 7,
       "chapter": "Les ruines du museau",
       "name": "Les dents de la porte",
       "subtitle": "Personne ne reste derrière",
@@ -2929,8 +2851,7 @@
         "Passage 1 · Passez Croqueboum à droite de la cible. Faites un pas à gauche, puis Espace.",
         "Passage 2 · Il faut occuper deux endroits à la fois avant de tirer.",
         "Passage 2 · Le bouclier levé aide Croquinet à gagner la dalle rouge en hauteur. Ensuite Croquefort descend tenir la dalle jaune.",
-        "Passage 2 · Laissez Croquinet sur sa dalle et Croquefort sur la sienne. Croqueboum tire depuis la gauche. La cible libère les deux équipiers.",
-        "Le zèbre saute par-dessus un poursuivant seul. Placez un croco de chaque côté, resserrez la tenaille, puis appuyez sur Espace près de lui."
+        "Passage 2 · Laissez Croquinet sur sa dalle et Croquefort sur la sienne. Croqueboum tire depuis la gauche. La cible libère les deux équipiers."
       ],
       "width": 1740,
       "exit": {
@@ -2944,18 +2865,11 @@
       },
       "enemies": [],
       "scenery": "falls",
-      "zebra": {
-        "x": 1440,
-        "y": 520,
-        "starId": "star-3",
-        "minX": 1458,
-        "maxX": 1540
-      },
       "questStage": 3
     },
     {
       "id": "expedition-16",
-      "revision": 6,
+      "revision": 7,
       "chapter": "Les ruines du museau",
       "name": "Le trousseau partagé",
       "subtitle": "Personne ne reste derrière",
@@ -3218,7 +3132,7 @@
     },
     {
       "id": "expedition-17",
-      "revision": 6,
+      "revision": 7,
       "chapter": "Les ruines du museau",
       "name": "Briques et bonnes manières",
       "subtitle": "Personne ne reste derrière",
@@ -3436,7 +3350,7 @@
     },
     {
       "id": "expedition-18",
-      "revision": 6,
+      "revision": 7,
       "chapter": "La fabrique des bêtises",
       "name": "La fabrique de confiture",
       "subtitle": "Personne ne reste derrière",
@@ -3599,8 +3513,7 @@
         "Passage 1 · Après la caisse, récupérez la clé rouge et tirez sur la cible avec Croqueboum.",
         "Passage 2 · Une cible grise attend un signal. Regardez ses voyants.",
         "Passage 2 · La dalle jaune alimente la cible. Le bouclier doit rester devant Croquefort pour arrêter les graines.",
-        "Passage 2 · Croquefort tient la dalle face à la fleur. Croqueboum tire depuis son abri. La cible verrouille le passage en position ouverte.",
-        "Le zèbre saute par-dessus un poursuivant seul. Placez un croco de chaque côté, resserrez la tenaille, puis appuyez sur Espace près de lui."
+        "Passage 2 · Croquefort tient la dalle face à la fleur. Croqueboum tire depuis son abri. La cible verrouille le passage en position ouverte."
       ],
       "width": 1680,
       "exit": {
@@ -3635,18 +3548,11 @@
         }
       ],
       "scenery": "mill",
-      "zebra": {
-        "x": 1380,
-        "y": 520,
-        "starId": "star-3",
-        "minX": 1408,
-        "maxX": 1480
-      },
       "questStage": 3
     },
     {
       "id": "expedition-19",
-      "revision": 6,
+      "revision": 7,
       "chapter": "La fabrique des bêtises",
       "name": "Monte-charge, descends-croco",
       "subtitle": "Personne ne reste derrière",
@@ -3821,7 +3727,7 @@
         "Passage 2 · Un nénuphar à ressort se déclenche tout seul.",
         "Passage 2 · Croqueboum a besoin du ressort pour atteindre la terrasse. Décalez-vous vers la droite pendant le rebond.",
         "Passage 2 · Atterrissez sur la terrasse, récupérez la clé bleue et tirez vers la cible. Le bord droit permet de redescendre.",
-        "Le zèbre saute par-dessus un poursuivant seul. Placez un croco de chaque côté, resserrez la tenaille, puis appuyez sur Espace près de lui.",
+        "Ce zèbre fait des pauses : observez son trot, approchez pendant qu’il broute, puis Espace pour son étoile.",
         "Le vautour monte avec sa noix de coco avant de la lâcher. Le bouclier levé protège les têtes ; profitez de son repos pour tirer."
       ],
       "width": 1680,
@@ -3848,17 +3754,18 @@
       ],
       "scenery": "harbour",
       "zebra": {
-        "x": 1380,
+        "x": 820,
+        "minX": 730,
+        "maxX": 920,
+        "mode": "pause",
         "y": 520,
-        "starId": "star-3",
-        "minX": 1408,
-        "maxX": 1480
+        "starId": "star-3"
       },
       "questStage": 3
     },
     {
       "id": "expedition-20",
-      "revision": 6,
+      "revision": 7,
       "chapter": "La fabrique des bêtises",
       "name": "La pile à trois pattes",
       "subtitle": "Personne ne reste derrière",
@@ -4131,7 +4038,7 @@
     },
     {
       "id": "expedition-21",
-      "revision": 6,
+      "revision": 7,
       "chapter": "La fabrique des bêtises",
       "name": "Le grand rendez-vous",
       "subtitle": "Personne ne reste derrière",
@@ -4362,7 +4269,7 @@
     },
     {
       "id": "expedition-22",
-      "revision": 6,
+      "revision": 7,
       "chapter": "La fabrique des bêtises",
       "name": "Un tapis très contrariant",
       "subtitle": "Personne ne reste derrière",
@@ -4620,7 +4527,7 @@
     },
     {
       "id": "expedition-23",
-      "revision": 6,
+      "revision": 7,
       "chapter": "La fabrique des bêtises",
       "name": "Les ressorts du règlement",
       "subtitle": "Personne ne reste derrière",
@@ -4843,7 +4750,6 @@
         "Passage 2 · Le pont A et le pont B ne peuvent pas être ouverts ensemble… au début.",
         "Passage 2 · Croquinet commande les deux leviers. A seul ouvre la première travée, B seul ouvre la seconde. L’îlot central est sûr.",
         "Passage 2 · A actif : faites traverser les deux autres jusqu’à l’îlot. Désactivez A et activez B. Croquefort traverse vers la dalle jaune ; Croqueboum tire sur la cible depuis l’îlot. Les deux ponts restent ouverts : ramenez Croquinet.",
-        "Le zèbre saute par-dessus un poursuivant seul. Placez un croco de chaque côté, resserrez la tenaille, puis appuyez sur Espace près de lui.",
         "Le vautour monte avec sa noix de coco avant de la lâcher. Le bouclier levé protège les têtes ; profitez de son repos pour tirer."
       ],
       "width": 1860,
@@ -4869,18 +4775,11 @@
         }
       ],
       "scenery": "canopy",
-      "zebra": {
-        "x": 1560,
-        "y": 520,
-        "starId": "star-3",
-        "minX": 1623,
-        "maxX": 1660
-      },
       "questStage": 4
     },
     {
       "id": "expedition-24",
-      "revision": 6,
+      "revision": 7,
       "chapter": "La fabrique des bêtises",
       "name": "Chauffeur, si tu nous entends",
       "subtitle": "Personne ne reste derrière",
@@ -5106,8 +5005,7 @@
         "Passage 1 · Croquefort reste sur la dalle pendant que Croqueboum monte chercher la clé bleue. Elle maintient l’ascenseur en haut et ouvre la porte.",
         "Passage 2 · Le pont A et le pont B ne peuvent pas être ouverts ensemble… au début.",
         "Passage 2 · Croquinet commande les deux leviers. A seul ouvre la première travée, B seul ouvre la seconde. L’îlot central est sûr.",
-        "Passage 2 · A actif : faites traverser les deux autres jusqu’à l’îlot. Désactivez A et activez B. Croquefort traverse vers la dalle jaune ; Croqueboum tire sur la cible depuis l’îlot. Les deux ponts restent ouverts : ramenez Croquinet.",
-        "Le zèbre saute par-dessus un poursuivant seul. Placez un croco de chaque côté, resserrez la tenaille, puis appuyez sur Espace près de lui."
+        "Passage 2 · A actif : faites traverser les deux autres jusqu’à l’îlot. Désactivez A et activez B. Croquefort traverse vers la dalle jaune ; Croqueboum tire sur la cible depuis l’îlot. Les deux ponts restent ouverts : ramenez Croquinet."
       ],
       "width": 1860,
       "exit": {
@@ -5121,18 +5019,11 @@
       },
       "enemies": [],
       "scenery": "mill",
-      "zebra": {
-        "x": 1560,
-        "y": 520,
-        "starId": "star-3",
-        "minX": 1623,
-        "maxX": 1660
-      },
       "questStage": 4
     },
     {
       "id": "expedition-25",
-      "revision": 6,
+      "revision": 7,
       "chapter": "La fabrique des bêtises",
       "name": "Inspection des machines",
       "subtitle": "Personne ne reste derrière",
@@ -5396,7 +5287,7 @@
     },
     {
       "id": "expedition-26",
-      "revision": 6,
+      "revision": 7,
       "chapter": "La foire aux détours",
       "name": "La foire des ventres ronds",
       "subtitle": "Personne ne reste derrière",
@@ -5566,7 +5457,6 @@
         "Passage 2 · Les trois crocos savent grimper aux cordages.",
         "Passage 2 · Maintenez ↑ près de l’échelle ; sur écran tactile, maintenez le bouton de saut.",
         "Passage 2 · Croqueboum grimpe, ramasse la clé bleue puis tire sur la cible à sa hauteur. Descendez ensuite par le bord droit.",
-        "Le zèbre saute par-dessus un poursuivant seul. Placez un croco de chaque côté, resserrez la tenaille, puis appuyez sur Espace près de lui.",
         "Le vautour monte avec sa noix de coco avant de la lâcher. Le bouclier levé protège les têtes ; profitez de son repos pour tirer."
       ],
       "width": 1680,
@@ -5602,18 +5492,11 @@
         }
       ],
       "scenery": "fair",
-      "zebra": {
-        "x": 1380,
-        "y": 520,
-        "starId": "star-3",
-        "minX": 1408,
-        "maxX": 1480
-      },
       "questStage": 4
     },
     {
       "id": "expedition-27",
-      "revision": 6,
+      "revision": 7,
       "chapter": "La foire aux détours",
       "name": "Le stand de tir biscornu",
       "subtitle": "Personne ne reste derrière",
@@ -5800,7 +5683,7 @@
         "Passage 2 · Un nénuphar à ressort se déclenche tout seul.",
         "Passage 2 · Croqueboum a besoin du ressort pour atteindre la terrasse. Décalez-vous vers la droite pendant le rebond.",
         "Passage 2 · Atterrissez sur la terrasse, récupérez la clé bleue et tirez vers la cible. Le bord droit permet de redescendre.",
-        "Le zèbre saute par-dessus un poursuivant seul. Placez un croco de chaque côté, resserrez la tenaille, puis appuyez sur Espace près de lui.",
+        "Ce zèbre est gourmand : offrez-lui une boulette avec Croqueboum, puis approchez et Espace pendant son goûter.",
         "Le vautour monte avec sa noix de coco avant de la lâcher. Le bouclier levé protège les têtes ; profitez de son repos pour tirer."
       ],
       "width": 1740,
@@ -5827,17 +5710,18 @@
       ],
       "scenery": "moon",
       "zebra": {
-        "x": 1440,
+        "x": 900,
+        "minX": 800,
+        "maxX": 990,
+        "mode": "snack",
         "y": 520,
-        "starId": "star-3",
-        "minX": 1468,
-        "maxX": 1540
+        "starId": "star-3"
       },
       "questStage": 4
     },
     {
       "id": "expedition-28",
-      "revision": 6,
+      "revision": 7,
       "chapter": "La foire aux détours",
       "name": "A, puis B, puis tout le monde",
       "subtitle": "Personne ne reste derrière",
@@ -6064,8 +5948,7 @@
         "Passage 1 · A actif : faites traverser les deux autres jusqu’à l’îlot. Désactivez A et activez B. Croquefort traverse vers la dalle jaune ; Croqueboum tire sur la cible depuis l’îlot. Les deux ponts restent ouverts : ramenez Croquinet.",
         "Passage 2 · Trois leviers, mais tous ne doivent pas être allumés.",
         "Passage 2 · Les panneaux indiquent A + C. Le voyant barré doit rester éteint.",
-        "Passage 2 · Activez A et C, laissez B éteint, puis tirez sur la cible. Si B est allumé, Espace le désactive.",
-        "Le zèbre saute par-dessus un poursuivant seul. Placez un croco de chaque côté, resserrez la tenaille, puis appuyez sur Espace près de lui."
+        "Passage 2 · Activez A et C, laissez B éteint, puis tirez sur la cible. Si B est allumé, Espace le désactive."
       ],
       "width": 1860,
       "exit": {
@@ -6079,19 +5962,12 @@
       },
       "enemies": [],
       "scenery": "fair",
-      "zebra": {
-        "x": 1560,
-        "y": 520,
-        "starId": "star-3",
-        "minX": 1588,
-        "maxX": 1660
-      },
       "questStage": 4,
       "questReward": 4
     },
     {
       "id": "expedition-29",
-      "revision": 6,
+      "revision": 7,
       "chapter": "La foire aux détours",
       "name": "Trois tickets pour la sortie",
       "subtitle": "Personne ne reste derrière",
@@ -6336,7 +6212,7 @@
     },
     {
       "id": "expedition-30",
-      "revision": 6,
+      "revision": 7,
       "chapter": "La foire aux détours",
       "name": "La clé du marchand de clés",
       "subtitle": "Personne ne reste derrière",
@@ -6570,7 +6446,7 @@
     },
     {
       "id": "expedition-31",
-      "revision": 6,
+      "revision": 7,
       "chapter": "La foire aux détours",
       "name": "Le fantôme du nénuphar",
       "subtitle": "Personne ne reste derrière",
@@ -6793,7 +6669,7 @@
     },
     {
       "id": "expedition-32",
-      "revision": 6,
+      "revision": 7,
       "chapter": "La foire aux détours",
       "name": "Le tourniquet des museaux",
       "subtitle": "Personne ne reste derrière",
@@ -7093,7 +6969,7 @@
     },
     {
       "id": "expedition-33",
-      "revision": 6,
+      "revision": 7,
       "chapter": "La foire aux détours",
       "name": "Le piège du garde-manger",
       "subtitle": "Personne ne reste derrière",
@@ -7276,8 +7152,7 @@
         "Passage 1 · Laissez Croquinet sur sa dalle et Croquefort sur la sienne. Croqueboum tire depuis la gauche. La cible libère les deux équipiers.",
         "Passage 2 · Le coffre du général a deux verrous très différents.",
         "Passage 2 · Croquefort alimente la cible depuis la dalle. Croqueboum retire le blindage en tirant.",
-        "Passage 2 · Quand la cible est verte, Croquinet peut charger le coffre. Tant qu’il est gris, même sa meilleure grimace n’y fera rien.",
-        "Le zèbre saute par-dessus un poursuivant seul. Placez un croco de chaque côté, resserrez la tenaille, puis appuyez sur Espace près de lui."
+        "Passage 2 · Quand la cible est verte, Croquinet peut charger le coffre. Tant qu’il est gris, même sa meilleure grimace n’y fera rien."
       ],
       "width": 1740,
       "exit": {
@@ -7302,18 +7177,11 @@
         }
       ],
       "scenery": "moon",
-      "zebra": {
-        "x": 1440,
-        "y": 520,
-        "starId": "star-3",
-        "minX": 1468,
-        "maxX": 1540
-      },
       "questStage": 5
     },
     {
       "id": "expedition-34",
-      "revision": 6,
+      "revision": 7,
       "chapter": "Le fort du général",
       "name": "Personne au même endroit",
       "subtitle": "Personne ne reste derrière",
@@ -7557,7 +7425,7 @@
     },
     {
       "id": "expedition-35",
-      "revision": 6,
+      "revision": 7,
       "chapter": "Le fort du général",
       "name": "Mais on est déjà passés ici !",
       "subtitle": "Personne ne reste derrière",
@@ -7841,7 +7709,8 @@
         "Passage 2 · Croqueboum tire sur la cible pour alimenter l’arche. Croquefort la traverse, prend la clé jaune, puis revient par l’arche du haut.",
         "Passage 3 · Le pont A et le pont B ne peuvent pas être ouverts ensemble… au début.",
         "Passage 3 · Croquinet commande les deux leviers. A seul ouvre la première travée, B seul ouvre la seconde. L’îlot central est sûr.",
-        "Passage 3 · A actif : faites traverser les deux autres jusqu’à l’îlot. Désactivez A et activez B. Croquefort traverse vers la dalle jaune ; Croqueboum tire sur la cible depuis l’îlot. Les deux ponts restent ouverts : ramenez Croquinet."
+        "Passage 3 · A actif : faites traverser les deux autres jusqu’à l’îlot. Désactivez A et activez B. Croquefort traverse vers la dalle jaune ; Croqueboum tire sur la cible depuis l’îlot. Les deux ponts restent ouverts : ramenez Croquinet.",
+        "Ce zèbre est curieux : restez immobile près de lui, laissez-le approcher, puis Espace pour son étoile."
       ],
       "width": 2580,
       "exit": {
@@ -7855,11 +7724,19 @@
       },
       "enemies": [],
       "scenery": "falls",
+      "zebra": {
+        "x": 820,
+        "minX": 730,
+        "maxX": 880,
+        "mode": "curious",
+        "y": 520,
+        "starId": "star-3"
+      },
       "questStage": 5
     },
     {
       "id": "expedition-36",
-      "revision": 6,
+      "revision": 7,
       "chapter": "Le fort du général",
       "name": "La revue du régiment",
       "subtitle": "Personne ne reste derrière",
@@ -8133,7 +8010,7 @@
     },
     {
       "id": "expedition-37",
-      "revision": 6,
+      "revision": 7,
       "chapter": "Le fort du général",
       "name": "Le coffre du général Crognon",
       "subtitle": "Personne ne reste derrière",

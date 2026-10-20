@@ -3,10 +3,9 @@ const assert=require('node:assert/strict'),D=require('../src/levels.js'),Engine=
 const tick=(E,n,input={})=>{for(let i=0;i<n;i++)E.step(1/60,input);};
 function arena(kind,hero=0){const L=structuredClone(D.levels[11]);Object.assign(L,{width:1300,platforms:[{x:0,y:520,w:1300,h:160}],gates:[],keys:[],stars:[],ladders:[],switches:[],targets:[],plates:[],crates:[],turrets:[],bridges:[],blocks:[],lifts:[],portals:[],elephants:[],zebra:null,checkpoint:{x:50,y:520},exit:{x:1150,y:520,w:120},spawns:[{x:450,y:520},{x:80,y:520},{x:140,y:520}],enemies:[]});if(kind==='elephant'){L.elephants=[{x:150,y:520,radius:400,requires:['calm']}];L.switches=[{id:'calm',x:900,y:520}];}else if(kind)L.enemies=[{id:'test',kind,x:600,y:520,minX:570,maxX:720,speed:70,dir:-1}];const E=new Engine(L);E.select(hero);tick(E,3);return E;}
 function until(E,fn,n=600,input={}){for(let i=0;i<n;i++){if(fn())return;E.step(1/60,input);}assert.fail('expected simulation event did not occur');}
-// A lone croc cannot receive the zebra star merely by touching or pursuing it.
-let E=arena(null);E.L.zebra={x:650,y:520,starId:'bonus',minX:550,maxX:950};E.L.stars=[{id:'bonus',x:650,y:410}];E.reset();tick(E,3);const initial=E.zebra.x;tick(E,22,{right:true});assert.ok(E.zebra.x>initial);assert.ok(!E.collected.bonus);assert.ok(!E.zebra.trapped);tick(E,45,{right:true});assert.ok(E.zebra.hop>0||E.zebra.dir<0,'zebra turns or jumps at lane edge');assert.ok(!E.collected.bonus);
-// Assemble a real pincer using normal controls, then catch with Space.
-E=arena(null);E.L.zebra={x:650,y:520,starId:'bonus',minX:550,maxX:950};E.L.stars=[{id:'bonus',x:650,y:410}];E.reset();E.select(1);until(E,()=>E.p[1].x>980,500,{right:true});E.select(0);until(E,()=>E.zebra.trapped,300,{right:true});until(E,()=>Math.abs(E.p[0].x-E.zebra.x)<80,100,{right:true});tick(E,1,{action:true});assert.ok(E.collected.bonus);assert.equal(E.rebounds,0);let s=E.snapshot(),copy=new Engine(E.L);assert.ok(copy.restore(s));assert.deepEqual(copy.snapshot(),s);
+let E,s,copy;
+// Zebra encounters have their own normal-input regression suite.
+
 // A visible elephant windup precedes a damaging ground wave.
 E=arena('elephant');until(E,()=>E.beasts[0].phase==='windup');assert.equal(E.rebounds,0);assert.equal(E.pranks.length,0);tick(E,50);assert.equal(E.rebounds,0);until(E,()=>E.rebounds>0);assert.ok(E.rebounds>0);
 // Jumping clears the SAME wave; the shield must face its origin.
@@ -24,4 +23,4 @@ E=coconutArena(true);tick(E,25);assert.equal(E.rebounds,0,'raised shield interce
 E=coconutArena();tick(E,18,{right:true});assert.equal(E.rebounds,0,'walking out from under drop works');
 // Invalid timers/projectiles cannot be injected through imports.
 const bad=structuredClone(s);bad.wildlife.pranks[0].vy=Infinity;assert.ok(!Engine.valid(bad,E.L));
-console.log('PASS zebra pursuit/pincer/capture; elephant warning/damage/jump/front vs back shield; sneeze shove/block; lion pounce/recovery; bird ascent/drop/damage/roof/dodge; exact mid-attack save/restore and malformed hazard rejection.');
+console.log('PASS elephant warning/damage/jump/front vs back shield; sneeze shove/block; lion pounce/recovery; bird ascent/drop/damage/roof/dodge; exact mid-attack save/restore and malformed hazard rejection.');

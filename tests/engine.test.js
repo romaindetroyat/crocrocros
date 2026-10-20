@@ -49,7 +49,11 @@ const routes=[],report=[];
 for(let index=0;index<levels.length;index++){
  E=new Engine(levels[index]);commands=[];tick(30);
  if(recipes[index].custom){context=E.L.name;require('./opening-solutions.cjs')(recipes[index].custom,{E,tick,select,walk,jumpTo,action,roofAt,climb,shootFrom,waitUntil,assert});}else recipes[index].steps.forEach(solve);
- if(E.zebra&&!E.zebra.caught){const z=E.zebra;select(2);walk(z.minX-90);select(1);walk(Math.min(E.L.width-30,z.maxX+40));select(0);walk(z.minX-60);waitUntil(()=>z.trapped,'corner the zebra',400,{right:true});walk(z.x-55);action();assert.ok(E.collected[z.starId],`${context}: zebra must be caught with two crocs`);}
+ if(E.zebra&&!E.zebra.caught){const z=E.zebra;select(z.mode==='snack'?2:0);walk((z.minX+z.maxX)/2);
+  if(z.mode==='snack'){let tries=0;while(!z.ready&&tries++<5){tick(1,{right:z.x>E.p[2].x,left:z.x<E.p[2].x});action();tick(25);}assert.ok(z.ready,`${context}: feed zebra`);}
+  else waitUntil(()=>z.ready,'zebra offers star',600);
+  if(z.mode!=='curious')walk(z.x-45);if(z.mode==='pause')waitUntil(()=>E.canTakeZebra(),'near grazing zebra',600);action();assert.ok(E.collected[z.starId],`${context}: optional zebra star`);
+ }
  for(const star of E.L.stars)if(!E.collected[star.id]&&star.y>=365){select(0);walk(star.x);jumpTo(star.x);}
  assert.equal(Object.keys(E.collected).length,3,`${E.L.sourceCode}: all three optional stars reachable`);
  assert.equal(E.rebounds,0,`${E.L.sourceCode}: route must not rely on respawning`);

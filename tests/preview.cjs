@@ -3,7 +3,7 @@ const {createCanvas,GlobalFonts}=require('@napi-rs/canvas'),fs=require('node:fs'
 GlobalFonts.registerFromPath('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf','Trebuchet MS');
 const D=require('../src/levels'),Engine=require('../src/engine'),Art=require('../src/art'),routes=require('./solutions.json');
 const scenes=[
- {n:0,label:'Le zèbre : une étoile à gagner en équipe',match:E=>E.zebra?.caught},
+ {n:3,label:'Un zèbre curieux : laissez-le vous approcher',match:E=>E.zebra?.caught},
  {n:8,label:'L’éléphant : sautez ou présentez le bouclier',match:E=>E.pranks.some(b=>b.kind==='wave')},
  {n:11,label:'L’hippopotame : un éternuement qui pousse !',play:(E,tick,walk)=>{walk(1,515);tick(440);},match:E=>E.enemies.some(e=>e.kind==='hippo'&&e.phase==='windup')},
  {n:5,label:'Le lionceau se ramasse… puis bondit',play:(E,tick,walk)=>{walk(2,965);tick(420);},match:E=>E.enemies.some(e=>e.kind==='lion'&&e.phase==='windup')},

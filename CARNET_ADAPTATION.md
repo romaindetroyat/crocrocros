@@ -19,7 +19,6 @@ Les solutions suivantes décrivent exclusivement nos nouvelles cartes. W / X / C
 1. À quoi peut servir un bouclier qui regarde le ciel ?
 2. Placez Croquefort près des fleurs. Son bouclier levé permet à Croquinet de gagner la terrasse.
 3. Croquinet actionne le levier en haut. Croqueboum peut alors s’approcher du canal et tirer sur la cible de l’autre rive.
-4. Le zèbre saute par-dessus un poursuivant seul. Placez un croco de chaque côté, resserrez la tenaille, puis appuyez sur Espace près de lui.
 
 
 Amenez ensuite les trois crocodiles sous l’arche de sortie.
@@ -29,7 +28,6 @@ Amenez ensuite les trois crocodiles sous l’arche de sortie.
 1. La dalle du haut et celle du bas n’ont pas la même couleur.
 2. Installez Croqueboum sur le monte-charge avant que Croquinet ne tienne la dalle rouge en hauteur.
 3. Croquefort tient la dalle jaune au sol. Croquinet reste sur la rouge. Depuis la terrasse de droite, Croqueboum peut alors activer la cible.
-4. Le zèbre saute par-dessus un poursuivant seul. Placez un croco de chaque côté, resserrez la tenaille, puis appuyez sur Espace près de lui.
 
 
 Amenez ensuite les trois crocodiles sous l’arche de sortie.
@@ -39,7 +37,6 @@ Amenez ensuite les trois crocodiles sous l’arche de sortie.
 1. La cible de gauche alimente l’arche turquoise. La clé jaune attend Croquefort.
 2. Croquefort traverse, ramasse la clé et descend de la terrasse vers le levier au sol.
 3. Le levier déploie la passerelle. Croquinet traverse et charge la caisse ; Croqueboum peut alors activer la cible finale. L’arche au sol à droite permet de revenir si vous avez oublié la clé.
-4. Le zèbre saute par-dessus un poursuivant seul. Placez un croco de chaque côté, resserrez la tenaille, puis appuyez sur Espace près de lui.
 
 
 Amenez ensuite les trois crocodiles sous l’arche de sortie.
@@ -49,7 +46,7 @@ Amenez ensuite les trois crocodiles sous l’arche de sortie.
 1. Le contrepoids peut rester sur la dalle à la place d’un crocodile.
 2. Croquefort est le seul assez fort pour pousser le contrepoids en marchant contre lui. Le rail indique sa course.
 3. Grimpez avec Croquefort et poussez le contrepoids vers la droite, jusqu’à la dalle. Revenez vers l’échelle pour redescendre. Croquinet casse ensuite la caisse et Croqueboum active la dernière cible.
-4. Le zèbre saute par-dessus un poursuivant seul. Placez un croco de chaque côté, resserrez la tenaille, puis appuyez sur Espace près de lui.
+4. Ce zèbre est curieux : restez immobile près de lui, laissez-le approcher, puis Espace pour son étoile.
 
 
 Amenez ensuite les trois crocodiles sous l’arche de sortie.
@@ -59,8 +56,7 @@ Amenez ensuite les trois crocodiles sous l’arche de sortie.
 1. A seul ouvre la première travée ; B seul ouvre la seconde. Les deux allumés ferment les deux ponts.
 2. Laissez Croquinet au levier A. Les deux autres rejoignent l’îlot grâce à A. Croquefort peut alors activer B.
 3. Désactivez A avec Croquinet. Croquefort traverse la seconde travée et tient la dalle ; Croqueboum tire sur la cible. Le verrou maintient les deux ponts ouverts : Croquinet peut rejoindre les autres.
-4. Le zèbre saute par-dessus un poursuivant seul. Placez un croco de chaque côté, resserrez la tenaille, puis appuyez sur Espace près de lui.
-5. Le vautour monte avec sa noix de coco avant de la lâcher. Le bouclier levé protège les têtes ; profitez de son repos pour tirer.
+4. Le vautour monte avec sa noix de coco avant de la lâcher. Le bouclier levé protège les têtes ; profitez de son repos pour tirer.
 
 
 Amenez ensuite les trois crocodiles sous l’arche de sortie.
@@ -79,7 +75,6 @@ Amenez ensuite les trois crocodiles sous l’arche de sortie.
 1. La cloche est blindée à gauche. Et ses deux voyants attendent les bonnes positions.
 2. Croquinet tient la dalle rouge en haut. Croquefort, sur la dalle jaune, lève son bouclier pour soutenir la trompe.
 3. Faites passer Croqueboum sous la trompe, puis à droite de la cloche. Il tire vers la gauche pendant que les deux autres tiennent leurs postes. La cloche libère tout le monde.
-4. Le zèbre saute par-dessus un poursuivant seul. Placez un croco de chaque côté, resserrez la tenaille, puis appuyez sur Espace près de lui.
 
 
 Amenez ensuite les trois crocodiles sous l’arche de sortie.
@@ -89,7 +84,6 @@ Amenez ensuite les trois crocodiles sous l’arche de sortie.
 1. Celui qui récupère la clé jaune n’est pas celui qui tire. La trompe doit redescendre entre les voyages.
 2. Croquinet commande le levier. Faites monter Croquefort chercher la clé, redescendez la trompe, puis faites monter Croqueboum.
 3. Les deux passagers quittent le plateau vers la corniche de droite. Croquinet éteint ensuite le levier et tient la dalle rouge. Croqueboum tire : clé partagée, dalle occupée et cloche silencieuse sont nécessaires.
-4. Le zèbre saute par-dessus un poursuivant seul. Placez un croco de chaque côté, resserrez la tenaille, puis appuyez sur Espace près de lui.
 
 
 Amenez ensuite les trois crocodiles sous l’arche de sortie.
@@ -108,7 +102,6 @@ Amenez ensuite les trois crocodiles sous l’arche de sortie.
 1. Croqueboum peut descendre du bord de sa terrasse. Il doit atteindre le monte-charge avant le déplacement du contrepoids.
 2. Croquefort pousse le contrepoids vers la dalle au sol. Croquinet tient la dalle rouge du dernier étage : le monte-charge peut monter.
 3. Croqueboum récupère la clé bleue sur la corniche, puis tire sur la cible. Le pont du haut libère Croquinet. Croquefort utilise la petite échelle pour passer au-dessus du contrepoids ; tout le monde rejoint la sortie au sol par la droite.
-4. Le zèbre saute par-dessus un poursuivant seul. Placez un croco de chaque côté, resserrez la tenaille, puis appuyez sur Espace près de lui.
 
 
 Amenez ensuite les trois crocodiles sous l’arche de sortie.
@@ -118,7 +111,6 @@ Amenez ensuite les trois crocodiles sous l’arche de sortie.
 1. Espace lève le bouclier de Croquefort. Au bord de la falaise, continuez vers la droite : sa chute devient très lente.
 2. Gardez le bouclier levé et maintenez → pour traverser le vide. ↑ ne fait pas sauter Croquefort : il doit partir du bord.
 3. Sur l’autre rive, Croquefort récupère la clé jaune et actionne le levier. Le pont permet aux deux autres de traverser. Croquinet casse la caisse, Croqueboum active la cible.
-4. Le zèbre saute par-dessus un poursuivant seul. Placez un croco de chaque côté, resserrez la tenaille, puis appuyez sur Espace près de lui.
 
 
 Amenez ensuite les trois crocodiles sous l’arche de sortie.
@@ -128,7 +120,7 @@ Amenez ensuite les trois crocodiles sous l’arche de sortie.
 1. Les animaux reviennent sur leurs pas. Observez leur patrouille depuis une position sûre.
 2. Croquefort bloque un animal seulement s’il lui fait face, bouclier devant lui. Croqueboum peut alors tirer depuis derrière son protecteur.
 3. Montez sur la corniche avec le protecteur et le tireur. Assommez le lionceau, puis récupérez le sceau avec Croquinet. Redescendez par l’échelle pour approcher l’hippopotame en formation. Les deux animaux endormis et le sceau ouvrent la porte.
-4. Le zèbre saute par-dessus un poursuivant seul. Placez un croco de chaque côté, resserrez la tenaille, puis appuyez sur Espace près de lui.
+4. Ce zèbre est gourmand : offrez-lui une boulette avec Croqueboum, puis approchez et Espace pendant son goûter.
 
 
 Amenez ensuite les trois crocodiles sous l’arche de sortie.

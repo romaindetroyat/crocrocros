@@ -13,6 +13,7 @@ class Engine {
  open(o){return !!o.latchWhen?.some(id=>this.flag(id))||((o.requires||[]).every(id=>this.flag(id))&&(o.requiresOff||[]).every(id=>!this.flag(id)));}
  solids(who=-1){let a=this.L.platforms.map(x=>({...x}));for(const b of this.L.bridges)if(this.open(b))a.push({...b});for(const g of this.L.gates)if(!this.open(g))a.push({...g});for(const c of this.L.crates)if(!this.broken[c.id])a.push({...c,crate:c.id});for(const b of this.L.blocks||[])a.push({...b,x:this.blocks[b.id],railBlock:b.id});for(const l of this.L.lifts||[])a.push({...l,y:this.lifts[l.id],oneway:true});const shield=this.p[1];if(who!==1&&shield.roof)a.push({x:shield.x-48,y:shield.y-87,w:96,h:12,oneway:true,shield:true});return a;}
  select(i){if(i>=0&&i<3){this.active=i;this.event('select',i);}}
+ canTakeZebra(){return Wildlife.canCatch(this);}
  action(){if(this.won)return;if(Wildlife.catch(this))return;const p=this.p[this.active];const sw=this.L.switches.find(s=>Math.abs(s.x-p.x)<65&&Math.abs(s.y-p.y)<40);if(sw){if(sw.toggle||!this.flags[sw.id]){this.flags[sw.id]=sw.toggle?!this.flags[sw.id]:true;this.event('lever',sw.id);this.burst(sw.x,sw.y-40,'#ffdc83',18);}return;}
   const portal=(this.L.portals||[]).find(t=>Math.abs(t.x-p.x)<42&&Math.abs(t.y-p.y)<35&&this.open(t));if(portal){p.x=portal.toX;p.y=portal.toY;p.onLadder=false;p.climbing=false;p.vy=0;p.ground=false;p.charge=0;this.event('portal');this.burst(p.x,p.y-40,'#a5dbdb',20);return;}
   if(p.cool>0)return;
@@ -57,7 +58,8 @@ class Engine {
   if(!this.checkpoint&&this.p.every(p=>p.x>this.L.checkpoint.x-100&&p.y<=525&&p.ground)){this.checkpoint=true;this.event('checkpoint');}
   for(const t of this.L.turrets){if(this.flags[t.off]||(t.awakeX&&!this.p.some(p=>p.x>=t.awakeX)))continue;this.turretTimers[t.id]=(this.turretTimers[t.id]??t.period)-dt;if(this.turretTimers[t.id]<=0){this.shots.push({x:t.x-25,y:t.y,vx:t.dir*260,kind:'seed',life:3.2});this.turretTimers[t.id]=t.period;}}
   for(const b of this.shots){const old=b.x;b.x+=b.vx*dt;b.life-=dt;
-   if(b.kind==='pea')for(const e of this.enemies)if(!e.asleep&&Math.abs(b.y-(e.y-22))<27&&Math.min(old,b.x)<=e.x+22&&Math.max(old,b.x)>=e.x-22){this.sleepEnemy(e);b.life=0;break;}
+   if(b.kind==='pea'&&b.life>0)Wildlife.feed(this,b,old);
+   if(b.kind==='pea'&&b.life>0)for(const e of this.enemies)if(!e.asleep&&Math.abs(b.y-(e.y-22))<27&&Math.min(old,b.x)<=e.x+22&&Math.max(old,b.x)>=e.x-22){this.sleepEnemy(e);b.life=0;break;}
    if(b.kind==='pea'&&b.life>0)for(const target of this.L.targets)if(!this.flags[target.id]&&Math.abs(b.y-target.y)<28&&Math.min(old,b.x)<=target.x+20&&Math.max(old,b.x)>=target.x-20){b.life=0;if((target.hitDirection&&Math.sign(b.vx)!==target.hitDirection)||!this.open(target)){this.burst(target.x,target.y,'#93adab',8);this.event('lockedTarget',target.hitDirection?'direction':'plates');}else{this.flags[target.id]=true;this.burst(target.x,target.y,'#ffcf76',20);this.event('target',target.id);}break;}
    if(b.kind==='seed'){
     const sh=this.p[1];if(!sh.roof&&Math.abs(b.y-(sh.y-40))<42&&(b.vx<0?sh.face===1:sh.face===-1)&&Math.min(old,b.x)<sh.x+43&&Math.max(old,b.x)>sh.x-43){b.life=0;this.burst(b.x,b.y,'#eac67a',4);this.event('block');}

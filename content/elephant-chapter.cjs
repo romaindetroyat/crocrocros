@@ -69,7 +69,11 @@ module.exports=function(levels,routes){
  levels[4].enemies=[{id:'islandPrankster',kind:'vulture',x:610,y:520,minX:525,maxX:635,speed:72,dir:-1}];
  levels[5].enemies=[{id:'workshopCub',kind:'lion',x:1100,y:320,minX:1020,maxX:1190,speed:85,dir:-1}];
  const scenery=['harbour','canopy','falls','mill','moon','savannah','savannah','canopy','moon','ruins','falls','savannah','ruins','moon','falls','ruins','moon','mill','harbour','mill','falls','mill','canopy','mill','fort','fair','moon','fair','harbour','fair','ruins','fair','moon','fort','falls','fort','savannah'];
- levels.forEach((l,i)=>{l.revision=6;l.scenery=scenery[i];const bonus=l.stars[2];if(bonus.y===410&&l.platforms.some(p=>p.y===520&&bonus.x>p.x&&bonus.x<p.x+p.w))l.zebra={x:bonus.x,y:520,starId:bonus.id,minX:Math.max(bonus.x-130,...l.gates.map(g=>g.x<bonus.x?g.x+g.w+50:0)),maxX:Math.min(l.width-65,bonus.x+100)};if(l.zebra)l.hints.push('Le zèbre saute par-dessus un poursuivant seul. Placez un croco de chaque côté, resserrez la tenaille, puis appuyez sur Espace près de lui.');if(l.enemies?.some(e=>e.kind==='vulture'))l.hints.push('Le vautour monte avec sa noix de coco avant de la lâcher. Le bouclier levé protège les têtes ; profitez de son repos pour tirer.');l.questStage=i<3?0:i<6?1:i<12?2:i<20?3:i<28?4:5;});
+ const encounters={3:{x:450,minX:320,maxX:560,mode:'curious'},11:{x:400,minX:310,maxX:490,mode:'snack'},18:{x:820,minX:730,maxX:920,mode:'pause'},26:{x:900,minX:800,maxX:990,mode:'snack'},34:{x:820,minX:730,maxX:880,mode:'curious'}};
+ const zebraHints={curious:'Ce zèbre est curieux : restez immobile près de lui, laissez-le approcher, puis Espace pour son étoile.',snack:'Ce zèbre est gourmand : offrez-lui une boulette avec Croqueboum, puis approchez et Espace pendant son goûter.',pause:'Ce zèbre fait des pauses : observez son trot, approchez pendant qu’il broute, puis Espace pour son étoile.'};
+ levels.forEach((l,i)=>{l.revision=7;l.scenery=scenery[i];delete l.zebra;
+  if(encounters[i]){l.zebra={...encounters[i],y:520,starId:l.stars[2].id};l.hints.push(zebraHints[l.zebra.mode]);}
+  if(l.enemies?.some(e=>e.kind==='vulture'))l.hints.push('Le vautour monte avec sa noix de coco avant de la lâcher. Le bouclier levé protège les têtes ; profitez de son repos pour tirer.');l.questStage=i<3?0:i<6?1:i<12?2:i<20?3:i<28?4:5;});
  levels[1].elephants=[{x:980,y:520,radius:310,requires:['signal'],label:'LES GRANDES OREILLES'}];
  levels[4].elephants=[{x:1015,y:520,radius:300,requires:['finish'],label:'NE PAS RÉVEILLER'}];
 };

@@ -7,9 +7,14 @@ const Wildlife={
  init(E){
   E.enemies.forEach(e=>Object.assign(e,{homeY:e.y,phase:'patrol',timer:1.5,anim:0,aim:e.x,attackDir:e.dir}));
   E.beasts=(E.L.elephants||[]).map(()=>({phase:'patrol',timer:2,anim:0}));
-  E.pranks=[];E.zebra=E.L.zebra?{...E.L.zebra,dir:-1,phase:'graze',anim:0,hop:0,trapped:false,caught:false}:null;
+  E.pranks=[];E.zebra=E.L.zebra?{...E.L.zebra,dir:-1,phase:'graze',anim:0,hop:0,ready:false,caught:false,timer:0,patience:0,watchX:null,watchHero:-1}:null;
  },
- catch(E){const z=E.zebra,p=E.p[E.active];if(!z||z.caught||!z.trapped||Math.abs(z.x-p.x)>95||Math.abs(z.y-p.y)>45)return false;z.caught=true;z.phase='caught';E.collected[z.starId]=true;E.burst(z.x,z.y-75,'#ffe487',32);E.event('zebra');return true;},
+ canCatch(E){const z=E.zebra,p=E.p[E.active];return !!z&&!z.caught&&z.ready&&Math.abs(z.x-p.x)<95&&Math.abs(z.y-p.y)<45;},
+ catch(E){if(!this.canCatch(E))return false;const z=E.zebra;z.caught=true;z.ready=false;z.phase='caught';E.collected[z.starId]=true;E.burst(z.x,z.y-75,'#ffe487',32);E.event('zebra');return true;},
+ feed(E,b,old){const z=E.zebra;if(!z||z.caught||z.mode!=='snack'||Math.abs(b.y-(z.y-38))>28||Math.min(old,b.x)>z.x+30||Math.max(old,b.x)<z.x-30)return false;
+  if(E.solids(-1).some(s=>!s.shield&&s.y<b.y+3&&s.y+s.h>b.y-3&&s.x<Math.max(old,z.x)&&s.x+s.w>Math.min(old,z.x)))return false;
+  z.timer=4;z.phase='snack';z.ready=true;b.life=0;E.burst(z.x,z.y-55,'#a6c66a',8);E.event('zebraReady');return true;
+ },
  tick(E,dt){
   const p=E.p[E.active];
   for(const e of E.enemies){e.anim+=dt;if(e.asleep)continue;e.stun=Math.max(0,e.stun-dt);e.timer-=dt;
@@ -38,20 +43,21 @@ const Wildlife={
    else if(e.phase==='recover'&&e.timer<=0){e.phase='patrol';e.timer=.4;}
   });
   const z=E.zebra;if(z){z.anim+=dt;z.hop=Math.max(0,z.hop-dt);z.caught=!!E.collected[z.starId];
-   if(!z.caught){
-    const same=E.p.filter(h=>Math.abs(h.y-z.y)<45),left=same.filter(h=>h.x<=z.x).sort((a,b)=>b.x-a.x)[0],right=same.filter(h=>h.x>z.x).sort((a,b)=>a.x-b.x)[0];
-    z.trapped=!!left&&!!right&&z.x-left.x<155&&right.x-z.x<155;const prev=z.phase;
-    if(z.trapped){z.phase='trapped';if(prev!=='trapped')E.event('zebraReady');}
-    else{const nearest=[...same].sort((a,b)=>Math.abs(a.x-z.x)-Math.abs(b.x-z.x))[0];const danger=nearest&&Math.abs(nearest.x-z.x)<230;
-     if(danger){z.phase='run';if(z.hop<=0)z.dir=Math.sign(z.x-nearest.x)||-1;let next=z.x+z.dir*445*dt;
-      // Waiting teammates form barriers; a lone pursuer gets jumped over at the edge.
-      const blocker=same.find(h=>h!==nearest&&(h.x-z.x)*z.dir>0&&Math.abs(h.x-z.x)<58);
-      if(blocker)next=z.x;
-      if(next<=z.minX||next>=z.maxX){z.dir*=-1;z.hop=.7;}
-      z.x=clamp(next,z.minX,z.maxX);
-     }else{z.phase='graze';z.x=clamp(z.x+Math.sin(z.anim)*12*dt,z.minX,z.maxX);}
-    }
-   }else{z.phase='caught';z.trapped=false;}
+   const wasReady=z.ready;z.ready=false;
+   if(z.caught){z.phase='caught';return;}
+   const same=Math.abs(p.y-z.y)<45,near=same&&Math.abs(p.x-z.x)<240;
+   const move=speed=>{z.x=clamp(z.x+z.dir*speed*dt,z.minX,z.maxX);if(z.x===z.minX||z.x===z.maxX){z.dir*=-1;z.hop=.7;}};
+   if(z.mode==='curious'){
+    const still=z.watchHero===E.active&&z.watchX!==null&&Math.abs(p.x-z.watchX)<.5&&Math.abs(p.vy)<1;
+    z.patience=near&&still?Math.min(2,z.patience+dt):0;z.watchX=p.x;z.watchHero=E.active;
+    if(z.patience>=1.2){z.dir=Math.sign(p.x-z.x)||z.dir;z.phase='approach';if(Math.abs(p.x-z.x)>65)z.x=clamp(z.x+z.dir*105*dt,z.minX,z.maxX);else{z.phase='curious';z.ready=true;}}
+    else{z.phase='graze';if(near&&!still){z.phase='run';z.dir=Math.sign(z.x-p.x)||1;move(130);}}
+   }else if(z.mode==='pause'){
+    // A readable cycle: a short trot, then three seconds of grazing.
+    z.ready=z.anim%6>=3;z.phase=z.ready?'graze':'run';if(!z.ready)move(170);
+   }else if(z.timer>0){z.timer=Math.max(0,z.timer-dt);z.phase='snack';z.ready=z.timer>0;}
+   else{z.phase='run';move(190);}
+   if(z.ready&&!wasReady&&near)E.event('zebraReady');
   }
  },
  impacts(E,dt){
@@ -76,7 +82,7 @@ const Wildlife={
  },
  snapshot(E){return JSON.parse(JSON.stringify({clock:E.clock,states:E.enemies.map(e=>({phase:e.phase,timer:e.timer,anim:e.anim,aim:e.aim,attackDir:e.attackDir,y:e.y})),beasts:E.beasts,pranks:E.pranks,zebra:E.zebra}));},
  valid(s,L){const num=(x,a,b)=>Number.isFinite(x)&&x>=a&&x<=b;const state=e=>e&&states.includes(e.phase)&&num(e.timer,-1e8,10)&&num(e.anim,0,1e8);
-  return !!s&&num(s.clock,0,1e8)&&Array.isArray(s.states)&&s.states.length===(L.enemies||[]).length&&s.states.every((e,i)=>state(e)&&num(e.aim,0,L.width)&&[-1,1].includes(e.attackDir)&&num(e.y,L.enemies[i].y-120,L.enemies[i].y+15))&&Array.isArray(s.beasts)&&s.beasts.length===(L.elephants||[]).length&&s.beasts.every(state)&&Array.isArray(s.pranks)&&s.pranks.length<60&&s.pranks.every(b=>b&&['wave','gust','coconut'].includes(b.kind)&&num(b.x,-100,L.width+600)&&num(b.y,-500,900)&&num(b.vx,-400,400)&&num(b.vy,0,2000)&&num(b.life,0,4)&&num(b.ground,0,600)&&Number.isInteger(b.hit)&&b.hit>=0&&b.hit<=7)&&(!L.zebra?s.zebra===null:s.zebra&&s.zebra.starId===L.zebra.starId&&num(s.zebra.x,L.zebra.minX,L.zebra.maxX)&&s.zebra.y===L.zebra.y&&s.zebra.minX===L.zebra.minX&&s.zebra.maxX===L.zebra.maxX&&[-1,1].includes(s.zebra.dir)&&['graze','trapped','run','caught'].includes(s.zebra.phase)&&num(s.zebra.anim,0,1e8)&&num(s.zebra.hop,0,.7)&&typeof s.zebra.trapped==='boolean'&&typeof s.zebra.caught==='boolean');
+  return !!s&&num(s.clock,0,1e8)&&Array.isArray(s.states)&&s.states.length===(L.enemies||[]).length&&s.states.every((e,i)=>state(e)&&num(e.aim,0,L.width)&&[-1,1].includes(e.attackDir)&&num(e.y,L.enemies[i].y-120,L.enemies[i].y+15))&&Array.isArray(s.beasts)&&s.beasts.length===(L.elephants||[]).length&&s.beasts.every(state)&&Array.isArray(s.pranks)&&s.pranks.length<60&&s.pranks.every(b=>b&&['wave','gust','coconut'].includes(b.kind)&&num(b.x,-100,L.width+600)&&num(b.y,-500,900)&&num(b.vx,-400,400)&&num(b.vy,0,2000)&&num(b.life,0,4)&&num(b.ground,0,600)&&Number.isInteger(b.hit)&&b.hit>=0&&b.hit<=7)&&(!L.zebra?s.zebra===null:s.zebra&&s.zebra.starId===L.zebra.starId&&num(s.zebra.x,L.zebra.minX,L.zebra.maxX)&&s.zebra.y===L.zebra.y&&s.zebra.minX===L.zebra.minX&&s.zebra.maxX===L.zebra.maxX&&[-1,1].includes(s.zebra.dir)&&['graze','approach','curious','snack','run','caught'].includes(s.zebra.phase)&&num(s.zebra.anim,0,1e8)&&num(s.zebra.hop,0,.7)&&typeof s.zebra.ready==='boolean'&&s.zebra.mode===L.zebra.mode&&num(s.zebra.timer,0,4)&&num(s.zebra.patience,0,2)&&(s.zebra.watchX===null||num(s.zebra.watchX,0,L.width))&&[-1,0,1,2].includes(s.zebra.watchHero)&&typeof s.zebra.caught==='boolean');
  },
  restore(E,s){E.clock=s.clock;s.states.forEach((e,i)=>Object.assign(E.enemies[i],e));E.beasts=JSON.parse(JSON.stringify(s.beasts));E.pranks=JSON.parse(JSON.stringify(s.pranks));E.zebra=s.zebra?{...s.zebra}:null;}
 };root.CrocoWildlife=Wildlife;if(typeof module!=='undefined')module.exports=Wildlife;

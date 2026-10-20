@@ -1,6 +1,6 @@
 # Les Cro Cro Cros — La bannière du retour
 
-Version 0.7.1 · 20 octobre 2026
+Version 0.8.0 · 20 octobre 2026
 
 Jeu de plateforme et de réflexion en solo, en français. Trois crocodiles complémentaires, 37 étapes, six chapitres, 111 étoiles facultatives. Aucun compte, publicité, achat ou serveur de jeu. Tout le contenu est inclus et fonctionne hors ligne.
 
@@ -24,7 +24,7 @@ Ouvrir ensuite http://localhost:8080. Sur un hébergement HTTPS, attendre « PR�
 | Marcher | ← et → |
 | Sauter avec Croquinet / monter à l’échelle | ↑ |
 | Descendre une échelle | ↓ |
-| Capacité, levier, passage, attraper un zèbre coincé | Espace |
+| Capacité, levier, passage, prendre l’étoile d’un zèbre | Espace |
 | Revenir jusqu’à environ 8 secondes en arrière | R |
 | Vue d’ensemble en pause | M |
 | Pause | Échap |
@@ -34,8 +34,16 @@ Les boutons tactiles permettent de marcher et agir simultanément. Un portrait s
 - **Croquinet** saute, charge, casse les caisses et assomme les animaux avec sa charge.
 - **Croquefort** bloque les tirs et les animaux avec son bouclier frontal, du côté qu’il regarde. Espace lève le bouclier : il sert alors de marchepied et de planeur. Pour planer, quitter une corniche en maintenant la direction, bouclier levé. Il ne saute pas. Son bouclier levé ne protège plus son avant. Il pousse aussi les contrepoids.
 - **Croqueboum** tire des boulettes pour actionner les cibles ou envoyer les gêneurs faire une sieste.
-- Espace attrape un zèbre coincé à proximité ; sinon, il privilégie un levier ou une arche avant la capacité du personnage.
+- Espace prend l’étoile d’un zèbre prêt à l’offrir à proximité ; sinon, il privilégie un levier ou une arche avant la capacité du personnage.
 - Les trois doivent rejoindre l’arrivée. Une sortie avec un sceau manquant demande d’abord de résoudre son mécanisme.
+
+## Nouveautés 0.8 : des rencontres en chemin
+
+Cinq zèbres seulement (niveaux 4, 12, 19, 27 et 35), placés au cours du parcours, loin des arches d’arrivée. Le curieux approche si vous attendez sans bouger ; le gourmand mange pendant quatre secondes après une boulette de Croqueboum ; le flâneur broute trois secondes entre ses trottinements. Approchez et utilisez Espace ou le bouton « Étoile ». Aucun encerclement requis. Les bonus restent facultatifs.
+
+Les étoiles des autres niveaux redeviennent fixes. Les niveaux terminés et leurs étoiles sont conservés à la mise à jour ; seule la tentative en cours redémarre avec la nouvelle disposition. Pour passer du fichier local au futur site Vercel, exporter la progression puis l’importer dans les réglages du site.
+
+`vercel.json` publie le dossier `dist/` déjà construit depuis la racine du dépôt GitHub. Aucun serveur de jeu n’est ajouté. Le service worker et la page sont revalidés à chaque connexion ; le jeu conserve son fonctionnement hors ligne après le premier chargement complet.
 
 ## Correctif 0.7.1 : dépassement de l’arrivée
 
@@ -56,7 +64,7 @@ La planche `docs/personnages-v07.png` est générée à partir des fonctions de 
 
 ## Nouveautés 0.6 : un bestiaire qui intervient dans le jeu
 
-- **Zèbres à coincer** : ils portent leur étoile, fuient plus vite qu’un croco et sautent par-dessus un poursuivant isolé. Placer deux crocos de part et d’autre, resserrer la tenaille puis utiliser Espace ou le bouton tactile « Attraper ». La simple proximité ne donne plus l’étoile. La prise déclenche une animation et un message de réussite. Ces étoiles restent facultatives.
+- **Zèbres** : le système de tenaille de la version 0.6 est remplacé par les rencontres décrites en 0.8 ci-dessus.
 - **Éléphants** : ils lèvent un pied pendant 1,3 seconde avant de frapper le sol. L’onde renvoie un croco touché au ralliement. Croquinet peut la sauter ; Croquefort l’arrête avec son bouclier frontal tourné vers l’éléphant. Résoudre le mécanisme associé calme l’animal. Les trompes restent des portes et des ascenseurs.
 - **Hippopotames** : joues gonflées, inspiration puis éternuement. La bourrasque déplace un croco de 94 unités, peut lui faire quitter une plaque ou tomber d’un bord et s’arrête sur le bouclier frontal. Le souffle ne fait pas perdre une vie directement.
 - **Lionceaux** : accroupissement, bond avec trajectoire en arc, puis récupération avec grimace et langue tirée. Les collisions, boulettes et charges utilisent leur position pendant le bond.

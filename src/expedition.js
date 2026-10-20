@@ -7,6 +7,7 @@ const X={
   if(q.all)return q.all.map(v=>this.describe(E,v,depth+1)).join(' + ');if(q.any)return q.any.map(v=>this.describe(E,v,depth+1)).join(' / ');if(q.not)return 'Sans '+this.describe(E,q.not,depth+1);
   if(q.slot){const s=E.L.sockets.find(s=>s.id===q.slot),i=E.L.items.find(i=>i.id===q.item);return (i?.name||'Objet')+' → '+(s?.name||q.slot);}
   if(q.mode){const c=E.L.controls.find(c=>c.id===q.mode);return c.name+' : '+(c.labels?.[q.value??1]||q.value||1);}
+  if(q.balance)return 'Équilibrer '+(E.L.balances.find(b=>b.id===q.balance)?.name||'la balance');
   if(q.weight)return (E.L.sockets.find(s=>s.id===q.weight)?.name||'Plateau')+' · poids '+(q.min||1);
   if(q.itemAt)return (E.L.items.find(i=>i.id===q.itemAt)?.name||'Objet')+' en '+q.room;return 'Équipe en place';
  },
@@ -21,6 +22,7 @@ const X={
   if(q.mode)return E.expedition.modes[q.mode]===(q.value??1);
   if(q.itemAt){const i=this.item(E,q.itemAt),r=E.L.rooms.find(r=>r.id===q.room);return !!i&&i.holder<0&&i.x>r.x+20&&i.x<r.x+r.w-20&&Math.abs(i.y-r.floor)<70;}
   if(q.hero!==undefined){const p=E.p[q.hero],r=E.L.rooms.find(r=>r.id===q.room);return p.x>r.x+20&&p.x<r.x+r.w-20&&Math.abs(p.y-r.floor)<35&&(!q.roof||p.roof);}
+  if(q.balance){const b=E.L.balances.find(b=>b.id===q.balance);if(!b)return false;const [left,right]=this.balance(E,b);return left===right&&left+right===b.total;}
   if(q.weight){const s=E.L.sockets.find(s=>s.id===q.weight);if(!s)return false;let w=0;
    for(const p of E.p)if(Math.abs(p.x-s.x)<50&&Math.abs(p.y-s.y)<12)w++;
    for(const i of E.expedition.items)if(i.holder<0&&Math.abs(i.x-s.x)<50&&Math.abs(i.y-s.y)<12)w+=(E.L.items.find(d=>d.id===i.id).weight||1);
@@ -41,6 +43,7 @@ const X={
   }
   this.sync(E);
  },
+ balance(E,b){return [b.left,b.right].map(slots=>E.expedition.items.filter(i=>slots.includes(i.slot)).reduce((sum,i)=>sum+(E.L.items.find(d=>d.id===i.id).weight||1),0));},
  nearby(E){if(!E.expedition)return null;const p=E.p[E.active],held=this.carried(E),near=o=>Math.abs(o.x-p.x)<64&&Math.abs(o.y-p.y)<44;
   const socket=(E.L.sockets||[]).find(s=>near(s)&&(!held||!s.accept||s.accept.includes(held.id)));
   if(held&&socket&&!E.expedition.items.some(i=>i.slot===socket.id))return {kind:'place',socket,item:held,label:'Installer'};
@@ -48,14 +51,17 @@ const X={
   if(!held&&item)return {kind:'take',item,label:item.slot?'Retirer':'Prendre'};
   const other=E.expedition.items.find(i=>i.holder>=0&&i.holder!==E.active&&near(i));
   if(!held&&other)return {kind:'take',item:other,label:'Recevoir'};
-  const control=(E.L.controls||[]).find(s=>near(s));if(control)return {kind:'control',control,label:control.verb||'Manœuvrer'};
+  const control=(E.L.controls||[]).find(s=>!s.readOnly&&near(s));if(control)return {kind:'control',control,label:control.verb||'Manœuvrer'};
   if(held)return {kind:'drop',item:held,label:'Poser'};return null;
  },
  interact(E){const n=this.nearby(E);if(!n)return;const p=E.p[E.active];
   if(n.kind==='take'){const d=E.L.items.find(d=>d.id===n.item.id);if(d.heavy&&E.active!==1){E.event('notice','Ce colis est lourd : Croquefort peut le transporter.');return;}n.item.holder=E.active;n.item.slot=null;E.event('notice',d.name+' : à vous de choisir son trajet.');}
   else if(n.kind==='place'){n.item.holder=-1;n.item.slot=n.socket.id;n.item.x=n.socket.x;n.item.y=n.socket.y;E.event('notice',n.socket.message||'Objet installé. Observez les passages.');}
   else if(n.kind==='drop'){n.item.holder=-1;n.item.slot=null;n.item.x=p.x;n.item.y=p.y;E.event('notice','Objet posé. Un autre croco peut le reprendre.');}
-  else if(n.kind==='control'){const c=n.control;if(!this.test(E,c.when)){E.event('notice',c.locked||'Le mécanisme a besoin de sa pièce.');return;}const next=(E.expedition.modes[c.id]+1)%(c.states||2);E.expedition.modes[c.id]=next;E.event('notice',(c.name||'Mécanisme')+' : '+(c.labels?.[next]||next));}
+  else if(n.kind==='control'){const c=n.control;if(c.hero!==undefined&&c.hero!==E.active){E.event('notice',E.p[c.hero].name+' doit actionner ce poste.');return;}if(!this.test(E,c.when)){E.event('notice',c.locked||'Le mécanisme a besoin de sa pièce.');return;}const next=c.latch?1:(E.expedition.modes[c.id]+1)%(c.states||2);E.expedition.modes[c.id]=next;
+   for(const id of c.flips||[])E.expedition.modes[id]=1-E.expedition.modes[id];
+   if(c.sequence){const seq=E.L.sequences.find(q=>q.id===c.sequence),progress=E.expedition.modes[seq.id];if(progress<seq.order.length){const correct=seq.order[progress]===c.note;E.expedition.modes[seq.id]=correct?progress+1:0;E.event('notice',correct?(progress+1===seq.order.length?'Mélodie complète !':(progress+1)+' / '+seq.order.length+' notes justes'):'Fausse note : la mélodie repart au début.');}}
+   else E.event('notice',(c.name||'Mécanisme')+' : '+(c.labels?.[next]||next));}
   this.sync(E);E.event('cargo');
  },
  dropOnHit(E,hero){const i=this.carried(E,hero);if(!i)return;i.holder=-1;i.slot=null;i.x=E.p[hero].x;i.y=E.p[hero].y;},

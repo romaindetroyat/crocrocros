@@ -1,0 +1,22 @@
+{
+  "levels": 100,
+  "replaced": 66,
+  "new_puzzles": 46,
+  "physical_courses_reintroduced": 20,
+  "cargo_levels_before": 84,
+  "cargo_levels_after": 35,
+  "families": {
+    "expéditions et animaux": 34,
+    "circuits": 10,
+    "parcours de plateforme": 20,
+    "séquences": 10,
+    "postes simultanés": 11,
+    "balances": 7,
+    "aiguillages": 8
+  },
+  "room_blueprints_before": 14,
+  "room_blueprints_after": 44,
+  "verified_wins": 100,
+  "verified_stars": 300,
+  "validated_snapshots": 1873
+}

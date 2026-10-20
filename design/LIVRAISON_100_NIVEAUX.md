@@ -1,3 +1,5 @@
+> Bilan historique de la version 1.0.0. La campagne actuelle est décrite dans [VARIETE_1_2.md](VARIETE_1_2.md).
+
 # Campagne 1.0.0 — périmètre livré
 
 100 cartes en dix chapitres, trois étoiles facultatives chacune. Les derniers niveaux atteignent quatre étages et seize salles. Les graphes de salles, leurs conditions et les plans de résolution sont écrits explicitement dans `content/campaign100.cjs` ; les aides génèrent la géométrie de ces cartes.

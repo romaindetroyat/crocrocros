@@ -2,17 +2,19 @@
 
 Jeu de plateforme et d’énigmes en solo, en français, jouable hors ligne. Trois crocodiles complémentaires, 100 étapes, dix chapitres et 300 étoiles facultatives.
 
-**Version 1.1.3 — écran de jeu pleine largeur, commandes Game Boy en dessous et caméra rapprochée.**
+**Version 1.2.0 — 66 niveaux remaniés pour varier les énigmes et les parcours.**
 
-Sur écran tactile : croix directionnelle glissante (appui court, maintien, diagonales), **haut** pour sauter ou grimper, **bas** pour descendre ; **A** pour la capacité du croco, **B** pour les objets, **les trois portraits** pour sélectionner directement un croco et **START** pour la pause. Les deux pouces peuvent agir simultanément. La caméra mobile utilise un zoom de 1,9× par défaut, réglable avec **− / +**, de 2,4× jusqu’au **niveau entier (« Tout »)**. Touchez la valeur du zoom pour revenir immédiatement à 1,9× ; le Plan conserve une vue complète. Les étiquettes mobiles sont agrandies et placées au-dessus des personnages. Dans l’ancienne aventure, B reste un raccourci de saut.
+46 nouvelles énigmes (circuits, partitions, postes simultanés, balances et aiguillages), 20 parcours de plateforme réintégrés, 34 expéditions conservées. Les niveaux avec objets à transporter passent de 84 à 35. [Détail de la refonte](design/VARIETE_1_2.md).
+
+Sur écran tactile : croix directionnelle glissante (appui court, maintien, diagonales), **haut** pour sauter ou grimper, **bas** pour descendre ; **A** pour la capacité du croco, **B** pour les objets, **les trois portraits** pour sélectionner directement un croco et **START** pour la pause. Les deux pouces peuvent agir simultanément. La caméra mobile utilise un zoom de 1,9× par défaut, réglable avec **− / +**, de 2,4× jusqu’au **niveau entier (« Tout »)**. Touchez la valeur du zoom pour revenir immédiatement à 1,9× ; le Plan conserve une vue complète. Les étiquettes mobiles sont agrandies et placées au-dessus des personnages. Dans les parcours sans objets et l’ancienne aventure, B est un raccourci de saut.
 
 [Jouer en mode libre](https://crocrocros.vercel.app/?essai=libre) · [Ancienne aventure de 37 niveaux](https://crocrocros.vercel.app/?campagne=classique)
 
 La campagne normale déverrouille les niveaux dans l’ordre ; le mode libre ouvre les 100 cartes avec une sauvegarde distincte. Les anciennes sauvegardes restent attachées à l’ancienne aventure. **F** (ou le bouton main) prend, pose, transmet ou installe un objet et manœuvre les commandes ; **Espace** conserve la capacité du personnage. **M** ouvre le plan et les conditions des passages.
 
-Validation : 100 parcours enregistrés avec les commandes du moteur, 300 étoiles obtenues, aucun retour après collision ; 2 187 états de sauvegarde validés et restaurés. Ce contrôle prouve une solution accessible par carte, pas l’équilibrage pour tous les joueurs ni l’absence de tout détour possible. Voir [le bilan de version](design/LIVRAISON_100_NIVEAUX.md).
+Validation : 100 parcours enregistrés avec les commandes du moteur, 300 étoiles obtenues, aucun retour après collision ; 1 873 états de sauvegarde validés et restaurés. Ce contrôle prouve une solution accessible par carte, pas l’équilibrage pour tous les joueurs ni l’absence de tout détour possible. Voir [le bilan de version](design/VARIETE_1_2.md).
 
-Reproduire : `node content/campaign100.cjs`, `node tests/campaign100.test.cjs`, `node tests/campaign100-state.test.cjs`, `node tests/campaign100-app.test.cjs`, `python3 build.py`, `node tests/package.test.cjs`. Les tests de rendu/app demandent `@napi-rs/canvas` ; le jeu livré n’a pas de dépendance.
+Reproduire : `node content/campaign100.cjs`, `node tests/campaign100.test.cjs`, `node tests/campaign100-state.test.cjs`, `node tests/campaign100-app.test.cjs`, `node tests/variety.test.cjs`, `python3 build.py`, `node tests/package.test.cjs`. Les tests de rendu/app demandent `@napi-rs/canvas` ; le jeu livré n’a pas de dépendance.
 
 
 ![Les personnages dessinés par le moteur du jeu](docs/personnages-v07.png)

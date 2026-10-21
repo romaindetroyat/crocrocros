@@ -1,5 +1,5 @@
 'use strict';
-const assert=require('node:assert/strict'),Engine=require('../src/engine'),A=require('../src/adventure'),D=require('../content/campaign.json');
+const assert=require('node:assert/strict'),Engine=require('../src/engine'),A=require('../src/adventure'),PACK=require('../content/campaign.json'),D={...PACK,levels:PACK.adventure2Levels,quest:PACK.adventure2Quest};
 const clone=x=>JSON.parse(JSON.stringify(x));
 const L=clone(D.levels[0]);L.platforms=[{x:0,y:820,w:L.width,h:30,oneway:true}];L.movers=[];L.gates=[{x:900,y:600,w:30,h:220,requires:['pont']}];L.switches=[];L.rallies=[];L.targets=[];L.exit.requires=['pont'];
 const E=new Engine(L);E.p[1].x=650;E.p[1].roof=true;A.mount(E,0);A.mount(E,2);E.select(1);for(let i=0;i<120;i++)E.step(1/60,{right:true});assert(E.p.every(p=>p.x+p.w/2<=900.01),'whole carried team respects a closed gate');E.select(2);E.p[2].face=1;A.interact(E);assert(E.p[2].x+E.p[2].w/2<900,'disembark cannot teleport through gate');assert(!E.adventure.riding[2]);

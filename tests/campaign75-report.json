@@ -1,0 +1,377 @@
+[
+  {
+    "levelId": "marais-001",
+    "seconds": 13,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-002",
+    "seconds": 16,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-003",
+    "seconds": 21,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-004",
+    "seconds": 18,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-005",
+    "seconds": 16,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-006",
+    "seconds": 16,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-007",
+    "seconds": 17,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-008",
+    "seconds": 23,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-009",
+    "seconds": 15,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-010",
+    "seconds": 15,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-011",
+    "seconds": 20,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-012",
+    "seconds": 17,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-013",
+    "seconds": 17,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-014",
+    "seconds": 12,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-015",
+    "seconds": 11,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-016",
+    "seconds": 19,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-017",
+    "seconds": 21,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-018",
+    "seconds": 19,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-019",
+    "seconds": 20,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-020",
+    "seconds": 25,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-021",
+    "seconds": 23,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-022",
+    "seconds": 24,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-023",
+    "seconds": 23,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-024",
+    "seconds": 18,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-025",
+    "seconds": 23,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-026",
+    "seconds": 21,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-027",
+    "seconds": 27,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-028",
+    "seconds": 23,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-029",
+    "seconds": 20,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-030",
+    "seconds": 25,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-031",
+    "seconds": 19,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-032",
+    "seconds": 23,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-033",
+    "seconds": 29,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-034",
+    "seconds": 19,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-035",
+    "seconds": 36,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-036",
+    "seconds": 19,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-037",
+    "seconds": 21,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-038",
+    "seconds": 26,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-039",
+    "seconds": 20,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-040",
+    "seconds": 25,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-041",
+    "seconds": 21,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-042",
+    "seconds": 24,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-043",
+    "seconds": 14,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-044",
+    "seconds": 22,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-045",
+    "seconds": 42,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-046",
+    "seconds": 26,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-047",
+    "seconds": 30,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-048",
+    "seconds": 27,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-049",
+    "seconds": 20,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-050",
+    "seconds": 29,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-051",
+    "seconds": 21,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-052",
+    "seconds": 28,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-053",
+    "seconds": 23,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-054",
+    "seconds": 29,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-055",
+    "seconds": 26,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-056",
+    "seconds": 29,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-057",
+    "seconds": 27,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-058",
+    "seconds": 23,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-059",
+    "seconds": 24,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-060",
+    "seconds": 34,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-061",
+    "seconds": 24,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-062",
+    "seconds": 28,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-063",
+    "seconds": 28,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-064",
+    "seconds": 32,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-065",
+    "seconds": 30,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-066",
+    "seconds": 43,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-067",
+    "seconds": 34,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-068",
+    "seconds": 40,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-069",
+    "seconds": 20,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-070",
+    "seconds": 50,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-071",
+    "seconds": 36,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-072",
+    "seconds": 48,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-073",
+    "seconds": 26,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-074",
+    "seconds": 45,
+    "stars": 3
+  },
+  {
+    "levelId": "marais-075",
+    "seconds": 54,
+    "stars": 3
+  }
+]

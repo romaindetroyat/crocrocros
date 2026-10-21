@@ -1,5 +1,5 @@
 'use strict';
-const assert=require('node:assert/strict'),fs=require('fs'),Engine=require('../src/engine'),A=require('../src/adventure'),D=require('../content/campaign.json'),solutions=require('./adventure-solutions.json');
+const assert=require('node:assert/strict'),fs=require('fs'),Engine=require('../src/engine'),A=require('../src/adventure'),PACK=require('../content/campaign.json'),D={...PACK,levels:PACK.adventure2Levels,quest:PACK.adventure2Quest},solutions=require('./adventure-solutions.json');
 let samples=0,inFlight=0,carried=0,moving=0;
 for(const L of D.levels){let E=new Engine(L),frames=0;const route=solutions.find(s=>s.levelId===L.id);assert(route,L.id);
  for(const c of route.commands){if(c.select!==undefined)E.select(c.select);else for(let j=0;j<c.n;j++){E.step(1/60,c.input);if(++frames%91===0&&!E.won){const s=JSON.parse(JSON.stringify(E.snapshot()));assert(Engine.valid(s,L),L.id+' valid '+frames);const R=new Engine(L);assert(R.restore(s),L.id+' restore');assert.deepEqual(JSON.parse(JSON.stringify(R.snapshot())),s,L.id+' complete roundtrip');inFlight+=s.shots.length>0;carried+=s.adventure.riding.some(Boolean);moving+=L.movers.some(m=>s.adventure.movers[m.id].x!==m.x||s.adventure.movers[m.id].y!==m.y);E=R;samples++;}}}

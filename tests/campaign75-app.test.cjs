@@ -1,0 +1,13 @@
+'use strict';
+const assert=require('node:assert/strict'),{harness}=require('./app-harness.cjs'),D=require('../content/campaign.json');
+const key='crocrocros.marais75.v1',old='crocrocros.adventure2.v1',legacy={format:'crocrocros-save',version:1,completed:{'escapade-001':{stars:2,time:60}},current:null,sound:false};
+const store=new Map([[old,JSON.stringify(legacy)]]),h=harness(store);
+h.els.get('mapBtn').click();assert(!h.els.get('level-0').disabled);assert(h.els.get('level-1').disabled);h.els.get('level-0').click();h.els.get('begin').click();h.frames(3);
+function finish(ids){h.engine.collected=Object.fromEntries(ids.map(id=>[id,true]));h.engine.won=true;h.engine.event('win');h.frames(110);}
+finish(['star-0']);assert.equal(JSON.parse(store.get(key)).completed[D.levels[0].id].stars,1);h.els.get('next').click();for(const i of [1,2,3])assert(!h.els.get('level-'+i).disabled);assert(h.els.get('level-4').disabled);
+h.els.get('level-0').click();h.els.get('begin').click();finish(['star-1']);let record=JSON.parse(store.get(key)).completed[D.levels[0].id];assert.equal(record.stars,2);assert.deepEqual(record.found,['star-0','star-1']);
+h.els.get('replay').click();h.els.get('begin').click();finish(['star-1']);record=JSON.parse(store.get(key)).completed[D.levels[0].id];assert.equal(record.stars,2,'same star never counts twice');assert.equal(store.get(old),JSON.stringify(legacy));
+const free=harness(new Map(),{search:'?essai=libre'});free.els.get('region4').click();assert(!free.els.get('level-74').disabled);free.els.get('mapJournal').click();free.els.get('questWorld4').click();assert(!free.els.get('level-74').disabled,'journal preserves free mode');free.els.get('level-74').click();free.els.get('begin').click();free.frames(120);free.els.get('overviewBtn').click();assert(free.els.get('overviewCanvas'));free.els.get('planBack').click();free.els.get('journalBtn').click();assert(free.els.get('modalBody').innerHTML.includes('225'));assert(free.els.get('modalBody').innerHTML.includes('Le dernier régisseur'));
+const saved=JSON.parse(free.store.get('crocrocros.marais75.free.v1'));const reload=harness(free.store,{search:'?essai=libre'});reload.els.get('continueBtn').click();assert.equal(reload.engine.L.id,'marais-075');assert.equal(reload.engine.p[0].x,saved.current.p[0].x);
+const newBeforeArchive=store.get(key),archive=harness(store,{search:'?campagne=2-0'});archive.els.get('continueBtn').click();assert.equal(archive.engine.L.id,'escapade-002');assert.deepEqual(JSON.parse(store.get(old)).completed,legacy.completed);assert.equal(store.get(key),newBeforeArchive);
+console.log('PASS branching missions, per-star banking, no duplicate awards, separate archives, free-mode journal navigation, full map, save/reload.');

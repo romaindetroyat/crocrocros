@@ -1,0 +1,11 @@
+'use strict';
+const assert=require('node:assert/strict'),Q=require('../src/quest');
+const levels=Array.from({length:75},(_,i)=>({id:'m'+i})),completed={};
+assert.deepEqual(levels.map((l,i)=>Q.unlocked(levels,completed,i)).filter(Boolean),[true]);
+completed.m0={stars:1};assert.deepEqual([1,2,3,4].map(i=>Q.unlocked(levels,completed,i)),[true,true,true,false]);
+completed.m3={stars:3};completed.m1={stars:0};assert.equal(Q.unlocked(levels,completed,4),false);completed.m2={stars:2};assert(Q.unlocked(levels,completed,4));
+completed.m4={stars:1};assert(Q.unlocked(levels,completed,5));assert.equal(Q.summary(levels,completed).next,5);assert.equal(Q.summary(levels,completed).stars,7);
+completed.m0.stars=3;assert.equal(Q.summary(levels,completed).stars,9,'replay replaces best result, does not farm stars');
+for(const l of levels)completed[l.id]={stars:3};completed.unrelated={stars:3};const final=Q.summary(levels,completed);assert.equal(final.stars,225);assert.equal(final.next,-1);assert.equal(final.worlds.filter(w=>w.restored).length,5);assert.equal(final.badges.filter(b=>b.earned).length,6);assert.equal(final.worlds.flatMap(w=>w.missions).filter(m=>m.complete).length,15);
+for(const l of levels)completed[l.id]={stars:0};assert(Q.summary(levels,completed).worlds.every(w=>w.restored),'stars never block the story');assert.equal(Q.summary(levels,completed).stars,0);
+console.log('PASS 15 branching missions, best stars without duplication, 225-star cap, 5 restorations, 6 rewards; zero stars can complete the story.');

@@ -1,14 +1,30 @@
-# Les Cro Cro Cros — La folle traversée
+# Les Cro Cro Cros — La fête du marais
 
-Jeu de plateforme et d’énigmes en solo, en français. **Version 2.0.0 : nouvelle coopération physique et campagne de 100 parcours.**
+Jeu de plateforme et d’énigmes en solo, en français. **Version 3.0.0 : 75 énigmes, 225 étoiles et un marais à faire revivre.**
 
-[Jouer](https://crocrocros.vercel.app/) · [Explorer les 100 niveaux librement](https://crocrocros.vercel.app/?essai=libre) · [Retrouver la campagne 1.2 et sa progression](https://crocrocros.vercel.app/?campagne=archive) · [Aventure classique de 37 niveaux](https://crocrocros.vercel.app/?campagne=classique)
+[Jouer](https://crocrocros.vercel.app/) · [Explorer librement](https://crocrocros.vercel.app/?essai=libre) · [Campagne 2.0](https://crocrocros.vercel.app/?campagne=2-0) · [Campagne 1.2](https://crocrocros.vercel.app/?campagne=archive) · [Aventure classique](https://crocrocros.vercel.app/?campagne=classique)
 
-Le bouclier devient un moyen de transport : les deux équipiers peuvent embarquer, voyager sur une nacelle, planer, prendre un courant d’air et descendre à destination. Les tirs rebondissent sur des réflecteurs orientables et traversent certains portails. Les nacelles transportent réellement les personnages ; casser un support transforme le trajet d’une passerelle.
+Après la grande crue, les chemins sont coupés et le théâtre est silencieux. Croquinet, Croquefort et Croqueboum aident les habitants à préparer une fête : faire passer les invitations, remplir les paniers, construire la scène, rallumer les jardins et ramener les derniers invités.
 
-La campagne emploie 16 situations fondatrices : bac, cheminée à ricochets, vol en équipe, pont descendant, relève d’un opérateur, contrepoids, aiguillage de tirs, ascenseurs opposés, tremplin, postes simultanés, chaîne de réflecteurs, portes complémentaires, sauvetage de deux balcons, souffleries alternées, course au frein et portail pour projectiles. Le catalogue compose **24 parcours concentrés, 65 traversées en deux passages et 11 traversées en trois passages**. Les situations reviennent et se combinent ; ce ne sont pas 100 règles indépendantes. Les grands parcours atteignent 5 580 unités de largeur et 1 780 de hauteur.
+## Une campagne reconstruite
 
-Les passages d’un niveau sont reliés physiquement. Aucun repositionnement automatique ne remplace les déplacements : les solutions enregistrées utilisent les mêmes commandes que le joueur. Le dernier opérateur doit rejoindre la sortie. Des points de ralliement, le rembobinage, le plan et des indices progressifs permettent de reprendre après une erreur.
+La sélection conserve 15 scènes distinctes de la version 2.0 et ajoute 60 nouvelles énigmes. Les assemblages de passages indépendants ont été retirés de la campagne principale. Les espaces sont connectés : libérer le dernier opérateur, déplacer un outil indispensable ailleurs, modifier un trajet ou réutiliser un objet fait partie du problème.
+
+Les régions introduisent progressivement transport, coopération avec les animaux, distribution d’énergie, poids et ressources, lumière, musique et coordination à plusieurs étages. Exemples : une balance 1 + 4 = 2 + 3, un instrument qui sert d’abord de contrepoids, un ascenseur à trois arrêts, une partition jouée par les animaux, un bouclier successivement marchepied, réflecteur et planeur. La difficulté est une appréciation éditoriale de la réflexion nécessaire, avec des respirations entre les grands défis.
+
+## Étoiles, missions et récompenses
+
+- **15 missions dans 5 régions.** Chaque mission commence par une entrée, propose trois préparatifs dans l’ordre choisi, puis une conclusion. Le carnet rappelle l’objectif et la prochaine étape.
+- **225 étoiles nommées.** Chaque étoile distincte est conservée après la réussite du niveau. On peut compléter une collection sur plusieurs parties terminées ; reprendre la même étoile n’augmente pas le total. Les étoiles restent facultatives.
+- **5 lieux à restaurer.** Le village du carnet se transforme au fil des missions. Chaque réussite explique ce qui a été accompli pour les habitants.
+- **6 décorations à gagner**, à 15, 45, 90, 135, 180 et 225 étoiles : guirlande, fleurs, enseigne, lanternes, fanions et constellation.
+- La carte distingue niveaux terminés, collections complètes, étoiles manquantes et missions accessibles. Toucher les étoiles pendant une partie ouvre le carnet.
+
+## Une troupe et des décors vivants
+
+Les crocos possèdent **45 animations d’attente, 15 chacun**, **8 scènes à deux**, des réactions au contexte, des poses de transport et des célébrations. La répétition générale, accessible à l’accueil et en pause, permet de regarder chaque numéro. Les animations cèdent immédiatement la place aux commandes ; un réglage permet de les réduire et suit par défaut la préférence de l’appareil.
+
+Les tortues transportent personnages et miroirs ; les grenouilles servent de commandes chantantes. Éléphants, hippopotames, oiseaux et lions participent aux énigmes. Loutres, canards, crabes, hérissons, escargots, papillons, souris, chouettes et lucioles animent les lieux. Bâtiments, scènes, moulins, observatoires et échafaudages donnent des repères aux niveaux.
 
 ## Commandes
 
@@ -18,59 +34,57 @@ Les passages d’un niveau sont reliés physiquement. Aucun repositionnement aut
 | Sauter avec Croquinet, monter à l’échelle | ↑ | Haut de la croix |
 | Descendre à l’échelle | ↓ | Bas de la croix |
 | Charge / bouclier / tir | Espace | A |
-| Embarquer, descendre, manœuvrer | F | B, dont le libellé suit le contexte |
+| Embarquer, porter, poser, manœuvrer | F | B ; son libellé suit le contexte |
 | Changer de personnage | W / X / C | Trois portraits |
 | Pause | Échap | START |
 | Revenir jusqu’à huit secondes en arrière | R | ↶ |
 | Vue complète, en pause | M | Plan |
 
-Pour voyager ensemble : sélectionner Croquefort, lever le bouclier avec A, rapprocher les deux autres puis B. Sélectionner un passager et B pour débarquer. Le bouclier frontal protège ; le bouclier levé permet de transporter et de planer.
+Pour voyager ensemble : sélectionner Croquefort, lever le bouclier avec A, rapprocher les deux autres puis B. Sélectionner un passager et B pour débarquer. Le bouclier frontal protège ; le bouclier levé permet de transporter et de planer. Les objets lourds sont réservés à Croquefort.
 
-Sur iPhone : paysage, scène sur toute la largeur, commandes en dessous. Le zoom va de 2,4× à « Tout » ; toucher sa valeur restaure 1,9×. Les portraits indiquent les passagers à bord. Les pointillés du Plan relient les commandes aux passages qu’elles actionnent.
+Sur iPhone : paysage, scène sur toute la largeur, commandes en dessous. Le zoom va de 2,4× à « Tout » ; toucher sa valeur restaure 1,9×. Le Plan cadre le niveau entier et permet de sélectionner un personnage avant de reprendre. Trois indices progressifs sont disponibles par énigme.
 
-## Progression et installation
+## Sauvegardes et installation
 
-La nouvelle campagne possède une sauvegarde distincte. La progression 1.2 reste consultable par le lien d’archive, et la campagne classique conserve aussi sa sauvegarde. Le mode libre ouvre les 100 cartes dans un emplacement séparé. Les préférences de son et de zoom de la campagne 1.2 sont reprises au premier lancement de la nouvelle aventure.
+La campagne 3.0, son mode libre et les anciennes éditions utilisent des sauvegardes distinctes. La progression de la version 2.0 reste accessible par son lien d’archive. Les préférences de son et de zoom sont reprises au premier lancement. Les niveaux ayant été reconstruits, les anciennes victoires ne sont pas converties en victoires de la nouvelle campagne.
 
-La partie se sauvegarde automatiquement sur le navigateur. Export et import sont disponibles dans les réglages. Pour importer une sauvegarde d’une ancienne campagne, ouvrir d’abord cette campagne. Effacer les données du navigateur efface les sauvegardes locales.
+Progression et tentative se sauvegardent automatiquement dans le navigateur. Export et import sont disponibles dans les réglages. Pour importer un ancien export, ouvrir d’abord la campagne correspondante. Effacer les données du navigateur efface ces sauvegardes locales.
 
-Le fichier [Les_Cro_Cro_Cros.html](Les_Cro_Cro_Cros.html) fonctionne directement sur ordinateur, sans connexion. Pour l’installation PWA : ouvrir le site HTTPS, puis Safari → Partager → Sur l’écran d’accueil sur iPhone. Attendre « Prêt hors ligne » avant de couper la connexion. Après une mise à jour, recharger la page pour charger le nouveau jeu.
+[Les_Cro_Cro_Cros.html](Les_Cro_Cro_Cros.html) fonctionne directement sur ordinateur, sans connexion. Pour la PWA : ouvrir le site HTTPS, puis Safari → Partager → Sur l’écran d’accueil sur iPhone. Attendre « Prêt hors ligne » avant de couper la connexion. Après une mise à jour, recharger la page ou fermer puis rouvrir la PWA ; l’accueil doit afficher **v3.0.0**.
 
-Le jeu livré n’a ni dépendance à installer, ni compte, publicité, achat ou serveur de jeu.
+Le jeu n’exige aucun compte, achat, publicité ou serveur de jeu. Tous ses dessins et sons sont locaux.
 
-## Validation de la version 2.0
+## Vérifications de la version 3.0
 
-- 100 parcours terminés avec les commandes du moteur ; 300 étoiles obtenues ; aucun retour après choc ou chute dans ces parcours.
-- 2 198 interruptions par sauvegarde/reprise intégrées aux replays, dont 974 avec passagers, 744 après déplacement de nacelles et 51 avec projectiles en vol.
-- Vérification des collisions du groupe transporté, du débarquement, des orientations des réflecteurs, des portails, des chronos et des retours au ralliement.
-- Interface réelle Chromium à 667 × 375, 844 × 390 et 932 × 430 : scène pleine largeur, contrôles dessous, sélection directe, zoom complet et persistance.
-- Rendu détaillé et complet des 100 cartes dans Chromium ; 13 scènes en cours de partie vérifiées avec leur Plan.
-- Replays et sauvegardes de la campagne 1.2 toujours valides : 100 victoires, 300 étoiles, 1 873 états.
+- 75 solutions exécutées avec les commandes du moteur : 225 étoiles, aucun retour après choc ou chute dans ces parcours.
+- 1 314 interruptions avec sauvegarde puis reprise, dont 141 avec objet porté, 97 avec passagers, 200 après déplacement de plateforme, 25 avec projectile et 92 pendant une partition.
+- Mauvaises configurations et récupération : surcharge, comptes exacts, fausses notes, orientation du bouclier, rappel des trois arrêts d’un ascenseur et transport de charges.
+- Progression des 15 missions, plafond de 225 étoiles, conservation des étoiles distinctes entre victoires, récompenses, sauvegardes isolées et accès au mode libre.
+- 150 rendus complets/détaillés dans Chromium ; 16 scènes en partie avec Plan et carnet ; contrôles à 667 × 375, 844 × 390 et 932 × 430 ; pause en portrait.
+- 45 animations et 8 duos vérifiés sans modifier la simulation ; pause, reprise, commandes et réduction des animations vérifiées.
+- Archives préservées : 100 niveaux / 300 étoiles / 2 198 reprises pour la 2.0 ; 100 niveaux / 300 étoiles / 1 873 reprises pour la 1.2.
 
-Ces contrôles établissent la possibilité des parcours et les comportements testés. Ils ne constituent pas une étude du plaisir de jeu, une recherche de toutes les solutions possibles, ni une validation de Safari sur iPhone physique. Détails et catalogue : [REFONTE_2_0.md](design/REFONTE_2_0.md).
+Ces contrôles établissent la possibilité des parcours et les comportements testés. Ils ne prouvent pas le plaisir de jeu, ne couvrent pas tous les chemins alternatifs et ne remplacent pas un essai de Safari sur iPhone physique. Catalogue des 75 idées, méthode et références : [REFONTE_3_0.md](design/REFONTE_3_0.md). Résultats chiffrés : [VALIDATION.json](VALIDATION.json).
 
 ## Reconstruire et vérifier
 
-Node.js et Python 3 suffisent pour la compilation et les tests du moteur. Les tests d’interface utilisent `@napi-rs/canvas`, ceux de navigateur Playwright avec Chromium. Aucun de ces outils n’est requis pour jouer.
+Node.js et Python 3 suffisent pour compiler et vérifier la simulation. Les tests d’interface utilisent `@napi-rs/canvas`, ceux de navigateur `playwright` avec Chromium ; ces dépendances de développement doivent être disponibles dans Node. Le jeu livré n’en dépend pas.
 
 ```sh
-node content/adventure-campaign.cjs
-node tests/adventure.test.cjs
-node tests/adventure-state.test.cjs
-node tests/adventure-mechanics.test.cjs
-node tests/adventure-app.test.cjs
+node content/campaign75.cjs
+node tests/campaign75.test.cjs
+node tests/campaign75-state.test.cjs
+node tests/campaign75-mechanics.test.cjs
+node tests/campaign75-design.test.cjs
+node tests/quest.test.cjs
+node tests/attitudes.test.cjs
+node tests/campaign75-app.test.cjs
 node tests/joypad.test.cjs
-node tests/campaign100-state.test.cjs
-node tests/campaign100-app.test.cjs
-node tests/variety.test.cjs
 python3 build.py
 node tests/package.test.cjs
-node tests/mobile-layout.test.cjs
-node tests/adventure-browser.test.cjs
+CROCO_CHROME_PATH=/chemin/vers/chromium node tests/campaign75-browser.test.cjs
 ```
 
-`content/adventure-campaign.cjs` contient les scènes, les variantes, le catalogue explicite des combinaisons et leurs plans de solution. `src/adventure.js` gère les nouvelles interactions ; `src/engine.js` reste la simulation commune aux campagnes. Les scripts historiques `content/campaign100.cjs` et `content/author-campaign.cjs` servent à reconstruire leurs anciennes éditions : ne pas les lancer pour compiler la version 2.0.
+`content/campaign75.cjs` assemble la sélection, les métadonnées et les scènes écrites dans `content/levels75-*.cjs`, à l’aide de `content/author75.cjs`. Les plans de solution deviennent des replays d’entrées réelles. `src/quest.js` et `src/quest-ui.js` gèrent les missions ; `src/attitudes.js` les crocos ; `src/scenery.js` les nouveaux décors. Les anciennes commandes de génération reconstruisent leurs éditions historiques : ne pas les utiliser pour générer la campagne 3.0.
 
-Vercel sert le dossier `dist/` déjà compilé. Tout changement de jeu doit donc être suivi de `python3 build.py` et de la publication des fichiers compilés avec les sources.
-
-Les personnages et décors sont dessinés en Canvas. L’arrangement instrumental de la comptine traditionnelle est documenté dans [MUSIQUE.md](MUSIQUE.md).
+Vercel sert `dist/` déjà compilé. Publier les fichiers compilés avec les sources après `python3 build.py`. L’arrangement instrumental de la comptine traditionnelle est documenté dans [MUSIQUE.md](MUSIQUE.md).

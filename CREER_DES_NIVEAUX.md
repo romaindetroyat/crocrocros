@@ -1,5 +1,7 @@
 # Ajouter des énigmes sans casser la progression
 
+> Document historique de la campagne classique. Pour la campagne 3.0 à 75 niveaux, utiliser `content/campaign75.cjs`, `content/author75.cjs` et `content/levels75-*.cjs`. La méthode actuelle et le catalogue sont dans [design/REFONTE_3_0.md](design/REFONTE_3_0.md). Ne pas lancer les anciens générateurs pour reconstruire la version actuelle.
+
 ## Organisation
 
 `content/campaign.json` contient `version`, `heroes` et `levels`. Ajouter les niveaux en fin de liste conserve l’ordre de déblocage. Chaque niveau doit recevoir un `id` inédit et permanent, par exemple `desert-01`. Ne pas renommer les identifiants des niveaux déjà distribués ; les sauvegardes les utilisent. Ajouter 163 niveaux à la campagne de 37 ne demande pas de réécrire le moteur ou les sauvegardes.

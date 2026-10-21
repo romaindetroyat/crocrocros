@@ -1,0 +1,1136 @@
+{
+  "levels": 75,
+  "stars": 225,
+  "retainedScenes": 15,
+  "newScenes": 60,
+  "concatenatedScenes": 0,
+  "conditionGraphGroupsForSpatialReview": [],
+  "notes": "Anonymous typed dependency graph, no names or coordinates. Equal graphs require spatial review; different graphs do not prove novelty or fun.",
+  "levelsCatalog": [
+    {
+      "level": 1,
+      "title": "Le bac n’attend personne",
+      "insight": "bac et retour",
+      "band": 1,
+      "heroActions": 5,
+      "width": 1570,
+      "height": 1040,
+      "stars": [
+        "Le quai du départ",
+        "Voyager ensemble",
+        "Le premier mouillage"
+      ],
+      "graph": "a64b17bd7ed989f99c815324460b3fb5f65681cd2a1b73dd44162cbc7883fcc6"
+    },
+    {
+      "level": 2,
+      "title": "Le petit pois prend l’escalier",
+      "insight": "ricochet et protection",
+      "band": 1,
+      "heroActions": 9,
+      "width": 1540,
+      "height": 1030,
+      "stars": [
+        "Le pied de la cheminée",
+        "Le sceau des poutres",
+        "La sortie du conduit"
+      ],
+      "graph": "a66e395606200ebbd9ed1822b2088af25d394bdb72cfc7b3876e9c0c306f42cb"
+    },
+    {
+      "level": 3,
+      "title": "Et le dernier, on le laisse ?",
+      "insight": "sauvetage et relève",
+      "band": 2,
+      "heroActions": 4,
+      "width": 1840,
+      "height": 1110,
+      "stars": [
+        "Le poste de relève",
+        "Le dernier passager",
+        "Le quai retrouvé"
+      ],
+      "graph": "07b99a3d72eb027b7362ee84f533f47904270d4cd00d134b4144a3ff35d4026f"
+    },
+    {
+      "level": 4,
+      "title": "Une porte peut en cacher une autre",
+      "insight": "portes complémentaires",
+      "band": 2,
+      "heroActions": 6,
+      "width": 1640,
+      "height": 1080,
+      "stars": [
+        "Le grenier entrouvert",
+        "L’autre galerie",
+        "La porte retrouvée"
+      ],
+      "graph": "ae0b0ce740dae19c5845440b4a0b6a7c31cecfb6c638d657cceb3b176b3fdba4"
+    },
+    {
+      "level": 5,
+      "title": "Le quatrième équipier",
+      "insight": "contrepoids et raccourci",
+      "band": 2,
+      "heroActions": 7,
+      "width": 1660,
+      "height": 1060,
+      "stars": [
+        "Le coffre du contrepoids",
+        "Un quatrième équipier",
+        "Le passage libéré"
+      ],
+      "graph": "73198598de7f29376412da87b48acee30fd3c350771636f7bedd9d81ebf65e59"
+    },
+    {
+      "level": 6,
+      "title": "Taxi pour trois museaux",
+      "insight": "vol en équipe",
+      "band": 2,
+      "heroActions": 4,
+      "width": 1700,
+      "height": 1110,
+      "stars": [
+        "La préparation du taxi",
+        "Un voyage au-dessus du marais",
+        "Le quai du ciel"
+      ],
+      "graph": "650690630f0985a5698df2e9e9b9eb219355a29ab81bcc47d9c248062c2cff90"
+    },
+    {
+      "level": 7,
+      "title": "En haut, en bas, et dans cet ordre",
+      "insight": "aiguillage de tirs",
+      "band": 2,
+      "heroActions": 7,
+      "width": 1510,
+      "height": 1140,
+      "stars": [
+        "Le sous-sol du miroir",
+        "Le bon aiguillage",
+        "Les deux directions"
+      ],
+      "graph": "7cbef2c2bdb42c4c05ba30740d8b718003e26559119cda7996f862700fad1f7b"
+    },
+    {
+      "level": 8,
+      "title": "Ce pont a un étage de moins",
+      "insight": "décor transformable",
+      "band": 2,
+      "heroActions": 6,
+      "width": 1780,
+      "height": 960,
+      "stars": [
+        "Le premier étage",
+        "L’étage oublié",
+        "Le pont transformé"
+      ],
+      "graph": "44c38bd5c96af1d7c9f3e5ea85116b9f7ffb9fd8b238d2e4b186bc3044f3ef21"
+    },
+    {
+      "level": 9,
+      "title": "Un monte, l’autre descend",
+      "insight": "ascenseurs en opposition",
+      "band": 2,
+      "heroActions": 7,
+      "width": 1770,
+      "height": 1110,
+      "stars": [
+        "Le premier ascenseur",
+        "Le quai de l’opérateur",
+        "La relève d’en face"
+      ],
+      "graph": "14da5dbca3bac47344a6a8d0cfa437f78523fd3574e414e1dc81cd473034514a"
+    },
+    {
+      "level": 10,
+      "title": "La photo de famille",
+      "insight": "coordination simultanée",
+      "band": 2,
+      "heroActions": 5,
+      "width": 1610,
+      "height": 1080,
+      "stars": [
+        "Le photographe du balcon",
+        "Le poste du bouclier",
+        "Toute la famille"
+      ],
+      "graph": "38aa750d4fc1227b44057f00125a69cb2709aacca59f93f5c413c09ad199906d"
+    },
+    {
+      "level": 11,
+      "title": "La boulette qui prend les virages",
+      "insight": "labyrinthe de ricochets",
+      "band": 3,
+      "heroActions": 6,
+      "width": 1740,
+      "height": 1110,
+      "stars": [
+        "Le prisme du dernier coude",
+        "Le chemin de la lumière",
+        "Le toit retrouvé"
+      ],
+      "graph": "ad4a03c5b9488981fc441591ba0708999d68cad90c36f7c5ef87ddad4083419b"
+    },
+    {
+      "level": 12,
+      "title": "La tournée du sauveteur",
+      "insight": "sauvetage sur deux balcons",
+      "band": 3,
+      "heroActions": 4,
+      "width": 1850,
+      "height": 1120,
+      "stars": [
+        "Le premier voisin",
+        "Le balcon du milieu",
+        "Le deuxième voisin"
+      ],
+      "graph": "7fa4245e11f5f15105ba1c817399c64e23fb074c5a16145363dca5d371dbe0ab"
+    },
+    {
+      "level": 13,
+      "title": "Passez-moi le courant",
+      "insight": "relais de souffleries",
+      "band": 3,
+      "heroActions": 5,
+      "width": 1830,
+      "height": 1110,
+      "stars": [
+        "Le premier courant",
+        "Le palier du relais",
+        "La seconde soufflerie"
+      ],
+      "graph": "dc6663182309b814787da15da5b8ad4eea7440d7d269dcaa59c4bebf81cb7320"
+    },
+    {
+      "level": 14,
+      "title": "Trois billets pour les nuages",
+      "insight": "tremplin et vol plané",
+      "band": 2,
+      "heroActions": 4,
+      "width": 1900,
+      "height": 1120,
+      "stars": [
+        "Avant le grand saut",
+        "Une étoile en plein vol",
+        "Le dernier atterrissage"
+      ],
+      "graph": "a1eb495508c6a7a542b3296fa494584d23bf2279d5b19f7a97a5537d1d0e8343"
+    },
+    {
+      "level": 15,
+      "title": "La livraison transdimensionnelle",
+      "insight": "tir et voyage par portail",
+      "band": 3,
+      "heroActions": 6,
+      "width": 1720,
+      "height": 1090,
+      "stars": [
+        "Le sceau du portail",
+        "Le quai transdimensionnel",
+        "L’autre bout du monde"
+      ],
+      "graph": "8d9858cb82bc28ae2bbd833ddb69949e430d9f77f84457bf8cb3773ced4fe73f"
+    },
+    {
+      "level": 16,
+      "title": "Le pied qui réveille le moulin",
+      "insight": "Intercepter une onde après son récepteur",
+      "band": 2,
+      "heroActions": 4,
+      "width": 1600,
+      "height": 1050,
+      "stars": [
+        "Le bon côté du récepteur",
+        "Le balcon du meunier",
+        "La roue réveillée"
+      ],
+      "graph": "5fca3cdd9a3b52d3e430dbcaff9929819dc566e6b159f6b5774508bb6c225a8c"
+    },
+    {
+      "level": 17,
+      "title": "À tes souhaits, la balance",
+      "insight": "Contourner un contrepoids avant de le faire pousser par le vent",
+      "band": 3,
+      "heroActions": 7,
+      "width": 1600,
+      "height": 1050,
+      "stars": [
+        "Le chemin du haut",
+        "La corniche",
+        "Un contrepoids bien garé"
+      ],
+      "graph": "0d75b04d8a8d560981666d74dee6e146c070ccbbeb867533cc3eb887a02ec207"
+    },
+    {
+      "level": 18,
+      "title": "La livraison de Paulette",
+      "insight": "Faire tomber un projectile dans un panier suspendu",
+      "band": 2,
+      "heroActions": 3,
+      "width": 1600,
+      "height": 1050,
+      "stars": [
+        "Le quai des livraisons",
+        "La visite au nid",
+        "Le panier plein"
+      ],
+      "graph": "870e9069a0956f3dff0fe2dce57df3e27a8e8de3422c7ab7e6ed39c6cfb055b7"
+    },
+    {
+      "level": 19,
+      "title": "Le lion saute la sonnette",
+      "insight": "Utiliser la trajectoire d’un bond pour toucher une sonnette haute",
+      "band": 3,
+      "heroActions": 6,
+      "width": 1600,
+      "height": 1050,
+      "stars": [
+        "Au-dessus des pommiers",
+        "Le public du grand saut",
+        "Les voisins prévenus"
+      ],
+      "graph": "5a81f507c65138b8befae880277f1dc391bc511edfc7084b0b01f1f74931c2ca"
+    },
+    {
+      "level": 20,
+      "title": "La tortue et le rayon de lune",
+      "insight": "Garer un réflecteur mobile sous sa cible",
+      "band": 3,
+      "heroActions": 7,
+      "width": 1720,
+      "height": 1100,
+      "stars": [
+        "Le premier appel",
+        "Le bon mouillage",
+        "Le sommet du phare"
+      ],
+      "graph": "8cf4407d96b946aac06749269b2c6296e3b6f029daf97672574447e3205b5103"
+    },
+    {
+      "level": 21,
+      "title": "Basile, joue-la encore",
+      "insight": "Transformer une première onde en accès au poste qui autorise la seconde",
+      "band": 3,
+      "heroActions": 5,
+      "width": 1600,
+      "height": 1050,
+      "stars": [
+        "Le public du carillon",
+        "Le bout du balcon",
+        "Le concert prêt"
+      ],
+      "graph": "9997412fa847d6e1e1c2aaca754336fa05c3f84ae4ce5113f08d6e667823b31c"
+    },
+    {
+      "level": 22,
+      "title": "L’éternuement à double service",
+      "insight": "Choisir successivement les deux directions d’une même force",
+      "band": 3,
+      "heroActions": 7,
+      "width": 1740,
+      "height": 1050,
+      "stars": [
+        "Le panier de gauche",
+        "La passerelle de service",
+        "Les deux paniers équilibrés"
+      ],
+      "graph": "fe28286b96a5e8b616630537f1c0abfc0f38f97b4ac3932be76de7a97a40cc80"
+    },
+    {
+      "level": 23,
+      "title": "Deux paniers et un bec",
+      "insight": "Préparer le deuxième récepteur avant de laisser passer la prochaine noix",
+      "band": 3,
+      "heroActions": 5,
+      "width": 1680,
+      "height": 1120,
+      "stars": [
+        "Le volet du grenier",
+        "La seconde livraison",
+        "La réserve remplie"
+      ],
+      "graph": "f9fe2c9178d0b25f3b2f01b8429054829c797717774c6cf16f5945def52f6135"
+    },
+    {
+      "level": 24,
+      "title": "Le chœur qui chante de travers",
+      "insight": "Inverser des voisins pour obtenir une configuration, sans appuyer partout au hasard",
+      "band": 2,
+      "heroActions": 4,
+      "width": 1600,
+      "height": 1050,
+      "stars": [
+        "Le pupitre du chef",
+        "Les trois voix",
+        "La partition accordée"
+      ],
+      "graph": "657f1a08fada40b603062369e14a9a3e8a3bc3d61209fecbd01fdb1d697a3fcf"
+    },
+    {
+      "level": 25,
+      "title": "Le dernier invité de Tortille",
+      "insight": "Utiliser deux états d’un passage pour organiser une relève avec retour",
+      "band": 3,
+      "heroActions": 5,
+      "width": 1880,
+      "height": 1160,
+      "stars": [
+        "Le premier embarquement",
+        "Le quai du tireur",
+        "Le dernier invité"
+      ],
+      "graph": "be826a38e9b76de5dc6190525d5374f966d4cef3ecf6eee0167ede53a367c613"
+    },
+    {
+      "level": 26,
+      "title": "Le pont préfère le silence",
+      "insight": "Couper volontairement le courant après avoir mis l’équipe en sûreté",
+      "band": 3,
+      "heroActions": 4,
+      "width": 1740,
+      "height": 1120,
+      "stars": [
+        "Avant le départ",
+        "Le quai de sûreté",
+        "Le pont au repos"
+      ],
+      "graph": "4db0733df28f133ddebc010bfddb7fc5c1ce0e4296c84c3cc3974800dd4f6ea6"
+    },
+    {
+      "level": 27,
+      "title": "Prends ma place, je pousse",
+      "insight": "Remplacer un poids par un équipier avant de déplacer ce poids hors d’un tir",
+      "band": 4,
+      "heroActions": 9,
+      "width": 1760,
+      "height": 1100,
+      "stars": [
+        "Le sceau du grenier",
+        "La relève",
+        "Le passage dégagé"
+      ],
+      "graph": "97929c2a570f4948b342f3bb9f8d9a14b3c08b0e6a31c1299e803aa91696bbcb"
+    },
+    {
+      "level": 28,
+      "title": "Le bouclier fait des reflets",
+      "insight": "Employer le protecteur comme réflecteur mobile pour deux rayons verticaux",
+      "band": 3,
+      "heroActions": 8,
+      "width": 1600,
+      "height": 1050,
+      "stars": [
+        "Le pas de tir",
+        "Le jardin des lanternes",
+        "Deux reflets pour la fête"
+      ],
+      "graph": "2528e0f3603cfe6210d5dca538592f8c109601237d36a286f046486d9ae236c6"
+    },
+    {
+      "level": 29,
+      "title": "Le courrier arrive par derrière",
+      "insight": "Utiliser le sens d’un tir et le retour d’un portail pour atteindre un verrou blindé",
+      "band": 3,
+      "heroActions": 4,
+      "width": 1720,
+      "height": 1100,
+      "stars": [
+        "Le guichet du grenier",
+        "Le courrier parti",
+        "La bonne entrée"
+      ],
+      "graph": "02e3c0232b8cd30538aa1af0a17df4fe613e3fc43af6f60ba52f240a0e6d41d4"
+    },
+    {
+      "level": 30,
+      "title": "Tout le monde au pique-nique",
+      "insight": "Faire coopérer deux animaux pour fixer le trajet de retour du dernier opérateur",
+      "band": 4,
+      "heroActions": 7,
+      "width": 1820,
+      "height": 1180,
+      "stars": [
+        "L’accord du panier",
+        "Le panier pique-nique",
+        "La grande table"
+      ],
+      "graph": "22618d452dd0ad5f0fc385385369e878dbf89d810f512e60c825350959d40c72"
+    },
+    {
+      "level": 31,
+      "title": "Trop de courant dans le moulin",
+      "insight": "Distinguer la configuration d’accès de la configuration de fonctionnement",
+      "band": 3,
+      "heroActions": 6,
+      "width": 1700,
+      "height": 1120,
+      "stars": [
+        "Le plan retrouvé",
+        "Un moteur sans surcharge",
+        "Les établis réveillés"
+      ],
+      "graph": "5bd1d0b1917ddc13af7a5a464db92a866e4ef5ebbfdef5439e655e3d3c976dca"
+    },
+    {
+      "level": 32,
+      "title": "Le studio veut du calme",
+      "insight": "Observer sous pression puis libérer la scène avant le tir",
+      "band": 4,
+      "heroActions": 5,
+      "width": 1660,
+      "height": 1080,
+      "stars": [
+        "Les coulisses",
+        "Le cadre de la photo",
+        "La photo sans personne devant"
+      ],
+      "graph": "e8569afd09e0232f436b49cae5d83bc5a22e9f0d6549c1ee09fe06309815fc3a"
+    },
+    {
+      "level": 33,
+      "title": "Trois pour ouvrir, deux pour jouer",
+      "insight": "Changer une majorité de trois en équilibre de deux sans perdre le résultat",
+      "band": 4,
+      "heroActions": 8,
+      "width": 1780,
+      "height": 1130,
+      "stars": [
+        "Le soufflet du grenier",
+        "Le coffre ouvert",
+        "Le bon accord"
+      ],
+      "graph": "fae011130f9e3982c6cf0136d83c35276b774a1172481e294495d245d2217164"
+    },
+    {
+      "level": 34,
+      "title": "La répétition des trois grenouilles",
+      "insight": "Lire une partition et retrouver ses notes dans un espace à deux étages",
+      "band": 3,
+      "heroActions": 7,
+      "width": 1660,
+      "height": 1100,
+      "stars": [
+        "Le pupitre du balcon",
+        "La voix grave",
+        "Le refrain complet"
+      ],
+      "graph": "2f7cca396b8d8f969b93911451ba7563d9fb4c0c21e4c9e316acebffb3ec1d1f"
+    },
+    {
+      "level": 35,
+      "title": "Un atelier au plafond",
+      "insight": "Préparer un miroir à quai puis verrouiller son arrivée depuis un autre étage",
+      "band": 4,
+      "heroActions": 11,
+      "width": 1800,
+      "height": 1150,
+      "stars": [
+        "L’atelier de commande",
+        "Le réglage au départ",
+        "Le toit de la fabrique"
+      ],
+      "graph": "74eeca34c0c30ee2e0f5fead96f9e19d70dbb15535e343a9d42514893c32b176"
+    },
+    {
+      "level": 36,
+      "title": "La manivelle n’a pas de jumelle",
+      "insight": "Réemployer une même pièce après avoir sécurisé le premier mécanisme",
+      "band": 3,
+      "heroActions": 7,
+      "width": 1740,
+      "height": 1120,
+      "stars": [
+        "Les plans du décor",
+        "Une pièce en voyage",
+        "La toile attachée"
+      ],
+      "graph": "909edc226ec9d33d390b808ef05af18d6cd03400605ef682411fc2354f7d881c"
+    },
+    {
+      "level": 37,
+      "title": "Le colis passe avant le livreur",
+      "insight": "Passer un colis pendant qu’un autre croco tient le chemin, puis transmettre la relève",
+      "band": 4,
+      "heroActions": 5,
+      "width": 1880,
+      "height": 1160,
+      "stars": [
+        "Le livreur oublié",
+        "Le colis au sec",
+        "Le pont pour tous"
+      ],
+      "graph": "03b42bc1085096d660821f226a806bbab853b167df989d70b1bda21a7aff8b45"
+    },
+    {
+      "level": 38,
+      "title": "Dix kilos de confettis",
+      "insight": "Répartir quatre poids différents en deux charges égales",
+      "band": 4,
+      "heroActions": 11,
+      "width": 1770,
+      "height": 1120,
+      "stars": [
+        "Le petit sac du grenier",
+        "La pesée exacte",
+        "Dix kilos bien répartis"
+      ],
+      "graph": "fff2d3733eedb6cde60f9c37328756329de9f93c9988f84a359f6ec71a555cf0"
+    },
+    {
+      "level": 39,
+      "title": "Le croco qui pesait une plume",
+      "insight": "Remplacer un opérateur par une charge pour libérer ses capacités",
+      "band": 4,
+      "heroActions": 5,
+      "width": 1700,
+      "height": 1110,
+      "stars": [
+        "Les lampes du grenier",
+        "Le remplacement",
+        "Un croco enfin libre"
+      ],
+      "graph": "f0f4fe271756fa59d918891af168373bebf95afa06c160c213d3e653b1f09fd0"
+    },
+    {
+      "level": 40,
+      "title": "L’aiguillage à trois humeurs",
+      "insight": "Mémoriser des réparations en changeant une distribution à trois états",
+      "band": 4,
+      "heroActions": 8,
+      "width": 1800,
+      "height": 1140,
+      "stars": [
+        "Le patron original",
+        "Le grand ourlet",
+        "Les lumières prêtes"
+      ],
+      "graph": "b9d1589e006962c7663f95e3a30ec5e9a1ee34a03202b494ebc6293e0b9ec505"
+    },
+    {
+      "level": 41,
+      "title": "Léon garde le ballon",
+      "insight": "Installer un leurre pour obtenir le poids d’un animal sur un plateau",
+      "band": 4,
+      "heroActions": 6,
+      "width": 1740,
+      "height": 1120,
+      "stars": [
+        "Le ballon retrouvé",
+        "Un ami qui rend service",
+        "Le gardien content"
+      ],
+      "graph": "1aa165743324f7982353f126168762a991f3996a5d9b2eada06007e047654eac"
+    },
+    {
+      "level": 42,
+      "title": "Une cloche pour deux pupitres",
+      "insight": "Déplacer un instrument pour jouer une partition alternée",
+      "band": 4,
+      "heroActions": 12,
+      "width": 1760,
+      "height": 1120,
+      "stars": [
+        "La cloche en voyage",
+        "Le retour du grave",
+        "La chanson installée"
+      ],
+      "graph": "bc2e195c6ba63716c8f09710c0fc463deff34388b3ded228ba18e52398eb35ef"
+    },
+    {
+      "level": 43,
+      "title": "La batterie veut passer aussi",
+      "insight": "Maintenir un passage pendant le transport de sa propre source d’énergie",
+      "band": 4,
+      "heroActions": 8,
+      "width": 1820,
+      "height": 1170,
+      "stars": [
+        "Le secours",
+        "La batterie arrivée",
+        "Le dernier opérateur"
+      ],
+      "graph": "d72098521d6aaf3d27d3a8164dde969fa1c5b9d1374d460966a7e1a5fe27e510"
+    },
+    {
+      "level": 44,
+      "title": "Le dernier sac appartient au pont",
+      "insight": "Libérer un contrepoids après avoir fixé le chemin qu’il tenait",
+      "band": 4,
+      "heroActions": 11,
+      "width": 1840,
+      "height": 1150,
+      "stars": [
+        "La galerie fixée",
+        "Le sac libéré",
+        "L’équilibre retrouvé"
+      ],
+      "graph": "83c6866e1708c8f3dbf11ef991225742ccb3f7cae861ff23d1c69936f2c4a2f9"
+    },
+    {
+      "level": 45,
+      "title": "L’orchestre tient à un fil",
+      "insight": "Faire circuler deux outils entre les réparations d’un même instrument",
+      "band": 5,
+      "heroActions": 16,
+      "width": 1900,
+      "height": 1180,
+      "stars": [
+        "La cloche perdue",
+        "La charpente du spectacle",
+        "Tout tient enfin"
+      ],
+      "graph": "2ea36b3d9c37e116bd5be1471244f73cdd95ebaf75b76539fd18ef84541f5126"
+    },
+    {
+      "level": 46,
+      "title": "L’escalier préfère la nuit",
+      "insight": "Prendre un chemin dans l’obscurité, puis modifier son état depuis un refuge",
+      "band": 3,
+      "heroActions": 9,
+      "width": 1800,
+      "height": 1180,
+      "stars": [
+        "La veilleuse dans le noir",
+        "Sous les jardins",
+        "Le phare rallumé"
+      ],
+      "graph": "748c38e39fd9bff60c0c91667748734bc29d0d2bb6c98bcc9679ce900433f82e"
+    },
+    {
+      "level": 47,
+      "title": "Deux lunes pour Tortille",
+      "insight": "Utiliser les deux mouillages d’un miroir mobile sans oublier le premier",
+      "band": 4,
+      "heroActions": 8,
+      "width": 1820,
+      "height": 1150,
+      "stars": [
+        "Le premier jardin",
+        "Le deuxième mouillage",
+        "Deux lunes retrouvées"
+      ],
+      "graph": "158bce8f1dff543e1bf775f695b2b57937ac1dd67366d3f820e24b80316b6aac"
+    },
+    {
+      "level": 48,
+      "title": "La constellation se joue au canon",
+      "insight": "Composer une partition en orientant un même tir vers deux cibles musicales",
+      "band": 4,
+      "heroActions": 9,
+      "width": 1760,
+      "height": 1250,
+      "stars": [
+        "Le ciel vu d’en bas",
+        "Le pupitre des étoiles",
+        "Le refrain céleste"
+      ],
+      "graph": "cb396234eaec459f51dc89d261f942ca6ee9466d835fa3c39144c2aa1def4a7e"
+    },
+    {
+      "level": 49,
+      "title": "Le voyage finit au commencement",
+      "insight": "Préparer un raccourci de retour avant de refermer la route d’aller",
+      "band": 4,
+      "heroActions": 8,
+      "width": 1860,
+      "height": 1180,
+      "stars": [
+        "Le sceau du fond",
+        "L’autre galerie",
+        "Préparer le retour"
+      ],
+      "graph": "38141a5eae58605ec380358c222804785863f1b662a9d1275465de875225da39"
+    },
+    {
+      "level": 50,
+      "title": "Le prisme partage la lune",
+      "insight": "Déplacer une ressource entre deux branches d’un réseau optique",
+      "band": 4,
+      "heroActions": 12,
+      "width": 1820,
+      "height": 1250,
+      "stars": [
+        "La lune du haut",
+        "La lune du bas",
+        "La lune partagée"
+      ],
+      "graph": "22293150a1ba07c87a14b81a09b6bf858ad6c95e53c58356e6904b49c5e40818"
+    },
+    {
+      "level": 51,
+      "title": "Les veilleuses se chamaillent",
+      "insight": "Raisonner sur les effets croisés de quatre interrupteurs",
+      "band": 4,
+      "heroActions": 6,
+      "width": 1740,
+      "height": 1120,
+      "stars": [
+        "La veilleuse du balcon",
+        "Un instant sans aucune lumière",
+        "La bonne constellation"
+      ],
+      "graph": "338b1bab26002a9a76fbc3dad7cb04bdcf4f00ae067dcfbcbd5efb5c3c8b0bae"
+    },
+    {
+      "level": 52,
+      "title": "Le passager descend pour mieux monter",
+      "insight": "Prévoir un débarquement intermédiaire pour rappeler un transport",
+      "band": 4,
+      "heroActions": 9,
+      "width": 1850,
+      "height": 1290,
+      "stars": [
+        "Le premier départ",
+        "Le crochet oublié",
+        "Le dernier balcon"
+      ],
+      "graph": "6607d7840cf9d84c9cb69d46bda832e1c9fc9eb6c44240c690367a50a09d4403"
+    },
+    {
+      "level": 53,
+      "title": "Les voisins des deux balcons",
+      "insight": "Débloquer l’autre rive avant que l’autre rive puisse vous débloquer",
+      "band": 4,
+      "heroActions": 5,
+      "width": 1920,
+      "height": 1180,
+      "stars": [
+        "Le premier voisin",
+        "La visite du toit",
+        "Les voisins réunis"
+      ],
+      "graph": "a14a0043f99e515f709df5e99e44230e9338b81f995f466bed3f7f674af5df4e"
+    },
+    {
+      "level": 54,
+      "title": "L’astronome a perdu son miroir",
+      "insight": "Combiner un objet optique et un réflecteur vivant à la bonne hauteur",
+      "band": 4,
+      "heroActions": 14,
+      "width": 1800,
+      "height": 1180,
+      "stars": [
+        "La lentille dans son étui",
+        "L’astronome improvisé",
+        "Le toit de l’observatoire"
+      ],
+      "graph": "79874fce0bf4620577ce7d3a46c3c018ec46a979d750c5dc66b8c228637f2bdc"
+    },
+    {
+      "level": 55,
+      "title": "Le pont regarde ailleurs",
+      "insight": "Changer la destination d’une passerelle après avoir placé le tireur",
+      "band": 5,
+      "heroActions": 10,
+      "width": 1940,
+      "height": 1250,
+      "stars": [
+        "Le grenier avant le départ",
+        "L’autre destination",
+        "Le retour par en dessous"
+      ],
+      "graph": "03b9ef2f3efc8dc4925683a66884a6fc8fff56c6925ca11a7b3a5661b37b36ac"
+    },
+    {
+      "level": 56,
+      "title": "Il faut ranger le ballon",
+      "insight": "Retirer un leurre après l’avoir utilisé pour placer un animal",
+      "band": 4,
+      "heroActions": 11,
+      "width": 1840,
+      "height": 1160,
+      "stars": [
+        "Le panier à jouets",
+        "Le grand bond de Léon",
+        "Le passage de nuit"
+      ],
+      "graph": "7ebc98dc1310c7e4e32c7556b91c9a1ea3fd6f138e45e5f5d33747b808c9db99"
+    },
+    {
+      "level": 57,
+      "title": "Vingt-quatre secondes pour les lucioles",
+      "insight": "Préparer une coordination avant de lancer un mécanisme temporaire",
+      "band": 4,
+      "heroActions": 7,
+      "width": 1800,
+      "height": 1140,
+      "stars": [
+        "Avant le compte à rebours",
+        "La préparation",
+        "La nuit stabilisée"
+      ],
+      "graph": "6c8c8e75ff408f874d62d8e14a66cb8d1c4a352600faac005e74c70d9cdbe757"
+    },
+    {
+      "level": 58,
+      "title": "Trois fenêtres dans la nuit",
+      "insight": "Démêler une dépendance circulaire grâce à un secours temporaire",
+      "band": 5,
+      "heroActions": 4,
+      "width": 1940,
+      "height": 1250,
+      "stars": [
+        "La fenêtre du sceau",
+        "La fenêtre du tireur",
+        "Le dernier volet"
+      ],
+      "graph": "21f85329fd82e76accc7914a73fd1f9d2a497e04a0a94d884fda4c1d348aa7c3"
+    },
+    {
+      "level": 59,
+      "title": "Tortille transporte sa cloche",
+      "insight": "Envoyer un passager stabiliser l’autre quai avant de transporter l’appel",
+      "band": 5,
+      "heroActions": 7,
+      "width": 2000,
+      "height": 1180,
+      "stars": [
+        "Le passager éclaireur",
+        "Le mouillage fixé",
+        "La cloche arrivée"
+      ],
+      "graph": "4ec01fb48189e68999ef78e8aa782d9f8c810c77610f9e4776f08a38030e4100"
+    },
+    {
+      "level": 60,
+      "title": "Le réveil des jardins suspendus",
+      "insight": "Faire circuler la lumière entre accès, musique et départ",
+      "band": 5,
+      "heroActions": 15,
+      "width": 2040,
+      "height": 1280,
+      "stars": [
+        "La dernière note du balcon",
+        "Le grand fanal",
+        "Le départ des lucioles"
+      ],
+      "graph": "7caa5e24819f1411838d4af970bf209463a6a539e9ab8b318f62cfeb11078363"
+    },
+    {
+      "level": 61,
+      "title": "Un invité vaut deux sacs",
+      "insight": "Équilibrer deux postes avec un objet, un animal et deux crocos",
+      "band": 4,
+      "heroActions": 8,
+      "width": 1900,
+      "height": 1200,
+      "stars": [
+        "Le jouet du machiniste",
+        "Les rôles bien répartis",
+        "Les deux plateaux levés"
+      ],
+      "graph": "1c07815b3134981134dc7e54ff7a22f4a9c0273784237115b1cd9241e30c2d2c"
+    },
+    {
+      "level": 62,
+      "title": "Le décor fait le tour du propriétaire",
+      "insight": "Préparer les deux côtés d’une boucle avant de déplacer son contrepoids",
+      "band": 5,
+      "heroActions": 9,
+      "width": 2040,
+      "height": 1270,
+      "stars": [
+        "La traversée des coulisses",
+        "Le décor à emporter",
+        "L’autre côté de la boucle"
+      ],
+      "graph": "d48c312fef0b284f4a725da0170c507afa19b4d6e7bcd3148c787c747d90a81f"
+    },
+    {
+      "level": 63,
+      "title": "Le rayon arrive avant les invités",
+      "insight": "Préparer un réflecteur à destination pour un tir venu d’un portail",
+      "band": 4,
+      "heroActions": 9,
+      "width": 1960,
+      "height": 1260,
+      "stars": [
+        "Le service de livraison",
+        "L’invitation du théâtre",
+        "Le passage des invités"
+      ],
+      "graph": "82de75365fac5af80f8f52643a1bd81ca9a3d4e1d04626162a7048139b4b4352"
+    },
+    {
+      "level": 64,
+      "title": "Les instruments font des poids",
+      "insight": "Changer la fonction d’un objet après avoir mémorisé un équilibre",
+      "band": 5,
+      "heroActions": 14,
+      "width": 1960,
+      "height": 1240,
+      "stars": [
+        "Le souffle de la flûte",
+        "La cloche libérée",
+        "Les instruments sur scène"
+      ],
+      "graph": "6000d19b30fa1c97b8d68855c5bbf8a9d32249d1652e16d8b0ac72649d89039e"
+    },
+    {
+      "level": 65,
+      "title": "Paulette ferme les coulisses",
+      "insight": "Coordonner deux animaux et conserver un poste jusqu’à l’arrivée de la livraison",
+      "band": 5,
+      "heroActions": 7,
+      "width": 2100,
+      "height": 1320,
+      "stars": [
+        "Les coulisses en veille",
+        "Le volet de livraison",
+        "La goupille arrivée"
+      ],
+      "graph": "3542fd8f94a25e19d01fcc82816109e06764c3cd4300be0f20b2c6487b09c71f"
+    },
+    {
+      "level": 66,
+      "title": "La fanfare n’a pas de musiciens",
+      "insight": "Diriger les animaux pour produire les notes d’une partition",
+      "band": 5,
+      "heroActions": 10,
+      "width": 2140,
+      "height": 1240,
+      "stars": [
+        "La loge du chef",
+        "Le triangle de Paulette",
+        "Une fanfare très vivante"
+      ],
+      "graph": "5e03a5722f655d59d116c90c38fd523d7e7877742c442437cc0af1868d612e00"
+    },
+    {
+      "level": 67,
+      "title": "Le spectateur qui déteste courir",
+      "insight": "Ouvrir un détour calme après une relève de plateau",
+      "band": 4,
+      "heroActions": 9,
+      "width": 1900,
+      "height": 1190,
+      "stars": [
+        "Le poste des ouvreurs",
+        "Le salut du spectateur",
+        "Le billet composté"
+      ],
+      "graph": "de8b9a4ab4a9c7ee98ce693fe58fd97a4dfd17a2163b124de77052d73cc762f8"
+    },
+    {
+      "level": 68,
+      "title": "L’ascenseur fait sa tournée",
+      "insight": "Planifier les arrêts de trois passagers avec deux colis de destinations opposées",
+      "band": 5,
+      "heroActions": 15,
+      "width": 1900,
+      "height": 1320,
+      "stars": [
+        "Les loges",
+        "Le colis descendu",
+        "Le colis monté"
+      ],
+      "graph": "6bdf3eeca62f6fc2008a44bd2110ba7f8d91fbf8df157c2f1f8f731b3d4589c1"
+    },
+    {
+      "level": 69,
+      "title": "Un piano dans les courants d’air",
+      "insight": "Transporter une charge lourde sans abandonner les deux passagers",
+      "band": 4,
+      "heroActions": 7,
+      "width": 2160,
+      "height": 1260,
+      "stars": [
+        "Les passagers du piano",
+        "Un atterrissage musical",
+        "Le piano livré"
+      ],
+      "graph": "82b78ec850c8433b6fcb9877402b73511713e20ae4af5d295ec60667ca6ae0b7"
+    },
+    {
+      "level": 70,
+      "title": "La répétition générale des lanternes",
+      "insight": "Conserver deux préparatifs avant d’échanger la source d’un troisième",
+      "band": 5,
+      "heroActions": 17,
+      "width": 2100,
+      "height": 1350,
+      "stars": [
+        "Sortir l’objectif",
+        "Installer le cinéma",
+        "La première image"
+      ],
+      "graph": "5140c9ccf637933c17ba4c40b64d411c4ec1a07b3907e8a2ef120fb101086c54"
+    },
+    {
+      "level": 71,
+      "title": "Trois rendez-vous pour une cloche",
+      "insight": "Réutiliser un appel dans un ordre dicté par les accès qu’il ouvre",
+      "band": 5,
+      "heroActions": 13,
+      "width": 2220,
+      "height": 1380,
+      "stars": [
+        "La cloche aux deux appels",
+        "Les derniers invités",
+        "Le rendez-vous sonne"
+      ],
+      "graph": "ede8763e79af33e9576499ea664f5672ecbce3d65fea8b26a896ad4e543194f7"
+    },
+    {
+      "level": 72,
+      "title": "Le bon étage n’est pas le dernier",
+      "insight": "Garer un ascenseur-réflecteur au bon niveau après une livraison au sommet",
+      "band": 5,
+      "heroActions": 18,
+      "width": 2060,
+      "height": 1370,
+      "stars": [
+        "La pièce au sommet",
+        "Le retour aux loges",
+        "L’accueil du rez-de-chaussée"
+      ],
+      "graph": "2d31130d6a17c9778babdce94387f1fba30e0a8f853d5611c27bf7b9706a4c4d"
+    },
+    {
+      "level": 73,
+      "title": "Le bouclier joue tous les rôles",
+      "insight": "Passer du marchepied au miroir puis au planeur sans perdre un équipier",
+      "band": 5,
+      "heroActions": 9,
+      "width": 2120,
+      "height": 1250,
+      "stars": [
+        "Le marchepied",
+        "Le miroir vivant",
+        "Le planeur de la troupe"
+      ],
+      "graph": "a841e0b29ef71515b0871fc2607e96fb0ef38e5f3ed6c0ee036eb8ccc28698e8"
+    },
+    {
+      "level": 74,
+      "title": "Quatre postes pour trois crocos",
+      "insight": "Remplacer deux opérateurs avant de répartir les trois rôles vivants",
+      "band": 5,
+      "heroActions": 14,
+      "width": 2200,
+      "height": 1430,
+      "stars": [
+        "Le deuxième remplaçant",
+        "La scène au grand complet",
+        "Quatre postes tenus"
+      ],
+      "graph": "b739328bb385bf6a2fa17cf054954cd8d6bcdef37c5b6c8c98d2b80512ec1b96"
+    },
+    {
+      "level": 75,
+      "title": "Le rideau se lève pour tout le marais",
+      "insight": "Réunir les habitants, réemployer les outils et libérer le dernier régisseur",
+      "band": 5,
+      "heroActions": 22,
+      "width": 2480,
+      "height": 1600,
+      "stars": [
+        "Le dernier régisseur",
+        "L’objectif du grand spectacle",
+        "Personne ne manque à l’appel"
+      ],
+      "graph": "703ca74df977f6ecfc1bbedd9f1d69812d54bde9828a3bb9b27bf6abb09cd967"
+    }
+  ]
+}

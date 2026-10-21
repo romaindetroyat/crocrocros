@@ -4,18 +4,19 @@
  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,viewport-fit=cover">
  <meta name="theme-color" content="#244a40"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
  <meta name="description" content="Trois crocodiles, un seul cerveau. Une aventure de réflexion et de coopération en solo, à emporter partout.">
- <title>Les Cro Cro Cros — La folle traversée</title><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icon-192.png"><link rel="icon" href="icon-192.png">
+ <title>Les Cro Cro Cros — La grande fête du marais</title><link rel="manifest" href="manifest.webmanifest"><link rel="apple-touch-icon" href="icon-192.png"><link rel="icon" href="icon-192.png">
  <style>/*__STYLE__*/</style>
 </head>
 <body>
  <main id="home">
   <header class="masthead"><span class="wordmark">Les Cro Cro Cros<span class="tiny-star">✦</span></span><div class="header-actions"><span class="status" id="offlineStatus">SOLO · SUR CET APPAREIL</span><button class="icon" id="settingsHome" aria-label="Réglages et sauvegardes">☷</button></div></header>
   <section class="hero">
-   <div class="hero-copy"><span class="eyebrow" id="editionTitle">LA FOLLE TRAVERSÉE · ÉDITION 2.0</span><h1>Trois museaux.<br>Un seul <em>cerveau.</em></h1><p id="editionCopy">Embarquez vos amis. Détournez les tirs. Transformez le chemin.<br>100 escapades, et personne laissé derrière.</p><div class="home-cta"><button class="primary" id="continueBtn">C’est parti ! <span>→</span></button><button class="secondary" id="mapBtn">Les étapes <span>☷</span></button></div><div id="progressNote" class="progress-note">3 crocodiles · 100 énigmes · beaucoup de mauvaise foi</div><div><button class="quest-link" id="trialLink">Explorer librement les 100 niveaux →</button></div><a class="quest-link" id="newAdventureLink" href="./" hidden>La folle traversée · nouvelle aventure →</a><a class="quest-link" href="?campagne=classique">Aventure classique · 37 niveaux</a><a class="quest-link" href="?campagne=archive">Campagne 1.2 · retrouver ma progression</a><button class="quest-link" id="journalHome">⚑ La quête de la bannière</button></div>
-   <div class="hero-art"><canvas id="cover" aria-label="Les trois crocodiles en expédition dans les marais"></canvas><div class="postcard"><span>EXPÉDITION N° 01</span><strong id="postcardTitle">La folle traversée</strong><small>Trois crocos, zéro pilote automatique</small></div></div>
+   <div class="hero-copy"><span class="eyebrow" id="editionTitle">LA GRANDE FÊTE DU MARAIS · ÉDITION 3.0</span><h1>Trois museaux.<br>Un seul <em>cerveau.</em></h1><p id="editionCopy">Aidez les habitants. Réparez les chemins. Préparez la grande fête.<br>75 énigmes, 225 étoiles et tout un marais à faire revivre.</p><div class="home-cta"><button class="primary" id="continueBtn">C’est parti ! <span>→</span></button><button class="secondary" id="mapBtn">Les étapes <span>☷</span></button></div><div id="progressNote" class="progress-note">3 crocodiles · 75 énigmes · beaucoup de mauvaise foi</div><div><button class="quest-link" id="trialLink">Explorer librement les 75 niveaux →</button></div><a class="quest-link" id="newAdventureLink" href="./" hidden>La grande fête du marais · nouvelle aventure →</a><a class="quest-link" href="?campagne=2-0">La folle traversée · archive 2.0</a><a class="quest-link" href="?campagne=classique">Aventure classique · 37 niveaux</a><a class="quest-link" href="?campagne=archive">Campagne 1.2 · retrouver ma progression</a><button class="quest-link" id="theatreHome">Les crocos font leur cinéma →</button><button class="quest-link" id="journalHome">⚑ Mes missions & mes étoiles</button></div>
+   <div class="hero-art"><canvas id="cover" aria-label="Les trois crocodiles en expédition dans les marais"></canvas><div class="postcard"><span>EXPÉDITION N° 01</span><strong id="postcardTitle">La grande fête du marais</strong><small>Trois crocos, zéro pilote automatique</small></div></div>
   </section>
+  <section id="homeQuest" class="quest-home" hidden></section>
   <section class="cast-strip" aria-label="Vos trois aventuriers"><article><i class="dot red"></i><div><strong>Croquinet</strong><span>Saute. Fonce. Réfléchit après.</span></div><kbd>W</kbd></article><article><i class="dot yellow"></i><div><strong>Croquefort</strong><span>Un grand cœur. Un grand bouclier.</span></div><kbd>X</kbd></article><article><i class="dot blue"></i><div><strong>Croqueboum</strong><span>La diplomatie, à coups de boulettes.</span></div><kbd>C</kbd></article></section>
-  <footer class="home-footer"><span>Un jeu de réflexion à trois… qui se joue tout seul.</span><span>DIX CHAPITRES · v2.0.0</span></footer>
+  <footer class="home-footer"><span>Un jeu de réflexion à trois… qui se joue tout seul.</span><span>5 RÉGIONS · 15 MISSIONS · v3.0.0</span></footer>
  </main>
  <main id="game" hidden>
   <header class="game-top"><button id="pauseBtn" class="icon" aria-label="Pause et menu">Ⅱ</button><div class="level-heading"><span id="levelChapter"></span><strong id="levelName"></strong></div><div class="game-tools"><span id="starCount" aria-label="Étoiles ramassées">☆ ☆ ☆</span><button id="rewindBtn" class="icon" aria-label="Revenir jusqu’à huit secondes en arrière">↶</button><div id="zoomControls" class="zoom-controls" role="group" aria-label="Zoom du niveau" hidden><button id="zoomOutBtn" class="icon" aria-label="Dézoomer, jusqu’au niveau entier">−</button><button id="zoomBtn" class="icon" aria-label="Revenir au zoom de jeu 1,9 fois" title="Revenir au zoom de jeu">1.9×</button><button id="zoomInBtn" class="icon" aria-label="Zoomer sur le personnage">+</button></div><button id="overviewBtn" class="icon" aria-label="Vue d’ensemble du niveau, touche M">⌖</button><button id="journalBtn" class="icon" aria-label="La quête et le bestiaire">⚑</button><button id="hintBtn" class="icon" aria-label="Obtenir un indice">?</button><button id="soundBtn" class="icon" aria-label="Activer ou couper le son">♫</button><button id="fullscreenBtn" class="icon desktop" aria-label="Plein écran">⛶</button></div></header>
@@ -33,6 +34,10 @@
  <div id="toast" role="status"></div><input type="file" id="importInput" accept="application/json,.json" hidden>
  <script>/*__LEVELS__*/</script><script>/*__EXPEDITION__*/</script><script>/*__WILDLIFE__*/
 </script><script>
-/*__ADVENTURE__*/</script><script>/*__ENGINE__*/</script><script>/*__ART__*/</script><script>/*__MUSIC__*/</script><script>/*__JOYPAD__*/</script><script>/*__APP__*/</script>
+/*__ADVENTURE__*/</script><script>/*__ENGINE__*/</script><script>/*__QUEST__*/
+/*__QUEST_UI__*/
+/*__ATTITUDES__*/
+/*__SCENERY__*/
+/*__ART__*/</script><script>/*__MUSIC__*/</script><script>/*__JOYPAD__*/</script><script>/*__APP__*/</script>
 </body>
 </html>

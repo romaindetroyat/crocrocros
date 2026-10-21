@@ -1,5 +1,7 @@
 # Difficulté, progression et satisfaction
 
+> Historique des premières éditions. La progression éditoriale de la version 3.0 et ses 75 énigmes sont décrites dans [design/REFONTE_3_0.md](design/REFONTE_3_0.md).
+
 ## Objectif
 
 La difficulté doit augmenter par les décisions et leurs conséquences : occupation simultanée de postes, ressources communes, ordre des opérations, séparation et réunion des personnages, retour de celui qui commande. Un niveau terminé doit signifier que le joueur a compris puis exécuté un plan.

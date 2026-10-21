@@ -18,7 +18,7 @@ const Wildlife={
  tick(E,dt){
   const p=E.p[E.active];
   for(const e of E.enemies){e.anim+=dt;if(e.calmWhen?.every(id=>E.flag(id))){e.asleep=true;E.flags[e.id]=true;e.y=e.homeY-(e.hover||0);}if(e.asleep)continue;e.distracted=false;if(e.lureItem&&E.expedition){const toy=E.expedition.items.find(i=>i.id===e.lureItem&&Math.abs(i.y-e.homeY)<120&&i.x>=e.minX-150&&i.x<=e.maxX+150);if(toy){e.distracted=true;e.dir=Math.sign(toy.x-e.x)||e.dir;e.x=clamp(e.x+Math.sign(toy.x-e.x)*Math.min(Math.max(0,Math.abs(toy.x-e.x)-(toy.holder>=0?90:0)),e.speed*1.6*dt),e.minX,e.maxX);e.y=e.homeY;e.phase='recover';e.timer=1;e.stun=0;continue;}}e.stun=Math.max(0,e.stun-dt);e.timer-=dt;
-   const canSee=Math.abs(p.y-e.homeY)<65&&Math.abs(p.x-e.x)<(e.kind==='vulture'?260:240)&&!E.solids().some(s=>!s.shield&&!s.oneway&&s.h>50&&s.x>Math.min(e.x,p.x)+30&&s.x<Math.max(e.x,p.x)-30&&s.y<e.homeY&&s.y+s.h>e.homeY-30);
+   const canSee=Math.abs(p.y-e.homeY)<65&&Math.abs(p.x-e.x)<(e.kind==='vulture'?260:240)&&!E.solids().some(s=>!s.shield&&!s.oneway&&!(e.lookOverBlocks&&s.railBlock)&&s.h>50&&s.x>Math.min(e.x,p.x)+30&&s.x<Math.max(e.x,p.x)-30&&s.y<e.homeY&&s.y+s.h>e.homeY-30);
    if(e.stun){e.phase='recover';e.timer=Math.max(e.timer,.65);e.y=e.homeY-(e.hover||0);continue;}
    if(e.phase==='patrol'){
     e.y=e.homeY-(e.hover||0)+(e.kind==='vulture'?Math.sin(e.anim*4)*12:0);e.x=clamp(e.x+e.dir*e.speed*dt,e.minX,e.maxX);if(e.x===e.minX||e.x===e.maxX)e.dir*=-1;
@@ -33,6 +33,7 @@ const Wildlife={
     if(e.kind==='lion'){e.x=clamp(e.x+e.attackDir*e.speed*2.4*dt,e.minX,e.maxX);e.y=e.homeY-Math.sin(clamp(1-e.timer/.65,0,1)*Math.PI)*72;}
     if(e.timer<=0){e.phase='recover';e.timer=e.kind==='lion'?2:2.6;e.y=e.homeY-(e.hover||0);}
    }else if(e.timer<=0){e.phase='patrol';e.timer=1.3;e.y=e.homeY-(e.hover||0);}
+   if(e.kind==='lion'&&e.phase==='attack')for(const r of E.L.reactors||[])if(r.kind==='pounce'&&e.x>=r.x&&e.x<=r.x+r.w&&e.homeY-e.y>30&&e.homeY-e.y<80)E.triggerReactor(r);
   }
   (E.L.elephants||[]).forEach((def,i)=>{const e=E.beasts[i];e.anim+=dt;e.timer-=dt;
    if(E.open(def)){e.phase='patrol';e.timer=2;return;}

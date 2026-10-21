@@ -13,12 +13,12 @@ for level in pack['levels']+pack.get('workshop',[]):
     assert len(level['spawns'])==3 and len(level['stars'])==3
     for key in ['platforms','bridges','gates','switches','targets','plates','crates','turrets','hints','pads','signs']:
         assert isinstance(level[key],list), f'Missing list {key}'
-    flags={x['id'] for key in ['switches','targets','plates','keys','crates','enemies','reactors','rules','mirrors','milestones'] for x in level.get(key,[])}
+    flags={x['id'] for key in ['switches','targets','plates','keys','crates','enemies','reactors','rules','logic','mirrors','milestones'] for x in level.get(key,[])} | set(level.get('stateIds',[]))
     for item in level.get('ladders',[])+level.get('reactors',[])+level['switches']+level['bridges']+level['gates']+level['targets']+level.get('lifts',[])+level.get('portals',[])+level['crates']+[level['exit']]+level.get('elephants',[])+level.get('movers',[])+level.get('winds',[])+level.get('milestones',[]):
         assert all(f in flags for f in item.get('requires',[])+item.get('requiresOff',[])+item.get('latchWhen',[])), 'Unknown mechanism dependency'
     for item in level['plates']:
         assert all(f in flags for f in item.get('latchWhen',[])), 'Unknown latch dependency'
-for token,file in [('STYLE','style.css'),('LEVELS','levels.js'),('EXPEDITION','expedition.js'),('WILDLIFE','wildlife.js'),('ADVENTURE','adventure.js'),('ENGINE','engine.js'),('ART','art.js'),('MUSIC','music.js'),('JOYPAD','joypad.js'),('APP','app.js')]:
+for token,file in [('STYLE','style.css'),('LEVELS','levels.js'),('EXPEDITION','expedition.js'),('WILDLIFE','wildlife.js'),('ADVENTURE','adventure.js'),('ENGINE','engine.js'),('QUEST','quest.js'),('QUEST_UI','quest-ui.js'),('ATTITUDES','attitudes.js'),('SCENERY','scenery.js'),('ART','art.js'),('MUSIC','music.js'),('JOYPAD','joypad.js'),('APP','app.js')]:
     code=(src/file).read_text()
     if token=='LEVELS':code=code.replace('/*__CAMPAIGN__*/null',json.dumps(pack,ensure_ascii=False).replace('</','<\\/'))
     page=page.replace('/*__'+token+'__*/',code)

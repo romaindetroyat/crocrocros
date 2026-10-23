@@ -32,12 +32,16 @@ Les flèches déplacent le personnage actif. Haut fait sauter Croquinet ou monte
 
 ↶ (R au clavier) rembobine jusqu’à huit secondes. START → Retour au ralliement revient au dernier point de ralliement atteint, ou au départ lorsqu’aucun n’a été atteint. Les erreurs de partition peuvent être rejouées ; les ascenseurs à trois arrêts possèdent des appels à chaque étage.
 
+## Régler la musique
+
+Dans les réglages, « Musique de l’expédition » fait défiler les niveaux Coupée, Discrète, Normale et Forte. Le choix est mémorisé. « Son général » coupe ou réactive à la fois la musique et les bruitages. La version 3.0.1 augmente sensiblement le niveau de sortie : reprenez avec un volume modéré sur vos écouteurs.
+
 ## Sauvegarder et retrouver l’ancienne aventure
 
 La progression et la tentative se sauvegardent automatiquement sur cet appareil. Export et import sont disponibles dans les réglages.
 
 La campagne 3.0, son mode libre, la campagne 2.0, la campagne 1.2 et l’aventure classique utilisent des progressions distinctes. Les anciennes parties restent accessibles par leurs liens à l’accueil. Pour importer un ancien export, ouvrez d’abord la campagne correspondante.
 
-L’accueil doit afficher **v3.0.0**. Après une mise à jour, rechargez la page ou fermez puis rouvrez la PWA. Attendez « Prêt hors ligne » avant de couper la connexion.
+L’accueil doit afficher **v3.0.1**. Après une mise à jour, rechargez la page ou fermez puis rouvrez la PWA. Attendez « Prêt hors ligne » avant de couper la connexion.
 
 Les changements et les vérifications sont détaillés dans `README.md` et `design/REFONTE_3_0.md`.

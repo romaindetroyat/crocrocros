@@ -1,0 +1,186 @@
+{
+  "version": "3.0.1",
+  "date": "2026-10-23",
+  "browser": "156.0.8078.47",
+  "scope": "OfflineAudioContext renders of complete reed/flute cycles, two arrangements, three volume presets, concurrent effects and music mute. No physical headphone or Safari measurement.",
+  "results": [
+    {
+      "theme": "morning",
+      "volume": 0.1,
+      "seconds": 72,
+      "sampleRate": 44100,
+      "full": {
+        "rmsDb": -29.894081190956648,
+        "peak": 0.3149576187133789,
+        "peakDb": -10.034957635143233,
+        "clipped": 0
+      },
+      "reprise": {
+        "rmsDb": -29.926881979132016,
+        "peak": 0.28088894486427307,
+        "peakDb": -11.029307065660385,
+        "clipped": 0
+      }
+    },
+    {
+      "theme": "morning",
+      "volume": 0.22,
+      "seconds": 72,
+      "sampleRate": 44100,
+      "full": {
+        "rmsDb": -23.047655438308094,
+        "peak": 0.6838858723640442,
+        "peakDb": -3.3003273555985424,
+        "clipped": 0
+      },
+      "reprise": {
+        "rmsDb": -23.078433965780967,
+        "peak": 0.617865800857544,
+        "peakDb": -4.182116850195991,
+        "clipped": 0
+      }
+    },
+    {
+      "theme": "morning",
+      "volume": 0.4,
+      "seconds": 72,
+      "sampleRate": 44100,
+      "full": {
+        "rmsDb": -18.654969280016733,
+        "peak": 0.9094136953353882,
+        "peakDb": -0.8247701962887398,
+        "clipped": 0
+      },
+      "reprise": {
+        "rmsDb": -18.598407068524242,
+        "peak": 0.8760465383529663,
+        "peakDb": -1.149456442550821,
+        "clipped": 0
+      }
+    },
+    {
+      "theme": "moon",
+      "volume": 0.1,
+      "seconds": 72,
+      "sampleRate": 44100,
+      "full": {
+        "rmsDb": -31.530175955716132,
+        "peak": 0.2714642584323883,
+        "peakDb": -11.325746849119442,
+        "clipped": 0
+      },
+      "reprise": {
+        "rmsDb": -31.56635070673405,
+        "peak": 0.2171458750963211,
+        "peakDb": -13.264968321652905,
+        "clipped": 0
+      }
+    },
+    {
+      "theme": "moon",
+      "volume": 0.22,
+      "seconds": 72,
+      "sampleRate": 44100,
+      "full": {
+        "rmsDb": -24.68172253670367,
+        "peak": 0.5972213745117188,
+        "peakDb": -4.477293145987301,
+        "clipped": 0
+      },
+      "reprise": {
+        "rmsDb": -24.71789728552926,
+        "peak": 0.47772088646888733,
+        "peakDb": -6.41651540963177,
+        "clipped": 0
+      }
+    },
+    {
+      "theme": "moon",
+      "volume": 0.4,
+      "seconds": 72,
+      "sampleRate": 44100,
+      "full": {
+        "rmsDb": -19.772896609297874,
+        "peak": 0.872834324836731,
+        "peakDb": -1.1813636628291055,
+        "clipped": 0
+      },
+      "reprise": {
+        "rmsDb": -19.68826603318088,
+        "peak": 0.7914891242980957,
+        "peakDb": -2.0311009663742468,
+        "clipped": 0
+      }
+    },
+    {
+      "theme": "morning",
+      "volume": 0.4,
+      "seconds": 12,
+      "effects": true,
+      "sampleRate": 48000,
+      "full": {
+        "rmsDb": -18.081033352106253,
+        "peak": 0.934548556804657,
+        "peakDb": -0.5879625768860054,
+        "clipped": 0
+      }
+    },
+    {
+      "theme": "moon",
+      "volume": 0.4,
+      "seconds": 12,
+      "effects": true,
+      "sampleRate": 48000,
+      "full": {
+        "rmsDb": -18.942140093232176,
+        "peak": 0.8754366040229797,
+        "peakDb": -1.1555059697917167,
+        "clipped": 0
+      }
+    },
+    {
+      "theme": "morning",
+      "volume": 0,
+      "seconds": 4,
+      "sampleRate": 44100,
+      "full": {
+        "rmsDb": null,
+        "peak": 0,
+        "peakDb": null,
+        "clipped": 0
+      }
+    },
+    {
+      "theme": "morning",
+      "volume": 0,
+      "seconds": 12,
+      "effects": true,
+      "sampleRate": 48000,
+      "full": {
+        "rmsDb": -26.110319788744448,
+        "peak": 0.56691575050354,
+        "peakDb": -4.929629538545332,
+        "clipped": 0
+      }
+    },
+    {
+      "theme": "morning",
+      "volume": 0.4,
+      "seconds": 5,
+      "muteAt": 2,
+      "sampleRate": 44100,
+      "full": {
+        "rmsDb": -23.231097285590803,
+        "peak": 0.8484331965446472,
+        "peakDb": -1.4276469446911455,
+        "clipped": 0
+      },
+      "afterMute": {
+        "rmsDb": null,
+        "peak": 0,
+        "peakDb": null,
+        "clipped": 0
+      }
+    }
+  ]
+}

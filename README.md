@@ -1,6 +1,6 @@
 # Les Cro Cro Cros — La fête du marais
 
-Jeu de plateforme et d’énigmes en solo, en français. **Version 3.0.0 : 75 énigmes, 225 étoiles et un marais à faire revivre.**
+Jeu de plateforme et d’énigmes en solo, en français. **Version 3.0.1 : 75 énigmes, 225 étoiles et un marais à faire revivre.**
 
 [Jouer](https://crocrocros.vercel.app/) · [Explorer librement](https://crocrocros.vercel.app/?essai=libre) · [Campagne 2.0](https://crocrocros.vercel.app/?campagne=2-0) · [Campagne 1.2](https://crocrocros.vercel.app/?campagne=archive) · [Aventure classique](https://crocrocros.vercel.app/?campagne=classique)
 
@@ -50,9 +50,13 @@ La campagne 3.0, son mode libre et les anciennes éditions utilisent des sauvega
 
 Progression et tentative se sauvegardent automatiquement dans le navigateur. Export et import sont disponibles dans les réglages. Pour importer un ancien export, ouvrir d’abord la campagne correspondante. Effacer les données du navigateur efface ces sauvegardes locales.
 
-[Les_Cro_Cro_Cros.html](Les_Cro_Cro_Cros.html) fonctionne directement sur ordinateur, sans connexion. Pour la PWA : ouvrir le site HTTPS, puis Safari → Partager → Sur l’écran d’accueil sur iPhone. Attendre « Prêt hors ligne » avant de couper la connexion. Après une mise à jour, recharger la page ou fermer puis rouvrir la PWA ; l’accueil doit afficher **v3.0.0**.
+[Les_Cro_Cro_Cros.html](Les_Cro_Cro_Cros.html) fonctionne directement sur ordinateur, sans connexion. Pour la PWA : ouvrir le site HTTPS, puis Safari → Partager → Sur l’écran d’accueil sur iPhone. Attendre « Prêt hors ligne » avant de couper la connexion. Après une mise à jour, recharger la page ou fermer puis rouvrir la PWA ; l’accueil doit afficher **v3.0.1**.
 
 Le jeu n’exige aucun compte, achat, publicité ou serveur de jeu. Tous ses dessins et sons sont locaux.
+
+## Audio corrigé en 3.0.1
+
+La musique dispose maintenant d’un niveau de sortie audible et de trois intensités : Discrète, Normale et Forte, en plus de Coupée. Le volume par défaut gagne environ 25 dB dans les rendus mesurés. Les bruitages sont rééquilibrés et le mélange contrôle les crêtes. Les préférences de silence et les sauvegardes sont conservées. Mesures et vérifications : [MUSIQUE.md](MUSIQUE.md).
 
 ## Vérifications de la version 3.0
 
@@ -80,8 +84,11 @@ node tests/quest.test.cjs
 node tests/attitudes.test.cjs
 node tests/campaign75-app.test.cjs
 node tests/joypad.test.cjs
+node tests/music.test.cjs
 python3 build.py
 node tests/package.test.cjs
+CROCO_CHROME_PATH=/chemin/vers/chromium node tests/audio-output.test.cjs
+CROCO_CHROME_PATH=/chemin/vers/chromium node tests/music-settings.test.cjs
 CROCO_CHROME_PATH=/chemin/vers/chromium node tests/campaign75-browser.test.cjs
 ```
 

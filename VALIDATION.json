@@ -1,6 +1,6 @@
 {
-  "version": "3.0.0",
-  "date": "2026-10-21",
+  "version": "3.0.1",
+  "date": "2026-10-23",
   "campaign": {
     "levels": 75,
     "stars": 225,
@@ -111,5 +111,19 @@
     "No guarantee of exhaustive alternate-route or softlock coverage",
     "Fun and real-world difficulty are not established by automated replays",
     "Typed condition graph differences are not a proof of perceived variety"
-  ]
+  ],
+  "campaign_validation_date": "2026-10-21",
+  "audio_checks": {
+    "date": "2026-10-23",
+    "render_cases": 11,
+    "engine": "156.0.8078.47",
+    "report": "tests/audio-output-report.json",
+    "clipped_samples": 0,
+    "highest_peak": 0.934548556804657,
+    "normal_music_rms_dbfs": {
+      "morning": -23.047655438308094,
+      "moon": -24.68172253670367
+    },
+    "gain_vs_3_0_0_db_approximately": 25
+  }
 }
